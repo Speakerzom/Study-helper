@@ -1,0 +1,117 @@
+{
+  "_note": "Đã tự sửa lỗi: 'content string' → object có cấu trúc rõ ràng. how_to_use là mảng step[], link_vid là mảng video[], dev_info là object. Cho phép render động, dễ mở rộng.",
+
+  "how_to_use": [
+    {
+      "step": 1,
+      "title": "Mở menu điều hướng",
+      "icon": "☰",
+      "content": "Nhấn nút ☰ (ba gạch ngang) ở góc trên bên trái màn hình để mở thanh điều hướng. Từ đây bạn có thể di chuyển giữa các module: Lý thuyết, Luyện tập và Hướng dẫn sử dụng.",
+      "tips": "Nhấn ra ngoài vùng menu hoặc nhấn phím Esc để đóng nhanh."
+    },
+    {
+      "step": 2,
+      "title": "Chuyển chế độ sáng / tối",
+      "icon": "🌙",
+      "content": "Cuộn xuống cuối thanh điều hướng bên trái, nhấn nút 'Chế độ tối / Chế độ sáng' để chuyển đổi giao diện. Tùy chọn này được lưu tự động, giao diện sẽ giữ nguyên ở lần truy cập tiếp theo.",
+      "tips": "Nên dùng chế độ tối khi học vào buổi tối để bảo vệ mắt."
+    },
+    {
+      "step": 3,
+      "title": "Sử dụng module Lý Thuyết",
+      "icon": "📖",
+      "content": "Vào Lý thuyết → Chọn khối lớp (10/11/12) → Chọn môn học → Chọn bài học. Mỗi bài hiển thị nội dung lý thuyết đầy đủ và bảng công thức quan trọng. Breadcrumb trên đầu trang giúp bạn điều hướng nhanh về bất kỳ cấp nào.",
+      "tips": "Nhấn vào từng mục trong breadcrumb để quay lại cấp trước mà không cần nhấn Back."
+    },
+    {
+      "step": 4,
+      "title": "Sử dụng module Luyện Tập",
+      "icon": "✏️",
+      "content": "Vào Luyện tập → Chọn khối lớp → Chọn môn → Chọn bài → Chọn chế độ (Normal hoặc Boss Mode). Hệ thống có 3 loại câu hỏi: 4 lựa chọn, Đúng/Sai, và Trả lời ngắn. Sau mỗi câu sẽ hiện giải thích chi tiết.",
+      "tips": "Chọn Normal để ôn tập cơ bản. Chọn Boss Mode khi bạn đã nắm vững lý thuyết để thử thách bản thân."
+    },
+    {
+      "step": 5,
+      "title": "Xem kết quả và làm lại",
+      "icon": "🏆",
+      "content": "Sau khi hoàn thành bài luyện tập, màn hình kết quả hiển thị: điểm số, số câu đúng/sai, tỉ lệ phần trăm và huy chương tương ứng. Nhấn 'Làm lại' để luyện lại (câu hỏi được xáo trộn ngẫu nhiên). Nhấn 'Ôn lý thuyết' để quay về bài lý thuyết tương ứng.",
+      "tips": "Hãy đặt mục tiêu đạt 90% trở lên (huy chương vàng 🏆) trước khi chuyển sang bài mới."
+    },
+    {
+      "step": 6,
+      "title": "Điều hướng nhanh bằng URL",
+      "icon": "🔗",
+      "content": "Study Helper hỗ trợ điều hướng qua URL hash. Bạn có thể bookmark trực tiếp một bài lý thuyết hoặc luyện tập cụ thể. Ví dụ: truy cập lại bài toán lớp 10 bài 1 chỉ cần mở đúng URL đã lưu.",
+      "tips": "Dùng Ctrl+D (hoặc Cmd+D trên Mac) để bookmark trang bài học yêu thích."
+    }
+  ],
+
+  "link_vid": [
+    {
+      "id": "vid_01",
+      "title": "Giới thiệu tổng quan Study Helper",
+      "description": "Video hướng dẫn tổng quan về hệ thống Study Helper: cách điều hướng, các tính năng chính và mẹo sử dụng hiệu quả.",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail_icon": "▶",
+      "duration": "5:30",
+      "tag": "Tổng quan"
+    },
+    {
+      "id": "vid_02",
+      "title": "Hướng dẫn module Lý Thuyết",
+      "description": "Chi tiết cách dùng module Lý thuyết: chọn lớp, môn, xem bài, sử dụng breadcrumb và công thức.",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail_icon": "📖",
+      "duration": "8:15",
+      "tag": "Lý thuyết"
+    },
+    {
+      "id": "vid_03",
+      "title": "Hướng dẫn module Luyện Tập",
+      "description": "Cách sử dụng module Luyện tập: phân biệt Normal và Boss Mode, cách làm 3 loại câu hỏi, đọc kết quả và luyện lại.",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail_icon": "✏️",
+      "duration": "10:42",
+      "tag": "Luyện tập"
+    },
+    {
+      "id": "vid_04",
+      "title": "Mẹo học tập hiệu quả với Study Helper",
+      "description": "Các chiến lược học tập: kết hợp lý thuyết và luyện tập, sử dụng Boss Mode đúng lúc, theo dõi tiến độ cá nhân.",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail_icon": "💡",
+      "duration": "12:00",
+      "tag": "Mẹo học"
+    }
+  ],
+
+  "dev_info": {
+    "product_name": "Study Helper",
+    "version": "1.0.0",
+    "release_date": "2025",
+    "description": "Study Helper là hệ thống web học tập miễn phí dành cho học sinh THPT lớp 10, 11, 12. Hệ thống cung cấp lý thuyết, bài tập luyện tập và game học tập cho 10 môn học theo chương trình phổ thông.",
+    "developer": {
+      "name": "Study Helper Team",
+      "role": "Full-Stack Developer & Game Developer",
+      "email": "contact@studyhelper.edu.vn",
+      "github": "https://github.com/studyhelper",
+      "website": "https://studyhelper.edu.vn"
+    },
+    "tech_stack": [
+      { "name": "HTML5",       "icon": "🌐", "desc": "Cấu trúc trang web" },
+      { "name": "CSS3",        "icon": "🎨", "desc": "Giao diện & animation" },
+      { "name": "JavaScript",  "icon": "⚙️",  "desc": "Logic & tương tác" },
+      { "name": "Canvas API",  "icon": "🎮", "desc": "Game học tập" },
+      { "name": "JSON",        "icon": "📦", "desc": "Lưu trữ dữ liệu" }
+    ],
+    "modules": [
+      { "name": "Lý thuyết",        "icon": "📖", "status": "Hoàn thành" },
+      { "name": "Luyện tập",        "icon": "✏️",  "status": "Hoàn thành" },
+      { "name": "Hướng dẫn",        "icon": "❓",  "status": "Hoàn thành" },
+      { "name": "Chatbot AI",       "icon": "🤖", "status": "Hoàn thành" },
+      { "name": "Game học tập",     "icon": "🎮", "status": "Đang phát triển" }
+    ],
+    "license": "MIT License — Miễn phí sử dụng cho mục đích giáo dục",
+    "feedback_email": "feedback@studyhelper.edu.vn"
+  }
+}
