@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Học Tập – Study Helper</title>
+  <link rel="stylesheet" href="game.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     SCREEN: LỖI (thiếu dữ liệu đầu vào)
+══════════════════════════════════════ -->
+<div id="screen-error" class="screen hidden">
+  <div class="error-card">
+    <div class="err-icon">⚠️</div>
+    <h2>Thiếu dữ liệu bài học</h2>
+    <p id="error-msg">Vui lòng chọn bài từ module Luyện tập trước khi vào game.</p>
+    <a class="btn-back-practice" href="../Practice/practice.html">
+      ← Quay về Luyện tập
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: PREPLASH VIDEO
+══════════════════════════════════════ -->
+<div id="screen-preplash" class="screen hidden">
+  <video id="preplash-video" playsinline muted preload="auto">
+    <source src="assets/preplash/preplash.mp4" type="video/mp4"/>
+  </video>
+  <div id="preplash-overlay">
+    <div id="preplash-info">
+      <div id="preplash-title"></div>
+      <div id="preplash-sub"></div>
+    </div>
+    <div id="preplash-skip">Nhấn để bỏ qua ▶</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: MÀN CHƠI CHÍNH (1 màn duy nhất)
+══════════════════════════════════════ -->
+<div id="screen-game" class="screen hidden">
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hud-left">
+      <a class="hud-back" href="../Practice/practice.html" title="Về Luyện tập">←</a>
+      <div id="hud-lesson-name"></div>
+    </div>
+    <div id="hud-center">
+      <span id="phase-badge" class="phase-normal">⚡ NORMAL</span>
+    </div>
+    <div id="hud-right">
+      <span class="energy-lbl">⚡</span>
+      <div id="energy-bar-bg">
+        <div id="energy-bar-fill"></div>
+      </div>
+      <span id="energy-text">0/0</span>
+    </div>
+  </div>
+
+  <!-- CANVAS: nền game + nhân vật -->
+  <canvas id="game-canvas"></canvas>
+
+  <!-- BOSS TIMER (chỉ hiện ở phase boss) -->
+  <div id="boss-timer" class="hidden">
+    <svg id="timer-svg" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="26" class="t-bg"/>
+      <circle cx="30" cy="30" r="26" class="t-ring" id="t-ring"/>
+    </svg>
+    <span id="timer-num">60</span>
+  </div>
+
+  <!-- NÚT TIẾN (normal phase) -->
+  <button id="btn-advance">⚔️ Tiến</button>
+
+  <!-- ATTACK FLASH OVERLAY -->
+  <div id="attack-flash" class="hidden"></div>
+
+  <!-- KHUNG CÂU HỎI -->
+  <div id="question-panel" class="hidden">
+
+    <div id="q-frame">
+      <span id="q-badge">4 lựa chọn</span>
+      <p id="q-text"></p>
+    </div>
+
+    <div id="a-frame">
+      <div id="a-body">
+        <!-- inject by game.js -->
+      </div>
+    </div>
+
+    <!-- Explanation (hiện sau khi trả lời) -->
+    <div id="q-explanation" class="hidden">
+      <span id="expl-icon">✅</span>
+      <span id="expl-text"></span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: THUA
+══════════════════════════════════════ -->
+<div id="screen-lose" class="screen hidden">
+  <div class="end-bg-img" id="lose-bg"></div>
+  <div class="end-card">
+    <div class="end-icon">💀</div>
+    <h2 class="end-title lose-title">Thất bại!</h2>
+    <p class="end-sub">Năng lượng đã cạn kiệt. Hãy cố gắng hơn!</p>
+    <div class="end-stats" id="lose-stats"></div>
+    <div class="end-btns">
+      <button class="btn-end btn-retry" id="btn-retry">🔄 Chơi lại</button>
+      <a class="btn-end btn-to-practice" id="btn-lose-back" href="../Practice/practice.html">← Luyện tập</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: THẮNG
+══════════════════════════════════════ -->
+<div id="screen-win" class="screen hidden">
+  <div class="end-bg-img" id="win-bg"></div>
+  <div class="end-card">
+    <div class="end-icon">🏆</div>
+    <h2 class="end-title win-title">Chiến thắng!</h2>
+    <p class="end-sub">Bạn đã đánh bại Boss! Xuất sắc!</p>
+    <div class="end-stats" id="win-stats"></div>
+    <div class="end-btns">
+      <button class="btn-end btn-complete" id="btn-complete">✅ Hoàn thành</button>
+      <button class="btn-end btn-retry-win" id="btn-retry-win">🔄 Chơi lại</button>
+    </div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+<script>
+  /* Gắn URL có params cho nút quay về Practice sau khi game.js chạy xong */
+  (function patchBackLinks() {
+    const p = new URLSearchParams(location.search);
+    const cls  = p.get('class')   || '';
+    const subj = p.get('subject') || '';
+    const les  = p.get('lesson')  || '';
+    const base = '../Practice/practice.html';
+    const url  = `${base}?class=${encodeURIComponent(cls)}&subject=${encodeURIComponent(subj)}&lesson=${encodeURIComponent(les)}`;
+
+    /* Nút Back trong screen-lose */
+    const loseBack = document.getElementById('btn-lose-back');
+    if (loseBack) loseBack.href = url;
+
+    /* Nút Back trong HUD (nút ← ở góc trái) */
+    const hudBack = document.querySelector('.hud-back');
+    if (hudBack) hudBack.href = url;
+  })();
+</script>
+</body>
+</html>

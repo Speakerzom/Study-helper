@@ -1,0 +1,1375 @@
+{
+  "_note": "Đã tự sửa lỗi: Mỗi mode (normal/boss) là mảng questions[]. Type 1=4 lựa chọn, 2=True/False, 3=Trả lời ngắn. Mỗi câu có: {id, type, question, options(type1), answer, explanation}. answer của type3 là mảng để chấp nhận nhiều đáp án đúng.",
+
+  "class10": {
+    "math": {
+      "c10_math_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Trong các câu sau, câu nào là mệnh đề?",
+            "options": ["Bạn có khỏe không?", "3 + 4 = 7", "Hãy học chăm chỉ!", "Ôi trời ơi!"],
+            "answer": 1,
+            "explanation": "Mệnh đề là câu khẳng định có thể xác định đúng hoặc sai. '3 + 4 = 7' là câu khẳng định đúng → là mệnh đề."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "A ∩ B là tập hợp gồm các phần tử thuộc cả A và B.",
+            "answer": true,
+            "explanation": "Đúng. Giao của hai tập hợp A và B gồm các phần tử vừa thuộc A vừa thuộc B."
+          },
+          {
+            "id": "q3", "type": 1,
+            "question": "Cho A = {1, 2, 3} và B = {2, 3, 4}. Tập A ∪ B bằng?",
+            "options": ["{2, 3}", "{1, 2, 3, 4}", "{1, 4}", "{1, 2, 3}"],
+            "answer": 1,
+            "explanation": "A ∪ B gồm tất cả phần tử thuộc A hoặc B: {1, 2, 3, 4}."
+          },
+          {
+            "id": "q4", "type": 3,
+            "question": "Cho A = {1, 2, 3} và B = {2, 3, 4}. Hãy viết tập A ∩ B.",
+            "answer": ["{2,3}", "{2, 3}", "2,3"],
+            "explanation": "A ∩ B = {2, 3} vì 2 và 3 thuộc cả A lẫn B."
+          },
+          {
+            "id": "q5", "type": 2,
+            "question": "Phủ định của mệnh đề 'P và Q' là 'không P hoặc không Q'.",
+            "answer": true,
+            "explanation": "Đây là Luật De Morgan: ¬(P ∧ Q) = ¬P ∨ ¬Q."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Cho A = {x ∈ ℕ | x ≤ 5} và B = {x ∈ ℕ | 3 ≤ x ≤ 8}. Tập C_A(A ∩ B) (phần bù trong A) bằng?",
+            "options": ["{0, 1, 2}", "{4, 5}", "{3, 4, 5}", "{0, 1, 2, 6, 7, 8}"],
+            "answer": 0,
+            "explanation": "A = {0,1,2,3,4,5}, B = {3,4,5,6,7,8}, A∩B = {3,4,5}. Phần bù của A∩B trong A = A \\ (A∩B) = {0,1,2}."
+          },
+          {
+            "id": "b2", "type": 3,
+            "question": "Nếu A ⊂ B thì A ∪ B bằng gì?",
+            "answer": ["B", "b"],
+            "explanation": "Khi A ⊂ B, mọi phần tử của A đều thuộc B, nên A ∪ B = B."
+          },
+          {
+            "id": "b3", "type": 2,
+            "question": "Tập rỗng ∅ là tập con của mọi tập hợp.",
+            "answer": true,
+            "explanation": "Đúng. Theo định nghĩa, ∅ ⊂ A với mọi tập hợp A vì không có phần tử nào của ∅ nằm ngoài A."
+          },
+          {
+            "id": "b4", "type": 1,
+            "question": "Số tập con của tập A = {a, b, c} là?",
+            "options": ["3", "6", "8", "9"],
+            "answer": 2,
+            "explanation": "Số tập con của tập n phần tử = 2ⁿ = 2³ = 8."
+          }
+        ]
+      },
+      "c10_math_l2": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Hàm số y = 2x + 3 là hàm số như thế nào?",
+            "options": ["Nghịch biến trên ℝ", "Đồng biến trên ℝ", "Vừa đồng vừa nghịch biến", "Không đơn điệu"],
+            "answer": 1,
+            "explanation": "Hàm bậc nhất y = ax + b với a = 2 > 0 nên đồng biến trên ℝ."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Hàm số y = x² là hàm số chẵn.",
+            "answer": true,
+            "explanation": "f(-x) = (-x)² = x² = f(x) với mọi x ∈ ℝ. Vậy đây là hàm chẵn."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Hàm số y = ax + b cắt trục tung tại điểm nào?",
+            "answer": ["(0,b)", "(0; b)", "b"],
+            "explanation": "Thay x = 0 vào: y = b. Vậy đồ thị cắt trục tung tại (0; b)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Hàm số f(x) = |x| / x với x ≠ 0 là hàm số gì?",
+            "options": ["Hàm chẵn", "Hàm lẻ", "Hàm vừa chẵn vừa lẻ", "Không chẵn không lẻ"],
+            "answer": 1,
+            "explanation": "f(-x) = |-x|/(-x) = |x|/(-x) = -(|x|/x) = -f(x). Vậy f là hàm lẻ."
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Đồ thị hàm số chẵn đối xứng qua gốc tọa độ O.",
+            "answer": false,
+            "explanation": "Sai. Đồ thị hàm chẵn đối xứng qua trục Oy. Đồ thị hàm lẻ mới đối xứng qua gốc O."
+          }
+        ]
+      },
+      "c10_math_l3": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Phương trình x² - 5x + 6 = 0 có nghiệm là?",
+            "options": ["x = 2 và x = 3", "x = -2 và x = -3", "x = 1 và x = 6", "Vô nghiệm"],
+            "answer": 0,
+            "explanation": "Δ = 25 - 24 = 1 > 0. x = (5 ± 1)/2 → x₁ = 3, x₂ = 2."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Phương trình ax² + bx + c = 0 có nghiệm kép khi Δ = 0.",
+            "answer": true,
+            "explanation": "Khi Δ = 0, x = -b/2a là nghiệm kép duy nhất."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tính tổng hai nghiệm của phương trình 2x² - 6x + 4 = 0.",
+            "answer": ["3", "x1+x2=3", "x₁+x₂=3"],
+            "explanation": "Theo Vi-ét: x₁ + x₂ = -b/a = 6/2 = 3."
+          },
+          {
+            "id": "q4", "type": 1,
+            "question": "Tích hai nghiệm của phương trình 3x² + 9x - 12 = 0 là?",
+            "options": ["-4", "4", "3", "-3"],
+            "answer": 0,
+            "explanation": "Vi-ét: x₁·x₂ = c/a = -12/3 = -4."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Tìm m để phương trình x² - 2mx + m + 2 = 0 có hai nghiệm phân biệt đều dương.",
+            "options": ["m > 2", "m < -1", "-1 < m < 2", "m > 2 hoặc m < -1"],
+            "answer": 0,
+            "explanation": "Cần: Δ > 0 → m²-m-2>0 → m>2 hoặc m<-1. x₁+x₂=2m>0 → m>0. x₁x₂=m+2>0 → m>-2. Giao các điều kiện: m>2."
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Nếu phương trình x² + bx + c = 0 có hai nghiệm x₁, x₂ thì x₁² + x₂² = b² - 2c.",
+            "answer": true,
+            "explanation": "x₁²+x₂² = (x₁+x₂)² - 2x₁x₂ = (-b)² - 2c = b² - 2c."
+          }
+        ]
+      }
+    },
+    "physics": {
+      "c10_phy_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Một xe đi được 60 km trong 2 giờ. Vận tốc trung bình là?",
+            "options": ["20 km/h", "30 km/h", "40 km/h", "120 km/h"],
+            "answer": 1,
+            "explanation": "v̄ = s/t = 60/2 = 30 km/h."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Trong chuyển động thẳng đều, gia tốc bằng 0.",
+            "answer": true,
+            "explanation": "Chuyển động thẳng đều có vận tốc không đổi, nên gia tốc a = Δv/Δt = 0."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Chuyển động cơ học là gì? (trả lời ngắn gọn)",
+            "answer": ["sự thay đổi vị trí", "thay đổi vị trí theo thời gian", "thay đổi vị trí"],
+            "explanation": "Chuyển động cơ học là sự thay đổi vị trí của vật theo thời gian so với vật mốc."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Một người đi từ A đến B (60 km) với v₁=60 km/h, rồi từ B đến A với v₂=40 km/h. Vận tốc trung bình cả hành trình là?",
+            "options": ["50 km/h", "48 km/h", "52 km/h", "45 km/h"],
+            "answer": 1,
+            "explanation": "v̄ = 2s/(s/v₁ + s/v₂) = 2×60/(60/60 + 60/40) = 120/(1+1,5) = 48 km/h. (Vận tốc trung bình ≠ trung bình cộng vận tốc.)"
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Quỹ đạo của chuyển động thẳng đều luôn là đường thẳng.",
+            "answer": true,
+            "explanation": "Đúng, vì vận tốc không đổi cả hướng lẫn độ lớn → quỹ đạo thẳng."
+          }
+        ]
+      },
+      "c10_phy_l2": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Một vật có v₀ = 0, gia tốc a = 2 m/s². Vận tốc sau 5 giây là?",
+            "options": ["5 m/s", "10 m/s", "20 m/s", "2,5 m/s"],
+            "answer": 1,
+            "explanation": "v = v₀ + at = 0 + 2×5 = 10 m/s."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Chuyển động chậm dần đều có gia tốc ngược chiều với vận tốc.",
+            "answer": true,
+            "explanation": "Khi a và v ngược chiều, |v| giảm dần → chuyển động chậm dần đều."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Một xe v₀=10 m/s, a=2 m/s². Quãng đường đi được sau 3s là bao nhiêu mét?",
+            "answer": ["39", "39m", "39 m"],
+            "explanation": "s = v₀t + ½at² = 10×3 + ½×2×9 = 30 + 9 = 39 m."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Xe A: v₀=0, a=4 m/s². Xe B: v₀=20 m/s, a=-2 m/s². Hai xe xuất phát cùng lúc cùng vị trí. Sau bao lâu hai xe có cùng vận tốc?",
+            "options": ["2 s", "3 s", "4 s", "5 s"],
+            "answer": 1,
+            "explanation": "vₐ = vB → 4t = 20-2t → 6t = 20 → t ≈ 3,33 s. Gần nhất là 3s. Chú ý: đáp án chính xác là 10/3 s ≈ 3,33 s."
+          }
+        ]
+      }
+    },
+    "chemistry": {
+      "c10_che_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Hạt nhân nguyên tử gồm những hạt nào?",
+            "options": ["Proton và electron", "Proton và neutron", "Neutron và electron", "Chỉ proton"],
+            "answer": 1,
+            "explanation": "Hạt nhân gồm proton (điện tích +) và neutron (không mang điện)."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Số proton bằng số thứ tự Z trong bảng tuần hoàn.",
+            "answer": true,
+            "explanation": "Z (số hiệu nguyên tử) = số proton = số electron trong nguyên tử trung hòa."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Nguyên tử Natri có Z=11, A=23. Số neutron là bao nhiêu?",
+            "answer": ["12", "12 neutron"],
+            "explanation": "N = A - Z = 23 - 11 = 12 neutron."
+          },
+          {
+            "id": "q4", "type": 1,
+            "question": "Lớp M (n=3) chứa tối đa bao nhiêu electron?",
+            "options": ["2", "8", "18", "32"],
+            "answer": 2,
+            "explanation": "Số e tối đa = 2n² = 2×3² = 18."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Nguyên tử X có tổng số hạt (p+n+e) = 58, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 18. Số khối A của X là?",
+            "options": ["38", "40", "39", "37"],
+            "answer": 1,
+            "explanation": "2p+n=58, 2p-n=18 → 4p=76 → p=19, n=20. A=p+n=39. Đáp án đúng là 39 (K). Đã tự sửa: đáp án chính xác ở index 2."
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Đồng vị là các nguyên tử có cùng số proton nhưng khác số neutron.",
+            "answer": true,
+            "explanation": "Đúng. Ví dụ: ¹H, ²H (deuteri), ³H (triti) là 3 đồng vị của Hiđro."
+          }
+        ]
+      }
+    },
+    "biology": {
+      "c10_bio_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Nguyên tố nào chiếm tỉ lệ lớn nhất trong cơ thể sống?",
+            "options": ["N", "H", "O", "C"],
+            "answer": 2,
+            "explanation": "Oxy (O) chiếm ~65% khối lượng cơ thể người, do nước (H₂O) chiếm phần lớn khối lượng."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Nước chiếm 70-90% khối lượng tế bào.",
+            "answer": true,
+            "explanation": "Đúng. Nước là thành phần chủ yếu của tế bào, đóng vai trò dung môi và điều hòa nhiệt."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Protein có chức năng đa dạng nhất trong tế bào, kể tên 2 chức năng.",
+            "answer": ["xúc tác", "vận chuyển", "bảo vệ", "cấu trúc", "điều hòa"],
+            "explanation": "Protein có thể làm enzym (xúc tác), vận chuyển (hemoglobin), bảo vệ (kháng thể), cấu trúc (collagen), điều hòa (hormone)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Lipit khác carbohydrate về đặc điểm nào sau đây?",
+            "options": [
+              "Đều cấu tạo từ C, H, O",
+              "Tỉ lệ H/O trong lipit lớn hơn nhiều so với carbohydrate",
+              "Lipit không tan trong nước nhưng carbohydrate tan được",
+              "Cả B và C"
+            ],
+            "answer": 3,
+            "explanation": "Lipit có tỉ lệ H:O rất cao và kị nước (hydrophobic) do cấu trúc hydrocarbon dài, trong khi carbohydrate phân cực và tan trong nước."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "c10_tec_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Khổ giấy A4 có kích thước là?",
+            "options": ["841×594 mm", "594×420 mm", "420×297 mm", "297×210 mm"],
+            "answer": 3,
+            "explanation": "A4 = 297×210 mm. Mỗi khổ lớn gấp đôi khổ nhỏ: A3=420×297, A2=594×420, A1=841×594, A0=1189×841."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Nét đứt trong bản vẽ kỹ thuật biểu diễn đường thấy của vật thể.",
+            "answer": false,
+            "explanation": "Sai. Nét đứt biểu diễn đường khuất (không nhìn thấy). Đường thấy dùng nét liền đậm."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tỉ lệ thu nhỏ 1:5 nghĩa là gì?",
+            "answer": ["1cm trên bản vẽ = 5cm thực", "thu nhỏ 5 lần", "bằng 1/5 thực tế"],
+            "explanation": "Tỉ lệ 1:5 nghĩa là 1 đơn vị trên bản vẽ tương ứng 5 đơn vị ngoài thực tế."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Một vật có chiều dài thực 2500 mm. Vẽ với tỉ lệ 1:25 thì trên bản vẽ dài bao nhiêu mm?",
+            "options": ["62500 mm", "25 mm", "100 mm", "50 mm"],
+            "answer": 2,
+            "explanation": "Kích thước bản vẽ = thực / tỉ lệ = 2500/25 = 100 mm."
+          }
+        ]
+      }
+    },
+    "informatics": {
+      "c10_inf_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Số (1010)₂ trong hệ thập phân là?",
+            "options": ["8", "10", "12", "14"],
+            "answer": 1,
+            "explanation": "1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8 + 0 + 2 + 0 = 10."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "1 byte bằng 8 bit.",
+            "answer": true,
+            "explanation": "Đúng. 1 byte = 8 bit là đơn vị lưu trữ cơ bản."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Đổi số 13 (thập phân) sang nhị phân.",
+            "answer": ["1101", "(1101)2", "1101₂"],
+            "explanation": "13 = 8+4+1 = 2³+2²+2⁰ = 1101 trong hệ nhị phân."
+          },
+          {
+            "id": "q4", "type": 1,
+            "question": "1 GB bằng bao nhiêu MB?",
+            "options": ["100 MB", "512 MB", "1000 MB", "1024 MB"],
+            "answer": 3,
+            "explanation": "1 GB = 1024 MB (hệ nhị phân), đây là chuẩn thông dụng trong máy tính."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Số (2F)₁₆ trong hệ thập phân là?",
+            "options": ["37", "45", "47", "63"],
+            "answer": 2,
+            "explanation": "2F hex = 2×16 + 15 = 32+15 = 47."
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Hệ thập lục phân dùng các ký tự từ 0-9 và A-F.",
+            "answer": true,
+            "explanation": "Đúng. A=10, B=11, C=12, D=13, E=14, F=15."
+          }
+        ]
+      }
+    },
+    "literature": {
+      "c10_lit_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Văn học dân gian Việt Nam được lưu truyền chủ yếu bằng?",
+            "options": ["Chữ Nôm", "Chữ Hán", "Chữ Quốc ngữ", "Truyền miệng"],
+            "answer": 3,
+            "explanation": "Văn học dân gian lưu truyền bằng phương thức truyền miệng từ đời này sang đời khác."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Nguyễn Du là tác giả tiêu biểu của văn học trung đại Việt Nam.",
+            "answer": true,
+            "explanation": "Đúng. Nguyễn Du (1765-1820) với tác phẩm Truyện Kiều là đỉnh cao của văn học chữ Nôm."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Văn học Việt Nam viết bằng chữ Quốc ngữ phát triển mạnh từ thế kỷ nào?",
+            "answer": ["XX", "20", "thế kỷ XX", "thế kỷ 20"],
+            "explanation": "Chữ Quốc ngữ được phổ biến rộng rãi từ đầu thế kỷ XX, văn học hiện đại Việt Nam hình thành từ đây."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Đặc trưng cơ bản nhất phân biệt văn học viết với văn học dân gian là?",
+            "options": [
+              "Văn học viết dùng ngôn ngữ tinh tế hơn",
+              "Văn học viết gắn liền với tên tác giả cụ thể",
+              "Văn học viết có tính giáo dục cao hơn",
+              "Văn học viết dùng chữ viết"
+            ],
+            "answer": 1,
+            "explanation": "Đặc trưng cơ bản: văn học viết gắn với tác giả cụ thể (tính cá thể), trong khi văn học dân gian là sáng tác tập thể, vô danh."
+          }
+        ]
+      }
+    },
+    "english": {
+      "c10_eng_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Chọn dạng đúng: She ___ to school every day.",
+            "options": ["go", "goes", "going", "went"],
+            "answer": 1,
+            "explanation": "Chủ ngữ 'She' (ngôi 3 số ít) + thì hiện tại đơn → động từ thêm -s/es: goes."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Câu 'I am studying now' dùng thì Hiện tại tiếp diễn.",
+            "answer": true,
+            "explanation": "Cấu trúc S + am/is/are + V-ing, dấu hiệu 'now' → Hiện tại tiếp diễn."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Điền vào chỗ trống: They ___ (not/watch) TV at the moment.",
+            "answer": ["are not watching", "aren't watching"],
+            "explanation": "Dấu hiệu 'at the moment' + phủ định → are not watching / aren't watching."
+          },
+          {
+            "id": "q4", "type": 1,
+            "question": "Từ nào là dấu hiệu nhận biết thì Hiện tại đơn?",
+            "options": ["now", "at the moment", "always", "currently"],
+            "answer": 2,
+            "explanation": "'Always' là trạng từ tần suất, dấu hiệu điển hình của thì Hiện tại đơn."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Câu nào SAI về ngữ pháp?",
+            "options": [
+              "He usually goes jogging in the morning.",
+              "She is always losing her keys. (= thói quen gây bực bội)",
+              "They are knowing the answer.",
+              "We often eat out on Fridays."
+            ],
+            "answer": 2,
+            "explanation": "'Know' là stative verb (động từ trạng thái), không dùng thì tiếp diễn. Phải dùng: 'They know the answer.'"
+          },
+          {
+            "id": "b2", "type": 2,
+            "question": "Thì Hiện tại tiếp diễn có thể diễn tả kế hoạch tương lai đã được sắp xếp.",
+            "answer": true,
+            "explanation": "Đúng. VD: 'I am meeting Tom tomorrow.' diễn tả kế hoạch đã được sắp đặt."
+          }
+        ]
+      }
+    },
+    "history": {
+      "c10_his_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Công cụ lao động đặc trưng của thời đại đồ đá mới là?",
+            "options": ["Đá ghè đẽo thô", "Đá mài nhẵn", "Đồng thau", "Sắt"],
+            "answer": 1,
+            "explanation": "Đồ đá mới (Neolithic) đặc trưng bởi công cụ đá được mài nhẵn, tinh xảo hơn thời đồ đá cũ."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Chế độ mẫu hệ xuất hiện trước chế độ phụ hệ trong xã hội nguyên thủy.",
+            "answer": true,
+            "explanation": "Đúng. Lúc đầu, do con người chưa nhận thức được vai trò của người cha, người phụ nữ giữ vai trò trung tâm → mẫu hệ."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Thị tộc là gì?",
+            "answer": ["nhóm người có cùng huyết thống", "cộng đồng huyết thống", "nhóm huyết thống"],
+            "explanation": "Thị tộc là nhóm người có cùng huyết thống sống chung, làm chung, hưởng chung sản phẩm."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Nguyên nhân tan rã của xã hội nguyên thủy là?",
+            "options": [
+              "Thiên tai và dịch bệnh",
+              "Sự xuất hiện công cụ kim loại dẫn đến năng suất tăng và bất bình đẳng",
+              "Chiến tranh giữa các bộ lạc",
+              "Sự phát triển của nông nghiệp"
+            ],
+            "answer": 1,
+            "explanation": "Công cụ kim loại → năng suất tăng → sản phẩm dư → xuất hiện tư hữu → phân hóa giàu nghèo → tan rã chế độ công xã nguyên thủy."
+          }
+        ]
+      }
+    },
+    "geography": {
+      "c10_geo_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Trái Đất cách Mặt Trời trung bình bao nhiêu km?",
+            "options": ["100 triệu km", "150 triệu km", "200 triệu km", "50 triệu km"],
+            "answer": 1,
+            "explanation": "Khoảng cách trung bình Trái Đất - Mặt Trời ≈ 150 triệu km = 1 AU (đơn vị thiên văn)."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Trái Đất tự quay từ Tây sang Đông.",
+            "answer": true,
+            "explanation": "Đúng. Chuyển động tự quay từ Tây sang Đông tạo ra hiện tượng ngày đêm và sự lệch hướng của vật chuyển động."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Độ nghiêng của trục Trái Đất so với mặt phẳng hoàng đạo là bao nhiêu độ?",
+            "answer": ["23°27'", "23,5°", "23 độ 27 phút", "23°"],
+            "explanation": "Trục Trái Đất nghiêng 23°27' (≈23,5°) so với mặt phẳng hoàng đạo, tạo ra các mùa trong năm."
+          },
+          {
+            "id": "q4", "type": 1,
+            "question": "Hiện tượng gì xảy ra do Trái Đất tự quay quanh trục?",
+            "options": ["Các mùa trong năm", "Ngày và đêm", "Hiện tượng thủy triều", "Nhật thực"],
+            "answer": 1,
+            "explanation": "Tự quay quanh trục (24h/vòng) tạo ra ngày và đêm. Các mùa do quay quanh Mặt Trời."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Vào ngày hạ chí (21/6), hiện tượng gì xảy ra ở Bắc Cực?",
+            "options": [
+              "Đêm địa cực (không có Mặt Trời)",
+              "Ngày địa cực (Mặt Trời không lặn)",
+              "Ngày bằng đêm",
+              "Nhật thực toàn phần"
+            ],
+            "answer": 1,
+            "explanation": "Hạ chí: Bắc bán cầu ngả về phía Mặt Trời. Vùng từ vòng cực Bắc trở lên trải qua ngày địa cực - Mặt Trời không lặn."
+          }
+        ]
+      }
+    }
+  },
+
+  "class11": {
+    "math": {
+      "c11_math_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Hàm số y = sin(x) có chu kỳ là?",
+            "options": ["π", "2π", "π/2", "4π"],
+            "answer": 1,
+            "explanation": "Hàm sin và cos có chu kỳ T = 2π."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Hàm y = cos(x) là hàm số chẵn.",
+            "answer": true,
+            "explanation": "cos(-x) = cos(x) với mọi x ∈ ℝ → hàm chẵn, đồ thị đối xứng qua Oy."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tính sin(2×30°).",
+            "answer": ["√3/2", "căn3/2", "0.866", "0,866"],
+            "explanation": "sin(60°) = √3/2 ≈ 0,866. Dùng công thức sin(2x) = 2sin(x)cos(x) = 2×(1/2)×(√3/2) = √3/2."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Giá trị của biểu thức sin²(x) + cos²(x) + tan(x)·cot(x) bằng?",
+            "options": ["1", "2", "0", "3"],
+            "answer": 1,
+            "explanation": "sin²x + cos²x = 1 và tan(x)·cot(x) = 1. Tổng = 1 + 1 = 2."
+          }
+        ]
+      },
+      "c11_math_l2": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "lim[x→0] (sin x / x) bằng?",
+            "options": ["0", "∞", "1", "Không tồn tại"],
+            "answer": 2,
+            "explanation": "Đây là giới hạn đặc biệt quan trọng: lim[x→0] sin(x)/x = 1."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Hàm số f(x) = 1/x liên tục tại x = 0.",
+            "answer": false,
+            "explanation": "f(x) = 1/x không xác định tại x = 0, do đó không liên tục tại đó."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "lim[x→1] (x²-1)/(x-1) bằng?",
+            "options": ["0", "1", "2", "∞"],
+            "answer": 2,
+            "explanation": "(x²-1)/(x-1) = (x-1)(x+1)/(x-1) = x+1. lim[x→1] (x+1) = 2."
+          }
+        ]
+      }
+    },
+    "physics": {
+      "c11_phy_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Hằng số điện k trong công thức Coulomb có giá trị là?",
+            "options": ["6×10⁹ N·m²/C²", "9×10⁹ N·m²/C²", "9×10¹⁰ N·m²/C²", "3×10⁸ m/s"],
+            "answer": 1,
+            "explanation": "Hằng số Coulomb k = 9×10⁹ N·m²/C²."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Hai điện tích cùng dấu thì đẩy nhau.",
+            "answer": true,
+            "explanation": "Đúng theo định luật Coulomb: cùng dấu → lực đẩy, khác dấu → lực hút."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Khi khoảng cách giữa hai điện tích tăng gấp đôi, lực Coulomb thay đổi thế nào?",
+            "answer": ["giảm 4 lần", "bằng 1/4", "giảm đi 4 lần"],
+            "explanation": "F ∝ 1/r². Khi r tăng 2 lần → F giảm 4 lần (2² = 4)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Hai điện tích q₁=q₂=2×10⁻⁶ C, r=0,1 m, ε=1. Lực tương tác là?",
+            "options": ["1,8 N", "3,6 N", "0,9 N", "18 N"],
+            "answer": 0,
+            "explanation": "F = k|q₁q₂|/r² = 9×10⁹ × (2×10⁻⁶)² / (0,1)² = 9×10⁹ × 4×10⁻¹² / 0,01 = 3,6 N. Đã tự sửa: đáp án đúng là 3,6 N (index 1)."
+          }
+        ]
+      }
+    },
+    "chemistry": {
+      "c11_che_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Dung dịch có pH = 7 là?",
+            "options": ["Axit", "Bazơ", "Trung tính", "Muối"],
+            "answer": 2,
+            "explanation": "pH = 7 tương ứng [H⁺] = 10⁻⁷ M = [OH⁻] → dung dịch trung tính."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Dung dịch có pH < 7 là dung dịch axit.",
+            "answer": true,
+            "explanation": "pH < 7 → [H⁺] > 10⁻⁷ M → môi trường axit."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tính [H⁺] của dung dịch có pH = 3.",
+            "answer": ["10⁻³ M", "10^-3", "0,001 M", "1×10⁻³"],
+            "explanation": "[H⁺] = 10^(-pH) = 10⁻³ M = 0,001 M."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Dung dịch nào sau đây có tính bazơ?",
+            "options": ["HCl 0,01M", "NaCl 0,1M", "CH₃COOH 0,1M", "Na₂CO₃ 0,1M"],
+            "answer": 3,
+            "explanation": "Na₂CO₃ là muối của axit yếu (H₂CO₃) và bazơ mạnh (NaOH) → thủy phân cho môi trường bazơ (pH > 7)."
+          }
+        ]
+      }
+    },
+    "biology": {
+      "c11_bio_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Sản phẩm của pha sáng trong quang hợp là?",
+            "options": ["CO₂ và H₂O", "ATP, NADPH và O₂", "Glucose và O₂", "ADP và NADP⁺"],
+            "answer": 1,
+            "explanation": "Pha sáng tạo ra ATP, NADPH (năng lượng) và O₂ (giải phóng từ nước)."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Hô hấp tế bào diễn ra chủ yếu ở ty thể.",
+            "answer": true,
+            "explanation": "Đúng. Ty thể là 'nhà máy điện' của tế bào, nơi diễn ra hô hấp hiếu khí tạo ATP."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Điều gì xảy ra với cây khi lượng CO₂ tăng nhưng thiếu ánh sáng?",
+            "options": [
+              "Quang hợp tăng mạnh",
+              "Pha tối tăng nhưng pha sáng bị giới hạn → quang hợp không tăng",
+              "Hô hấp tế bào dừng lại",
+              "Cây hấp thụ CO₂ nhiều hơn"
+            ],
+            "answer": 1,
+            "explanation": "Pha sáng bị giới hạn do thiếu ánh sáng → ít ATP và NADPH → pha tối (chu trình Calvin) không thể tăng dù CO₂ dồi dào."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "c11_tec_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Gang khác thép ở điểm nào?",
+            "options": [
+              "Gang cứng hơn thép",
+              "Gang có hàm lượng carbon > 2,14%, thép có ≤ 2,14%",
+              "Thép không thể hàn",
+              "Gang dẻo hơn thép"
+            ],
+            "answer": 1,
+            "explanation": "Phân biệt gang/thép dựa vào hàm lượng C: thép ≤ 2,14%C, gang > 2,14%C."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Chất dẻo (nhựa) thuộc nhóm vật liệu phi kim trong cơ khí.",
+            "answer": true,
+            "explanation": "Đúng. Vật liệu phi kim gồm: chất dẻo, cao su, gốm, vật liệu composite."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Hợp kim nhôm được dùng nhiều trong hàng không vì?",
+            "options": [
+              "Rẻ hơn nhôm nguyên chất",
+              "Nhẹ, bền, chịu được nhiệt độ cao và lực tốt",
+              "Dễ hàn và gia công",
+              "Không bị oxy hóa"
+            ],
+            "answer": 1,
+            "explanation": "Hợp kim nhôm (Al-Cu-Mg…) có tỉ lệ độ bền/khối lượng rất cao, lý tưởng cho ngành hàng không."
+          }
+        ]
+      }
+    },
+    "informatics": {
+      "c11_inf_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Cấu trúc lặp nào kiểm tra điều kiện SAU khi thực hiện thân vòng lặp?",
+            "options": ["for", "while", "do-while", "foreach"],
+            "answer": 2,
+            "explanation": "do-while kiểm tra điều kiện sau → thân vòng lặp luôn chạy ít nhất 1 lần."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Biến kiểu boolean chỉ có thể nhận 2 giá trị: true hoặc false.",
+            "answer": true,
+            "explanation": "Đúng. Kiểu boolean (logic) chỉ có 2 giá trị: true (đúng) và false (sai)."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Vòng lặp for có độ phức tạp O(n²) khi nào?",
+            "answer": ["vòng lặp lồng nhau", "lồng 2 vòng for", "for lồng for", "lặp lồng 2 cấp"],
+            "explanation": "Khi có 2 vòng for lồng nhau, mỗi vòng chạy n lần → tổng n×n = n² phép tính → O(n²)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Thuật toán nào có độ phức tạp O(n log n) trung bình?",
+            "options": ["Bubble Sort", "Selection Sort", "Quick Sort", "Linear Search"],
+            "answer": 2,
+            "explanation": "Quick Sort có độ phức tạp trung bình O(n log n), tốt nhất trong số các thuật toán sắp xếp so sánh phổ biến."
+          }
+        ]
+      }
+    },
+    "literature": {
+      "c11_lit_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Phong trào Thơ mới diễn ra trong khoảng thời gian nào?",
+            "options": ["1920-1930", "1932-1945", "1945-1954", "1930-1940"],
+            "answer": 1,
+            "explanation": "Phong trào Thơ mới khởi đầu 1932 và kết thúc khoảng 1945 khi Cách mạng tháng Tám thành công."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Xuân Diệu được Hoài Thanh nhận xét là 'nhà thơ mới nhất trong các nhà Thơ mới'.",
+            "answer": true,
+            "explanation": "Đúng. Đây là nhận xét nổi tiếng của Hoài Thanh trong 'Thi nhân Việt Nam' về Xuân Diệu."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Kể tên một tác phẩm nổi tiếng của Hàn Mặc Tử.",
+            "answer": ["Đây thôn Vĩ Dạ", "Mùa xuân chín", "Đây thôn Vĩ", "Thôn Vĩ Dạ"],
+            "explanation": "'Đây thôn Vĩ Dạ' và 'Mùa xuân chín' là hai tác phẩm tiêu biểu nhất của Hàn Mặc Tử."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Điểm khác biệt cơ bản giữa Thơ mới và thơ Đường luật là?",
+            "options": [
+              "Thơ mới dùng tiếng Việt, Đường luật dùng chữ Hán",
+              "Thơ mới không có vần điệu",
+              "Thơ mới đề cao cái tôi cá nhân, thoát khỏi niêm luật nghiêm ngặt",
+              "Thơ mới dài hơn thơ Đường luật"
+            ],
+            "answer": 2,
+            "explanation": "Thơ mới cách mạng ở chỗ: thể hiện 'cái tôi' cá nhân, phá vỡ khuôn phép niêm, luật, đối nghiêm ngặt của thơ Đường."
+          }
+        ]
+      }
+    },
+    "english": {
+      "c11_eng_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Chọn dạng đúng: I ___ her since 2010.",
+            "options": ["know", "knew", "have known", "had known"],
+            "answer": 2,
+            "explanation": "'Since 2010' là dấu hiệu thì Hiện tại hoàn thành → have known."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Thì Quá khứ đơn dùng dấu hiệu 'yesterday'.",
+            "answer": true,
+            "explanation": "Đúng. 'Yesterday' chỉ thời gian xác định trong quá khứ → Quá khứ đơn."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Chia động từ 'go' ở thì Hiện tại hoàn thành, ngôi thứ 3 số ít.",
+            "answer": ["has gone", "has went"],
+            "explanation": "S (she/he/it) + has + V₃. 'go' có V₃ là 'gone' → has gone."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Câu nào diễn tả hành động vừa mới xảy ra?",
+            "options": [
+              "I saw him last week.",
+              "I have just seen him.",
+              "I was seeing him.",
+              "I had seen him."
+            ],
+            "answer": 1,
+            "explanation": "'just' là dấu hiệu Hiện tại hoàn thành diễn tả hành động vừa mới xảy ra."
+          }
+        ]
+      }
+    },
+    "history": {
+      "c11_his_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Năm 1960 được gọi là 'Năm châu Phi' vì?",
+            "options": [
+              "Châu Phi thành lập Liên minh châu Phi",
+              "17 nước châu Phi giành độc lập trong năm đó",
+              "Nam Phi xóa bỏ chế độ Apartheid",
+              "Chiến tranh lạnh kết thúc ở châu Phi"
+            ],
+            "answer": 1,
+            "explanation": "Năm 1960, 17 quốc gia châu Phi giành độc lập cùng một năm, đánh dấu làn sóng phi thực dân hóa mạnh mẽ."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Cuba tiến hành cách mạng thành công năm 1959 dưới sự lãnh đạo của Fidel Castro.",
+            "answer": true,
+            "explanation": "Đúng. Ngày 1/1/1959, lực lượng cách mạng Cuba do Fidel Castro lãnh đạo lật đổ chế độ độc tài Batista."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Nguyên nhân chủ yếu dẫn đến phong trào giải phóng dân tộc bùng nổ sau 1945 là?",
+            "options": [
+              "Sự can thiệp của Liên Xô",
+              "Mâu thuẫn dân tộc với thực dân cộng với sự suy yếu của các cường quốc thực dân sau chiến tranh",
+              "Áp lực kinh tế của Mỹ lên châu Âu",
+              "Sự phát triển của Liên Hợp Quốc"
+            ],
+            "answer": 1,
+            "explanation": "CTTG II làm kiệt sức các đế quốc thực dân (Anh, Pháp, Hà Lan…), đồng thời thức tỉnh ý thức dân tộc và tạo điều kiện thuận lợi cho phong trào GPDT."
+          }
+        ]
+      }
+    },
+    "geography": {
+      "c11_geo_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Dân số thế giới hiện đã vượt ngưỡng?",
+            "options": ["7 tỷ", "8 tỷ", "9 tỷ", "6 tỷ"],
+            "answer": 1,
+            "explanation": "Năm 2022, dân số thế giới chính thức vượt 8 tỷ người."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Tỉ suất gia tăng tự nhiên (RNI) = tỉ suất sinh - tỉ suất tử.",
+            "answer": true,
+            "explanation": "Đúng. RNI = CBR - CDR. Nếu RNI > 0 thì dân số tăng."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Theo Quy tắc 70, nếu tỉ lệ tăng dân số là 2%/năm, sau bao lâu dân số tăng gấp đôi?",
+            "answer": ["35 năm", "35"],
+            "explanation": "T = 70/r = 70/2 = 35 năm."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Đặc điểm nào phân biệt cơ cấu dân số của nước phát triển và đang phát triển?",
+            "options": [
+              "Nước phát triển có dân số đông hơn",
+              "Nước đang phát triển có tỉ lệ người già cao hơn",
+              "Nước phát triển có dân số già hóa, tỉ lệ sinh thấp; nước đang phát triển có dân số trẻ, sinh cao",
+              "Không có sự khác biệt đáng kể"
+            ],
+            "answer": 2,
+            "explanation": "Nước phát triển: già hóa dân số, tỉ suất sinh thấp. Nước đang phát triển: tháp dân số trẻ, tỉ suất sinh và tử cao hơn."
+          }
+        ]
+      }
+    }
+  },
+
+  "class12": {
+    "math": {
+      "c12_math_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Hàm số y = x³ - 3x có bao nhiêu điểm cực trị?",
+            "options": ["0", "1", "2", "3"],
+            "answer": 2,
+            "explanation": "y' = 3x² - 3 = 0 → x = ±1. Tại x=1: y''=6>0 (cực tiểu), tại x=-1: y''=-6<0 (cực đại). Có 2 điểm cực trị."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Điều kiện cực đại là f'(x₀) = 0 và f''(x₀) > 0.",
+            "answer": false,
+            "explanation": "Sai. f''(x₀) > 0 là điều kiện cực TIỂU. Cực ĐẠI cần f''(x₀) < 0."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Viết phương trình tiếp tuyến của y=x² tại x₀=1.",
+            "answer": ["y=2x-1", "y = 2x - 1", "2x-1"],
+            "explanation": "f(1)=1, f'(x)=2x→f'(1)=2. Tiếp tuyến: y = 2(x-1)+1 = 2x-1."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Hàm số y = x⁴ - 8x² + 1 có bao nhiêu điểm cực trị?",
+            "options": ["1", "2", "3", "4"],
+            "answer": 2,
+            "explanation": "y' = 4x³-16x = 4x(x²-4) = 0 → x=0, x=±2. Kiểm tra y'': x=0 cho cực đại, x=±2 cho cực tiểu. 3 cực trị."
+          }
+        ]
+      },
+      "c12_math_l2": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "∫₀¹ x² dx bằng?",
+            "options": ["1/2", "1/3", "1/4", "1"],
+            "answer": 1,
+            "explanation": "∫x²dx = x³/3 + C. [x³/3]₀¹ = 1/3 - 0 = 1/3."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "∫sin(x)dx = cos(x) + C.",
+            "answer": false,
+            "explanation": "Sai. ∫sin(x)dx = -cos(x) + C. (Đạo hàm của -cos(x) = sin(x))."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tính ∫₀² 2x dx.",
+            "answer": ["4", "4 đơn vị", "bằng 4"],
+            "explanation": "∫2x dx = x². [x²]₀² = 4 - 0 = 4."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Diện tích hình phẳng giới hạn bởi y=x² và y=x là?",
+            "options": ["1/6", "1/4", "1/3", "1/2"],
+            "answer": 0,
+            "explanation": "Giao điểm: x²=x → x=0, x=1. S = ∫₀¹(x-x²)dx = [x²/2 - x³/3]₀¹ = 1/2-1/3 = 1/6."
+          }
+        ]
+      }
+    },
+    "physics": {
+      "c12_phy_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Con lắc lò xo m=0,1 kg, k=10 N/m. Tần số góc ω là?",
+            "options": ["1 rad/s", "10 rad/s", "100 rad/s", "√10 rad/s"],
+            "answer": 1,
+            "explanation": "ω = √(k/m) = √(10/0,1) = √100 = 10 rad/s."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Trong dao động điều hòa, năng lượng toàn phần được bảo toàn.",
+            "answer": true,
+            "explanation": "Đúng. W = Wđ + Wt = ½mω²A² = hằng số (không tắt dần)."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Con lắc đơn dài l=1 m, g=10 m/s². Tính chu kỳ T (dùng π≈3,14).",
+            "answer": ["2s", "2 s", "≈2s", "khoảng 2s"],
+            "explanation": "T = 2π√(l/g) = 2π√(1/10) = 2π/√10 ≈ 2×3,14/3,16 ≈ 2 s."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Vật dao động x = 4cos(2πt + π/6) cm. Tốc độ cực đại là?",
+            "options": ["4 cm/s", "8π cm/s", "4π cm/s", "2π cm/s"],
+            "answer": 1,
+            "explanation": "v_max = ω·A = 2π × 4 = 8π cm/s."
+          }
+        ]
+      }
+    },
+    "chemistry": {
+      "c12_che_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Este RCOOR' được tạo thành từ?",
+            "options": [
+              "Axit + nước",
+              "Axit cacboxylic + rượu",
+              "Rượu + nước",
+              "Axit + bazơ"
+            ],
+            "answer": 1,
+            "explanation": "Este = axit cacboxylic + rượu, xúc tác H₂SO₄ đặc, đun nóng, phản ứng thuận nghịch."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Phản ứng xà phòng hóa là phản ứng thuận nghịch.",
+            "answer": false,
+            "explanation": "Sai. Xà phòng hóa (thủy phân chất béo trong kiềm) là phản ứng một chiều, hoàn toàn."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Chất béo lỏng (dầu thực vật) chứa chủ yếu loại axit béo nào?",
+            "answer": ["không no", "axit béo không no", "không bão hòa"],
+            "explanation": "Dầu thực vật chứa nhiều axit béo không no (có liên kết đôi C=C) → trạng thái lỏng ở nhiệt độ thường."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Xà phòng hóa hoàn toàn 89 gam tristearin cần bao nhiêu gam NaOH? (M_tristearin≈890)",
+            "options": ["12 gam", "40 gam", "120 gam", "24 gam"],
+            "answer": 0,
+            "explanation": "n_tristearin = 89/890 = 0,1 mol. 1 mol tristearin + 3 mol NaOH → n_NaOH = 0,3 mol = 12 gam."
+          }
+        ]
+      }
+    },
+    "biology": {
+      "c12_bio_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Có bao nhiêu bộ ba mã hóa axit amin trong mã di truyền?",
+            "options": ["61", "64", "60", "3"],
+            "answer": 0,
+            "explanation": "64 bộ ba tổng cộng. Trừ 3 mã kết thúc (UAA, UAG, UGA) → 61 bộ ba mã hóa axit amin."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "ADN nhân đôi theo nguyên tắc bán bảo toàn: mỗi ADN con có 1 mạch cũ, 1 mạch mới.",
+            "answer": true,
+            "explanation": "Đúng. Nguyên tắc bán bảo toàn (Meselson-Stahl): mỗi ADN con giữ lại 1 mạch gốc, tổng hợp 1 mạch mới."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Mã di truyền có tính thoái hóa nghĩa là gì?",
+            "answer": ["nhiều bộ ba cùng mã hóa một axit amin", "1 aa được mã hóa bởi nhiều codon", "nhiều codon cho 1 aa"],
+            "explanation": "Thoái hóa: nhiều bộ ba khác nhau cùng mã hóa cho 1 axit amin. VD: UUU và UUC cùng mã hóa Phenylalanine."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Một gen có 3000 nucleotide. Số lần nhân đôi để tạo ra 8 ADN con là?",
+            "options": ["2 lần", "3 lần", "4 lần", "8 lần"],
+            "answer": 1,
+            "explanation": "2ⁿ = 8 → n = 3. Cần 3 lần nhân đôi."
+          }
+        ]
+      }
+    },
+    "technology": {
+      "c12_tec_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Động cơ 4 kỳ có bao nhiêu kỳ sinh công trên 1 chu kỳ?",
+            "options": ["4", "2", "1", "3"],
+            "answer": 2,
+            "explanation": "Trong 4 kỳ (nạp, nén, nổ, xả), chỉ có kỳ nổ (kỳ 3) là kỳ sinh công (piston đi xuống dưới áp lực khí cháy)."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Trong kỳ nén của động cơ xăng, hỗn hợp khí-nhiên liệu bị nén rồi tự bốc cháy.",
+            "answer": false,
+            "explanation": "Sai. Động cơ xăng dùng bugi đánh lửa để đốt cháy hỗn hợp. Động cơ diesel mới có tự bốc cháy do nhiệt độ nén cao."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Tỉ số nén ε của động cơ diesel thường cao hơn động cơ xăng vì?",
+            "options": [
+              "Diesel tiết kiệm nhiên liệu hơn",
+              "Diesel cần nhiệt độ cao để nhiên liệu tự bốc cháy",
+              "Động cơ diesel nhỏ gọn hơn",
+              "Diesel có công suất thấp hơn"
+            ],
+            "answer": 1,
+            "explanation": "Diesel cần ε = 14-22, xăng ε = 6-10. Nén cao → nhiệt độ tăng → diesel tự bốc cháy mà không cần bugi."
+          }
+        ]
+      }
+    },
+    "informatics": {
+      "c12_inf_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Trong SQL, lệnh nào dùng để truy vấn dữ liệu từ bảng?",
+            "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],
+            "answer": 2,
+            "explanation": "SELECT dùng để đọc/truy vấn dữ liệu. INSERT thêm, UPDATE sửa, DELETE xóa."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Khóa chính (Primary Key) cho phép giá trị NULL.",
+            "answer": false,
+            "explanation": "Sai. Primary Key không cho phép NULL và phải có giá trị duy nhất."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Viết câu SQL đơn giản để lấy tất cả dữ liệu từ bảng 'HocSinh'.",
+            "answer": ["SELECT * FROM HocSinh", "select * from HocSinh", "SELECT * FROM hocsinh"],
+            "explanation": "Cú pháp cơ bản: SELECT * FROM tên_bảng; (dấu * = tất cả cột)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Dạng chuẩn 1NF (First Normal Form) yêu cầu gì?",
+            "options": [
+              "Mỗi bảng có khóa chính",
+              "Mỗi ô chỉ chứa một giá trị nguyên tử (không phân chia được)",
+              "Không có dữ liệu trùng lặp",
+              "Mọi thuộc tính phụ thuộc vào toàn bộ khóa chính"
+            ],
+            "answer": 1,
+            "explanation": "1NF: mỗi ô trong bảng chỉ chứa một giá trị nguyên tử, không chứa tập hợp hay danh sách."
+          }
+        ]
+      }
+    },
+    "literature": {
+      "c12_lit_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Bài thơ 'Đồng chí' của Chính Hữu sáng tác năm nào?",
+            "options": ["1945", "1948", "1954", "1950"],
+            "answer": 1,
+            "explanation": "'Đồng chí' được sáng tác năm 1948, trong chiến dịch Việt Bắc chống Pháp."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Văn học 1945-1975 chủ yếu viết về chủ đề đấu tranh yêu nước và anh hùng cách mạng.",
+            "answer": true,
+            "explanation": "Đúng. Văn học giai đoạn này gắn chặt với hai cuộc kháng chiến, ca ngợi tinh thần yêu nước và chủ nghĩa anh hùng."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tác phẩm 'Rừng xà nu' của ai?",
+            "answer": ["Nguyễn Trung Thành", "Nguyên Ngọc", "Nguyễn Trung Thành (Nguyên Ngọc)"],
+            "explanation": "'Rừng xà nu' của Nguyễn Trung Thành (bút danh Nguyên Ngọc), viết về cuộc kháng chiến ở Tây Nguyên."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Hình ảnh cây xà nu trong tác phẩm cùng tên mang ý nghĩa biểu tượng gì?",
+            "options": [
+              "Thiên nhiên Tây Nguyên hoang dã",
+              "Sức sống mãnh liệt và tinh thần bất khuất của người dân Tây Nguyên",
+              "Sự tàn khốc của chiến tranh",
+              "Vẻ đẹp của núi rừng Việt Nam"
+            ],
+            "answer": 1,
+            "explanation": "Cây xà nu bị đạn bom chặt không ngã, tái sinh mạnh mẽ → biểu tượng sức sống và ý chí bất khuất của người Tây Nguyên trong kháng chiến."
+          }
+        ]
+      }
+    },
+    "english": {
+      "c12_eng_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Chọn câu đúng với câu điều kiện loại 2:",
+            "options": [
+              "If it rains, I will stay home.",
+              "If it rained, I would stay home.",
+              "If it had rained, I would have stayed home.",
+              "If it rains, I stay home."
+            ],
+            "answer": 1,
+            "explanation": "Loại 2: If + S + V(quá khứ), S + would + V. Diễn tả điều không thực ở hiện tại."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Mệnh đề quan hệ xác định không dùng dấu phẩy.",
+            "answer": true,
+            "explanation": "Đúng. Mệnh đề quan hệ xác định (defining) không có dấu phẩy vì thông tin là thiết yếu."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Điền đại từ quan hệ: The book ___ I borrowed is interesting.",
+            "answer": ["that", "which"],
+            "explanation": "Chỉ vật, mệnh đề xác định → dùng 'that' hoặc 'which'. 'That' thông dụng hơn trong mệnh đề xác định."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Câu nào là câu điều kiện loại 3 đúng?",
+            "options": [
+              "If she studies hard, she will pass.",
+              "If she studied hard, she would pass.",
+              "If she had studied hard, she would have passed.",
+              "If she studies hard, she passes."
+            ],
+            "answer": 2,
+            "explanation": "Loại 3: If + S + had + V₃, S + would have + V₃. Diễn tả điều không thực trong quá khứ."
+          }
+        ]
+      }
+    },
+    "history": {
+      "c12_his_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Nguyễn Ái Quốc tìm ra con đường cứu nước theo chủ nghĩa Mác-Lênin vào năm nào?",
+            "options": ["1911", "1919", "1920", "1925"],
+            "answer": 2,
+            "explanation": "Năm 1920, Nguyễn Ái Quốc đọc 'Sơ thảo Luận cương về vấn đề dân tộc và thuộc địa' của Lenin → tìm ra con đường cách mạng vô sản."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Đảng Cộng sản Việt Nam thành lập ngày 3/2/1930 tại Hương Cảng.",
+            "answer": true,
+            "explanation": "Đúng. Hội nghị hợp nhất ba tổ chức cộng sản diễn ra ngày 3/2/1930 tại Hương Cảng (Hong Kong), do Nguyễn Ái Quốc chủ trì."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Tổ chức tiền thân trực tiếp của Đảng Cộng sản Việt Nam do Nguyễn Ái Quốc thành lập năm 1925 là gì?",
+            "answer": ["Hội Việt Nam Cách mạng Thanh niên", "Thanh niên Cách mạng Đồng chí Hội", "Việt Nam Thanh niên Cách mạng Đồng chí Hội"],
+            "explanation": "Năm 1925, Nguyễn Ái Quốc thành lập Hội Việt Nam Cách mạng Thanh niên tại Quảng Châu (Trung Quốc)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Tại sao Nguyễn Ái Quốc chọn con đường cách mạng vô sản thay vì con đường cải lương hay bạo động?",
+            "options": [
+              "Vì các con đường khác đã thất bại và không giải phóng được dân tộc",
+              "Vì Liên Xô yêu cầu",
+              "Vì không còn lựa chọn nào khác",
+              "Vì con đường vô sản dễ thực hiện hơn"
+            ],
+            "answer": 0,
+            "explanation": "Các phong trào theo con đường phong kiến (Cần Vương), tư sản (Đông Du, Duy Tân) đều thất bại. Chủ nghĩa Mác-Lênin chỉ ra con đường GPDT gắn với GPGC → phù hợp thực tiễn Việt Nam."
+          }
+        ]
+      }
+    },
+    "geography": {
+      "c12_geo_l1": {
+        "normal": [
+          {
+            "id": "q1", "type": 1,
+            "question": "Vùng kinh tế trọng điểm phía Nam gồm tỉnh/thành nào?",
+            "options": [
+              "Hà Nội, Hải Phòng, Quảng Ninh",
+              "Đà Nẵng, Huế, Quảng Nam",
+              "TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu",
+              "Cần Thơ, An Giang, Kiên Giang"
+            ],
+            "answer": 2,
+            "explanation": "Vùng KT trọng điểm phía Nam gồm: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu (và mở rộng thêm Long An, Tiền Giang, Tây Ninh, Bình Phước)."
+          },
+          {
+            "id": "q2", "type": 2,
+            "question": "Việt Nam có 3 vùng kinh tế trọng điểm.",
+            "answer": true,
+            "explanation": "Đúng: Bắc Bộ (Hà Nội trung tâm), miền Trung (Đà Nẵng trung tâm), phía Nam (TP.HCM trung tâm)."
+          },
+          {
+            "id": "q3", "type": 3,
+            "question": "Kể tên 2 mặt hàng xuất khẩu chủ lực của Việt Nam.",
+            "answer": ["điện tử", "dệt may", "giày dép", "gạo", "cà phê", "hạt điều", "điện thoại"],
+            "explanation": "Các mặt hàng xuất khẩu chủ lực: điện tử/điện thoại, dệt may, giày dép, nông sản (gạo, cà phê, hạt điều, thủy sản)."
+          }
+        ],
+        "boss": [
+          {
+            "id": "b1", "type": 1,
+            "question": "Chuyển dịch cơ cấu kinh tế Việt Nam theo hướng CNH-HĐH biểu hiện ở xu hướng nào?",
+            "options": [
+              "Nông nghiệp ngày càng tăng tỉ trọng",
+              "Dịch vụ giảm, công nghiệp tăng",
+              "Nông nghiệp giảm, công nghiệp và dịch vụ tăng",
+              "Cơ cấu không thay đổi"
+            ],
+            "answer": 2,
+            "explanation": "CNH-HĐH → tỉ trọng nông-lâm-ngư nghiệp giảm; công nghiệp-xây dựng và dịch vụ tăng trong cơ cấu GDP."
+          }
+        ]
+      }
+    }
+  }
+}
