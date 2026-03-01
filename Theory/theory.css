@@ -1,0 +1,413 @@
+/* ============================================================
+   theory.css — Module Lý thuyết, Study Helper
+   Hệ màu: cam #FF6B00, trắng #FFF, đen #0D0D0D,
+           xanh lá mạ #7FFF00, vàng #FFD700,
+           xanh ngọc bích #00CED1, xanh lục bảo #00897B
+============================================================ */
+
+/* ---------- RESET & VARIABLES ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange : #FF6B00;
+  --lime   : #7FFF00;
+  --yellow : #FFD700;
+  --cyan   : #00CED1;
+  --teal   : #00897B;
+  --white  : #FFFFFF;
+  --black  : #0D0D0D;
+
+  --bg     : #FAFAFA;
+  --surface: #FFFFFF;
+  --border : #E4E4E4;
+  --text   : #0D0D0D;
+  --text2  : #555555;
+  --radius : 12px;
+  --shadow : 0 4px 20px rgba(0,0,0,.09);
+  --trans  : .28s cubic-bezier(.4,0,.2,1);
+  --header-h: 58px;
+}
+
+:root.dark, body.dark {
+  --bg     : #0D0D0D;
+  --surface: #181818;
+  --border : #2C2C2C;
+  --text   : #FFFFFF;
+  --text2  : #AAAAAA;
+  --shadow : 0 4px 20px rgba(0,0,0,.5);
+}
+
+html {
+  height: 100%;
+  background: var(--bg);
+  transition: background var(--trans);
+}
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+  transition: background var(--trans), color var(--trans);
+}
+
+/* ---------- HEADER ---------- */
+#th-header {
+  position: sticky;
+  top: 0;
+  height: var(--header-h);
+  background: var(--surface);
+  border-bottom: 2px solid var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  z-index: 100;
+  box-shadow: var(--shadow);
+  transition: background var(--trans);
+}
+
+.back-home {
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: .92rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity var(--trans);
+}
+.back-home:hover { opacity: .75; }
+
+#th-logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--cyan), var(--lime));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- BREADCRUMB ---------- */
+#breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 28px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-size: .84rem;
+  transition: background var(--trans);
+}
+
+.bc-item {
+  color: var(--cyan);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background var(--trans), color var(--trans);
+  white-space: nowrap;
+}
+.bc-item:hover { background: rgba(0,206,209,.13); }
+.bc-item.bc-current {
+  color: var(--text2);
+  cursor: default;
+  font-weight: 500;
+}
+.bc-item.bc-current:hover { background: transparent; }
+
+.bc-sep {
+  color: var(--border);
+  font-size: .9rem;
+  user-select: none;
+  padding: 0 2px;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+#th-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  animation: fadeUp .35s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+  font-size: 1.65rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.section-title .icon { font-size: 1.8rem; }
+
+.section-sub {
+  color: var(--text2);
+  font-size: .95rem;
+  margin-bottom: 28px;
+}
+
+/* ---------- CLASS CARDS (Level 1) ---------- */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.class-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  cursor: pointer;
+  transition: border-color var(--trans), transform .2s, box-shadow var(--trans), background var(--trans);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.class-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+.class-card .c-icon { font-size: 2.8rem; line-height: 1; }
+.class-card .c-name { font-size: 1.35rem; font-weight: 800; }
+.class-card .c-desc { font-size: .83rem; color: var(--text2); line-height: 1.55; }
+.class-card .c-badge {
+  margin-top: 6px;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  width: fit-content;
+}
+.badge-c10 { background: var(--cyan);   color: var(--black); }
+.badge-c11 { background: var(--teal);   color: var(--white); }
+.badge-c12 { background: var(--orange); color: var(--white); }
+
+/* ---------- SUBJECT GRID (Level 2) ---------- */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 16px;
+}
+
+.subject-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  cursor: pointer;
+  transition: border-color var(--trans), transform .18s, box-shadow var(--trans), background var(--trans);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.subject-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.subject-card .s-icon { font-size: 2rem; }
+.subject-card .s-name { font-weight: 700; font-size: .92rem; }
+.subject-card .s-id   { font-size: .72rem; color: var(--text2); }
+
+/* ---------- LESSON LIST (Level 3) ---------- */
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lesson-item {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: border-color var(--trans), transform .18s, box-shadow var(--trans), background var(--trans);
+}
+.lesson-item:hover {
+  border-color: var(--teal);
+  transform: translateX(6px);
+  box-shadow: var(--shadow);
+}
+.lesson-item .l-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--teal));
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.lesson-item .l-title { font-weight: 700; font-size: .97rem; }
+.lesson-item .l-arrow {
+  margin-left: auto;
+  color: var(--text2);
+  font-size: 1.1rem;
+}
+
+/* ---------- LESSON DETAIL (Level 4) ---------- */
+.lesson-detail { max-width: 800px; }
+
+.lesson-header { margin-bottom: 24px; }
+
+.lesson-header h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.lesson-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.lesson-meta .meta-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Content block */
+.lesson-content {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-left: 5px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  font-size: .97rem;
+  line-height: 1.85;
+  color: var(--text);
+  white-space: pre-line;
+  transition: background var(--trans), border-color var(--trans);
+  margin-bottom: 24px;
+}
+
+/* Formulas block */
+.formula-section { margin-bottom: 28px; }
+
+.formula-section h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cyan);
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.formula-card {
+  background: var(--surface);
+  border: 2px solid var(--cyan);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  transition: background var(--trans), box-shadow var(--trans);
+}
+.formula-card:hover { box-shadow: 0 0 0 3px rgba(0,206,209,.25); }
+.formula-card .f-label {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.formula-card .f-expr {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: .95rem;
+  color: var(--text);
+  word-break: break-word;
+}
+
+/* Nút Luyện tập */
+.btn-practice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: none;
+  background: linear-gradient(90deg, var(--orange), #FF9A3C);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .18s, box-shadow var(--trans), opacity var(--trans);
+  box-shadow: 0 4px 16px rgba(255,107,0,.35);
+  margin-top: 8px;
+}
+.btn-practice:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255,107,0,.45);
+}
+.btn-practice:active { transform: translateY(0); }
+
+/* Divider trước nút */
+.lesson-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 28px 0;
+}
+
+/* ---------- EMPTY / ERROR ---------- */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text2);
+}
+.empty-state .e-icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-state p { font-size: 1rem; }
+
+/* ---------- FOOTER ---------- */
+#th-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: .78rem;
+  color: var(--text2);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  transition: background var(--trans);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  #th-content  { padding: 20px 12px 48px; }
+  #th-header   { padding: 0 14px; }
+  #breadcrumb  { padding: 8px 14px; }
+  .section-title { font-size: 1.3rem; }
+  .class-grid  { grid-template-columns: 1fr 1fr; }
+  .subject-grid{ grid-template-columns: repeat(3, 1fr); }
+  .formula-grid{ grid-template-columns: 1fr; }
+}
