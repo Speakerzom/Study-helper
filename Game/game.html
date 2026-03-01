@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Học Tập – Study Helper</title>
+  <link rel="stylesheet" href="game.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     SCREEN: LỖI (thiếu dữ liệu đầu vào)
+══════════════════════════════════════ -->
+<div id="screen-error" class="screen hidden">
+  <div class="error-card">
+    <div class="err-icon">⚠️</div>
+    <h2>Thiếu dữ liệu bài học</h2>
+    <p id="error-msg">Vui lòng chọn bài từ module Luyện tập trước khi vào game.</p>
+    <a class="btn-back-practice" href="../Practice/practice.html">
+      ← Quay về Luyện tập
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: PREPLASH VIDEO
+══════════════════════════════════════ -->
+<div id="screen-preplash" class="screen hidden">
+  <video id="preplash-video" playsinline muted preload="auto">
+    <source src="assets/preplash/preplash.mp4" type="video/mp4"/>
+  </video>
+  <div id="preplash-overlay">
+    <div id="preplash-info">
+      <div id="preplash-title"></div>
+      <div id="preplash-sub"></div>
+    </div>
+    <div id="preplash-skip">Nhấn để bỏ qua ▶</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: MÀN CHƠI CHÍNH (1 màn duy nhất)
+══════════════════════════════════════ -->
+<div id="screen-game" class="screen hidden">
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hud-left">
+      <a class="hud-back" href="../Practice/practice.html" title="Về Luyện tập">←</a>
+
+      <!-- VOLUME CONTROL -->
+      <div id="vol-ctrl">
+        <button id="vol-btn" title="Âm lượng">🔊</button>
+        <div id="vol-panel">
+          <div class="vol-row">
+            <span class="vol-lbl">🎵</span>
+            <input type="range" id="vol-music" min="0" max="100" value="40" title="Nhạc nền">
+            <span class="vol-val" id="val-music">40</span>
+          </div>
+          <div class="vol-row">
+            <span class="vol-lbl">🔊</span>
+            <input type="range" id="vol-sfx" min="0" max="100" value="70" title="Hiệu ứng">
+            <span class="vol-val" id="val-sfx">70</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="hud-lesson-name"></div>
+    </div>
+    <div id="hud-center">
+      <span id="phase-badge" class="phase-normal">⚡ NORMAL</span>
+    </div>
+    <div id="hud-right">
+      <span class="energy-lbl">⚡</span>
+      <div id="energy-bar-bg">
+        <div id="energy-bar-fill"></div>
+      </div>
+      <span id="energy-text">0/0</span>
+    </div>
+  </div>
+
+  <!-- CANVAS: nền game + nhân vật -->
+  <canvas id="game-canvas"></canvas>
+
+  <!-- BOSS TIMER (chỉ hiện ở phase boss) -->
+  <div id="boss-timer" class="hidden">
+    <svg id="timer-svg" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="26" class="t-bg"/>
+      <circle cx="30" cy="30" r="26" class="t-ring" id="t-ring"/>
+    </svg>
+    <span id="timer-num">60</span>
+  </div>
+
+  <!-- NÚT TIẾN (normal phase) -->
+  <button id="btn-advance">⚔️ Tiến</button>
+
+  <!-- ATTACK FLASH OVERLAY -->
+  <div id="attack-flash" class="hidden"></div>
+
+  <!-- KHUNG CÂU HỎI -->
+  <div id="question-panel" class="hidden">
+
+    <div id="q-frame">
+      <span id="q-badge">4 lựa chọn</span>
+      <p id="q-text"></p>
+    </div>
+
+    <div id="a-frame">
+      <div id="a-body">
+        <!-- inject by game.js -->
+      </div>
+    </div>
+
+    <!-- Explanation (hiện sau khi trả lời) -->
+    <div id="q-explanation" class="hidden">
+      <span id="expl-icon">✅</span>
+      <span id="expl-text"></span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: THUA
+══════════════════════════════════════ -->
+<div id="screen-lose" class="screen hidden">
+  <div class="end-bg-img" id="lose-bg"></div>
+  <div class="end-card">
+    <div class="end-icon">💀</div>
+    <h2 class="end-title lose-title">Thất bại!</h2>
+    <p class="end-sub">Năng lượng đã cạn kiệt. Hãy cố gắng hơn!</p>
+    <div class="end-stats" id="lose-stats"></div>
+    <div class="end-btns">
+      <button class="btn-end btn-retry" id="btn-retry">🔄 Chơi lại</button>
+      <a class="btn-end btn-to-practice" id="btn-lose-back" href="../Theory/theory.html">📖 Lý thuyết</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: THẮNG
+══════════════════════════════════════ -->
+<div id="screen-win" class="screen hidden">
+  <div class="end-bg-img" id="win-bg"></div>
+  <div class="end-card">
+    <div class="end-icon">🏆</div>
+    <h2 class="end-title win-title">Chiến thắng!</h2>
+    <p class="end-sub">Bạn đã đánh bại Boss! Xuất sắc!</p>
+    <div class="end-stats" id="win-stats"></div>
+    <div class="end-btns">
+      <button class="btn-end btn-complete" id="btn-complete">✅ Hoàn thành</button>
+      <button class="btn-end btn-retry-win" id="btn-retry-win">🔄 Chơi lại</button>
+    </div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+<script>
+  /* Gắn URL có params cho nút quay về Practice sau khi game.js chạy xong */
+  /* ── VOLUME CONTROL ── */
+  (function initVolume() {
+    const btn      = document.getElementById('vol-btn');
+    const panel    = document.getElementById('vol-panel');
+    const slMusic  = document.getElementById('vol-music');
+    const slSfx    = document.getElementById('vol-sfx');
+    const valMusic = document.getElementById('val-music');
+    const valSfx   = document.getElementById('val-sfx');
+
+    /* Đọc giá trị từ localStorage */
+    const _sm = localStorage.getItem('sh_vol_music');
+    const _ss = localStorage.getItem('sh_vol_sfx');
+    const savedMusic = (_sm !== null && !isNaN(Number(_sm))) ? Number(_sm) : 40;
+    const savedSfx   = (_ss !== null && !isNaN(Number(_ss))) ? Number(_ss) : 70;
+    slMusic.value = savedMusic; valMusic.textContent = savedMusic;
+    slSfx.value   = savedSfx;   valSfx.textContent   = savedSfx;
+
+    function updateIcon() {
+      const avg = (Number(slMusic.value) + Number(slSfx.value)) / 200;
+      btn.textContent = avg <= 0 ? '🔇' : avg < 0.4 ? '🔉' : '🔊';
+    }
+    updateIcon();
+
+    /* Gắn event TRƯỚC TIÊN — không phụ thuộc AUDIO */
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (panel.classList.contains('open')) {
+        panel.classList.remove('open');
+      } else {
+        const r = btn.getBoundingClientRect();
+        panel.style.top  = (r.bottom + 8) + 'px';
+        panel.style.left = r.left + 'px';
+        panel.classList.add('open');
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !panel.contains(e.target))
+        panel.classList.remove('open');
+    });
+
+    slMusic.addEventListener('input', function() {
+      const v = Number(slMusic.value);
+      valMusic.textContent = v;
+      localStorage.setItem('sh_vol_music', v);
+      updateIcon();
+      try { if (typeof AUDIO !== 'undefined') AUDIO.setMusicVol(v / 100); } catch(_) {}
+    });
+
+    slSfx.addEventListener('input', function() {
+      const v = Number(slSfx.value);
+      valSfx.textContent = v;
+      localStorage.setItem('sh_vol_sfx', v);
+      updateIcon();
+      try { if (typeof AUDIO !== 'undefined') AUDIO.setSfxVol(v / 100); } catch(_) {}
+    });
+  })();
+
+  (function patchBackLinks() {
+    const p = new URLSearchParams(location.search);
+    const cls  = p.get('class')   || '';
+    const subj = p.get('subject') || '';
+    const les  = p.get('lesson')  || '';
+    const base = '../Practice/practice.html';
+    const url  = `${base}?class=${encodeURIComponent(cls)}&subject=${encodeURIComponent(subj)}&lesson=${encodeURIComponent(les)}`;
+
+    /* Nút "Lý thuyết" trong screen-lose → về Theory đúng môn */
+    const theoryUrl = `../Theory/theory.html?class=${encodeURIComponent(cls)}&subject=${encodeURIComponent(subj)}`;
+    const loseBack = document.getElementById('btn-lose-back');
+    if (loseBack) {
+      loseBack.removeAttribute('href');
+      loseBack.style.cursor = 'pointer';
+      loseBack.addEventListener('click', () => {
+        try { AUDIO?.playSFX('button'); } catch(_) {}
+        try { AUDIO?.stopMusic(); } catch(_) {}
+        setTimeout(() => {
+          window.parent.postMessage({
+            type: 'SH_NAVIGATE',
+            page: 'theory',
+            url: theoryUrl
+          }, '*');
+        }, 200);
+      });
+    }
+
+    /* Nút Back trong HUD (nút ← ở góc trái) */
+    const hudBack = document.querySelector('.hud-back');
+    if (hudBack) {
+      hudBack.removeAttribute('href');
+      hudBack.style.cursor = 'pointer';
+      hudBack.addEventListener('click', () => {
+        try { AUDIO?.playSFX('button'); } catch(_) {}
+        try { AUDIO?.stopMusic(); } catch(_) {}
+        setTimeout(() => { window.location.href = url; }, 200);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
