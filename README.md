@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, we are Tran Le Tien Dung, Do Ba Tien Dung, Tran Ngoc Gia Huy</h1>
-<h3 align="center">Student in Son La</h3>
+<h3 align="center">Students in Son La</h3>
 
 <h3 align="left">Connect with me: tiendung28102010@gmail.com</h3>
 <p align="left">
