@@ -1,0 +1,2298 @@
+{
+  "_note": "Đã tự sửa lỗi: Thay 'content string dài' bằng object {id, title, content, formulas[]} để hỗ trợ công thức riêng biệt và render động. Mỗi subject là mảng lessons[].",
+  "class10": {
+    "math": [
+      {
+        "id": "c10_math_l1",
+        "title": "Bài 1: Mệnh đề và tập hợp",
+        "content": "Mệnh đề là một câu khẳng định có giá trị đúng (Đ) hoặc sai (S), không thể vừa đúng vừa sai.\n\nTập hợp là một khái niệm cơ bản trong toán học, dùng để chỉ một nhóm các đối tượng phân biệt. Mỗi đối tượng trong tập hợp gọi là phần tử.\n\nCác phép toán trên tập hợp:\n• Hợp: A ∪ B gồm các phần tử thuộc A hoặc thuộc B\n• Giao: A ∩ B gồm các phần tử thuộc cả A và B\n• Hiệu: A \\ B gồm các phần tử thuộc A nhưng không thuộc B\n• Phần bù: Cₐ B gồm các phần tử thuộc A nhưng không thuộc B",
+        "formulas": [
+          {
+            "label": "Hợp hai tập hợp",
+            "expr": "A ∪ B = {x | x ∈ A hoặc x ∈ B}"
+          },
+          {
+            "label": "Giao hai tập hợp",
+            "expr": "A ∩ B = {x | x ∈ A và x ∈ B}"
+          },
+          {
+            "label": "Luật De Morgan",
+            "expr": "Cₐ(A ∪ B) = CₐA ∩ CₐB"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l2",
+        "title": "Bài 2: Hàm số và đồ thị",
+        "content": "Hàm số y = f(x) là một quy tắc tương ứng mỗi số x thuộc tập xác định D với một số y duy nhất.\n\nTập xác định D là tập hợp tất cả các giá trị x làm cho biểu thức f(x) có nghĩa.\n\nHàm số chẵn: f(-x) = f(x) với mọi x ∈ D (đồ thị đối xứng qua trục Oy)\nHàm số lẻ: f(-x) = -f(x) với mọi x ∈ D (đồ thị đối xứng qua gốc O)\n\nHàm số bậc nhất y = ax + b (a ≠ 0): đồ thị là đường thẳng cắt trục tung tại (0, b), đồng biến khi a > 0, nghịch biến khi a < 0.",
+        "formulas": [
+          {
+            "label": "Hàm số bậc nhất",
+            "expr": "y = ax + b, a ≠ 0"
+          },
+          {
+            "label": "Điều kiện đồng biến",
+            "expr": "a > 0 ⟹ hàm đồng biến trên ℝ"
+          },
+          {
+            "label": "Điều kiện nghịch biến",
+            "expr": "a < 0 ⟹ hàm nghịch biến trên ℝ"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l3",
+        "title": "Bài 3: Phương trình bậc hai",
+        "content": "Phương trình bậc hai một ẩn có dạng ax² + bx + c = 0 (a ≠ 0).\n\nĐể giải phương trình bậc hai, ta tính biệt thức Δ = b² - 4ac:\n• Nếu Δ > 0: phương trình có 2 nghiệm phân biệt\n• Nếu Δ = 0: phương trình có nghiệm kép\n• Nếu Δ < 0: phương trình vô nghiệm (trong ℝ)\n\nĐịnh lý Vi-ét: Nếu x₁, x₂ là hai nghiệm thì x₁ + x₂ = -b/a và x₁·x₂ = c/a.",
+        "formulas": [
+          {
+            "label": "Biệt thức",
+            "expr": "Δ = b² - 4ac"
+          },
+          {
+            "label": "Công thức nghiệm",
+            "expr": "x = (-b ± √Δ) / 2a"
+          },
+          {
+            "label": "Vi-ét (tổng)",
+            "expr": "x₁ + x₂ = -b/a"
+          },
+          {
+            "label": "Vi-ét (tích)",
+            "expr": "x₁ · x₂ = c/a"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l4",
+        "title": "Bài 4: Bất phương trình và hệ bất phương trình",
+        "content": "Bất phương trình bậc nhất một ẩn có dạng ax + b > 0 (hoặc <, ≥, ≤).\n\nNghiệm của bất phương trình là tập hợp tất cả các giá trị x thỏa mãn bất phương trình.\n\nQuy tắc giải:\n• Cộng/trừ cùng một số vào hai vế: chiều bất phương trình không đổi\n• Nhân/chia hai vế với số dương: chiều không đổi\n• Nhân/chia hai vế với số âm: chiều đảo ngược\n\nHệ bất phương trình: nghiệm là giao của tập nghiệm từng bất phương trình.\n\nBất phương trình bậc hai ax² + bx + c > 0: xét dấu tam thức f(x) dựa vào Δ và dấu của a.",
+        "formulas": [
+          {
+            "label": "BPT bậc nhất (a > 0)",
+            "expr": "ax + b > 0 ⟹ x > -b/a"
+          },
+          {
+            "label": "Nghiệm BPT bậc hai (a>0, Δ>0)",
+            "expr": "ax²+bx+c < 0 ⟺ x₁ < x < x₂"
+          },
+          {
+            "label": "Nghiệm BPT bậc hai (a>0, Δ<0)",
+            "expr": "ax²+bx+c > 0 với mọi x ∈ R"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l5",
+        "title": "Bài 5: Hàm số bậc hai và đồ thị Parabol",
+        "content": "Hàm số bậc hai y = ax² + bx + c (a ≠ 0) có đồ thị là một parabol.\n\nĐỉnh parabol: I(-b/2a; -Δ/4a)\nTrục đối xứng: x = -b/2a\n\nHướng mở:\n• a > 0: parabol mở lên, hàm đạt giá trị nhỏ nhất tại đỉnh\n• a < 0: parabol mở xuống, hàm đạt giá trị lớn nhất tại đỉnh\n\nBảng biến thiên:\n• a > 0: giảm trên (-∞; -b/2a), tăng trên (-b/2a; +∞)\n• a < 0: tăng trên (-∞; -b/2a), giảm trên (-b/2a; +∞)",
+        "formulas": [
+          {
+            "label": "Đỉnh parabol",
+            "expr": "I = (-b/2a ; -Δ/4a)"
+          },
+          {
+            "label": "Trục đối xứng",
+            "expr": "x = -b/2a"
+          },
+          {
+            "label": "Giá trị lớn nhất (a<0)",
+            "expr": "y_max = -Δ/4a tại x = -b/2a"
+          },
+          {
+            "label": "Giá trị nhỏ nhất (a>0)",
+            "expr": "y_min = -Δ/4a tại x = -b/2a"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l6",
+        "title": "Bài 6: Vectơ và các phép toán",
+        "content": "Vectơ là một đoạn thẳng có hướng, đặc trưng bởi độ dài và hướng.\n\nHai vectơ bằng nhau: cùng hướng và cùng độ dài.\n\nCác phép toán:\n• Tổng: quy tắc hình bình hành hoặc quy tắc 3 điểm\n• Hiệu: a⃗ - b⃗ = a⃗ + (-b⃗)\n• Tích với số thực k: cùng/ngược hướng tùy dấu k, độ dài nhân |k|\n• Tích vô hướng: a⃗·b⃗ = |a⃗|·|b⃗|·cos(góc giữa hai vectơ)\n\nỨng dụng: kiểm tra vuông góc, tính góc giữa hai vectơ, tính độ dài.",
+        "formulas": [
+          {
+            "label": "Quy tắc 3 điểm",
+            "expr": "AB + BC = AC"
+          },
+          {
+            "label": "Tích vô hướng",
+            "expr": "a·b = |a|·|b|·cosθ"
+          },
+          {
+            "label": "Điều kiện vuông góc",
+            "expr": "a ⊥ b ⟺ a·b = 0"
+          },
+          {
+            "label": "Độ dài vectơ tọa độ",
+            "expr": "|a| = √(x² + y²)"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l7",
+        "title": "Bài 7: Phương pháp tọa độ trong mặt phẳng",
+        "content": "Hệ tọa độ Descartes Oxy: mỗi điểm M xác định bởi cặp số (x; y).\n\nPhương trình đường thẳng:\n• Dạng tổng quát: ax + by + c = 0\n• Dạng chính tắc: y = kx + m (k là hệ số góc)\n• Dạng đoạn chắn: x/a + y/b = 1\n\nPhương trình đường tròn tâm I(a; b) bán kính R: (x-a)² + (y-b)² = R²\n\nVị trí tương đối đường thẳng và đường tròn: dựa vào khoảng cách d từ tâm đến đường thẳng so với R.",
+        "formulas": [
+          {
+            "label": "Khoảng cách AB",
+            "expr": "AB = √[(x₂-x₁)² + (y₂-y₁)²]"
+          },
+          {
+            "label": "Trung điểm AB",
+            "expr": "I = ((x₁+x₂)/2 ; (y₁+y₂)/2)"
+          },
+          {
+            "label": "Khoảng cách điểm đến đường thẳng",
+            "expr": "d = |ax₀+by₀+c| / √(a²+b²)"
+          },
+          {
+            "label": "Phương trình đường tròn",
+            "expr": "(x-a)² + (y-b)² = R²"
+          }
+        ]
+      },
+      {
+        "id": "c10_math_l8",
+        "title": "Bài 8: Thống kê mô tả",
+        "content": "Thống kê mô tả nghiên cứu cách thu thập, xử lý và biểu diễn số liệu.\n\nCác đại lượng đặc trưng:\n• Số trung bình cộng: trung tâm của phân phối\n• Trung vị (Me): giá trị ở vị trí giữa khi sắp xếp tăng dần\n• Mốt (Mo): giá trị xuất hiện nhiều nhất\n• Phương sai S²: đặc trưng mức độ phân tán\n• Độ lệch chuẩn S: căn bậc hai của phương sai\n\nBiểu đồ: biểu đồ cột, đường, hình quạt, hộp (box-plot).\n\nỨng dụng: phân tích điểm số, kết quả khảo sát, số liệu kinh tế-xã hội.",
+        "formulas": [
+          {
+            "label": "Số trung bình cộng",
+            "expr": "x̄ = (x₁+x₂+...+xₙ) / n"
+          },
+          {
+            "label": "Phương sai",
+            "expr": "S² = (1/n)·Σ(xᵢ - x̄)²"
+          },
+          {
+            "label": "Độ lệch chuẩn",
+            "expr": "S = √S²"
+          }
+        ]
+      }
+    ],
+    "physics": [
+      {
+        "id": "c10_phy_l1",
+        "title": "Bài 1: Động học chất điểm",
+        "content": "Chuyển động cơ học là sự thay đổi vị trí của vật theo thời gian so với vật mốc.\n\nChất điểm là vật có kích thước rất nhỏ so với chiều dài quỹ đạo, được coi là một điểm.\n\nVận tốc trung bình: là thương số giữa độ dời và khoảng thời gian thực hiện độ dời đó.\nVận tốc tức thời: là vận tốc tại một thời điểm xác định.\n\nChuyển động thẳng đều: vận tốc không đổi, quỹ đạo thẳng, gia tốc = 0.",
+        "formulas": [
+          {
+            "label": "Vận tốc trung bình",
+            "expr": "v̄ = Δx / Δt = (x₂ - x₁) / (t₂ - t₁)"
+          },
+          {
+            "label": "Phương trình chuyển động thẳng đều",
+            "expr": "x = x₀ + v·t"
+          },
+          {
+            "label": "Quãng đường",
+            "expr": "s = v·t"
+          }
+        ]
+      },
+      {
+        "id": "c10_phy_l2",
+        "title": "Bài 2: Chuyển động thẳng biến đổi đều",
+        "content": "Chuyển động thẳng biến đổi đều là chuyển động có gia tốc không đổi theo thời gian.\n\nGia tốc a đặc trưng cho sự thay đổi vận tốc theo thời gian:\n• a > 0: chuyển động nhanh dần đều\n• a < 0: chuyển động chậm dần đều\n\nĐồ thị v-t là đường thẳng, đồ thị x-t là parabol.",
+        "formulas": [
+          {
+            "label": "Gia tốc",
+            "expr": "a = Δv / Δt = (v - v₀) / t"
+          },
+          {
+            "label": "Vận tốc",
+            "expr": "v = v₀ + a·t"
+          },
+          {
+            "label": "Phương trình chuyển động",
+            "expr": "x = x₀ + v₀·t + ½·a·t²"
+          },
+          {
+            "label": "Công thức độc lập thời gian",
+            "expr": "v² - v₀² = 2·a·s"
+          }
+        ]
+      },
+      {
+        "id": "c10_phy_l3",
+        "title": "Bài 3: Chuyển động tròn đều",
+        "content": "Chuyển động tròn đều là chuyển động có quỹ đạo tròn và tốc độ dài không đổi.\n\nDù tốc độ không đổi, vật vẫn có gia tốc vì hướng vận tốc liên tục thay đổi → gia tốc hướng tâm, luôn hướng vào tâm.\n\nĐặc trưng:\n• Tốc độ góc ω: góc quét trong một đơn vị thời gian\n• Chu kỳ T: thời gian quay một vòng\n• Tần số f: số vòng quay trong một giây\n\nLực hướng tâm giữ vật chuyển động tròn, do các lực thực (trọng lực, lực căng dây, lực ma sát...) cung cấp.",
+        "formulas": [
+          {
+            "label": "Tốc độ góc",
+            "expr": "ω = 2π / T = 2πf  (rad/s)"
+          },
+          {
+            "label": "Tốc độ dài",
+            "expr": "v = ω·R = 2πR / T"
+          },
+          {
+            "label": "Gia tốc hướng tâm",
+            "expr": "a_ht = v²/R = ω²·R"
+          },
+          {
+            "label": "Lực hướng tâm",
+            "expr": "F_ht = m·v²/R = m·ω²·R"
+          }
+        ]
+      },
+      {
+        "id": "c10_phy_l4",
+        "title": "Bài 4: Ba định luật Newton",
+        "content": "Ba định luật Newton là nền tảng của cơ học cổ điển.\n\nĐịnh luật I (Quán tính): Mọi vật giữ nguyên trạng thái đứng yên hoặc chuyển động thẳng đều nếu không có lực nào tác dụng hoặc các lực cân bằng nhau.\n\nĐịnh luật II: Gia tốc tỉ lệ thuận với lực tác dụng và tỉ lệ nghịch với khối lượng. Phương, chiều của gia tốc cùng với lực tổng hợp.\n\nĐịnh luật III: Hai vật tương tác, lực và phản lực luôn cùng giá, ngược chiều, bằng nhau về độ lớn.\n\nCác lực thường gặp: trọng lực P = mg, lực ma sát trượt F = μN, lực căng dây, phản lực pháp tuyến.",
+        "formulas": [
+          {
+            "label": "Định luật II Newton",
+            "expr": "F = m·a  (N)"
+          },
+          {
+            "label": "Trọng lực",
+            "expr": "P = m·g,  g ≈ 9,8 m/s²"
+          },
+          {
+            "label": "Lực ma sát trượt",
+            "expr": "F_ms = μ·N"
+          },
+          {
+            "label": "Định luật III",
+            "expr": "F_AB = -F_BA"
+          }
+        ]
+      },
+      {
+        "id": "c10_phy_l5",
+        "title": "Bài 5: Công và năng lượng",
+        "content": "Công của một lực là đại lượng vô hướng đặc trưng cho tác dụng của lực theo phương dịch chuyển.\n\n• Công dương: lực cùng chiều chuyển dời\n• Công âm: lực ngược chiều chuyển dời\n• Công bằng 0: lực vuông góc với chuyển dời\n\nĐộng năng: năng lượng do chuyển động.\nThế năng trọng trường: năng lượng do vị trí (chọn mốc thế năng).\nCơ năng W = Eₖ + Eₚ: bảo toàn khi không có lực ma sát và lực cản.\n\nĐịnh lý động năng: độ biến thiên động năng bằng tổng công của các lực tác dụng.\nCông suất P = A/t đặc trưng cho tốc độ thực hiện công.",
+        "formulas": [
+          {
+            "label": "Công của lực",
+            "expr": "A = F·s·cosα"
+          },
+          {
+            "label": "Động năng",
+            "expr": "Ek = ½·m·v²"
+          },
+          {
+            "label": "Thế năng trọng trường",
+            "expr": "Ep = m·g·h"
+          },
+          {
+            "label": "Bảo toàn cơ năng",
+            "expr": "Ek1 + Ep1 = Ek2 + Ep2 = const"
+          },
+          {
+            "label": "Công suất",
+            "expr": "P = A/t = F·v  (W)"
+          }
+        ]
+      }
+    ],
+    "chemistry": [
+      {
+        "id": "c10_che_l1",
+        "title": "Bài 1: Cấu tạo nguyên tử",
+        "content": "Nguyên tử là đơn vị cơ bản của chất, gồm hạt nhân mang điện dương và lớp vỏ electron mang điện âm.\n\nHạt nhân gồm proton (p, điện tích +1) và neutron (n, không mang điện).\nSố proton = số thứ tự Z (số hiệu nguyên tử).\nSố khối A = Z + N (N là số neutron).\n\nElectron sắp xếp theo lớp và phân lớp: s, p, d, f.\nNguyên lý Pauli: mỗi orbital chứa tối đa 2 electron.\nQuy tắc Hund: electron điền vào các orbital cùng phân lớp đơn độc trước.",
+        "formulas": [
+          {
+            "label": "Số khối",
+            "expr": "A = Z + N"
+          },
+          {
+            "label": "Điện tích hạt nhân",
+            "expr": "Q = Z · e, e = 1,6 × 10⁻¹⁹ C"
+          },
+          {
+            "label": "Số electron tối đa lớp n",
+            "expr": "e_max = 2n²"
+          }
+        ]
+      },
+      {
+        "id": "c10_che_l2",
+        "title": "Bài 2: Bảng tuần hoàn các nguyên tố hóa học",
+        "content": "Bảng tuần hoàn sắp xếp các nguyên tố theo chiều tăng dần của số hiệu nguyên tử Z.\n\nCấu trúc bảng:\n• Chu kỳ (hàng ngang): nguyên tố có cùng số lớp electron. Có 7 chu kỳ.\n• Nhóm (cột dọc): nguyên tố có cùng số electron hóa trị. Có 8 nhóm A và 8 nhóm B.\n\nQuy luật biến đổi trong chu kỳ (trái → phải):\n• Bán kính nguyên tử giảm, độ âm điện tăng\n• Tính kim loại giảm, tính phi kim tăng\n• Tính axit của oxit/hidroxit tăng\n\nQuy luật biến đổi trong nhóm A (trên → dưới):\n• Bán kính tăng, tính kim loại tăng, tính phi kim giảm",
+        "formulas": [
+          {
+            "label": "Số thứ tự chu kỳ",
+            "expr": "n_chu_kỳ = số lớp electron"
+          },
+          {
+            "label": "Số thứ tự nhóm A",
+            "expr": "n_nhóm = số electron lớp ngoài cùng"
+          }
+        ]
+      },
+      {
+        "id": "c10_che_l3",
+        "title": "Bài 3: Liên kết hóa học",
+        "content": "Liên kết hóa học là lực hút giữ các nguyên tử lại với nhau trong phân tử hoặc tinh thể.\n\nLiên kết ion: do lực hút tĩnh điện giữa cation và anion. Xảy ra giữa kim loại điển hình và phi kim điển hình. Hiệu độ âm điện Δχ ≥ 1,7.\n\nLiên kết cộng hóa trị: các cặp electron dùng chung.\n• Không phân cực: hai nguyên tử giống nhau (H-H, Cl-Cl)\n• Phân cực: hai nguyên tử khác nhau (H-Cl)\n\nLiên kết kim loại: electron tự do và cation kim loại trong mạng tinh thể.\n\nDạng phân tử và hình học phân tử: phụ thuộc số cặp electron liên kết và không liên kết (VSEPR).",
+        "formulas": [
+          {
+            "label": "Điều kiện liên kết ion",
+            "expr": "Δχ ≥ 1,7"
+          },
+          {
+            "label": "LK CHT không cực",
+            "expr": "Δχ = 0"
+          },
+          {
+            "label": "LK CHT phân cực",
+            "expr": "0 < Δχ < 1,7"
+          }
+        ]
+      },
+      {
+        "id": "c10_che_l4",
+        "title": "Bài 4: Phản ứng hóa học và tốc độ phản ứng",
+        "content": "Phản ứng hóa học là quá trình biến đổi chất này thành chất khác, bẻ gãy liên kết cũ, tạo liên kết mới.\n\nPhân loại:\n• Hóa hợp: A + B → AB\n• Phân hủy: AB → A + B\n• Thế: A + BC → AC + B\n• Trao đổi: AB + CD → AD + CB\n\nTốc độ phản ứng phụ thuộc:\n• Nồng độ chất phản ứng (tăng nồng độ → tốc độ tăng)\n• Nhiệt độ (tăng 10°C → tốc độ tăng 2-4 lần)\n• Áp suất (với chất khí)\n• Diện tích tiếp xúc (chất rắn)\n• Chất xúc tác (tăng tốc độ, không thay đổi sau phản ứng)\n\nNhiệt phản ứng ΔH: < 0 (tỏa nhiệt), > 0 (thu nhiệt).",
+        "formulas": [
+          {
+            "label": "Tốc độ phản ứng trung bình",
+            "expr": "v = ΔC / Δt  (mol/L·s)"
+          },
+          {
+            "label": "Quy tắc Van't Hoff",
+            "expr": "v₂/v₁ = γ^(ΔT/10)  với γ = 2÷4"
+          },
+          {
+            "label": "Hằng số cân bằng",
+            "expr": "Kc = [C]^c·[D]^d / ([A]^a·[B]^b)"
+          }
+        ]
+      },
+      {
+        "id": "c10_che_l5",
+        "title": "Bài 5: Halogen — Nhóm VIIA",
+        "content": "Halogen gồm: F, Cl, Br, I, At. Đặc điểm: 7 electron lớp ngoài cùng, tính oxi hóa mạnh.\n\nFlo (F₂): phi kim mạnh nhất, oxi hóa được hầu hết kim loại và phi kim.\n\nClo (Cl₂): khí vàng lục, mùi hắc. Tác dụng với nước tạo nước clo (HCl + HClO), dùng khử trùng. Điều chế: MnO₂ + 4HCl → MnCl₂ + Cl₂ + 2H₂O.\n\nBrom và Iot: hoạt động kém hơn Cl. Iot phản ứng với hồ tinh bột → màu xanh tím đặc trưng, dùng nhận biết tinh bột.\n\nAxit halogenhidric HX: tính axit tăng dần HF < HCl < HBr < HI. HF ăn mòn thủy tinh.",
+        "formulas": [
+          {
+            "label": "Cl₂ tác dụng với nước",
+            "expr": "Cl₂ + H₂O ⇌ HCl + HClO"
+          },
+          {
+            "label": "Điều chế Cl₂ (PTN)",
+            "expr": "MnO₂ + 4HCl(đặc) → MnCl₂ + Cl₂ + 2H₂O"
+          },
+          {
+            "label": "Nhận biết ion Cl⁻",
+            "expr": "Ag⁺ + Cl⁻ → AgCl↓ (trắng)"
+          }
+        ]
+      }
+    ],
+    "biology": [
+      {
+        "id": "c10_bio_l1",
+        "title": "Bài 1: Thành phần hóa học của tế bào",
+        "content": "Tế bào là đơn vị cơ bản của sự sống. Thành phần hóa học gồm các nguyên tố và hợp chất hóa học.\n\nNguyên tố đại lượng: C, H, O, N, P, S (chiếm > 99% khối lượng tế bào).\nNguyên tố vi lượng: Fe, Cu, Mn, Mo… (chiếm < 0.01%, rất quan trọng với enzym).\n\nNước chiếm 70-90% khối lượng tế bào. Vai trò: dung môi hòa tan, điều hòa nhiệt độ, tham gia phản ứng hóa học.\n\nCarbohydrate (glucid): cung cấp năng lượng chính, cấu trúc tế bào.\nLipid: dự trữ năng lượng, cấu trúc màng tế bào.\nProtein: đa chức năng nhất — xúc tác, vận chuyển, bảo vệ, cấu trúc.",
+        "formulas": [
+          {
+            "label": "Công thức chung monosaccharide",
+            "expr": "Cₙ(H₂O)ₙ"
+          },
+          {
+            "label": "Phản ứng tổng hợp nước",
+            "expr": "n(aa) → Protein + (n-1)H₂O"
+          }
+        ]
+      },
+      {
+        "id": "c10_bio_l2",
+        "title": "Bài 2: Cấu trúc tế bào nhân sơ và nhân thực",
+        "content": "Hai loại tế bào chính trong sinh giới: nhân sơ và nhân thực.\n\nTế bào nhân sơ (Prokaryote):\n• Không có màng nhân, ADN dạng vòng trần nằm trong tế bào chất\n• Không có bào quan có màng (ty thể, lục lạp...)\n• Kích thước nhỏ (1-10 µm)\n• Đại diện: vi khuẩn, vi khuẩn cổ\n\nTế bào nhân thực (Eukaryote):\n• Có nhân có màng bao bọc, chứa nhiễm sắc thể\n• Có các bào quan có màng: ty thể, lưới nội chất, bộ máy Golgi, lizôxôm\n• Đại diện: động vật, thực vật, nấm, nguyên sinh vật\n\nTế bào thực vật có thêm: thành xenlulozo, lục lạp, không bào trung tâm lớn.",
+        "formulas": [
+          {
+            "label": "Diện tích tế bào hình cầu",
+            "expr": "S = 4πr²"
+          },
+          {
+            "label": "Thể tích tế bào hình cầu",
+            "expr": "V = (4/3)πr³"
+          },
+          {
+            "label": "Tỉ lệ S/V",
+            "expr": "S/V = 3/r  → tế bào nhỏ trao đổi chất hiệu quả hơn"
+          }
+        ]
+      },
+      {
+        "id": "c10_bio_l3",
+        "title": "Bài 3: Vận chuyển chất qua màng tế bào",
+        "content": "Màng sinh chất có cấu trúc khảm lỏng: lớp kép photpholipid xen kẽ protein màng.\n\nCác hình thức vận chuyển:\n\n1. Vận chuyển thụ động: theo chiều gradient nồng độ (từ cao → thấp), không tốn năng lượng ATP.\n• Khuếch tán đơn giản: O₂, CO₂, phân tử nhỏ không phân cực\n• Khuếch tán qua kênh protein: ion (Na⁺, K⁺, Cl⁻), nước qua aquaporin\n\n2. Vận chuyển chủ động: ngược gradient nồng độ, cần ATP và protein mang (bơm ion Na⁺/K⁺).\n\n3. Nhập bào (endocytosis) và xuất bào (exocytosis): vận chuyển đại phân tử qua túi màng.",
+        "formulas": [
+          {
+            "label": "Áp suất thẩm thấu",
+            "expr": "π = iCRT"
+          },
+          {
+            "label": "Thế nước tế bào",
+            "expr": "Ψ_tế_bào = Ψ_s + Ψ_p"
+          }
+        ]
+      },
+      {
+        "id": "c10_bio_l4",
+        "title": "Bài 4: Nguyên phân và Giảm phân",
+        "content": "Nguyên phân (Mitosis): 1 tế bào mẹ (2n) → 2 tế bào con (2n). Dùng trong sinh trưởng, tái sinh.\nCác kỳ: Đầu → Giữa → Sau → Cuối.\n• Kỳ giữa: NST kép xếp ở mặt phẳng xích đạo — quan sát rõ nhất\n• Kỳ sau: NST kép tách về 2 cực\n\nGiảm phân (Meiosis): 1 tế bào mẹ (2n) → 4 tế bào con (n). Tạo giao tử trong sinh sản hữu tính.\n• Giảm phân I: phân ly NST tương đồng\n• Giảm phân II: tương tự nguyên phân\n\nÝ nghĩa: duy trì bộ NST đặc trưng của loài, tạo đa dạng di truyền qua tổ hợp tự do.",
+        "formulas": [
+          {
+            "label": "Số tế bào sau k lần nguyên phân",
+            "expr": "N = 2^k"
+          },
+          {
+            "label": "Số giao tử từ 1 tế bào sinh dục",
+            "expr": "4 (giảm phân)"
+          },
+          {
+            "label": "Bộ NST tế bào con (nguyên phân)",
+            "expr": "2n (giữ nguyên)"
+          }
+        ]
+      }
+    ],
+    "technology": [
+      {
+        "id": "c10_tec_l1",
+        "title": "Bài 1: Vẽ kỹ thuật và tiêu chuẩn",
+        "content": "Bản vẽ kỹ thuật là ngôn ngữ kỹ thuật dùng để diễn đạt ý tưởng thiết kế theo quy tắc thống nhất.\n\nTiêu chuẩn bản vẽ Việt Nam (TCVN) dựa trên ISO.\nKhổ giấy chuẩn: A0 (1189×841mm), A1, A2, A3, A4.\nTỉ lệ bản vẽ: thu nhỏ (1:2, 1:5, 1:10) hoặc phóng to (2:1, 5:1).\n\nCác loại nét vẽ: nét liền đậm (đường thấy), nét đứt (đường khuất), nét chấm gạch (đường tâm).",
+        "formulas": [
+          {
+            "label": "Tỉ lệ bản vẽ",
+            "expr": "TL = Kích thước trên bản vẽ / Kích thước thực"
+          }
+        ]
+      },
+      {
+        "id": "c10_tec_l2",
+        "title": "Bài 2: Hình chiếu và biểu diễn vật thể",
+        "content": "Hình chiếu là hình ảnh vật thể chiếu lên mặt phẳng theo một hướng xác định.\n\nPhép chiếu vuông góc (trực giao): tia chiếu vuông góc với mặt phẳng hình chiếu. Dùng phổ biến trong bản vẽ kỹ thuật.\n\nBa hình chiếu cơ bản (hệ châu Âu):\n• Hình chiếu đứng (mặt phẳng V): nhìn từ trước\n• Hình chiếu bằng (mặt phẳng H): nhìn từ trên xuống\n• Hình chiếu cạnh (mặt phẳng W): nhìn từ trái sang\n\nHình chiếu trục đo: biểu diễn vật thể 3D lên mặt phẳng 2D.\n• Trục đo vuông góc đều (ISO): trục z thẳng đứng, trục x và y nghiêng 30°, hệ số biến dạng ≈ 1.",
+        "formulas": [
+          {
+            "label": "Hệ số biến dạng trục đo bằng",
+            "expr": "p = q = r ≈ 0,82 (quy ước = 1)"
+          }
+        ]
+      },
+      {
+        "id": "c10_tec_l3",
+        "title": "Bài 3: Gia công cơ khí cơ bản",
+        "content": "Gia công cơ khí là quá trình tạo ra chi tiết máy có hình dạng, kích thước và chất lượng theo yêu cầu.\n\nCác phương pháp gia công chính:\n\n1. Đúc: rót kim loại lỏng vào khuôn → chi tiết phức tạp, giá rẻ\n2. Gia công áp lực: rèn, dập, cán, kéo → thay đổi hình dạng bằng lực\n3. Gia công cắt gọt: tiện, phay, khoan, mài → bóc lớp vật liệu tạo hình chính xác\n4. Hàn: nối chi tiết bằng nhiệt hoặc áp lực\n\nĐộ chính xác gia công: kích thước danh nghĩa, dung sai, độ nhám bề mặt (Ra, Rz).",
+        "formulas": [
+          {
+            "label": "Dung sai kích thước",
+            "expr": "IT = A_max - A_min"
+          },
+          {
+            "label": "Tốc độ cắt tiện",
+            "expr": "v = π·d·n / 1000  (m/phút)"
+          }
+        ]
+      }
+    ],
+    "informatics": [
+      {
+        "id": "c10_inf_l1",
+        "title": "Bài 1: Thông tin và xử lý thông tin",
+        "content": "Thông tin là tất cả những gì mang lại sự hiểu biết cho con người về thế giới xung quanh.\n\nDữ liệu là thông tin được đưa vào máy tính để xử lý (dạng số, văn bản, hình ảnh, âm thanh).\n\nHệ đếm:\n• Thập phân (Decimal): cơ số 10, ký hiệu 0-9\n• Nhị phân (Binary): cơ số 2, ký hiệu 0 và 1\n• Thập lục phân (Hexadecimal): cơ số 16, ký hiệu 0-9, A-F\n\nQuy tắc chuyển đổi: từ thập phân sang nhị phân dùng phép chia liên tiếp cho 2.",
+        "formulas": [
+          {
+            "label": "Chuyển nhị phân → thập phân",
+            "expr": "(1011)₂ = 1·2³ + 0·2² + 1·2¹ + 1·2⁰ = 11"
+          },
+          {
+            "label": "1 byte",
+            "expr": "1 byte = 8 bit"
+          },
+          {
+            "label": "Đơn vị lưu trữ",
+            "expr": "1 KB = 1024 B, 1 MB = 1024 KB, 1 GB = 1024 MB"
+          }
+        ]
+      },
+      {
+        "id": "c10_inf_l2",
+        "title": "Bài 2: Biểu diễn thông tin trong máy tính",
+        "content": "Máy tính lưu trữ và xử lý thông tin dưới dạng nhị phân (0 và 1).\n\nBiểu diễn số nguyên:\n• Không dấu (unsigned): biểu diễn trực tiếp bằng nhị phân\n• Có dấu: dùng bù 2 (two's complement). Bit cao nhất là bit dấu.\n\nBiểu diễn ký tự:\n• ASCII: 7 bit, 128 ký tự, chỉ tiếng Anh\n• Unicode (UTF-8): hỗ trợ đa ngôn ngữ\n\nBiểu diễn màu sắc:\n• RGB(r, g, b): mỗi kênh 8 bit (0-255) → 256³ ≈ 16,7 triệu màu\n\nĐơn vị tốc độ truyền dữ liệu: bps (bit/s), Kbps, Mbps, Gbps.",
+        "formulas": [
+          {
+            "label": "Số nguyên âm (bù 2)",
+            "expr": "-n = đảo bit(n) + 1"
+          },
+          {
+            "label": "Số màu RGB (24-bit)",
+            "expr": "2^24 = 16.777.216 màu"
+          },
+          {
+            "label": "Thời gian tải file",
+            "expr": "t = dung_lượng(bit) / băng_thông(bps)"
+          }
+        ]
+      },
+      {
+        "id": "c10_inf_l3",
+        "title": "Bài 3: Mạng máy tính và Internet",
+        "content": "Mạng máy tính: tập hợp các máy tính và thiết bị kết nối để chia sẻ tài nguyên và trao đổi thông tin.\n\nPhân loại theo quy mô:\n• LAN: mạng cục bộ (văn phòng, trường học)\n• MAN: mạng đô thị\n• WAN: mạng diện rộng, Internet là WAN toàn cầu\n\nGiao thức TCP/IP: nền tảng của Internet.\n• IP (Internet Protocol): định địa chỉ và định tuyến\n• TCP: đảm bảo truyền dữ liệu đáng tin cậy\n\nĐịa chỉ IP:\n• IPv4: 32 bit, dạng x.x.x.x (ví dụ: 192.168.1.1)\n• IPv6: 128 bit, giải quyết cạn kiệt IPv4\n\nDNS: phân giải tên miền (www.google.com) thành địa chỉ IP.",
+        "formulas": [
+          {
+            "label": "Số địa chỉ IPv4",
+            "expr": "2^32 ≈ 4,3 tỷ địa chỉ"
+          },
+          {
+            "label": "Số địa chỉ IPv6",
+            "expr": "2^128 ≈ 3,4 × 10^38 địa chỉ"
+          }
+        ]
+      }
+    ],
+    "literature": [
+      {
+        "id": "c10_lit_l1",
+        "title": "Bài 1: Tổng quan văn học Việt Nam",
+        "content": "Văn học Việt Nam trải qua các giai đoạn lịch sử lớn:\n\n1. Văn học dân gian: truyện thần thoại, cổ tích, ca dao, tục ngữ — lưu truyền miệng.\n2. Văn học trung đại (thế kỷ X - XIX): chữ Hán và chữ Nôm. Tiêu biểu: Nguyễn Trãi, Nguyễn Du, Hồ Xuân Hương.\n3. Văn học hiện đại (từ đầu thế kỷ XX): chữ Quốc ngữ. Phong trào Thơ mới, Nam Quốc văn học.\n\nĐặc trưng văn học Việt Nam: gắn liền với lịch sử dân tộc, tinh thần yêu nước, nhân đạo.",
+        "formulas": []
+      },
+      {
+        "id": "c10_lit_l2",
+        "title": "Bài 2: Văn học dân gian Việt Nam",
+        "content": "Văn học dân gian là sáng tác tập thể của nhân dân, lưu truyền bằng miệng qua nhiều thế hệ.\n\nĐặc trưng: tính truyền miệng, tính tập thể, tính dị bản.\n\nCác thể loại chính:\n• Thần thoại: giải thích nguồn gốc vũ trụ, hiện tượng tự nhiên (Lạc Long Quân và Âu Cơ)\n• Truyền thuyết: lịch sử hóa hư cấu (Thánh Gióng, Sơn Tinh Thủy Tinh)\n• Cổ tích: số phận con người, ước mơ công bằng (Tấm Cám, Thạch Sanh)\n• Ngụ ngôn: triết lý nhân sinh (Thầy bói xem voi)\n• Truyện cười: phê phán, giải trí\n• Ca dao: tình cảm, tâm tư trong cuộc sống\n• Tục ngữ: kinh nghiệm sống ngắn gọn, súc tích",
+        "formulas": []
+      },
+      {
+        "id": "c10_lit_l3",
+        "title": "Bài 3: Nguyễn Trãi và Nguyễn Du",
+        "content": "Nguyễn Trãi (1380-1442) — Đại thi hào, anh hùng dân tộc:\n• Bình Ngô Đại Cáo: tuyên ngôn độc lập bất hủ, \"áng thiên cổ hùng văn\"\n• Quốc âm Thi tập: tập thơ Nôm đầu tiên của văn học Việt Nam\n• Tư tưởng cốt lõi: nhân nghĩa — lấy dân làm gốc, lo cho dân trước\n\nNguyễn Du (1765-1820) — Đại thi hào dân tộc:\n• Truyện Kiều (3254 câu lục bát): kiệt tác văn học Việt Nam\n• Nội dung: số phận bi kịch của Thúy Kiều trong xã hội phong kiến\n• Giá trị: tố cáo xã hội bất công, ngợi ca vẻ đẹp và phẩm giá con người\n• Nghệ thuật: ngôn ngữ tinh tế, tâm lý nhân vật sâu sắc, tả cảnh ngụ tình",
+        "formulas": []
+      },
+      {
+        "id": "c10_lit_l4",
+        "title": "Bài 4: Thể thơ và phong cách ngôn ngữ",
+        "content": "Các thể thơ trong văn học Việt Nam:\n\nThơ Đường luật (cổ điển):\n• Thất ngôn bát cú: 8 câu, 7 chữ/câu, chia: đề-thực-luận-kết\n• Thất ngôn tứ tuyệt: 4 câu, 7 chữ/câu\n• Niêm, luật, vần chặt chẽ\n\nThể thơ dân gian:\n• Lục bát: 6-8 tiếng, vần linh hoạt, uyển chuyển\n• Song thất lục bát: 7-7-6-8\n\nSáu phong cách ngôn ngữ:\n• Nghệ thuật: giàu hình tượng, đa nghĩa, truyền cảm\n• Khoa học: chính xác, trừu tượng, khách quan\n• Chính luận: lập luận chặt chẽ, thuyết phục\n• Hành chính: công thức, trang trọng\n• Báo chí: ngắn gọn, cập nhật, đại chúng\n• Sinh hoạt: tự nhiên, đa dạng",
+        "formulas": []
+      }
+    ],
+    "english": [
+      {
+        "id": "c10_eng_l1",
+        "title": "Bài 1: Thì hiện tại đơn và hiện tại tiếp diễn",
+        "content": "Thì Hiện tại đơn (Simple Present) diễn tả hành động xảy ra thường xuyên, thói quen, sự thật hiển nhiên.\n\nDấu hiệu nhận biết: always, usually, often, sometimes, rarely, never, every day/week.\n\nThì Hiện tại tiếp diễn (Present Continuous) diễn tả hành động đang xảy ra tại thời điểm nói, kế hoạch trong tương lai gần.\n\nDấu hiệu nhận biết: now, at the moment, at present, currently, Look!, Listen!",
+        "formulas": [
+          {
+            "label": "Hiện tại đơn (khẳng định)",
+            "expr": "S + V(s/es) + O"
+          },
+          {
+            "label": "Hiện tại đơn (phủ định)",
+            "expr": "S + do/does + not + V + O"
+          },
+          {
+            "label": "Hiện tại tiếp diễn (khẳng định)",
+            "expr": "S + am/is/are + V-ing + O"
+          },
+          {
+            "label": "Hiện tại tiếp diễn (phủ định)",
+            "expr": "S + am/is/are + not + V-ing + O"
+          }
+        ]
+      },
+      {
+        "id": "c10_eng_l2",
+        "title": "Bài 2: Thì tương lai và quá khứ tiếp diễn",
+        "content": "Thì Tương lai đơn (Simple Future):\n• Dự đoán không căn cứ, quyết định tức thì, hứa hẹn\n• Dấu hiệu: tomorrow, next week/year, soon, in the future\n\nThì Tương lai gần (Be going to):\n• Kế hoạch đã quyết định, dự đoán có bằng chứng trước mắt\n\nThì Quá khứ đơn (Simple Past):\n• Hành động đã xong tại thời điểm xác định\n• Dấu hiệu: yesterday, ago, last..., in + năm quá khứ\n\nThì Quá khứ tiếp diễn (Past Continuous):\n• Hành động đang diễn ra tại thời điểm trong quá khứ\n• Hành động dài bị hành động ngắn chen vào (while...when)",
+        "formulas": [
+          {
+            "label": "Tương lai đơn",
+            "expr": "S + will + V_bare"
+          },
+          {
+            "label": "Tương lai gần",
+            "expr": "S + am/is/are + going to + V"
+          },
+          {
+            "label": "Quá khứ đơn",
+            "expr": "S + V-ed / V2 + O"
+          },
+          {
+            "label": "Quá khứ tiếp diễn",
+            "expr": "S + was/were + V-ing + O"
+          }
+        ]
+      },
+      {
+        "id": "c10_eng_l3",
+        "title": "Bài 3: Câu bị động",
+        "content": "Câu bị động (Passive Voice): dùng khi nhấn mạnh tân ngữ, không biết chủ thể, hoặc chủ thể rõ ràng.\n\nCấu trúc tổng quát: S + be + V3 + (by + tác nhân)\n\nBị động theo thì:\n• Hiện tại đơn: am/is/are + V3\n• Hiện tại tiếp diễn: am/is/are + being + V3\n• Quá khứ đơn: was/were + V3\n• Tương lai đơn: will be + V3\n• Hiện tại hoàn thành: have/has been + V3\n\nLưu ý: động từ khuyết thiếu (can, must, should) + be + V3.",
+        "formulas": [
+          {
+            "label": "Cấu trúc bị động",
+            "expr": "S + be(chia theo thì) + V3 + (by O)"
+          },
+          {
+            "label": "Bị động hiện tại tiếp diễn",
+            "expr": "S + am/is/are + being + V3"
+          },
+          {
+            "label": "Bị động với modal verb",
+            "expr": "S + modal + be + V3"
+          }
+        ]
+      },
+      {
+        "id": "c10_eng_l4",
+        "title": "Bài 4: Câu gián tiếp và Mệnh đề danh ngữ",
+        "content": "Câu gián tiếp (Reported Speech): thuật lại lời nói, cần:\n• Lùi thì động từ một bậc\n• Đổi đại từ nhân xưng\n• Đổi trạng từ chỉ thời gian và nơi chốn\n\nLùi thì: will→would, can→could, am/is/are→was/were, V(hiện tại)→V(quá khứ)...\nĐổi trạng từ: now→then, today→that day, here→there, tomorrow→the next day.\n\nMệnh đề danh ngữ (Noun Clause):\n• Đứng ở vị trí chủ ngữ, tân ngữ, bổ ngữ\n• Được dẫn bởi: that, whether/if, từ hỏi (what, where, how...)\n• Ví dụ: I know that she is smart. / I wonder whether he will come.",
+        "formulas": [
+          {
+            "label": "Câu trực tiếp → gián tiếp",
+            "expr": "He said: \"I am tired\" → He said (that) he was tired"
+          },
+          {
+            "label": "Cấu trúc noun clause",
+            "expr": "S + V + (that/if/wh-) + S + V"
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "id": "c10_his_l1",
+        "title": "Bài 1: Xã hội nguyên thủy",
+        "content": "Xã hội nguyên thủy là giai đoạn đầu tiên của lịch sử loài người, kéo dài hàng triệu năm.\n\nGiai đoạn bầy người nguyên thủy: sống theo bầy, săn bắt hái lượm, công cụ đá thô sơ.\nGiai đoạn thị tộc, bộ lạc: quan hệ huyết thống, chế độ mẫu hệ → phụ hệ.\n\nCông cụ đặc trưng:\n• Đồ đá cũ (Paleolithic): ghè đẽo thô sơ\n• Đồ đá mới (Neolithic): mài nhẵn, biết làm gốm, trồng trọt, chăn nuôi\n\nCuối thời nguyên thủy: xuất hiện công cụ kim loại (đồng, sắt), dẫn tới tan rã chế độ công xã nguyên thủy.",
+        "formulas": []
+      },
+      {
+        "id": "c10_his_l2",
+        "title": "Bài 2: Các quốc gia cổ đại phương Đông",
+        "content": "Văn minh phương Đông cổ đại xuất hiện ở lưu vực các sông lớn, khoảng 3000-1000 TCN.\n\nAi Cập cổ đại (sông Nile):\n• Pharaoh là vua kiêm thần, nhà nước quân chủ chuyên chế\n• Văn hóa: chữ tượng hình, kim tự tháp Giza, ướp xác, lịch 365 ngày\n\nLưỡng Hà (Mesopotamia — sông Tigris và Euphrates):\n• Bộ luật Hammurabi (1754 TCN): bộ luật thành văn sớm nhất thế giới\n• Chữ hình nêm, vườn treo Babylon\n\nẤn Độ cổ đại (sông Indus và Gange):\n• Văn minh Harappa, chế độ đẳng cấp Varna (Brahmin, Kshatriya, Vaishya, Shudra)\n• Đạo Hindu và Phật giáo\n\nTrung Quốc cổ đại (sông Hoàng Hà):\n• Nhà Thương, chữ giáp cốt; nhà Chu, Bách gia chư tử\n• Tứ đại phát minh: giấy, in, thuốc súng, la bàn",
+        "formulas": []
+      },
+      {
+        "id": "c10_his_l3",
+        "title": "Bài 3: Hy Lạp và La Mã cổ đại",
+        "content": "Văn minh Hy Lạp và La Mã là đỉnh cao văn minh cổ đại phương Tây.\n\nHy Lạp cổ đại:\n• Tổ chức thành bang (polis): Athens (dân chủ trực tiếp) và Sparta (quân phiệt)\n• Triết học: Socrates, Platon, Aristotle — nền tảng triết học phương Tây\n• Olympic: lễ hội thể thao 4 năm/lần, tôn vinh hòa bình\n• Văn học: Homer (Iliad, Odyssey)\n\nLa Mã cổ đại:\n• Cộng hòa → Đế chế (27 TCN, Augustus)\n• Luật La Mã: nền tảng pháp luật châu Âu hiện đại\n• Công trình: Colosseum, đường Via Appia, hệ thống cầu máng\n• Sụp đổ 476 SCN, kết thúc thời cổ đại",
+        "formulas": []
+      },
+      {
+        "id": "c10_his_l4",
+        "title": "Bài 4: Việt Nam thời dựng nước và Bắc thuộc",
+        "content": "Nhà nước Văn Lang (khoảng TK VII TCN):\n• Người Lạc Việt, kinh tế nông nghiệp lúa nước ở đồng bằng sông Hồng\n• Vua Hùng, kinh đô Phong Châu (Phú Thọ)\n• Văn hóa Đông Sơn: trống đồng Ngọc Lũ, kỹ thuật luyện đồng tinh xảo\n\nNhà nước Âu Lạc (257-179 TCN):\n• Thục Phán - An Dương Vương hợp nhất Lạc Việt và Âu Việt\n• Thành Cổ Loa (Đông Anh, Hà Nội) — kinh đô hình ốc\n• Thất thủ trước Triệu Đà (179 TCN)\n\nThời kỳ Bắc thuộc (179 TCN — 938 SCN):\n• Các cuộc khởi nghĩa: Hai Bà Trưng (40-43), Bà Triệu (248), Lý Bí (544), Mai Thúc Loan...\n• Ngô Quyền đánh tan quân Nam Hán trên sông Bạch Đằng (938) → kết thúc Bắc thuộc",
+        "formulas": []
+      }
+    ],
+    "geography": [
+      {
+        "id": "c10_geo_l1",
+        "title": "Bài 1: Trái Đất trong hệ Mặt Trời",
+        "content": "Trái Đất là hành tinh thứ ba trong hệ Mặt Trời, cách Mặt Trời trung bình 150 triệu km (1 AU).\n\nHình dạng: gần hình cầu, hơi dẹp ở hai cực và phình ra ở xích đạo (hình elipsoid).\n\nCác chuyển động của Trái Đất:\n• Tự quay quanh trục: từ Tây sang Đông, chu kỳ 24 giờ → ngày và đêm, giờ trên Trái Đất.\n• Quay quanh Mặt Trời: theo chiều ngược kim đồng hồ (nhìn từ Bắc Cực), chu kỳ 365 ngày 6 giờ → các mùa trong năm.\n\nĐộ nghiêng trục Trái Đất: 23°27' so với mặt phẳng hoàng đạo → nguyên nhân tạo ra các mùa.",
+        "formulas": [
+          {
+            "label": "Khoảng cách Trái Đất – Mặt Trời",
+            "expr": "d ≈ 150.000.000 km = 1 AU"
+          },
+          {
+            "label": "Chu kỳ tự quay",
+            "expr": "T_ngày = 24 giờ"
+          },
+          {
+            "label": "Chu kỳ quay quanh Mặt Trời",
+            "expr": "T_năm ≈ 365,25 ngày"
+          }
+        ]
+      },
+      {
+        "id": "c10_geo_l2",
+        "title": "Bài 2: Thạch quyển — Cấu trúc Trái Đất và kiến tạo mảng",
+        "content": "Cấu trúc bên trong Trái Đất gồm 3 lớp:\n• Vỏ (Crust): dày 5-70 km. Vỏ đại dương: mỏng, nặng (bazan). Vỏ lục địa: dày, nhẹ (granit).\n• Manti (Mantle): dày ~2900 km. Manti trên dẻo quánh (quyết định chuyển động mảng).\n• Nhân (Core): nhân ngoài lỏng (sắt-niken), nhân trong rắn.\n\nThuyết kiến tạo mảng:\n• Vỏ Trái Đất chia thành 7 mảng lớn (Thái Bình Dương, Âu-Á, Bắc Mỹ...)\n• Ranh giới hội tụ: tạo núi lửa, động đất (vành đai lửa Thái Bình Dương)\n• Ranh giới phân kỳ: sống núi giữa đại dương\n\nNội lực: động đất, núi lửa, uốn nếp, đứt gãy.\nNgoại lực: phong hóa, xâm thực, bồi tụ.",
+        "formulas": [
+          {
+            "label": "Tốc độ di chuyển mảng",
+            "expr": "v ≈ 2-15 cm/năm"
+          },
+          {
+            "label": "Thang Richter",
+            "expr": "M = log(A) - log(A₀)"
+          }
+        ]
+      },
+      {
+        "id": "c10_geo_l3",
+        "title": "Bài 3: Khí quyển và các yếu tố khí hậu",
+        "content": "Khí quyển: lớp khí bao quanh Trái Đất, dày ~1000 km.\n\nCác tầng: đối lưu (0-12 km, thời tiết diễn ra ở đây), bình lưu (tầng ozon bảo vệ UV), giữa, nhiệt, ngoài.\n\nNhiệt độ không khí phụ thuộc:\n• Góc chiếu sáng Mặt Trời (vĩ độ)\n• Độ cao: cứ lên 100m, nhiệt giảm 0,6°C\n• Khoảng cách biển: đất liền biên độ nhiệt lớn hơn\n\nGió: chuyển động từ vùng áp cao → áp thấp.\n• Tín phong: từ chí tuyến → xích đạo\n• Gió Tây ôn đới: từ chí tuyến → vùng ôn đới\n\nLượng mưa phân bố không đều: xích đạo mưa nhiều, chí tuyến và vùng cực mưa ít.",
+        "formulas": [
+          {
+            "label": "Gradient nhiệt theo độ cao",
+            "expr": "ΔT = -0,6°C / 100m"
+          },
+          {
+            "label": "Độ ẩm tương đối",
+            "expr": "RH (%) = a/A × 100"
+          }
+        ]
+      },
+      {
+        "id": "c10_geo_l4",
+        "title": "Bài 4: Thủy quyển — Sông ngòi, biển và đại dương",
+        "content": "Thủy quyển là toàn bộ nước trên, trong và trên bề mặt Trái Đất.\nPhân bố: biển và đại dương (~97%), băng (~2%), nước ngọt (~1%).\n\nSông ngòi:\n• Hệ thống sông: sông chính + phụ lưu + chi lưu\n• Lưu lượng phụ thuộc: diện tích lưu vực, lượng mưa, thảm thực vật\n• Chế độ nước: phụ thuộc nguồn nước (mưa, băng tan, nước ngầm)\n\n5 Đại dương: Thái Bình Dương (lớn nhất), Đại Tây Dương, Ấn Độ Dương, Nam Cực, Bắc Băng Dương.\n\nChuyển động của nước biển:\n• Sóng: do gió gây ra\n• Thủy triều: do lực hút Mặt Trăng và Mặt Trời\n• Dòng biển: nóng (từ nhiệt đới) và lạnh (từ cực) — ảnh hưởng lớn đến khí hậu",
+        "formulas": [
+          {
+            "label": "Độ muối trung bình",
+            "expr": "35‰ (35g muối/1000g nước biển)"
+          },
+          {
+            "label": "Chu kỳ thủy triều bán nhật",
+            "expr": "T ≈ 12 giờ 25 phút"
+          }
+        ]
+      }
+    ]
+  },
+  "class11": {
+    "math": [
+      {
+        "id": "c11_math_l1",
+        "title": "Bài 1: Hàm số lượng giác",
+        "content": "Các hàm số lượng giác cơ bản: sin, cos, tan, cot được định nghĩa trên đường tròn đơn vị.\n\nHàm y = sin(x): tập xác định ℝ, tập giá trị [-1; 1], chu kỳ 2π, lẻ.\nHàm y = cos(x): tập xác định ℝ, tập giá trị [-1; 1], chu kỳ 2π, chẵn.\nHàm y = tan(x): xác định khi x ≠ π/2 + kπ, tập giá trị ℝ, chu kỳ π, lẻ.\nHàm y = cot(x): xác định khi x ≠ kπ, tập giá trị ℝ, chu kỳ π, lẻ.",
+        "formulas": [
+          {
+            "label": "Công thức cơ bản",
+            "expr": "sin²x + cos²x = 1"
+          },
+          {
+            "label": "Tan và cot",
+            "expr": "tan(x) = sin(x)/cos(x);  cot(x) = cos(x)/sin(x)"
+          },
+          {
+            "label": "Công thức cộng",
+            "expr": "sin(a±b) = sin(a)cos(b) ± cos(a)sin(b)"
+          },
+          {
+            "label": "Công thức nhân đôi",
+            "expr": "sin(2x) = 2sin(x)cos(x)"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l2",
+        "title": "Bài 2: Giới hạn và liên tục",
+        "content": "Giới hạn của hàm số f(x) khi x → a là giá trị L mà f(x) tiếp cận khi x tiến đến a.\n\nHàm số liên tục tại x₀ nếu: giới hạn tồn tại, f(x₀) xác định, và lim = f(x₀).\n\nGiới hạn đặc biệt quan trọng: lim(sin x/x) = 1 khi x→0.",
+        "formulas": [
+          {
+            "label": "Định nghĩa giới hạn",
+            "expr": "lim[x→a] f(x) = L"
+          },
+          {
+            "label": "Giới hạn đặc biệt",
+            "expr": "lim[x→0] (sin x / x) = 1"
+          },
+          {
+            "label": "Điều kiện liên tục",
+            "expr": "lim[x→x₀] f(x) = f(x₀)"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l3",
+        "title": "Bài 3: Phương trình lượng giác",
+        "content": "Phương trình lượng giác cơ bản là các phương trình có ẩn xuất hiện trong biểu thức lượng giác.\n\nPhương trình sin(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = arcsin(m) + 2kπ hoặc x = π - arcsin(m) + 2kπ\n\nPhương trình cos(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = ±arccos(m) + 2kπ\n\nPhương trình tan(x) = m:\n• Luôn có nghiệm: x = arctan(m) + kπ\n\nPhương trình bậc nhất theo sinx, cosx: a·sinx + b·cosx = c\nChia cả hai vế cho √(a²+b²), đặt cosφ = a/√(a²+b²), sinφ = b/√(a²+b²).",
+        "formulas": [
+          {
+            "label": "sinx = m (|m|≤1)",
+            "expr": "x = arcsin(m) + 2kπ  hoặc  x = π - arcsin(m) + 2kπ"
+          },
+          {
+            "label": "cosx = m (|m|≤1)",
+            "expr": "x = ±arccos(m) + 2kπ"
+          },
+          {
+            "label": "tanx = m",
+            "expr": "x = arctan(m) + kπ"
+          },
+          {
+            "label": "Phương trình bậc nhất",
+            "expr": "a·sinx + b·cosx = c  →  √(a²+b²)·sin(x+φ) = c"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l4",
+        "title": "Bài 4: Dãy số — Cấp số cộng và cấp số nhân",
+        "content": "Dãy số là một hàm số xác định trên tập số tự nhiên.\n\nCấp số cộng (CSC): mỗi số hạng (từ số hạng thứ hai) bằng số hạng liền trước cộng thêm một số không đổi d (công sai).\n\nCấp số nhân (CSN): mỗi số hạng (từ số hạng thứ hai) bằng số hạng liền trước nhân với một số không đổi q (công bội, q ≠ 0).\n\nỨng dụng: tính lãi suất ngân hàng, tăng trưởng dân số, vật lý hạt nhân.",
+        "formulas": [
+          {
+            "label": "Số hạng tổng quát CSC",
+            "expr": "uₙ = u₁ + (n-1)·d"
+          },
+          {
+            "label": "Tổng n số hạng CSC",
+            "expr": "Sₙ = n·(u₁ + uₙ)/2 = n·u₁ + n(n-1)d/2"
+          },
+          {
+            "label": "Số hạng tổng quát CSN",
+            "expr": "uₙ = u₁ · q^(n-1)"
+          },
+          {
+            "label": "Tổng n số hạng CSN (q≠1)",
+            "expr": "Sₙ = u₁·(qⁿ - 1) / (q - 1)"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l5",
+        "title": "Bài 5: Tổ hợp — Xác suất",
+        "content": "Quy tắc đếm:\n• Quy tắc cộng: hai hành động không đồng thời, tổng số cách = tổng số cách của mỗi hành động\n• Quy tắc nhân: hai hành động liên tiếp, số cách = tích số cách\n\nHoán vị: số cách sắp xếp n phần tử phân biệt thành hàng.\nChỉnh hợp (chập k): chọn k phần tử từ n và sắp xếp có thứ tự.\nTổ hợp (chập k): chọn k phần tử từ n, không xét thứ tự.\n\nXác suất cổ điển: P(A) = số kết quả thuận lợi / tổng số kết quả đồng khả năng.",
+        "formulas": [
+          {
+            "label": "Hoán vị",
+            "expr": "Pₙ = n!"
+          },
+          {
+            "label": "Chỉnh hợp chập k",
+            "expr": "Aₙᵏ = n! / (n-k)!"
+          },
+          {
+            "label": "Tổ hợp chập k",
+            "expr": "Cₙᵏ = n! / [k!·(n-k)!]"
+          },
+          {
+            "label": "Xác suất cổ điển",
+            "expr": "P(A) = |A| / |Ω|"
+          },
+          {
+            "label": "Công thức cộng xác suất",
+            "expr": "P(A∪B) = P(A) + P(B) - P(A∩B)"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l6",
+        "title": "Bài 6: Đạo hàm — Định nghĩa và quy tắc tính",
+        "content": "Đạo hàm của hàm số f(x) tại điểm x₀ là giới hạn của tỉ số số gia hàm số và số gia biến số khi số gia biến số tiến về 0.\n\nÝ nghĩa hình học: đạo hàm tại x₀ là hệ số góc của tiếp tuyến với đồ thị hàm số tại điểm có hoành độ x₀.\n\nÝ nghĩa vật lý: đạo hàm của quãng đường theo thời gian là vận tốc tức thời.\n\nCác quy tắc vi phân: tuyến tính, tích, thương, hàm hợp (chain rule).",
+        "formulas": [
+          {
+            "label": "Định nghĩa đạo hàm",
+            "expr": "f'(x₀) = lim[Δx→0] Δy/Δx = lim[Δx→0] [f(x₀+Δx)-f(x₀)]/Δx"
+          },
+          {
+            "label": "Đạo hàm lũy thừa",
+            "expr": "(xⁿ)' = n·xⁿ⁻¹"
+          },
+          {
+            "label": "Đạo hàm tích",
+            "expr": "(u·v)' = u'·v + u·v'"
+          },
+          {
+            "label": "Đạo hàm thương",
+            "expr": "(u/v)' = (u'·v - u·v') / v²"
+          },
+          {
+            "label": "Đạo hàm hàm hợp",
+            "expr": "[f(u)]' = f'(u)·u'"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l7",
+        "title": "Bài 7: Hình học không gian — Đường thẳng và mặt phẳng",
+        "content": "Trong không gian, đường thẳng và mặt phẳng có các vị trí tương đối:\n\nĐường thẳng và mặt phẳng:\n• Song song: đường thẳng không có điểm chung với mặt phẳng\n• Cắt nhau: đường thẳng có đúng 1 điểm chung\n• Nằm trong: đường thẳng có vô số điểm chung\n\nHai mặt phẳng:\n• Song song: không có điểm chung\n• Cắt nhau: giao là một đường thẳng\n\nĐường thẳng vuông góc với mặt phẳng: đường thẳng vuông góc với mọi đường thẳng nằm trong mặt phẳng qua chân đường vuông góc.\n\nHai mặt phẳng vuông góc: góc nhị diện giữa hai mặt phẳng bằng 90°.",
+        "formulas": [
+          {
+            "label": "Điều kiện d ⊥ (P)",
+            "expr": "d ⊥ a và d ⊥ b  (a, b cắt nhau trong (P))"
+          },
+          {
+            "label": "Góc giữa đường thẳng và mp",
+            "expr": "sinα = |cos(d, n̂)|  (n̂ là pháp tuyến mp)"
+          },
+          {
+            "label": "Khoảng cách từ điểm đến mặt phẳng",
+            "expr": "d(M, P) = |ax₀+by₀+cz₀+d| / √(a²+b²+c²)"
+          }
+        ]
+      },
+      {
+        "id": "c11_math_l8",
+        "title": "Bài 8: Vectơ trong không gian và tọa độ",
+        "content": "Trong không gian Oxyz, mỗi điểm M xác định bởi bộ ba số (x; y; z).\n\nVectơ trong không gian: a⃗ = (x; y; z)\nCác phép toán vectơ tương tự mặt phẳng nhưng thêm tọa độ z.\n\nPhương trình mặt phẳng:\n• Dạng tổng quát: ax + by + cz + d = 0 (pháp tuyến n⃗ = (a;b;c))\n• Qua điểm M₀ có pháp tuyến n⃗: a(x-x₀) + b(y-y₀) + c(z-z₀) = 0\n\nPhương trình đường thẳng trong không gian:\n• Dạng tham số: x = x₀+at, y = y₀+bt, z = z₀+ct\n• Vectơ chỉ phương u⃗ = (a; b; c)",
+        "formulas": [
+          {
+            "label": "Độ dài vectơ không gian",
+            "expr": "|a| = √(x²+y²+z²)"
+          },
+          {
+            "label": "Tích vô hướng",
+            "expr": "a·b = x₁x₂+y₁y₂+z₁z₂"
+          },
+          {
+            "label": "Phương trình mặt phẳng",
+            "expr": "ax + by + cz + d = 0"
+          },
+          {
+            "label": "Khoảng cách 2 điểm",
+            "expr": "AB = √[(x₂-x₁)²+(y₂-y₁)²+(z₂-z₁)²]"
+          }
+        ]
+      }
+    ],
+    "physics": [
+      {
+        "id": "c11_phy_l1",
+        "title": "Bài 1: Điện tích và điện trường",
+        "content": "Điện tích là thuộc tính của vật chất gây ra và chịu tác dụng của lực điện.\nHai loại điện tích: dương (+) và âm (-). Cùng dấu đẩy nhau, trái dấu hút nhau.\n\nĐịnh luật Coulomb: lực tương tác giữa hai điện tích điểm tỉ lệ thuận với tích hai điện tích, tỉ lệ nghịch với bình phương khoảng cách.\n\nĐiện trường là môi trường vật chất tồn tại xung quanh điện tích, tác dụng lực lên điện tích khác đặt trong nó.",
+        "formulas": [
+          {
+            "label": "Lực Coulomb",
+            "expr": "F = k·|q₁·q₂| / (ε·r²),  k = 9×10⁹ N·m²/C²"
+          },
+          {
+            "label": "Cường độ điện trường",
+            "expr": "E = F / q = k·|Q| / (ε·r²)"
+          },
+          {
+            "label": "Lực điện",
+            "expr": "F = q·E"
+          }
+        ]
+      },
+      {
+        "id": "c11_phy_l2",
+        "title": "Bài 2: Điện thế và hiệu điện thế",
+        "content": "Điện thế tại một điểm M trong điện trường là đại lượng đặc trưng cho khả năng sinh công của điện trường khi di chuyển điện tích từ M ra vô cực.\n\nHiệu điện thế (điện áp) U_MN = V_M - V_N đặc trưng cho khả năng sinh công của điện trường khi di chuyển điện tích từ M đến N.\n\nTụ điện là hệ hai vật dẫn đặt gần nhau, ngăn cách bởi lớp điện môi, dùng tích trữ điện tích và năng lượng điện trường.\n\nĐiện dung C là đại lượng đặc trưng cho khả năng tích điện của tụ.",
+        "formulas": [
+          {
+            "label": "Điện thế",
+            "expr": "V_M = A_M∞ / q  (V = J/C)"
+          },
+          {
+            "label": "Hiệu điện thế",
+            "expr": "U_MN = V_M - V_N = A_MN / q"
+          },
+          {
+            "label": "Điện dung tụ phẳng",
+            "expr": "C = ε·ε₀·S / d  (F)"
+          },
+          {
+            "label": "Năng lượng tụ điện",
+            "expr": "W = Q²/2C = CU²/2 = QU/2"
+          }
+        ]
+      },
+      {
+        "id": "c11_phy_l3",
+        "title": "Bài 3: Dòng điện không đổi và mạch điện",
+        "content": "Dòng điện không đổi là dòng điện có chiều và cường độ không thay đổi theo thời gian.\n\nCường độ dòng điện I là lượng điện tích chuyển qua tiết diện thẳng của dây dẫn trong một đơn vị thời gian.\n\nĐịnh luật Ohm cho đoạn mạch: I = U/R\nĐịnh luật Ohm cho toàn mạch: I = ξ / (R + r)\ntrong đó ξ là suất điện động, r là điện trở trong của nguồn.\n\nMạch ngoài:\n• Điện trở nối tiếp: R = R₁ + R₂ + ...\n• Điện trở song song: 1/R = 1/R₁ + 1/R₂ + ...",
+        "formulas": [
+          {
+            "label": "Cường độ dòng điện",
+            "expr": "I = Δq / Δt  (A = C/s)"
+          },
+          {
+            "label": "Định luật Ohm (đoạn mạch)",
+            "expr": "I = U / R"
+          },
+          {
+            "label": "Định luật Ohm (toàn mạch)",
+            "expr": "I = ξ / (R + r)"
+          },
+          {
+            "label": "Công suất điện",
+            "expr": "P = U·I = I²R = U²/R  (W)"
+          },
+          {
+            "label": "Điện trở theo nhiệt độ",
+            "expr": "R = R₀[1 + α(t - t₀)]"
+          }
+        ]
+      },
+      {
+        "id": "c11_phy_l4",
+        "title": "Bài 4: Từ trường và lực từ",
+        "content": "Từ trường là môi trường vật chất tồn tại xung quanh nam châm, dây dẫn mang dòng điện, tác dụng lực lên nam châm và dây dẫn mang dòng điện khác đặt trong nó.\n\nCảm ứng từ B⃗ đặc trưng cho từ trường về phương diện lực từ (T - Tesla).\n\nLực Lorentz: lực từ tác dụng lên hạt mang điện chuyển động trong từ trường. Vuông góc với cả v⃗ và B⃗ → hạt chuyển động tròn.\n\nLực Ampere: lực từ tác dụng lên đoạn dây dẫn mang dòng điện đặt trong từ trường.",
+        "formulas": [
+          {
+            "label": "Cảm ứng từ dây dẫn thẳng dài",
+            "expr": "B = 2×10⁻⁷ · I / r"
+          },
+          {
+            "label": "Lực Ampere",
+            "expr": "F = B·I·l·sinα"
+          },
+          {
+            "label": "Lực Lorentz",
+            "expr": "f = |q|·v·B·sinα"
+          },
+          {
+            "label": "Bán kính quỹ đạo hạt trong B",
+            "expr": "r = m·v / (|q|·B)"
+          }
+        ]
+      },
+      {
+        "id": "c11_phy_l5",
+        "title": "Bài 5: Cảm ứng điện từ",
+        "content": "Cảm ứng điện từ là hiện tượng xuất hiện suất điện động trong mạch kín khi từ thông qua mạch biến thiên.\n\nTừ thông Φ qua diện tích S đặt trong từ trường đều có cảm ứng từ B.\n\nĐịnh luật Faraday: suất điện động cảm ứng tỉ lệ với tốc độ biến thiên từ thông.\n\nĐịnh luật Lenz: dòng điện cảm ứng có chiều sao cho từ trường do nó sinh ra có tác dụng chống lại sự biến thiên từ thông đã sinh ra nó.\n\nỨng dụng: máy phát điện, biến áp, động cơ điện.",
+        "formulas": [
+          {
+            "label": "Từ thông",
+            "expr": "Φ = B·S·cosα  (Wb = T·m²)"
+          },
+          {
+            "label": "Định luật Faraday",
+            "expr": "ξ = -ΔΦ / Δt  (V)"
+          },
+          {
+            "label": "Suất điện động thanh dẫn",
+            "expr": "ξ = B·l·v·sinα"
+          },
+          {
+            "label": "Hệ số tự cảm",
+            "expr": "L = Φ / I  (H = Wb/A)"
+          }
+        ]
+      }
+    ],
+    "chemistry": [
+      {
+        "id": "c11_che_l1",
+        "title": "Bài 1: Sự điện li",
+        "content": "Sự điện li là quá trình phân li các chất trong nước tạo thành ion.\nChất điện li mạnh phân li hoàn toàn (axit mạnh, bazơ mạnh, hầu hết muối).\nChất điện li yếu phân li một phần (axit yếu, bazơ yếu, nước).\n\nThuyết Arrhenius:\n• Axit: chất khi tan trong nước phân li ra ion H⁺\n• Bazơ: chất khi tan trong nước phân li ra ion OH⁻\n• Muối: sản phẩm của phản ứng axit + bazơ",
+        "formulas": [
+          {
+            "label": "pH của dung dịch",
+            "expr": "pH = -lg[H⁺]"
+          },
+          {
+            "label": "Tích số ion của nước",
+            "expr": "Kw = [H⁺]·[OH⁻] = 10⁻¹⁴ (25°C)"
+          },
+          {
+            "label": "Dung dịch trung tính",
+            "expr": "[H⁺] = [OH⁻] = 10⁻⁷ M ⟹ pH = 7"
+          }
+        ]
+      },
+      {
+        "id": "c11_che_l2",
+        "title": "Bài 2: Nitơ và hợp chất của Nitơ",
+        "content": "Nitơ (N₂): chiếm ~78% thể tích không khí, phân tử có liên kết ba bền, ít hoạt động ở nhiệt độ thường.\n\nAmoniac (NH₃): khí không màu, mùi khai, tan nhiều trong nước. Tính bazơ yếu. Dùng sản xuất phân đạm, axit nitric.\n\nAxit nitric (HNO₃): axit mạnh, có tính oxi hóa rất mạnh. Tác dụng với hầu hết kim loại (trừ Au, Pt).\n• HNO₃ đặc + kim loại (Cu, Fe...) → NO₂ (nâu đỏ)\n• HNO₃ loãng + kim loại → NO (không màu)\n\nMuối nitrat (NO₃⁻): đều tan trong nước, kém bền nhiệt, ứng dụng làm phân bón, thuốc nổ.",
+        "formulas": [
+          {
+            "label": "Tổng hợp NH₃ (Haber)",
+            "expr": "N₂ + 3H₂ ⇌ 2NH₃  (Fe, 400-500°C, 200 atm)"
+          },
+          {
+            "label": "Cu + HNO₃ đặc",
+            "expr": "Cu + 4HNO₃(đặc) → Cu(NO₃)₂ + 2NO₂ + 2H₂O"
+          },
+          {
+            "label": "Cu + HNO₃ loãng",
+            "expr": "3Cu + 8HNO₃(loãng) → 3Cu(NO₃)₂ + 2NO + 4H₂O"
+          }
+        ]
+      },
+      {
+        "id": "c11_che_l3",
+        "title": "Bài 3: Cacbon, Silic và hợp chất",
+        "content": "Cacbon (C): tồn tại các dạng thù hình: kim cương (cứng nhất), than chì (mềm, dẫn điện), fullerene (C₆₀).\nTính chất: vừa có tính khử (C + O₂, C + CuO), vừa có tính oxi hóa (C + H₂, C + Al).\n\nCO: oxit không tạo muối, chất khử mạnh, rất độc (kết hợp hemoglobin).\nCO₂: tham gia quang hợp, gây hiệu ứng nhà kính.\nAxit cacbonic H₂CO₃: axit yếu, không bền, phân li hai nấc.\n\nSilic (Si): á kim, là nền tảng công nghệ bán dẫn.\nSiO₂: không tan trong nước, tan trong HF và dung dịch kiềm đặc nóng.",
+        "formulas": [
+          {
+            "label": "C khử CuO",
+            "expr": "C + 2CuO → 2Cu + CO₂  (to cao)"
+          },
+          {
+            "label": "CO₂ + kiềm (tỉ lệ 1:1)",
+            "expr": "CO₂ + NaOH → NaHCO₃"
+          },
+          {
+            "label": "CO₂ + kiềm (tỉ lệ 1:2)",
+            "expr": "CO₂ + 2NaOH → Na₂CO₃ + H₂O"
+          },
+          {
+            "label": "SiO₂ + HF",
+            "expr": "SiO₂ + 4HF → SiF₄ + 2H₂O"
+          }
+        ]
+      },
+      {
+        "id": "c11_che_l4",
+        "title": "Bài 4: Đại cương về hóa học hữu cơ",
+        "content": "Hóa học hữu cơ nghiên cứu các hợp chất của cacbon (trừ CO, CO₂, muối cacbonat, xianua).\n\nĐặc điểm liên kết trong hợp chất hữu cơ: chủ yếu liên kết cộng hóa trị, bền nhiệt kém, phản ứng chậm.\n\nPhân loại:\n• Hiđrocacbon: chỉ chứa C và H (ankan, anken, ankyn, aren)\n• Dẫn xuất hiđrocacbon: ngoài C, H còn có O, N, halogen...\n\nĐồng đẳng: cùng công thức tổng quát, hơn kém nhau một hay nhiều nhóm CH₂.\nĐồng phân: cùng CTPT nhưng CTCT khác nhau (đồng phân mạch C, vị trí, nhóm chức, hình học).\n\nDanh pháp IUPAC: đặt tên theo mạch C dài nhất, đánh số từ đầu gần nhánh nhất.",
+        "formulas": [
+          {
+            "label": "Công thức tổng quát ankan",
+            "expr": "CₙH₂ₙ₊₂  (n ≥ 1)"
+          },
+          {
+            "label": "Công thức tổng quát anken",
+            "expr": "CₙH₂ₙ  (n ≥ 2)"
+          },
+          {
+            "label": "Công thức tổng quát ankyn",
+            "expr": "CₙH₂ₙ₋₂  (n ≥ 2)"
+          },
+          {
+            "label": "Độ bất bão hòa (DBE)",
+            "expr": "DBE = (2C + 2 + N - H - X) / 2"
+          }
+        ]
+      },
+      {
+        "id": "c11_che_l5",
+        "title": "Bài 5: Hiđrocacbon — Ankan, Anken, Ankyn",
+        "content": "Ankan (parafin) CₙH₂ₙ₊₂: chỉ có liên kết đơn C-C. Phản ứng đặc trưng: thế (halogen hóa), crackinh, reforming. Không tác dụng với axit, bazơ, thuốc tím.\n\nAnken (olefin) CₙH₂ₙ: có một liên kết đôi C=C. Phản ứng đặc trưng: cộng (H₂, Br₂, HX, H₂O), trùng hợp, oxi hóa (mất màu KMnO₄).\n• Quy tắc Markovnikov: H cộng vào C bậc thấp, X vào C bậc cao\n\nAnkyn CₙH₂ₙ₋₂: có một liên kết ba C≡C. Phản ứng: cộng, thế nguyên tử H ở C đầu mạch (do tính axit yếu).\nAxetylen (C₂H₂): nguyên liệu quan trọng trong công nghiệp.",
+        "formulas": [
+          {
+            "label": "Phản ứng thế ankan",
+            "expr": "CH₄ + Cl₂ → CH₃Cl + HCl  (as)"
+          },
+          {
+            "label": "Cộng HX vào anken (Markovnikov)",
+            "expr": "CH₃-CH=CH₂ + HBr → CH₃-CHBr-CH₃"
+          },
+          {
+            "label": "Trùng hợp etilen",
+            "expr": "n(CH₂=CH₂) → (-CH₂-CH₂-)ₙ  (PE)"
+          },
+          {
+            "label": "Điều chế axetylen",
+            "expr": "CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂"
+          }
+        ]
+      }
+    ],
+    "biology": [
+      {
+        "id": "c11_bio_l1",
+        "title": "Bài 1: Trao đổi chất và năng lượng ở thực vật",
+        "content": "Trao đổi nước ở thực vật gồm 3 giai đoạn: hấp thụ nước từ đất → vận chuyển qua thân → thoát hơi nước qua lá.\n\nQuang hợp: quá trình tổng hợp chất hữu cơ từ CO₂ và H₂O dưới tác dụng của ánh sáng và diệp lục.\nGồm 2 pha: pha sáng (ở tilacoit) và pha tối (chu trình Calvin, ở stroma).\n\nHô hấp tế bào: phân giải chất hữu cơ giải phóng năng lượng ATP. Diễn ra ở ty thể.",
+        "formulas": [
+          {
+            "label": "Phương trình quang hợp",
+            "expr": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂"
+          },
+          {
+            "label": "Phương trình hô hấp",
+            "expr": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP"
+          }
+        ]
+      },
+      {
+        "id": "c11_bio_l2",
+        "title": "Bài 2: Tiêu hóa và hô hấp ở động vật",
+        "content": "Tiêu hóa là quá trình biến đổi thức ăn thành các chất dinh dưỡng đơn giản để cơ thể hấp thụ.\n\nHình thức tiêu hóa theo tiến hóa:\n• Tiêu hóa nội bào: trùng amip, thủy tức\n• Tiêu hóa ngoại bào: ruột khoang, giun dẹp trở lên\n• Ống tiêu hóa hoàn chỉnh: hai đầu mở, phân hóa các bộ phận\n\nHô hấp ở động vật:\n• Hô hấp qua bề mặt cơ thể: giun, ếch nhái ở nước\n• Hô hấp bằng mang: cá, tôm, cua\n• Hô hấp bằng ống khí (khí quản): côn trùng\n• Hô hấp bằng phổi: bò sát, chim, thú",
+        "formulas": [
+          {
+            "label": "Diện tích trao đổi khí",
+            "expr": "S_phổi người ≈ 70-100 m²"
+          },
+          {
+            "label": "Thể tích khí lưu thông",
+            "expr": "V_bình thường ≈ 500 mL/lần thở"
+          }
+        ]
+      },
+      {
+        "id": "c11_bio_l3",
+        "title": "Bài 3: Tuần hoàn máu",
+        "content": "Hệ tuần hoàn vận chuyển các chất trong cơ thể động vật.\n\nTiến hóa hệ tuần hoàn:\n• Chưa có hệ tuần hoàn: thủy tức (khoang tiêu hóa)\n• Tuần hoàn hở: côn trùng, nhuyễn thể (trừ bạch tuộc)\n• Tuần hoàn kín đơn: cá (1 vòng: tim 2 ngăn)\n• Tuần hoàn kép: lưỡng cư (tim 3 ngăn), bò sát (3 ngăn+vách ngăn), chim và thú (tim 4 ngăn)\n\nTim người:\n• 4 ngăn: 2 tâm nhĩ + 2 tâm thất\n• Vòng tuần hoàn nhỏ (phổi): tâm thất phải → phổi → tâm nhĩ trái\n• Vòng tuần hoàn lớn (hệ thống): tâm thất trái → cơ thể → tâm nhĩ phải",
+        "formulas": [
+          {
+            "label": "Cung lượng tim",
+            "expr": "CO = SV × HR  (L/phút)"
+          },
+          {
+            "label": "Huyết áp tâm thu bình thường",
+            "expr": "HA_tt ≈ 120 mmHg"
+          },
+          {
+            "label": "Huyết áp tâm trương bình thường",
+            "expr": "HA_ttr ≈ 80 mmHg"
+          }
+        ]
+      },
+      {
+        "id": "c11_bio_l4",
+        "title": "Bài 4: Sinh trưởng và phát triển",
+        "content": "Sinh trưởng là quá trình tăng kích thước cơ thể do tăng số lượng và kích thước tế bào.\nPhát triển là toàn bộ những biến đổi diễn ra trong chu kỳ sống của sinh vật.\n\nSinh trưởng ở thực vật:\n• Mô phân sinh đỉnh: tăng chiều dài thân và rễ\n• Mô phân sinh bên: tăng đường kính thân (tầng sinh vỏ, tầng sinh trụ)\n• Hoocmôn thực vật: auxin (kéo dài tế bào), gibberellin (tăng chiều cao), cytokinin (phân chia tế bào)\n\nPhát triển ở động vật:\n• Biến thái hoàn toàn: trứng → ấu trùng → nhộng → trưởng thành (bướm, ong)\n• Biến thái không hoàn toàn: trứng → ấu trùng → trưởng thành (châu chấu)\n• Không biến thái: thú, chim, bò sát",
+        "formulas": [
+          {
+            "label": "Tốc độ sinh trưởng tuyệt đối",
+            "expr": "G = (W₂ - W₁) / (t₂ - t₁)"
+          },
+          {
+            "label": "Tốc độ sinh trưởng tương đối",
+            "expr": "RGR = (lnW₂ - lnW₁) / (t₂ - t₁)"
+          }
+        ]
+      },
+      {
+        "id": "c11_bio_l5",
+        "title": "Bài 5: Sinh sản ở sinh vật",
+        "content": "Sinh sản là quá trình tạo ra cá thể mới, đảm bảo sự tồn tại và phát triển của loài.\n\nSinh sản vô tính: không có sự kết hợp giao tử, con giống mẹ về mặt di truyền.\n• Phân đôi (vi khuẩn, amip)\n• Nảy chồi (thủy tức, nấm men)\n• Phân mảnh (giun dẹp, san hô)\n• Trinh sản (ong, kiến)\n• Sinh sản sinh dưỡng ở thực vật: giâm cành, chiết, ghép, nuôi cấy mô\n\nSinh sản hữu tính: có sự kết hợp giao tử đực và cái → hợp tử.\nƯu điểm: tạo biến dị tổ hợp, thích nghi với môi trường thay đổi.",
+        "formulas": [
+          {
+            "label": "Thụ tinh kép ở thực vật hạt kín",
+            "expr": "Giao tử đực 1 + Noãn cầu → Hợp tử (2n)\nGiao tử đực 2 + Nhân cực (2n) → Nội nhũ (3n)"
+          }
+        ]
+      }
+    ],
+    "technology": [
+      {
+        "id": "c11_tec_l1",
+        "title": "Bài 1: Vật liệu cơ khí",
+        "content": "Vật liệu cơ khí là những vật liệu dùng để chế tạo máy móc, thiết bị.\n\nPhân loại:\n• Kim loại đen: gang (> 2,14% C) và thép (< 2,14% C)\n• Kim loại màu: đồng, nhôm, chì, thiếc và hợp kim của chúng\n• Vật liệu phi kim: chất dẻo, cao su, gốm, composit\n\nTính chất cơ học quan trọng: độ bền, độ cứng, độ dẻo, độ dai va đập.",
+        "formulas": [
+          {
+            "label": "Giới hạn bền kéo",
+            "expr": "σ_b = F_max / S₀ (N/mm²)"
+          }
+        ]
+      },
+      {
+        "id": "c11_tec_l2",
+        "title": "Bài 2: Gia công cơ khí và dung sai lắp ghép",
+        "content": "Gia công cơ khí tạo ra chi tiết có hình dạng và kích thước theo yêu cầu.\n\nCác phương pháp gia công cắt gọt:\n• Tiện: chi tiết quay, dao tịnh tiến — gia công bề mặt tròn xoay\n• Phay: dao quay, phôi tịnh tiến — gia công mặt phẳng, rãnh, bánh răng\n• Khoan, khoét, doa: gia công lỗ\n• Mài: hoàn thiện bề mặt, đạt độ chính xác cao\n\nDung sai lắp ghép:\n• Kích thước danh nghĩa (dN): kích thước thiết kế\n• Sai lệch giới hạn: sai lệch trên (es/ES) và sai lệch dưới (ei/EI)\n• Dung sai IT = |ES - EI| = |es - ei|\n• Lắp ghép: lỏng (khe hở > 0), chặt (độ dôi > 0), trung gian",
+        "formulas": [
+          {
+            "label": "Dung sai kích thước",
+            "expr": "IT = A_max - A_min = ES - EI"
+          },
+          {
+            "label": "Khe hở lắp ghép lỏng",
+            "expr": "S = D - d > 0"
+          },
+          {
+            "label": "Độ dôi lắp ghép chặt",
+            "expr": "N = d - D > 0"
+          }
+        ]
+      },
+      {
+        "id": "c11_tec_l3",
+        "title": "Bài 3: Truyền động cơ khí",
+        "content": "Truyền động cơ khí là bộ phận truyền và biến đổi chuyển động từ trục dẫn sang trục bị dẫn.\n\nCác cơ cấu truyền động phổ biến:\n\n1. Truyền động đai (dây curoa): qua ma sát giữa đai và puli. Ưu: êm, giá rẻ, cách ly chấn động. Nhược: có trượt, tỉ số truyền không ổn định.\n\n2. Truyền động xích: qua sự ăn khớp xích với đĩa xích. Ưu: không trượt, khoảng cách trục lớn. Dùng trên xe đạp, xe máy.\n\n3. Truyền động bánh răng: qua sự ăn khớp giữa các răng. Ưu: tỉ số truyền chính xác, hiệu suất cao. Dùng trong hộp số.\n\n4. Truyền động vít — đai ốc: biến chuyển động quay thành tịnh tiến.",
+        "formulas": [
+          {
+            "label": "Tỉ số truyền chung",
+            "expr": "i = n₁ / n₂ = D₂ / D₁  (đai, bánh răng)"
+          },
+          {
+            "label": "Tỉ số truyền xích",
+            "expr": "i = n₁ / n₂ = z₂ / z₁"
+          },
+          {
+            "label": "Công suất truyền",
+            "expr": "P₂ = P₁ · η  (η: hiệu suất)"
+          }
+        ]
+      }
+    ],
+    "informatics": [
+      {
+        "id": "c11_inf_l1",
+        "title": "Bài 1: Lập trình cơ bản",
+        "content": "Lập trình là quá trình viết chương trình để máy tính thực hiện các công việc theo yêu cầu.\n\nCấu trúc điều khiển:\n• Tuần tự: thực hiện lần lượt từng lệnh\n• Rẽ nhánh: if-else, switch-case\n• Lặp: for, while, do-while\n\nBiến là ô nhớ trong bộ nhớ máy tính dùng lưu trữ dữ liệu, có tên, kiểu, giá trị.\nKiểu dữ liệu cơ bản: integer, float, char, boolean, string.",
+        "formulas": [
+          {
+            "label": "Độ phức tạp tuyến tính",
+            "expr": "O(n): vòng lặp đơn"
+          },
+          {
+            "label": "Độ phức tạp bậc hai",
+            "expr": "O(n²): vòng lặp lồng 2 cấp"
+          }
+        ]
+      },
+      {
+        "id": "c11_inf_l2",
+        "title": "Bài 2: Kiểu dữ liệu, biến và biểu thức",
+        "content": "Trong lập trình, dữ liệu được phân loại thành các kiểu cụ thể để máy tính xử lý đúng cách.\n\nCác kiểu dữ liệu cơ bản:\n• Integer (int): số nguyên (-2,147,483,648 đến 2,147,483,647 với 32 bit)\n• Float/Double: số thực dấu phẩy động\n• Char: ký tự đơn, mã ASCII\n• Boolean: chỉ nhận True hoặc False\n• String: chuỗi ký tự\n\nBiến là vùng nhớ có tên dùng lưu trữ dữ liệu; phải khai báo kiểu trước khi dùng (trong ngôn ngữ tĩnh).\n\nBiểu thức: toán học (+,-,*,/,%), quan hệ (==,!=,<,>), logic (and, or, not).\nThứ tự ưu tiên: (), **, *, /, +, - (từ cao đến thấp).",
+        "formulas": [
+          {
+            "label": "Phạm vi int 32-bit có dấu",
+            "expr": "-2³¹ đến 2³¹-1  (-2.147.483.648 đến 2.147.483.647)"
+          },
+          {
+            "label": "Phạm vi byte",
+            "expr": "0 đến 255  (8 bit không dấu)"
+          }
+        ]
+      },
+      {
+        "id": "c11_inf_l3",
+        "title": "Bài 3: Cấu trúc điều kiện và vòng lặp",
+        "content": "Cấu trúc điều khiển là xương sống của mọi thuật toán.\n\nCấu trúc rẽ nhánh:\n• if-else: kiểm tra điều kiện, rẽ hai nhánh\n• elif (else if): nhiều điều kiện liên tiếp\n• switch-case (match-case): so sánh một biến với nhiều hằng số\n\nCấu trúc lặp:\n• for: lặp xác định số lần (duyệt qua dãy, range)\n• while: lặp khi điều kiện còn đúng (không biết trước số lần)\n• do-while: lặp ít nhất 1 lần rồi mới kiểm tra\n\nTừ khóa điều khiển vòng lặp:\n• break: thoát khỏi vòng lặp ngay lập tức\n• continue: bỏ qua phần còn lại, sang vòng lặp tiếp theo",
+        "formulas": [
+          {
+            "label": "Cú pháp if-else (Python)",
+            "expr": "if dieu_kien:\n    lenh1\nelse:\n    lenh2"
+          },
+          {
+            "label": "Cú pháp for (Python)",
+            "expr": "for i in range(n):\n    lenh"
+          },
+          {
+            "label": "Tổng dãy bằng vòng lặp",
+            "expr": "S = 0\nfor i in range(1, n+1):\n    S += i"
+          }
+        ]
+      },
+      {
+        "id": "c11_inf_l4",
+        "title": "Bài 4: Mảng, hàm và đệ quy",
+        "content": "Mảng (Array): tập hợp các phần tử cùng kiểu, lưu liên tiếp trong bộ nhớ, truy xuất qua chỉ số (index bắt đầu từ 0).\n\nMảng một chiều: danh sách phần tử.\nMảng hai chiều (ma trận): bảng m hàng × n cột.\n\nHàm (Function): khối lệnh có tên, nhận tham số đầu vào và trả về kết quả. Giúp tái sử dụng code, chia nhỏ bài toán.\n• Tham trị: hàm nhận bản sao — thay đổi không ảnh hưởng ngoài\n• Tham chiếu: hàm nhận địa chỉ — thay đổi ảnh hưởng ngoài\n\nĐệ quy (Recursion): hàm gọi lại chính nó. Cần có điều kiện dừng (base case) để tránh vòng lặp vô hạn.",
+        "formulas": [
+          {
+            "label": "Giai thừa (đệ quy)",
+            "expr": "fact(n) = 1  nếu n=0\nfact(n) = n × fact(n-1)"
+          },
+          {
+            "label": "Fibonacci (đệ quy)",
+            "expr": "fib(1)=fib(2)=1\nfib(n) = fib(n-1)+fib(n-2)"
+          }
+        ]
+      }
+    ],
+    "literature": [
+      {
+        "id": "c11_lit_l1",
+        "title": "Bài 1: Phong trào Thơ mới",
+        "content": "Phong trào Thơ mới (1932-1945) là cuộc cách mạng thơ ca Việt Nam, thay thế thơ Đường luật bằng thơ tự do.\n\nĐặc điểm: thể hiện cái tôi cá nhân, cảm xúc chân thực, không bị ràng buộc niêm luật.\n\nCác tác giả tiêu biểu:\n• Xuân Diệu: nhà thơ mới nhất trong các nhà Thơ mới (Hoài Thanh) — Vội vàng, Đây mùa thu tới\n• Hàn Mặc Tử: Đây thôn Vĩ Dạ, Mùa xuân chín\n• Huy Cận: Tràng giang, Đoàn thuyền đánh cá\n• Chế Lan Viên: Điêu tàn",
+        "formulas": []
+      },
+      {
+        "id": "c11_lit_l2",
+        "title": "Bài 2: Tác phẩm Thơ mới tiêu biểu",
+        "content": "Phân tích các tác phẩm Thơ mới tiêu biểu:\n\nVội vàng — Xuân Diệu:\n• Chủ đề: khao khát sống mãnh liệt, ý thức về sự trôi chảy của thời gian\n• Nghệ thuật: hình ảnh tươi mới, nhịp thơ gấp gáp, điệp từ, ẩn dụ\n• Triết lý: \"Xuân đương tới nghĩa là xuân đương qua\" — sống gấp\n\nĐây thôn Vĩ Dạ — Hàn Mặc Tử:\n• Chủ đề: tình yêu quê hương, nỗi đau chia cách và khao khát được sống\n• Ba khổ: cảnh vườn Vĩ → cảnh sông nước → cảnh người thiếu nữ mờ ảo\n• Hình ảnh: mang màu sắc siêu thực, tâm hồn đau thương\n\nTràng giang — Huy Cận:\n• Chủ đề: nỗi cô đơn trước thiên nhiên bao la, nỗi nhớ quê hương\n• Nghệ thuật: từ Hán Việt, hình ảnh cổ điển kết hợp hiện đại",
+        "formulas": []
+      },
+      {
+        "id": "c11_lit_l3",
+        "title": "Bài 3: Văn xuôi lãng mạn 1930-1945",
+        "content": "Giai đoạn 1930-1945 chứng kiến sự nở rộ của văn xuôi lãng mạn với hai xu hướng chính.\n\nXu hướng lãng mạn thuần túy — Tự lực văn đoàn (1932):\n• Thành viên: Nhất Linh, Khái Hưng, Hoàng Đạo, Thạch Lam...\n• Chủ trương: đổi mới văn học, đề cao cá nhân, chống lễ giáo phong kiến\n• Tác phẩm: Đoạn tuyệt (Nhất Linh), Nửa chừng xuân (Khái Hưng)\n• Thạch Lam: Hai đứa trẻ — truyện ngắn trữ tình, tâm trạng tinh tế\n\nXu hướng hiện thực phê phán:\n• Nguyễn Công Hoan: truyện ngắn trào phúng\n• Ngô Tất Tố: Tắt đèn — phê phán chế độ sưu thuế\n• Nam Cao: Chí Phèo, Lão Hạc — nhân đạo sâu sắc, bi kịch bị tha hóa",
+        "formulas": []
+      },
+      {
+        "id": "c11_lit_l4",
+        "title": "Bài 4: Văn học cách mạng trước 1945",
+        "content": "Song song với văn học lãng mạn, văn học cách mạng phát triển mạnh trong giai đoạn 1930-1945.\n\nVăn học cách mạng:\n• Hoàn cảnh: đất nước mất chủ quyền, phong trào yêu nước bị đàn áp\n• Chủ đề: kêu gọi đứng dậy, ca ngợi tinh thần đấu tranh, tố cáo áp bức\n\nHồ Chí Minh — nhà văn, nhà thơ lớn:\n• Nhật ký trong tù (Ngục trung nhật ký): 134 bài thơ chữ Hán — tinh thần lạc quan, ý chí cách mạng\n• Tuyên ngôn độc lập (2/9/1945): văn kiện lịch sử, kết tinh tư tưởng nhân đạo\n\nTố Hữu — nhà thơ cách mạng:\n• Tập thơ Từ ấy (1937-1946): tiếng lòng người thanh niên giác ngộ lý tưởng\n• Bài thơ Từ ấy: khoảnh khắc bừng sáng lý tưởng cộng sản",
+        "formulas": []
+      }
+    ],
+    "english": [
+      {
+        "id": "c11_eng_l1",
+        "title": "Bài 1: Thì quá khứ và hiện tại hoàn thành",
+        "content": "Thì Quá khứ đơn (Simple Past) diễn tả hành động đã hoàn thành tại thời điểm xác định trong quá khứ.\nDấu hiệu: yesterday, ago, last week/month/year, in + năm quá khứ.\n\nThì Hiện tại hoàn thành (Present Perfect) diễn tả hành động xảy ra trong quá khứ còn liên quan đến hiện tại, hoặc không xác định thời gian.\nDấu hiệu: already, yet, ever, never, just, recently, since, for.",
+        "formulas": [
+          {
+            "label": "Quá khứ đơn (khẳng định)",
+            "expr": "S + V₂(ed) + O"
+          },
+          {
+            "label": "Hiện tại hoàn thành (khẳng định)",
+            "expr": "S + have/has + V₃(pp) + O"
+          },
+          {
+            "label": "Hiện tại hoàn thành (phủ định)",
+            "expr": "S + have/has + not + V₃ + O"
+          }
+        ]
+      },
+      {
+        "id": "c11_eng_l2",
+        "title": "Bài 2: Thì hoàn thành và hoàn thành tiếp diễn",
+        "content": "Thì Hiện tại hoàn thành (Present Perfect):\n• Hành động xảy ra trong quá khứ, không xác định thời gian, còn liên quan hiện tại\n• Dấu hiệu: already, yet, ever, never, just, recently, since, for, so far\n\nThì Hiện tại hoàn thành tiếp diễn (Present Perfect Continuous):\n• Nhấn mạnh tính liên tục, kéo dài của hành động từ quá khứ đến hiện tại\n• Dấu hiệu: for, since, all day/morning, how long\n\nThì Quá khứ hoàn thành (Past Perfect):\n• Hành động xảy ra trước một hành động khác trong quá khứ\n• Dấu hiệu: before, after, when, by the time, already, just\n\nPhân biệt since (từ mốc thời gian) và for (khoảng thời gian).",
+        "formulas": [
+          {
+            "label": "Hiện tại hoàn thành",
+            "expr": "S + have/has + V3(pp)"
+          },
+          {
+            "label": "Hiện tại hoàn thành tiếp diễn",
+            "expr": "S + have/has + been + V-ing"
+          },
+          {
+            "label": "Quá khứ hoàn thành",
+            "expr": "S + had + V3(pp)"
+          },
+          {
+            "label": "Quá khứ hoàn thành tiếp diễn",
+            "expr": "S + had + been + V-ing"
+          }
+        ]
+      },
+      {
+        "id": "c11_eng_l3",
+        "title": "Bài 3: Mệnh đề quan hệ và Mệnh đề trạng ngữ",
+        "content": "Mệnh đề quan hệ (Relative Clause):\nDùng đại từ quan hệ: who (người), whom (tân ngữ người), which (vật), that (người/vật), whose (sở hữu), where (nơi), when (thời gian).\n\nXác định (Defining RC): không có dấu phẩy, cần thiết về nghĩa. Có thể dùng that.\nKhông xác định (Non-defining RC): có dấu phẩy, bỏ cũng không mất nghĩa cơ bản. Không dùng that.\n\nRút gọn mệnh đề quan hệ:\n• Chủ ngữ, chủ động → V-ing: The boy who is playing... → The boy playing...\n• Chủ ngữ, bị động → V3: The book which was written... → The book written...\n\nMệnh đề trạng ngữ chỉ thời gian (when, while, before, after, as soon as, until, since, by the time).\nMệnh đề trạng ngữ chỉ nguyên nhân (because, since, as, due to, owing to).",
+        "formulas": [
+          {
+            "label": "Rút gọn chủ động",
+            "expr": "...who/which + V → ...V-ing"
+          },
+          {
+            "label": "Rút gọn bị động",
+            "expr": "...who/which + be + V3 → ...V3"
+          }
+        ]
+      },
+      {
+        "id": "c11_eng_l4",
+        "title": "Bài 4: Câu điều kiện và câu ước",
+        "content": "Câu điều kiện (Conditional Sentences):\n\n• Loại 0: sự thật hiển nhiên. If + V(HT), V(HT)\n• Loại 1: có thể xảy ra ở hiện tại/tương lai. If + V(HT), will + V\n• Loại 2: không thực ở hiện tại. If + V(QKĐ), would + V\n• Loại 3: không thực ở quá khứ. If + had + V3, would have + V3\n• Loại hỗn hợp: điều kiện quá khứ, kết quả hiện tại (và ngược lại)\n\nCâu ước (Wish):\n• Ước hiện tại không thực: S + wish + S + V(quá khứ)\n• Ước quá khứ không thực: S + wish + S + had + V3\n• Ước tương lai (mong muốn thay đổi): S + wish + S + would + V",
+        "formulas": [
+          {
+            "label": "Điều kiện loại 1",
+            "expr": "If + S + V(s/es), S + will + V"
+          },
+          {
+            "label": "Điều kiện loại 2",
+            "expr": "If + S + V(ed), S + would + V"
+          },
+          {
+            "label": "Điều kiện loại 3",
+            "expr": "If + S + had + V3, S + would have + V3"
+          },
+          {
+            "label": "Câu ước hiện tại",
+            "expr": "S + wish + S + V(quá khứ đơn)"
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "id": "c11_his_l1",
+        "title": "Bài 1: Các nước Á, Phi, Mỹ Latinh (1945-2000)",
+        "content": "Sau Chiến tranh Thế giới thứ 2, phong trào giải phóng dân tộc bùng nổ mạnh mẽ ở châu Á, châu Phi và Mỹ Latinh.\n\nChâu Á: Ấn Độ độc lập 1947, Trung Quốc thành lập CHND Trung Hoa 10/1949, các nước Đông Nam Á lần lượt độc lập.\n\nChâu Phi: năm 1960 được gọi là 'Năm châu Phi' với 17 nước giành độc lập. Nam Phi xóa bỏ Apartheid 1994.\n\nMỹ Latinh: phong trào cách mạng Cuba (1959) do Fidel Castro lãnh đạo là sự kiện tiêu biểu.",
+        "formulas": []
+      },
+      {
+        "id": "c11_his_l2",
+        "title": "Bài 2: Chiến tranh thế giới thứ nhất (1914-1918)",
+        "content": "Nguyên nhân:\n• Sâu xa: mâu thuẫn giữa các nước đế quốc về thuộc địa, thị trường\n• Trực tiếp: vụ ám sát Thái tử Áo-Hung Franz Ferdinand (6/1914) tại Sarajevo\n\nHai phe tham chiến:\n• Phe Liên minh (Triple Alliance): Đức, Áo-Hung, Italia (sau chuyển phe)\n• Phe Hiệp ước (Triple Entente): Anh, Pháp, Nga (sau: Mỹ tham gia 1917)\n\nDiễn biến chính:\n• 1914-1916: chiến tranh chiến hào ở Mặt trận phía Tây\n• 1917: Mỹ tham chiến; Cách mạng Nga nổ ra\n• 11/11/1918: Đức đầu hàng, chiến tranh kết thúc\n\nHậu quả: 10 triệu người chết, bản đồ châu Âu vẽ lại, Hòa ước Versailles (1919).",
+        "formulas": []
+      },
+      {
+        "id": "c11_his_l3",
+        "title": "Bài 3: Cách mạng tháng Mười Nga 1917",
+        "content": "Bối cảnh: Nga sa hoàng lạc hậu, thất bại liên tiếp trong WWI, đời sống nhân dân cực khổ.\n\nHai giai đoạn cách mạng 1917:\n\nCách mạng tháng Hai (2/1917):\n• Nổi dậy tự phát của quần chúng và binh sĩ ở Petrograd\n• Lật đổ chế độ Nga hoàng Nicholas II\n• Kết quả: chính phủ tư sản lâm thời + Xô Viết → tình trạng \"hai chính quyền song song\"\n\nCách mạng tháng Mười (10/1917):\n• 24-25/10/1917: Bolshevik (Lenin) lãnh đạo khởi nghĩa vũ trang ở Petrograd\n• Chiếm Cung điện Mùa Đông, lật đổ chính phủ tư sản\n• Thành lập Nhà nước Xô Viết — nhà nước vô sản đầu tiên trên thế giới\n\nÝ nghĩa: mở ra thời đại mới, ảnh hưởng sâu sắc đến phong trào cách mạng thế giới.",
+        "formulas": []
+      },
+      {
+        "id": "c11_his_l4",
+        "title": "Bài 4: Việt Nam dưới thực dân Pháp và phong trào yêu nước",
+        "content": "Pháp hoàn thành xâm lược Việt Nam 1884, áp đặt chính sách khai thác thuộc địa.\n\nChính sách thực dân:\n• Khai thác thuộc địa lần 1 (1897-1914): tập trung khai thác mỏ, đường sắt, đồn điền\n• Khai thác thuộc địa lần 2 (sau WWI): đẩy mạnh đầu tư công nghiệp\n\nCác phong trào yêu nước:\n• Phong trào Cần Vương (1885-1896): dưới danh nghĩa vua Hàm Nghi, văn thân sĩ phu lãnh đạo. Thất bại vì chưa có đường lối đúng\n• Phong trào Đông Du (1905-1909): Phan Bội Châu đưa học sinh sang Nhật học\n• Đông Kinh Nghĩa Thục (1907): cải cách giáo dục theo lối mới\n• Phong trào Duy Tân: Phan Châu Trinh kêu gọi cải cách ôn hòa\n\nTất cả đều thất bại vì chưa có đường lối cách mạng đúng đắn.",
+        "formulas": []
+      }
+    ],
+    "geography": [
+      {
+        "id": "c11_geo_l1",
+        "title": "Bài 1: Dân số và sự phát triển dân số thế giới",
+        "content": "Dân số thế giới tăng nhanh từ thế kỷ XIX đến nay, đặc biệt từ sau Chiến tranh Thế giới thứ 2.\n\nNăm 2023 dân số thế giới vượt 8 tỷ người.\n\nTỉ suất sinh thô (CBR): số trẻ sinh ra trên 1000 dân/năm.\nTỉ suất tử thô (CDR): số người chết trên 1000 dân/năm.\nTỉ suất gia tăng tự nhiên (RNI) = CBR - CDR.\n\nMô hình dân số: nước phát triển → già hóa dân số; nước đang phát triển → dân số trẻ, tăng nhanh.",
+        "formulas": [
+          {
+            "label": "Tỉ suất gia tăng tự nhiên",
+            "expr": "RNI (‰) = CBR - CDR"
+          },
+          {
+            "label": "Thời gian tăng gấp đôi dân số",
+            "expr": "T ≈ 70 / r%  (Quy tắc 70)"
+          }
+        ]
+      },
+      {
+        "id": "c11_geo_l2",
+        "title": "Bài 2: Địa lý kinh tế — Các ngành sản xuất thế giới",
+        "content": "Nền kinh tế thế giới gồm ba khu vực chính:\n\nNông nghiệp:\n• Trồng trọt: lúa mì (ôn đới), lúa gạo (nhiệt đới ẩm), ngô (toàn cầu)\n• Chăn nuôi: bò, lợn, cừu — gắn với điều kiện đồng cỏ\n• Đánh bắt thủy sản: Thái Bình Dương chiếm ~70% sản lượng\n\nCông nghiệp:\n• Phân loại: khai khoáng, chế biến (sản xuất), năng lượng, xây dựng\n• Các trung tâm CN lớn: Bắc Mỹ, Tây Âu, Đông Á (Nhật, Trung, Hàn)\n• Xu hướng: dịch chuyển sang các nước đang phát triển (nhân công rẻ)\n\nDịch vụ:\n• Chiếm tỉ trọng GDP cao nhất ở nước phát triển (>60-70%)\n• Du lịch: ngành \"công nghiệp không khói\", doanh thu >1,4 nghìn tỷ USD/năm",
+        "formulas": [
+          {
+            "label": "Cơ cấu GDP theo ngành",
+            "expr": "GDP = Nông nghiệp + Công nghiệp + Dịch vụ"
+          },
+          {
+            "label": "Năng suất lao động",
+            "expr": "NSLĐ = GDP / Lực lượng lao động"
+          }
+        ]
+      },
+      {
+        "id": "c11_geo_l3",
+        "title": "Bài 3: Địa lý tự nhiên Việt Nam",
+        "content": "Vị trí địa lý:\n• Nằm ở phía đông bán đảo Đông Dương, ven biển Thái Bình Dương\n• Tọa độ: 8°34'B đến 23°23'B; 102°10'Đ đến 109°21'Đ\n• Tiếp giáp: Trung Quốc (N), Lào và Campuchia (T), Biển Đông (Đ và N)\n\nĐịa hình:\n• 3/4 diện tích là đồi núi, chạy dài từ Bắc đến Nam\n• Hướng chính: Tây Bắc-Đông Nam và vòng cung\n• Đồng bằng: đồng bằng sông Hồng và đồng bằng sông Cửu Long\n\nKhí hậu:\n• Nhiệt đới ẩm gió mùa, chịu ảnh hưởng của biển\n• Miền Bắc: 4 mùa (xuân, hạ, thu, đông)\n• Miền Nam: 2 mùa (mưa và khô)",
+        "formulas": [
+          {
+            "label": "Diện tích Việt Nam",
+            "expr": "S ≈ 331.212 km²"
+          },
+          {
+            "label": "Đường bờ biển",
+            "expr": "L ≈ 3.260 km"
+          }
+        ]
+      },
+      {
+        "id": "c11_geo_l4",
+        "title": "Bài 4: Địa lý kinh tế — Xã hội Việt Nam",
+        "content": "Dân số và lao động:\n• Dân số ~100 triệu người (2023), đứng thứ 15 thế giới\n• Cơ cấu dân số trẻ nhưng đang già hóa nhanh\n• Mật độ dân số cao: 290 người/km², tập trung ở đồng bằng và ven biển\n\nKinh tế Việt Nam:\n• Đổi mới từ 1986: chuyển từ kinh tế kế hoạch hóa sang thị trường định hướng XHCN\n• GDP tăng trưởng ~6-7%/năm, thu nhập bình quân trên 4.000 USD/người (2023)\n• Xuất khẩu chủ lực: điện tử (Samsung), dệt may, da giày, nông sản\n\nCác vùng kinh tế:\n• Đồng bằng sông Hồng: trọng điểm kinh tế phía Bắc, trung tâm chính trị\n• Đông Nam Bộ: vùng kinh tế năng động nhất, đóng góp ~45% GDP cả nước",
+        "formulas": [
+          {
+            "label": "Mật độ dân số",
+            "expr": "D = N / S  (người/km²)"
+          },
+          {
+            "label": "Tốc độ đô thị hóa",
+            "expr": "Tỉ lệ đô thị = Dân đô thị / Tổng dân × 100%"
+          }
+        ]
+      }
+    ]
+  },
+  "class12": {
+    "math": [
+      {
+        "id": "c12_math_l1",
+        "title": "Bài 1: Ứng dụng đạo hàm",
+        "content": "Đạo hàm là công cụ chính để khảo sát hàm số và vẽ đồ thị.\n\nSơ đồ khảo sát hàm số:\n1. Tập xác định\n2. Sự biến thiên: tính f'(x), tìm điểm cực trị\n3. Các giới hạn và tiệm cận\n4. Bảng biến thiên\n5. Vẽ đồ thị\n\nĐiều kiện cực trị: f'(x₀)=0 và f' đổi dấu tại x₀.\nNếu f'(x₀)=0 và f''(x₀)>0 → cực tiểu; f''(x₀)<0 → cực đại.",
+        "formulas": [
+          {
+            "label": "Điều kiện cực đại",
+            "expr": "f'(x₀) = 0 và f''(x₀) < 0"
+          },
+          {
+            "label": "Điều kiện cực tiểu",
+            "expr": "f'(x₀) = 0 và f''(x₀) > 0"
+          },
+          {
+            "label": "Tiếp tuyến tại x₀",
+            "expr": "y = f'(x₀)·(x - x₀) + f(x₀)"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l2",
+        "title": "Bài 2: Tích phân",
+        "content": "Tích phân xác định của f(x) trên [a,b] là giới hạn của tổng Riemann, biểu diễn diện tích hình thang cong.\n\nĐịnh lý Newton-Leibniz: nếu F(x) là nguyên hàm của f(x) trên [a,b] thì tích phân xác định bằng F(b) - F(a).\n\nMột số nguyên hàm cơ bản cần nhớ: ∫xⁿdx, ∫sinx dx, ∫cosx dx, ∫eˣdx.",
+        "formulas": [
+          {
+            "label": "Newton-Leibniz",
+            "expr": "∫[a→b] f(x)dx = F(b) - F(a)"
+          },
+          {
+            "label": "Nguyên hàm lũy thừa",
+            "expr": "∫xⁿdx = xⁿ⁺¹/(n+1) + C,  n ≠ -1"
+          },
+          {
+            "label": "Nguyên hàm sin/cos",
+            "expr": "∫sin(x)dx = -cos(x) + C"
+          },
+          {
+            "label": "Diện tích hình thang cong",
+            "expr": "S = |∫[a→b] f(x) dx|"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l3",
+        "title": "Bài 3: Khảo sát hàm số và vẽ đồ thị",
+        "content": "Sơ đồ khảo sát hàm số đầy đủ:\n1. Tập xác định D\n2. Sự biến thiên:\n   a. Tính đạo hàm f'(x), tìm điểm làm f'(x) = 0 hoặc không xác định\n   b. Lập bảng biến thiên\n   c. Tìm cực trị (cực đại, cực tiểu)\n3. Giới hạn tại vô cực và tiệm cận\n4. Điểm đặc biệt: giao với trục tọa độ\n5. Vẽ đồ thị\n\nTiệm cận:\n• Tiệm cận đứng x = a: lim f(x) = ±∞ khi x→a\n• Tiệm cận ngang y = b: lim f(x) = b khi x→±∞\n• Tiệm cận xiên y = ax+b: khi bậc tử = bậc mẫu + 1\n\nBốn dạng đồ thị thường gặp: bậc ba, bậc bốn trùng phương, hàm phân thức bậc nhất/bậc nhất.",
+        "formulas": [
+          {
+            "label": "Hàm bậc 3",
+            "expr": "y = ax³ + bx² + cx + d,  a ≠ 0"
+          },
+          {
+            "label": "Hàm trùng phương",
+            "expr": "y = ax⁴ + bx² + c,  a ≠ 0"
+          },
+          {
+            "label": "Hàm phân thức",
+            "expr": "y = (ax+b)/(cx+d),  ad-bc ≠ 0"
+          },
+          {
+            "label": "Tiệm cận ngang hàm phân thức",
+            "expr": "y = a/c"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l4",
+        "title": "Bài 4: Hàm số mũ và hàm số logarit",
+        "content": "Hàm số mũ y = aˣ (a > 0, a ≠ 1):\n• a > 1: hàm đồng biến trên ℝ\n• 0 < a < 1: hàm nghịch biến trên ℝ\n• Luôn đi qua điểm (0; 1), đồ thị nằm trên trục Ox\n\nHàm số logarit y = logₐx (a > 0, a ≠ 1), x > 0:\n• a > 1: đồng biến; 0 < a < 1: nghịch biến\n• Là hàm ngược của hàm mũ\n\nLũy thừa và logarit:\n• Hàm mũ tự nhiên: y = eˣ (e ≈ 2,718)\n• Logarit tự nhiên: ln x = logₑx\n• Logarit thập phân: log x = log₁₀x\n\nPhương trình và bất phương trình mũ – logarit: đưa về cùng cơ số hoặc đặt ẩn phụ.",
+        "formulas": [
+          {
+            "label": "Tính chất logarit",
+            "expr": "logₐ(MN) = logₐM + logₐN"
+          },
+          {
+            "label": "Đổi cơ số",
+            "expr": "logₐb = logcb / logcа"
+          },
+          {
+            "label": "Đạo hàm hàm mũ",
+            "expr": "(aˣ)' = aˣ·ln a;  (eˣ)' = eˣ"
+          },
+          {
+            "label": "Đạo hàm logarit",
+            "expr": "(ln x)' = 1/x;  (logₐx)' = 1/(x·ln a)"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l5",
+        "title": "Bài 5: Số phức",
+        "content": "Số phức z = a + bi trong đó a, b ∈ ℝ, i là đơn vị ảo với i² = -1.\na là phần thực, b là phần ảo.\n\nTập số phức ℂ mở rộng tập số thực ℝ. Số thực là số phức có phần ảo bằng 0.\n\nSố phức liên hợp: z̄ = a - bi\nMô-đun: |z| = √(a² + b²)\n\nBiểu diễn hình học: điểm M(a; b) trong mặt phẳng phức Oxy.\n\nDạng lượng giác: z = r(cosφ + i·sinφ), r = |z|, φ = arg(z)\n\nPhương trình bậc hai với hệ số thực luôn có nghiệm trong ℂ.",
+        "formulas": [
+          {
+            "label": "Đơn vị ảo",
+            "expr": "i² = -1;  i³ = -i;  i⁴ = 1"
+          },
+          {
+            "label": "Mô-đun",
+            "expr": "|z| = √(a² + b²)"
+          },
+          {
+            "label": "Nhân hai số phức",
+            "expr": "(a+bi)(c+di) = (ac-bd) + (ad+bc)i"
+          },
+          {
+            "label": "Chia số phức",
+            "expr": "z₁/z₂ = z₁·z̄₂ / |z₂|²"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l6",
+        "title": "Bài 6: Nguyên hàm và tích phân nâng cao",
+        "content": "Nguyên hàm F(x) của f(x) trên (a;b) là hàm thỏa mãn F'(x) = f(x) với mọi x ∈ (a;b).\n\nHọ nguyên hàm: ∫f(x)dx = F(x) + C\n\nPhương pháp tính nguyên hàm:\n1. Nguyên hàm cơ bản: tra bảng\n2. Phương pháp đổi biến: đặt t = g(x)\n3. Phương pháp từng phần: ∫u dv = uv - ∫v du\n\nTích phân xác định — ứng dụng:\n• Diện tích hình phẳng giới hạn bởi đường cong\n• Thể tích vật thể tròn xoay\n• Quãng đường trong vật lý",
+        "formulas": [
+          {
+            "label": "Nguyên hàm cơ bản",
+            "expr": "∫xⁿdx = xⁿ⁺¹/(n+1)+C;  ∫eˣdx = eˣ+C"
+          },
+          {
+            "label": "Nguyên hàm từng phần",
+            "expr": "∫u dv = uv - ∫v du"
+          },
+          {
+            "label": "Diện tích hình phẳng",
+            "expr": "S = ∫[a→b] |f(x) - g(x)| dx"
+          },
+          {
+            "label": "Thể tích tròn xoay (quanh Ox)",
+            "expr": "V = π·∫[a→b] [f(x)]² dx"
+          }
+        ]
+      },
+      {
+        "id": "c12_math_l7",
+        "title": "Bài 7: Hình học không gian — Khối đa diện và thể tích",
+        "content": "Khối đa diện là khối giới hạn bởi hữu hạn các đa giác phẳng (mặt).\n\nCác khối đa diện đều: tứ diện đều, lập phương, bát diện đều, mười hai mặt đều, hai mươi mặt đều.\n\nKhối lăng trụ đứng: đáy là đa giác, các mặt bên là hình chữ nhật.\nKhối chóp: đáy là đa giác, đỉnh là điểm nằm ngoài mặt đáy.\n\nKhối tròn xoay:\n• Hình nón: quay tam giác vuông quanh 1 cạnh góc vuông\n• Hình trụ: quay hình chữ nhật quanh 1 cạnh\n• Hình cầu: quay nửa hình tròn quanh đường kính",
+        "formulas": [
+          {
+            "label": "Thể tích lăng trụ/hình trụ",
+            "expr": "V = S_đáy × h"
+          },
+          {
+            "label": "Thể tích chóp/hình nón",
+            "expr": "V = (1/3) × S_đáy × h"
+          },
+          {
+            "label": "Thể tích hình cầu",
+            "expr": "V = (4/3)πR³"
+          },
+          {
+            "label": "Diện tích xung quanh hình nón",
+            "expr": "S_xq = πRl  (l: đường sinh)"
+          }
+        ]
+      }
+    ],
+    "physics": [
+      {
+        "id": "c12_phy_l1",
+        "title": "Bài 1: Dao động điều hòa",
+        "content": "Dao động điều hòa là dao động được mô tả bởi hàm sin hoặc cos theo thời gian.\n\nCon lắc lò xo và con lắc đơn là hai hệ dao động điều hòa phổ biến.\n\nPha dao động φ = ωt + φ₀ xác định trạng thái tại thời điểm t.\nNăng lượng dao động: tổng động năng và thế năng luôn bảo toàn trong dao động không tắt dần.",
+        "formulas": [
+          {
+            "label": "Phương trình dao động",
+            "expr": "x = A·cos(ωt + φ₀)"
+          },
+          {
+            "label": "Tần số góc (lò xo)",
+            "expr": "ω = √(k/m)"
+          },
+          {
+            "label": "Tần số góc (con lắc đơn)",
+            "expr": "ω = √(g/l)"
+          },
+          {
+            "label": "Chu kỳ",
+            "expr": "T = 2π/ω"
+          },
+          {
+            "label": "Năng lượng dao động",
+            "expr": "W = ½·k·A² = ½·m·ω²·A²"
+          }
+        ]
+      },
+      {
+        "id": "c12_phy_l2",
+        "title": "Bài 2: Sóng cơ và sóng âm",
+        "content": "Sóng cơ là dao động cơ học lan truyền trong môi trường vật chất.\n\nPhân loại theo phương dao động:\n• Sóng ngang: phương dao động ⊥ phương truyền sóng (sóng trên dây, sóng mặt nước)\n• Sóng dọc: phương dao động // phương truyền sóng (sóng âm trong không khí)\n\nCác đại lượng đặc trưng: chu kỳ T, tần số f, bước sóng λ, tốc độ truyền sóng v, biên độ A.\n\nSóng âm: sóng dọc, truyền được trong chất rắn, lỏng, khí; không truyền được trong chân không.\n• Âm nghe được: 16 Hz – 20.000 Hz\n• Hạ âm: f < 16 Hz; Siêu âm: f > 20.000 Hz\n• Cường độ âm I, mức cường độ âm L (dB)",
+        "formulas": [
+          {
+            "label": "Liên hệ v, λ, f, T",
+            "expr": "v = λ·f = λ/T"
+          },
+          {
+            "label": "Phương trình sóng",
+            "expr": "u(x,t) = A·cos(ωt - 2πx/λ)"
+          },
+          {
+            "label": "Mức cường độ âm",
+            "expr": "L = 10·log(I/I₀)  (dB),  I₀ = 10⁻¹² W/m²"
+          },
+          {
+            "label": "Hiệu ứng Doppler (nguồn lại gần)",
+            "expr": "f' = f·(v+v_obs)/(v-v_s)"
+          }
+        ]
+      },
+      {
+        "id": "c12_phy_l3",
+        "title": "Bài 3: Sóng điện từ và Quang học",
+        "content": "Sóng điện từ: sóng ngang do điện trường và từ trường biến thiên lan truyền trong không gian, tốc độ c = 3×10⁸ m/s trong chân không.\n\nPhổ sóng điện từ (bước sóng tăng dần): tia γ → tia X → tia tử ngoại → ánh sáng nhìn thấy → hồng ngoại → sóng vô tuyến.\n\nÁnh sáng nhìn thấy: 380-760 nm (tím → đỏ).\n\nQuang học hình học:\n• Phản xạ: góc tới = góc phản xạ\n• Khúc xạ: n₁sinθ₁ = n₂sinθ₂ (Định luật Snell)\n• Phản xạ toàn phần: khi θ ≥ θ_gh và ánh sáng đi từ môi trường chiết quang hơn sang kém hơn\n• Thấu kính: hội tụ (f > 0) và phân kỳ (f < 0)",
+        "formulas": [
+          {
+            "label": "Định luật khúc xạ (Snell)",
+            "expr": "n₁sinθ₁ = n₂sinθ₂"
+          },
+          {
+            "label": "Chiết suất tuyệt đối",
+            "expr": "n = c/v"
+          },
+          {
+            "label": "Công thức thấu kính",
+            "expr": "1/f = 1/d_o + 1/d_i"
+          },
+          {
+            "label": "Góc phản xạ toàn phần",
+            "expr": "sinθ_gh = n₂/n₁  (n₁ > n₂)"
+          }
+        ]
+      },
+      {
+        "id": "c12_phy_l4",
+        "title": "Bài 4: Vật lý hạt nhân",
+        "content": "Hạt nhân nguyên tử gồm proton (Z) và neutron (N), số khối A = Z + N.\n\nPhóng xạ tự nhiên: hạt nhân không bền tự phát ra bức xạ.\n• Tia α (²₄He): xuyên thấu yếu, ion hóa mạnh\n• Tia β⁻ (electron): n → p + e⁻ + ν̄\n• Tia β⁺ (positron): p → n + e⁺ + ν\n• Tia γ (photon): không mang điện, xuyên thấu mạnh\n\nĐịnh luật phóng xạ: số hạt nhân phóng xạ giảm theo hàm mũ.\n\nPhản ứng hạt nhân: phân hạch (hạt nhân nặng vỡ ra) và nhiệt hạch (hạt nhân nhẹ kết hợp).\nBảo toàn: số khối A, điện tích Z, năng lượng-khối lượng (E = mc²).",
+        "formulas": [
+          {
+            "label": "Định luật phóng xạ",
+            "expr": "N(t) = N₀·(1/2)^(t/T) = N₀·e^(-λt)"
+          },
+          {
+            "label": "Chu kỳ bán rã và hằng số phóng xạ",
+            "expr": "T = ln2 / λ ≈ 0,693/λ"
+          },
+          {
+            "label": "Năng lượng liên kết hạt nhân",
+            "expr": "E = Δm·c²  (Δm = độ hụt khối)"
+          },
+          {
+            "label": "Einstein",
+            "expr": "E = mc²,  c = 3×10⁸ m/s"
+          }
+        ]
+      },
+      {
+        "id": "c12_phy_l5",
+        "title": "Bài 5: Điện xoay chiều",
+        "content": "Dòng điện xoay chiều (AC): cường độ biến đổi điều hòa theo thời gian.\n\nMạch RLC nối tiếp:\n• Điện trở R: u và i cùng pha\n• Cuộn cảm L: u nhanh pha hơn i góc π/2\n• Tụ điện C: u chậm pha hơn i góc π/2\n\nTổng trở Z của mạch RLC nối tiếp.\nCộng hưởng điện: Z_L = Z_C → Z = R (nhỏ nhất), I = U/R (lớn nhất).\n\nMáy biến áp: biến đổi điện áp AC dựa trên hiện tượng cảm ứng điện từ. Dùng truyền tải điện năng đi xa.",
+        "formulas": [
+          {
+            "label": "Tổng trở mạch RLC",
+            "expr": "Z = √[R² + (Z_L - Z_C)²]"
+          },
+          {
+            "label": "Cảm kháng và dung kháng",
+            "expr": "Z_L = ωL;  Z_C = 1/(ωC)"
+          },
+          {
+            "label": "Điều kiện cộng hưởng",
+            "expr": "ω₀ = 1/√(LC)"
+          },
+          {
+            "label": "Máy biến áp",
+            "expr": "U₁/U₂ = N₁/N₂;  I₁·N₁ = I₂·N₂"
+          }
+        ]
+      }
+    ],
+    "chemistry": [
+      {
+        "id": "c12_che_l1",
+        "title": "Bài 1: Este và lipit",
+        "content": "Este là sản phẩm của phản ứng axit (hữu cơ hoặc vô cơ) với rượu, có mùi thơm đặc trưng.\n\nCông thức tổng quát este của axit cacboxylic: RCOOR'\nPhản ứng este hóa là phản ứng thuận nghịch, cần xúc tác H₂SO₄ đặc, đun nóng.\n\nLipit gồm chất béo (triglixerit), sáp, photpholipit, steorit.\nChất béo: este của glixerol và axit béo. Chất béo lỏng (dầu) → nhiều axit béo không no. Chất béo rắn (mỡ) → nhiều axit béo no.",
+        "formulas": [
+          {
+            "label": "Phản ứng este hóa",
+            "expr": "RCOOH + R'OH ⇌ RCOOR' + H₂O"
+          },
+          {
+            "label": "Phản ứng xà phòng hóa",
+            "expr": "(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa + C₃H₅(OH)₃"
+          }
+        ]
+      },
+      {
+        "id": "c12_che_l2",
+        "title": "Bài 2: Cacbohydrat — Glucozơ, Saccarozơ, Tinh bột, Xenlulozơ",
+        "content": "Cacbohydrat (gluxit, saccharide): hợp chất hữu cơ gồm C, H, O; công thức chung Cₙ(H₂O)ₘ.\n\nGlucozơ (C₆H₁₂O₆):\n• Aldehyde đơn chức + polyol\n• Phản ứng tráng bạc (phản ứng với AgNO₃/NH₃): nhận biết glucozơ\n• Phản ứng lên men rượu: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂\n\nSaccarozơ (C₁₂H₂₂O₁₁): disaccharide, không có tính khử, thủy phân tạo glucozơ + fructozơ.\n\nTinh bột: polysaccharide, phản ứng với I₂ → màu xanh tím (nhận biết).\nXenlulozơ: polysaccharide, cấu trúc sợi, không tan trong nước, phản ứng với HNO₃ đặc tạo xenlulozơ trinitrat (thuốc nổ, tơ).",
+        "formulas": [
+          {
+            "label": "Phản ứng tráng bạc glucozơ",
+            "expr": "C₆H₁₂O₆ + Ag₂O → C₆H₁₂O₇ + 2Ag↓  (NH₃, to)"
+          },
+          {
+            "label": "Lên men glucozơ",
+            "expr": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂  (men rượu)"
+          },
+          {
+            "label": "Thủy phân tinh bột",
+            "expr": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆  (H⁺, to)"
+          }
+        ]
+      },
+      {
+        "id": "c12_che_l3",
+        "title": "Bài 3: Amin, Amino axit và Protein",
+        "content": "Amin: dẫn xuất của NH₃ thay H bởi gốc hidrocacbon.\n• Bậc amin = số nguyên tử H thay thế\n• Amin thơm (anilin C₆H₅NH₂): tính bazơ rất yếu, không làm đổi màu quỳ\n• Amin béo: tính bazơ mạnh hơn NH₃, dung dịch làm quỳ chuyển xanh\n\nAmino axit: phân tử có cả nhóm -NH₂ và -COOH → lưỡng tính.\nPhản ứng trùng ngưng amino axit → peptide → protein.\n\nProtein: polymer của amino axit, liên kết peptide (-CO-NH-).\n• Phản ứng màu biuret (protein + Cu(OH)₂ → màu tím): nhận biết protein\n• Phản ứng thủy phân protein → amino axit (enzym tiêu hóa)",
+        "formulas": [
+          {
+            "label": "Phản ứng tạo peptide",
+            "expr": "H₂N-CHR-COOH + H₂N-CHR'-COOH → H₂N-CHR-CO-NH-CHR'-COOH + H₂O"
+          },
+          {
+            "label": "Lưỡng tính amino axit",
+            "expr": "H₂N-R-COOH + HCl → ClH₃N-R-COOH\nH₂N-R-COOH + NaOH → H₂N-R-COONa + H₂O"
+          }
+        ]
+      },
+      {
+        "id": "c12_che_l4",
+        "title": "Bài 4: Polime và vật liệu polymer",
+        "content": "Polime (polymer) là hợp chất có phân tử khối lớn, gồm nhiều mắt xích nhỏ (monome) liên kết lại.\n\nPhân loại:\n• Polime thiên nhiên: tinh bột, xenlulozơ, cao su thiên nhiên, protein\n• Polime tổng hợp: PE, PVC, PS, nylon, Teflon\n• Polime bán tổng hợp: tơ axetat, tơ visco\n\nPhản ứng điều chế:\n• Trùng hợp: các monome có liên kết đôi cộng hợp với nhau\n• Trùng ngưng: các monome có ≥2 nhóm chức phản ứng với nhau, loại phân tử nhỏ\n\nVật liệu polymer: chất dẻo, cao su, tơ sợi, keo dán.",
+        "formulas": [
+          {
+            "label": "Trùng hợp etilen",
+            "expr": "n CH₂=CH₂ → (-CH₂-CH₂-)ₙ  (PE)"
+          },
+          {
+            "label": "Trùng ngưng nylon-6,6",
+            "expr": "n H₂N(CH₂)₆NH₂ + n HOOC(CH₂)₄COOH → [-NH(CH₂)₆NH-CO(CH₂)₄CO-]ₙ + nH₂O"
+          },
+          {
+            "label": "Độ trùng hợp",
+            "expr": "n = M_polime / M_monome"
+          }
+        ]
+      },
+      {
+        "id": "c12_che_l5",
+        "title": "Bài 5: Kim loại và điện hóa",
+        "content": "Kim loại chiếm 80% nguyên tố trong bảng tuần hoàn. Cấu trúc tinh thể kim loại với electron tự do giải thích tính dẫn điện, dẫn nhiệt, ánh kim.\n\nDãy hoạt động hóa học (dãy thế điện cực): K, Na, Mg, Al, Zn, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt, Au.\n\nPhản ứng của kim loại:\n• Với phi kim: đốt cháy tạo oxit hoặc muối\n• Với axit: kim loại trước H khử H⁺ thành H₂ (HCl, H₂SO₄ loãng)\n• Với HNO₃, H₂SO₄ đặc: sản phẩm khử khác\n• Với dung dịch muối: kim loại mạnh đẩy kim loại yếu\n\nSự ăn mòn điện hóa: xảy ra khi hai kim loại khác nhau tiếp xúc trong dung dịch điện li.",
+        "formulas": [
+          {
+            "label": "Fe + HCl",
+            "expr": "Fe + 2HCl → FeCl₂ + H₂↑"
+          },
+          {
+            "label": "Fe + CuSO₄",
+            "expr": "Fe + CuSO₄ → FeSO₄ + Cu↓"
+          },
+          {
+            "label": "Điều chế bằng điện phân",
+            "expr": "Tại catod: ion KL + ne → KL\nTại anod: ion âm - ne → phi kim"
+          }
+        ]
+      }
+    ],
+    "biology": [
+      {
+        "id": "c12_bio_l1",
+        "title": "Bài 1: Gen, mã di truyền và nhân đôi ADN",
+        "content": "Gen là một đoạn phân tử ADN mang thông tin mã hóa cho một chuỗi polipeptit hay một phân tử ARN.\n\nMã di truyền là mã bộ ba (codon): 3 nucleotit liên tiếp trên mARN mã hóa cho 1 axit amin.\nMã di truyền có tính phổ biến, đặc hiệu, thoái hóa và không gối nhau.\n\nNhân đôi ADN (tái bản): diễn ra ở nhân tế bào, nguyên tắc bổ sung và bán bảo toàn. Mỗi ADN mẹ tạo ra 2 ADN con, mỗi ADN con có 1 mạch mẹ và 1 mạch mới.",
+        "formulas": [
+          {
+            "label": "Số codon có thể có",
+            "expr": "4³ = 64 bộ ba (61 mã hóa aa + 3 mã kết thúc)"
+          },
+          {
+            "label": "Nguyên tắc bổ sung",
+            "expr": "A-T, G-X (ADN);  A-U, G-X (ARN)"
+          }
+        ]
+      },
+      {
+        "id": "c12_bio_l2",
+        "title": "Bài 2: Phiên mã và Dịch mã",
+        "content": "Phiên mã (Transcription): tổng hợp ARN từ khuôn mẫu ADN, xảy ra trong nhân tế bào.\n• mARN: mang thông tin từ ADN ra ribosome\n• tARN: vận chuyển amino axit, có anticodon\n• rARN: cấu tạo nên ribosome\n\nDịch mã (Translation): tổng hợp protein từ mARN, diễn ra ở ribosome trong tế bào chất.\nQuy trình:\n1. Khởi đầu: ribosome gắn vào mARN tại codon mở đầu AUG\n2. Kéo dài: ribosome dịch chuyển theo chiều 5'→3', tARN mang aa vào, hình thành liên kết peptide\n3. Kết thúc: gặp codon kết thúc (UAA, UAG, UGA)\n\nQuá trình từ ADN → ARN → Protein gọi là sự biểu hiện gene.",
+        "formulas": [
+          {
+            "label": "Nguyên tắc bổ sung (phiên mã)",
+            "expr": "ADN: A-T, G-X → mARN: U-A, G-X"
+          },
+          {
+            "label": "Số amino axit trong chuỗi polipeptit",
+            "expr": "N_aa = N_codon - 1  (trừ codon kết thúc)"
+          },
+          {
+            "label": "Chiều dài mARN",
+            "expr": "L = N_nucleotit × 3,4Å / 3"
+          }
+        ]
+      },
+      {
+        "id": "c12_bio_l3",
+        "title": "Bài 3: Điều hòa hoạt động gene và Đột biến",
+        "content": "Điều hòa hoạt động gene — Mô hình Operon Lac (Jacob-Monod):\n• Promoter (P): vùng khởi động, ARN polymerase bám vào\n• Operator (O): vùng vận hành, protein ức chế bám vào\n• Gene cấu trúc Z, Y, A: mã hóa enzyme phân giải lactose\n• Gene điều hòa R: tổng hợp protein ức chế\nKhi có lactose: lactose gắn vào protein ức chế → mất tác dụng → operon hoạt động.\n\nĐột biến gene: thay đổi cấu trúc phân tử ADN tại một hoặc một vài cặp nucleotide.\n• Thêm/mất cặp nu: dịch khung đọc → ảnh hưởng nhiều\n• Thay thế cặp nu: có thể ít ảnh hưởng (đột biến im lặng)\n\nĐột biến nhiễm sắc thể: đột biến cấu trúc NST và đột biến số lượng NST (lệch bội, đa bội).",
+        "formulas": [
+          {
+            "label": "Đột biến mất 1 cặp nu",
+            "expr": "Dịch khung từ vị trí đột biến → thay đổi toàn bộ aa phía sau"
+          },
+          {
+            "label": "Thể đa bội",
+            "expr": "3n: tam bội, 4n: tứ bội, ... → cơ thể to, năng suất cao"
+          }
+        ]
+      },
+      {
+        "id": "c12_bio_l4",
+        "title": "Bài 4: Quy luật di truyền Mendel",
+        "content": "Gregor Mendel (1865) đặt nền móng cho di truyền học qua thí nghiệm với đậu Hà Lan.\n\nQuy luật phân li (Mendel I):\nMỗi tính trạng do một cặp nhân tố di truyền (allele) quy định. Trong quá trình hình thành giao tử, các allele phân li đồng đều. Tỉ lệ kiểu hình F₂: 3 trội : 1 lặn.\n\nQuy luật phân li độc lập (Mendel II):\nCác cặp nhân tố di truyền phân li và tổ hợp tự do trong quá trình sinh sản (khi các gene nằm trên NST khác nhau).\nTỉ lệ F₂ (2 tính trạng): 9:3:3:1.\n\nCác dạng tương tác gene: át chế, bổ sung, cộng gộp — tạo tỉ lệ khác 9:3:3:1.",
+        "formulas": [
+          {
+            "label": "Tỉ lệ F₂ (1 cặp gene)",
+            "expr": "1 AA : 2 Aa : 1 aa  →  3 trội : 1 lặn"
+          },
+          {
+            "label": "Tỉ lệ F₂ (2 cặp gene)",
+            "expr": "9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb"
+          },
+          {
+            "label": "Xác suất kiểu gen",
+            "expr": "P(AaBb) = P(Aa) × P(Bb)"
+          }
+        ]
+      },
+      {
+        "id": "c12_bio_l5",
+        "title": "Bài 5: Di truyền liên kết và Di truyền người",
+        "content": "Di truyền liên kết gene:\nCác gene cùng nằm trên một NST tạo thành nhóm liên kết, thường di truyền cùng nhau → phá vỡ tỉ lệ Mendel.\nHoán vị gene (trao đổi chéo): xảy ra ở kỳ đầu giảm phân I → tạo giao tử tổ hợp mới.\n\nDi truyền liên kết với giới tính:\n• Gene trên NST X nhưng không có allele trên Y: nữ (XX) mang 2 allele, nam (XY) chỉ có 1\n• Bệnh máu khó đông, mù màu: lặn trên X → nam dễ mắc hơn\n\nDi truyền học người:\n• Phương pháp nghiên cứu phả hệ, sinh đôi, tế bào, phân tử\n• Bệnh di truyền: Down (thêm NST 21), Patau, Edwards\n• Tư vấn di truyền: xác suất sinh con mắc bệnh",
+        "formulas": [
+          {
+            "label": "Tần số hoán vị gene",
+            "expr": "f = số cá thể tái tổ hợp / tổng số cá thể × 100%"
+          },
+          {
+            "label": "Bệnh mù màu (lặn X)",
+            "expr": "Nam mắc: X^a Y;  Nữ mắc: X^a X^a;  Nữ mang gen: X^A X^a"
+          }
+        ]
+      }
+    ],
+    "technology": [
+      {
+        "id": "c12_tec_l1",
+        "title": "Bài 1: Động cơ đốt trong",
+        "content": "Động cơ đốt trong là loại động cơ nhiệt, trong đó quá trình đốt cháy nhiên liệu xảy ra bên trong xi-lanh.\n\nPhân loại theo nhiên liệu: xăng và diesel.\nPhân loại theo kỳ: 4 kỳ và 2 kỳ.\n\nCác kỳ của động cơ 4 kỳ:\n1. Kỳ nạp: piston đi xuống, hút hỗn hợp khí-nhiên liệu vào xi-lanh\n2. Kỳ nén: piston đi lên, nén hỗn hợp\n3. Kỳ nổ (sinh công): hỗn hợp cháy giãn nở, đẩy piston xuống\n4. Kỳ xả: piston đi lên, đẩy khí thải ra ngoài",
+        "formulas": [
+          {
+            "label": "Hiệu suất nhiệt lý thuyết",
+            "expr": "η = 1 - 1/ε^(γ-1),  ε = tỉ số nén"
+          }
+        ]
+      },
+      {
+        "id": "c12_tec_l2",
+        "title": "Bài 2: Hệ thống điện quốc gia và An toàn điện",
+        "content": "Hệ thống điện quốc gia: tập hợp các nhà máy điện, đường dây truyền tải, trạm biến áp và hộ tiêu thụ.\n\nNguồn điện Việt Nam:\n• Nhiệt điện: đốt than, khí, dầu — chiếm tỉ trọng lớn\n• Thủy điện: Hòa Bình, Sơn La, Lai Châu\n• Điện tái tạo: điện mặt trời, điện gió đang phát triển nhanh\n\nTruyền tải điện năng:\n• Dùng máy biến áp tăng điện áp khi truyền → giảm tổn hao\n• Điện áp truyền tải: 110 kV, 220 kV, 500 kV\n\nAn toàn điện:\n• Nguyên nhân tai nạn: chạm vào vật mang điện, điện rò\n• Biện pháp: nối đất, cầu dao CB (circuit breaker), RCD/ELCB",
+        "formulas": [
+          {
+            "label": "Công suất tổn hao truyền tải",
+            "expr": "P_tt = I²·R = P²·R / U²  → tăng U giảm tổn hao"
+          },
+          {
+            "label": "Tỉ số máy biến áp",
+            "expr": "U₁/U₂ = N₁/N₂"
+          }
+        ]
+      },
+      {
+        "id": "c12_tec_l3",
+        "title": "Bài 3: Công nghệ chế tạo máy CNC và tự động hóa",
+        "content": "Máy CNC (Computer Numerical Control): máy công cụ được điều khiển bằng máy tính qua chương trình số.\n\nƯu điểm CNC so với máy thông thường:\n• Độ chính xác cao, lặp lại tốt\n• Năng suất cao, ít phụ thuộc vào tay nghề\n• Linh hoạt thay đổi sản phẩm bằng cách thay chương trình\n\nCác loại máy CNC: tiện CNC, phay CNC, trung tâm gia công (machining center), máy cắt laser/plasma.\n\nTự động hóa sản xuất:\n• Robot công nghiệp: hàn, sơn, lắp ráp, bốc dỡ\n• Dây chuyền sản xuất tự động\n• Hệ thống sản xuất linh hoạt FMS\n• Xu hướng: Công nghiệp 4.0, IoT trong sản xuất",
+        "formulas": [
+          {
+            "label": "Hiệu suất máy",
+            "expr": "η = P_có_ích / P_đầu_vào × 100%"
+          },
+          {
+            "label": "Năng suất gia công",
+            "expr": "NS = Số sản phẩm / Thời gian sản xuất"
+          }
+        ]
+      }
+    ],
+    "informatics": [
+      {
+        "id": "c12_inf_l1",
+        "title": "Bài 1: Hệ cơ sở dữ liệu",
+        "content": "Hệ quản trị cơ sở dữ liệu (DBMS) là phần mềm cho phép tạo lập, lưu trữ, cập nhật và khai thác dữ liệu.\n\nMô hình cơ sở dữ liệu quan hệ: dữ liệu tổ chức thành các bảng (quan hệ), mỗi bảng gồm hàng (bản ghi) và cột (thuộc tính).\n\nNgôn ngữ SQL cơ bản:\n• SELECT: truy vấn dữ liệu\n• INSERT: thêm bản ghi\n• UPDATE: cập nhật dữ liệu\n• DELETE: xóa bản ghi\n\nKhóa chính (Primary Key): thuộc tính hoặc nhóm thuộc tính xác định duy nhất mỗi bản ghi.",
+        "formulas": [
+          {
+            "label": "Câu lệnh truy vấn cơ bản",
+            "expr": "SELECT cột FROM bảng WHERE điều_kiện"
+          }
+        ]
+      },
+      {
+        "id": "c12_inf_l2",
+        "title": "Bài 2: Ngôn ngữ SQL và khai thác cơ sở dữ liệu",
+        "content": "SQL (Structured Query Language): ngôn ngữ truy vấn chuẩn cho CSDL quan hệ.\n\nNhóm lệnh DDL (Data Definition Language):\n• CREATE TABLE: tạo bảng\n• ALTER TABLE: sửa cấu trúc bảng\n• DROP TABLE: xóa bảng\n\nNhóm lệnh DML (Data Manipulation Language):\n• SELECT ... FROM ... WHERE: truy vấn dữ liệu\n• INSERT INTO ... VALUES: thêm bản ghi\n• UPDATE ... SET ... WHERE: cập nhật\n• DELETE FROM ... WHERE: xóa bản ghi\n\nTruy vấn nâng cao:\n• JOIN: kết hợp dữ liệu từ nhiều bảng (INNER, LEFT, RIGHT JOIN)\n• GROUP BY + HAVING: nhóm và lọc theo nhóm\n• Hàm tập hợp: COUNT, SUM, AVG, MAX, MIN",
+        "formulas": [
+          {
+            "label": "Truy vấn cơ bản",
+            "expr": "SELECT col1, col2 FROM table WHERE dieu_kien"
+          },
+          {
+            "label": "Truy vấn có nhóm",
+            "expr": "SELECT col, COUNT(*) FROM table GROUP BY col HAVING COUNT(*) > 1"
+          },
+          {
+            "label": "Kết hợp bảng",
+            "expr": "SELECT * FROM A INNER JOIN B ON A.id = B.id"
+          }
+        ]
+      },
+      {
+        "id": "c12_inf_l3",
+        "title": "Bài 3: Thuật toán sắp xếp và tìm kiếm",
+        "content": "Sắp xếp (Sorting): sắp xếp các phần tử theo một thứ tự nhất định.\n\nCác thuật toán sắp xếp phổ biến:\n• Bubble Sort: so sánh hai phần tử liền kề, đổi chỗ nếu sai thứ tự. O(n²)\n• Selection Sort: tìm phần tử nhỏ nhất, đặt vào vị trí đầu. O(n²)\n• Insertion Sort: chèn từng phần tử vào vị trí đúng. O(n²), tốt với mảng gần sắp xếp\n• Merge Sort: chia đôi, sắp xếp, trộn. O(n log n)\n• Quick Sort: chọn pivot, phân hoạch. O(n log n) trung bình\n\nTìm kiếm (Searching):\n• Tìm kiếm tuyến tính (Linear Search): duyệt tuần tự. O(n)\n• Tìm kiếm nhị phân (Binary Search): mảng đã sắp xếp, chia đôi lặp lại. O(log n)",
+        "formulas": [
+          {
+            "label": "Binary Search",
+            "expr": "mid = (left + right) / 2\nnếu arr[mid] == target: tìm thấy\nnếu arr[mid] < target: left = mid+1\nnếu arr[mid] > target: right = mid-1"
+          },
+          {
+            "label": "Độ phức tạp Binary Search",
+            "expr": "O(log₂ n)  →  n=1024: chỉ cần 10 bước"
+          }
+        ]
+      },
+      {
+        "id": "c12_inf_l4",
+        "title": "Bài 4: An toàn thông tin và bảo mật máy tính",
+        "content": "An toàn thông tin đảm bảo ba thuộc tính: Bí mật (Confidentiality), Toàn vẹn (Integrity), Sẵn sàng (Availability) — viết tắt CIA.\n\nCác mối đe dọa phổ biến:\n• Virus, worm, trojan, ransomware: phần mềm độc hại\n• Phishing: lừa đảo lấy thông tin cá nhân\n• Man-in-the-middle: nghe lén truyền thông\n• SQL Injection, XSS: tấn công ứng dụng web\n• DDoS: làm tê liệt dịch vụ\n\nBiện pháp bảo vệ:\n• Mật khẩu mạnh, xác thực hai yếu tố (2FA)\n• Mã hóa dữ liệu: đối xứng (AES), bất đối xứng (RSA)\n• Tường lửa (Firewall), hệ thống phát hiện xâm nhập (IDS/IPS)\n• Sao lưu dữ liệu định kỳ\n• Cập nhật phần mềm, vá lỗ hổng",
+        "formulas": [
+          {
+            "label": "Độ mạnh mật khẩu",
+            "expr": "Entropy = L × log₂(N)  (L: độ dài, N: kích thước bảng chữ cái)"
+          },
+          {
+            "label": "Số khóa mã hóa AES-256",
+            "expr": "2²⁵⁶ ≈ 1,16 × 10⁷⁷ khóa có thể"
+          }
+        ]
+      }
+    ],
+    "literature": [
+      {
+        "id": "c12_lit_l1",
+        "title": "Bài 1: Văn học Việt Nam 1945-1975",
+        "content": "Giai đoạn 1945-1975 là thời kỳ văn học cách mạng, gắn liền với hai cuộc kháng chiến chống Pháp và chống Mỹ.\n\nChủ đề chính: tình yêu quê hương đất nước, tinh thần yêu nước và chủ nghĩa anh hùng cách mạng.\n\nThể loại phát triển: thơ ca (kháng chiến), văn xuôi (truyện ngắn, ký sự, tiểu thuyết).\n\nTác phẩm tiêu biểu:\n• Đồng chí — Chính Hữu (1948)\n• Tây Tiến — Quang Dũng (1948)\n• Việt Bắc — Tố Hữu (1954)\n• Rừng xà nu — Nguyễn Trung Thành\n• Những ngôi sao xa xôi — Lê Minh Khuê",
+        "formulas": []
+      },
+      {
+        "id": "c12_lit_l2",
+        "title": "Bài 2: Tác phẩm tiêu biểu giai đoạn 1945-1975",
+        "content": "Phân tích chi tiết các tác phẩm tiêu biểu:\n\nĐồng chí — Chính Hữu (1948):\n• Hoàn cảnh: ra đời trong chiến dịch Việt Bắc\n• Chủ đề: tình đồng chí gắn kết qua gian khổ, chung lý tưởng\n• Hình ảnh \"đầu súng trăng treo\": biểu tượng đẹp nhất, kết hợp hiện thực và lãng mạn\n\nTây Tiến — Quang Dũng (1948):\n• Chủ đề: nỗi nhớ đơn vị cũ, ca ngợi người lính Tây Tiến\n• Đặc sắc: lãng mạn + bi tráng, hình ảnh thiên nhiên hùng vĩ\n\nViệt Bắc — Tố Hữu (1954):\n• Hoàn cảnh: chia tay căn cứ địa sau chiến thắng Điện Biên Phủ\n• Thể thơ lục bát truyền thống, tình cảm cách mạng\n\nRừng xà nu — Nguyễn Trung Thành:\n• Hình ảnh cây xà nu: biểu tượng sức sống bất diệt của dân làng Xô Man",
+        "formulas": []
+      },
+      {
+        "id": "c12_lit_l3",
+        "title": "Bài 3: Văn học Việt Nam 1975 đến nay",
+        "content": "Sau 1975, văn học Việt Nam bước vào giai đoạn đổi mới với tư duy mới, đề tài mới.\n\nĐặc điểm:\n• Từ cảm hứng sử thi → cảm hứng đời tư, thế sự\n• Nhìn thẳng vào hiện thực, kể cả mặt trái xã hội\n• Con người cá nhân được chú trọng\n• Văn học hậu chiến: vết thương chiến tranh, số phận người lính hậu chiến\n\nCác tác giả và tác phẩm tiêu biểu:\n• Nguyễn Khải: Một người Hà Nội — nhân vật bà Hiền, giá trị văn hóa\n• Nguyễn Minh Châu: Chiếc thuyền ngoài xa — nghịch lý cuộc sống, góc nhìn đa chiều\n• Thanh Thảo: Đàn ghi ta của Lor-ca — thơ tượng trưng, siêu thực\n• Hữu Thỉnh: Sóng (thơ) — nỗi nhớ và khát vọng tình yêu",
+        "formulas": []
+      },
+      {
+        "id": "c12_lit_l4",
+        "title": "Bài 4: Nghị luận văn học và Nghị luận xã hội",
+        "content": "Nghị luận văn học: bàn về một vấn đề thuộc lĩnh vực văn học (tác phẩm, tác giả, giai đoạn).\n\nCác dạng đề nghị luận văn học:\n• Phân tích, cảm nhận một đoạn thơ / đoạn văn\n• Phân tích nhân vật văn học\n• So sánh hai tác phẩm / hai nhân vật\n• Bình luận về quan điểm sáng tác\n\nCấu trúc bài nghị luận văn học: Mở bài (giới thiệu vấn đề) → Thân bài (phân tích, chứng minh, đánh giá) → Kết bài (khái quát, mở rộng).\n\nNghị luận xã hội:\n• Nghị luận về tư tưởng đạo lý: giải thích, phân tích, chứng minh, bàn luận\n• Nghị luận về hiện tượng đời sống: thực trạng, nguyên nhân, hậu quả, giải pháp",
+        "formulas": []
+      }
+    ],
+    "english": [
+      {
+        "id": "c12_eng_l1",
+        "title": "Bài 1: Mệnh đề quan hệ và câu điều kiện",
+        "content": "Mệnh đề quan hệ (Relative Clause) bổ nghĩa cho danh từ đứng trước, dùng đại từ quan hệ: who, whom, which, that, whose.\n\nMệnh đề quan hệ xác định: không có dấu phẩy, cần thiết về nghĩa.\nMệnh đề quan hệ không xác định: có dấu phẩy, có thể bỏ mà câu vẫn đủ nghĩa.\n\nCâu điều kiện:\n• Loại 1 (có thể xảy ra): If + S + V(hiện tại), S + will + V\n• Loại 2 (không thực ở hiện tại): If + S + V(quá khứ), S + would + V\n• Loại 3 (không thực ở quá khứ): If + S + had + V₃, S + would have + V₃",
+        "formulas": [
+          {
+            "label": "Điều kiện loại 1",
+            "expr": "If + S + V(s/es), S + will + V"
+          },
+          {
+            "label": "Điều kiện loại 2",
+            "expr": "If + S + V(ed/2), S + would + V"
+          },
+          {
+            "label": "Điều kiện loại 3",
+            "expr": "If + S + had + V(pp), S + would have + V(pp)"
+          }
+        ]
+      },
+      {
+        "id": "c12_eng_l2",
+        "title": "Bài 2: Động từ nguyên thể và Danh động từ",
+        "content": "To-infinitive (V-to): dùng sau tính từ, danh từ, nhiều động từ và cấu trúc đặc biệt.\nBare infinitive (V nguyên thể): sau modal verbs, make/let/help.\n\nDanh động từ (Gerund — V-ing): dùng làm chủ ngữ, tân ngữ sau một số động từ và giới từ.\n\nĐộng từ chỉ theo TO-infinitive: want, wish, hope, agree, decide, plan, refuse, promise, manage, fail...\nĐộng từ chỉ theo Gerund: enjoy, finish, avoid, mind, suggest, consider, admit, deny, keep, practice...\nĐộng từ theo cả hai (nghĩa thay đổi): remember, forget, stop, regret, try.\n\nCấu trúc quan trọng:\n• It + be + adj + to-V: It is important to study.\n• S + V + O + to-V: I want you to go.",
+        "formulas": [
+          {
+            "label": "Gerund sau giới từ",
+            "expr": "V + prep + V-ing: interested in doing, good at playing"
+          },
+          {
+            "label": "remember + to-V",
+            "expr": "nhớ làm việc gì đó (chưa làm)"
+          },
+          {
+            "label": "remember + V-ing",
+            "expr": "nhớ lại việc đã làm (đã làm rồi)"
+          }
+        ]
+      },
+      {
+        "id": "c12_eng_l3",
+        "title": "Bài 3: Câu nhượng bộ, Đảo ngữ và Câu chẻ",
+        "content": "Câu nhượng bộ (Concession): mặc dù... nhưng...\n• Although/Though/Even though + mệnh đề\n• Despite/In spite of + N/V-ing\n• However, Nevertheless, Nonetheless + mệnh đề\n\nĐảo ngữ (Inversion): đưa trạng từ phủ định hoặc hạn định lên đầu câu để nhấn mạnh.\n• Never have I seen such beauty.\n• Not only... but also...; Hardly... when...; No sooner... than...\n• Only + trạng từ đầu câu → đảo trợ động từ\n\nCâu chẻ (Cleft Sentence): nhấn mạnh một thành phần của câu.\n• It is/was + thành phần nhấn mạnh + that/who + phần còn lại\n• What-cleft: What I need is a rest.",
+        "formulas": [
+          {
+            "label": "Đảo ngữ với Never",
+            "expr": "Never have I + V3 / Never did I + V_bare"
+          },
+          {
+            "label": "Not only... but also",
+            "expr": "Not only did he sing, but he also danced."
+          },
+          {
+            "label": "It-cleft",
+            "expr": "It was John that/who broke the window."
+          }
+        ]
+      },
+      {
+        "id": "c12_eng_l4",
+        "title": "Bài 4: Từ vựng học thuật và Kỹ năng viết luận",
+        "content": "Từ vựng học thuật (Academic Vocabulary): nhóm từ thường gặp trong văn bản học thuật, bài luận, bài thi.\n\nCác từ nối (Linking words/Discourse markers):\n• Liệt kê: Firstly, Secondly, Finally, In addition, Furthermore, Moreover\n• Đối lập: However, Nevertheless, On the other hand, Although, Despite\n• Nhân quả: Therefore, Thus, Consequently, As a result, Due to, Owing to\n• Kết luận: In conclusion, To sum up, In summary, Overall\n\nCấu trúc bài luận tiếng Anh (Essay):\n• Introduction: Hook + Background + Thesis statement\n• Body paragraphs: Topic sentence + Supporting ideas + Examples\n• Conclusion: Restate thesis + Summary + Final thought\n\nParagraph cohesion: pronoun reference, repetition, synonyms, linking words.",
+        "formulas": [
+          {
+            "label": "Cấu trúc đoạn văn PEEL",
+            "expr": "Point → Evidence → Explanation → Link"
+          },
+          {
+            "label": "Thesis statement",
+            "expr": "Chủ đề + quan điểm + 2-3 luận điểm chính"
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "id": "c12_his_l1",
+        "title": "Bài 1: Lịch sử Việt Nam 1919-1930",
+        "content": "Giai đoạn 1919-1930 đánh dấu sự chuyển biến quan trọng trong phong trào yêu nước Việt Nam.\n\nSau Chiến tranh Thế giới thứ nhất, thực dân Pháp tăng cường khai thác thuộc địa lần 2, mâu thuẫn xã hội sâu sắc.\n\nNguyễn Ái Quốc (Hồ Chí Minh) tìm con đường cứu nước mới:\n• 1920: Đọc Sơ thảo Luận cương của Lenin, tìm ra con đường cách mạng vô sản\n• 1925: Thành lập Hội Việt Nam Cách mạng Thanh niên\n• 3/2/1930: Thành lập Đảng Cộng sản Việt Nam tại Hương Cảng (Trung Quốc)",
+        "formulas": []
+      },
+      {
+        "id": "c12_his_l2",
+        "title": "Bài 2: Việt Nam 1930-1945 — Cách mạng tháng Tám",
+        "content": "Phong trào cách mạng 1930-1931:\n• Đảng CSVN (3/2/1930) ra đời dưới sự chủ trì của Nguyễn Ái Quốc\n• Phong trào Xô Viết Nghệ Tĩnh: đỉnh cao phong trào 1930-1931, chính quyền Xô Viết ở Nghệ An, Hà Tĩnh\n\nCao trào kháng Nhật (1939-1945):\n• 9/3/1945: Nhật đảo chính Pháp ở Đông Dương\n• Đảng phát lệnh \"Nhật, Pháp bắn nhau và hành động của chúng ta\"\n• Chiến khu Việt Bắc: trung tâm lãnh đạo cách mạng\n\nCách mạng tháng Tám 1945:\n• 13/8/1945: Nhật đầu hàng Đồng Minh → thời cơ đến\n• 19/8/1945: Hà Nội khởi nghĩa thắng lợi\n• 25/8/1945: Sài Gòn; 23/8/1945: Huế\n• 2/9/1945: Hồ Chí Minh đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình",
+        "formulas": []
+      },
+      {
+        "id": "c12_his_l3",
+        "title": "Bài 3: Kháng chiến chống Pháp (1946-1954)",
+        "content": "Sau Cách mạng tháng Tám, Pháp quay lại xâm lược Việt Nam.\n\nCác sự kiện chính:\n• 23/9/1945: Pháp nổ súng ở Sài Gòn — Nam Bộ kháng chiến\n• 19/12/1946: Hồ Chí Minh ra lời kêu gọi toàn quốc kháng chiến\n• 1950: Chiến dịch Biên Giới — giải phóng vùng biên giới Việt-Trung\n• 1951: Đại hội Đảng toàn quốc lần II, thành lập Đảng Lao động Việt Nam\n• Đông Xuân 1953-1954: Chiến dịch Điện Biên Phủ\n\nChiến dịch Điện Biên Phủ (13/3 – 7/5/1954):\n• Tổng chỉ huy: Đại tướng Võ Nguyên Giáp\n• Chiến thuật: \"đánh chắc tiến chắc\" thay vì \"đánh nhanh thắng nhanh\"\n• 7/5/1954: quân Pháp đầu hàng → Hiệp định Genève (21/7/1954)",
+        "formulas": []
+      },
+      {
+        "id": "c12_his_l4",
+        "title": "Bài 4: Kháng chiến chống Mỹ và Thống nhất đất nước",
+        "content": "Sau Hiệp định Genève, đất nước tạm thời chia cắt tại vĩ tuyến 17.\n\nMiền Nam dưới chế độ Diệm (1954-1963): phong trào Đồng Khởi (1960) → thành lập Mặt trận GPMN (12/1960).\n\nChiến lược chiến tranh của Mỹ:\n• Chiến tranh đặc biệt (1961-1965): \"dùng người Việt đánh người Việt\"\n• Chiến tranh cục bộ (1965-1968): đưa quân Mỹ trực tiếp tham chiến\n• Việt Nam hóa chiến tranh (1969-1973)\n\nCác sự kiện quyết định:\n• Mậu Thân 1968: tổng tiến công và nổi dậy\n• Hiệp định Paris (27/1/1973): Mỹ rút quân\n• 30/4/1975: Chiến dịch Hồ Chí Minh — giải phóng miền Nam\n• 2/7/1976: nước CHXHCN Việt Nam thành lập",
+        "formulas": []
+      }
+    ],
+    "geography": [
+      {
+        "id": "c12_geo_l1",
+        "title": "Bài 1: Địa lý kinh tế Việt Nam",
+        "content": "Việt Nam có nền kinh tế đang phát triển với cơ cấu chuyển dịch theo hướng công nghiệp hóa, hiện đại hóa.\n\nCơ cấu GDP (xu hướng): nông-lâm-ngư nghiệp giảm, công nghiệp-xây dựng và dịch vụ tăng.\n\nCác vùng kinh tế trọng điểm:\n• Vùng kinh tế trọng điểm Bắc Bộ: Hà Nội, Hải Phòng, Quảng Ninh\n• Vùng kinh tế trọng điểm miền Trung: Đà Nẵng, Thừa Thiên Huế, Quảng Nam\n• Vùng kinh tế trọng điểm phía Nam: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu\n\nXuất khẩu chủ lực: điện tử, dệt may, giày dép, nông sản (gạo, cà phê, hạt điều).",
+        "formulas": [
+          {
+            "label": "Tốc độ tăng trưởng GDP",
+            "expr": "g = (GDP_t - GDP_(t-1)) / GDP_(t-1) × 100%"
+          }
+        ]
+      },
+      {
+        "id": "c12_geo_l2",
+        "title": "Bài 2: Địa lý các vùng kinh tế Việt Nam",
+        "content": "Việt Nam có 7 vùng địa lý - kinh tế:\n\nTrung du và miền núi Bắc Bộ:\n• Giàu khoáng sản (than Quảng Ninh, sắt Thái Nguyên, apatit Lào Cai)\n• Thủy điện lớn: Hòa Bình, Sơn La, Lai Châu\n\nĐồng bằng sông Hồng:\n• Vựa lúa lớn thứ 2, mật độ dân số cao nhất\n• Trung tâm: Hà Nội, Hải Phòng, Quảng Ninh\n\nDuyên hải miền Trung:\n• Du lịch biển: Đà Nẵng, Hội An, Nha Trang, Huế\n\nTây Nguyên:\n• Cao nguyên đất đỏ bazan, cà phê (Đắk Lắk), cao su, hồ tiêu\n\nĐông Nam Bộ:\n• Vùng kinh tế năng động nhất, trung tâm TP.HCM\n• Công nghiệp, dầu mỏ Vũng Tàu\n\nĐồng bằng sông Cửu Long:\n• Vựa lúa, trái cây, thủy sản lớn nhất cả nước",
+        "formulas": [
+          {
+            "label": "Đóng góp ĐNB vào GDP",
+            "expr": "Đông Nam Bộ ≈ 45% GDP cả nước"
+          },
+          {
+            "label": "Sản lượng lúa ĐBSCL",
+            "expr": "Chiếm ≈ 50% sản lượng lúa cả nước"
+          }
+        ]
+      },
+      {
+        "id": "c12_geo_l3",
+        "title": "Bài 3: Biển Đông và tài nguyên biển Việt Nam",
+        "content": "Biển Đông là biển lớn thứ 3 thế giới, giữ vị trí chiến lược về giao thông và tài nguyên.\n\nViệt Nam có đường bờ biển dài 3.260 km, vùng đặc quyền kinh tế (EEZ) 200 hải lý, diện tích ~1 triệu km².\n\nTài nguyên biển:\n• Dầu khí: bể Cửu Long, bể Nam Côn Sơn — xuất khẩu dầu thô và khí đốt\n• Thủy sản: khai thác và nuôi trồng, xuất khẩu >9 tỷ USD/năm\n• Du lịch biển: đảo Phú Quốc, Cô Tô, Côn Đảo, Cát Bà\n• Muối, titan, khoáng sản ven biển\n\nCác vấn đề biển Đông:\n• Tranh chấp chủ quyền Hoàng Sa, Trường Sa\n• Ô nhiễm biển, khai thác quá mức\n• Biến đổi khí hậu: nước biển dâng đe dọa ĐBSCL và ven biển",
+        "formulas": [
+          {
+            "label": "Vùng EEZ (Công ước UNCLOS)",
+            "expr": "200 hải lý = 370 km tính từ đường cơ sở"
+          },
+          {
+            "label": "Thềm lục địa",
+            "expr": "Tối đa 350 hải lý (theo UNCLOS 1982)"
+          }
+        ]
+      },
+      {
+        "id": "c12_geo_l4",
+        "title": "Bài 4: Biến đổi khí hậu và phát triển bền vững",
+        "content": "Biến đổi khí hậu (BĐKH) là sự thay đổi dài hạn trong nhiệt độ và các mô hình thời tiết, chủ yếu do hoạt động con người.\n\nNguyên nhân: phát thải khí nhà kính (CO₂, CH₄, N₂O) từ đốt nhiên liệu hóa thạch, phá rừng, nông nghiệp.\n\nBiểu hiện: nhiệt độ toàn cầu tăng, băng tan, mực nước biển dâng, thiên tai cực đoan tăng.\n\nViệt Nam — một trong những nước dễ bị tổn thương nhất:\n• ĐBSCL: nguy cơ ngập do nước biển dâng\n• Hạn hán, xâm nhập mặn ở miền Trung, Tây Nguyên\n• Bão lũ gia tăng cường độ\n\nPhát triển bền vững (Sustainable Development):\n• 17 Mục tiêu Phát triển Bền vững (SDGs) của Liên Hợp Quốc\n• Ba trụ cột: kinh tế + xã hội + môi trường\n• Năng lượng tái tạo, kinh tế tuần hoàn, nông nghiệp xanh",
+        "formulas": [
+          {
+            "label": "Mục tiêu khí hậu Paris",
+            "expr": "Giữ nhiệt độ tăng dưới 1,5°C so với thời tiền công nghiệp"
+          },
+          {
+            "label": "Footprint carbon",
+            "expr": "CF = Tổng khí thải CO₂eq / Hoạt động (kg CO₂/km, kg CO₂/kWh...)"
+          }
+        ]
+      }
+    ]
+  }
+}
