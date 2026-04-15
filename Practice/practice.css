@@ -588,3 +588,112 @@ body {
   .subject-grid { grid-template-columns: repeat(2, 1fr); }
   .class-card   { padding: 14px 12px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   STUDY HELPER — PROFESSIONAL ANIMATED ICONS v2
+   Hiệu ứng nhẹ nhàng, chuyên nghiệp, phù hợp giáo dục
+═══════════════════════════════════════════════════════════ */
+
+/* Icon lơ lửng nhẹ — dùng cho hầu hết icon */
+@keyframes sh-float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-4px); }
+}
+/* Icon xoay nhẹ — vật lý, địa lý */
+@keyframes sh-spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+/* Icon lắc nhẹ sang trái phải — toán, văn */
+@keyframes sh-sway {
+  0%,100% { transform: rotate(0deg); }
+  30%     { transform: rotate(-8deg); }
+  70%     { transform: rotate(8deg); }
+}
+/* Icon phóng to nhẹ — sinh, anh, lịch sử */
+@keyframes sh-scale {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.1); }
+}
+/* Icon nhún nhẹ — class card */
+@keyframes sh-nudge {
+  0%,100% { transform: translateY(0) scale(1); }
+  50%     { transform: translateY(-3px) scale(1.05); }
+}
+/* Icon rung nhẹ — tin học */
+@keyframes sh-jitter {
+  0%,100%  { transform: rotate(0deg); }
+  25%      { transform: rotate(-5deg); }
+  75%      { transform: rotate(5deg); }
+}
+/* Glow nhẹ — history, energy */
+@keyframes sh-glow {
+  0%,100% { opacity: 1; filter: brightness(1); }
+  50%     { opacity: .85; filter: brightness(1.3) drop-shadow(0 0 4px currentColor); }
+}
+/* Back arrow ← trượt nhẹ */
+@keyframes sh-arrow {
+  0%,100% { transform: translateX(0); }
+  50%     { transform: translateX(-3px); }
+}
+/* Logo: shimmer chữ */
+@keyframes sh-logo {
+  0%,100% { filter: brightness(1); }
+  50%     { filter: brightness(1.15) drop-shadow(0 0 6px rgba(0,206,209,.4)); }
+}
+/* Badge glow nhẹ */
+@keyframes sh-badge {
+  0%,100% { box-shadow: 0 0 0 0 rgba(255,107,0,0); }
+  50%     { box-shadow: 0 0 0 3px rgba(255,107,0,.2); }
+}
+
+/* ── Class card icon: nhún nhẹ ── */
+.class-card .c-icon {
+  display: inline-block;
+  animation: sh-nudge 4s ease-in-out infinite;
+}
+.class-card:hover .c-icon { animation-duration: 2s; }
+
+/* ── Subject card icon: lơ lửng, mỗi môn 1 nhịp khác nhau ── */
+.subject-card .s-icon {
+  display: inline-block;
+  animation: sh-float 3.5s ease-in-out infinite;
+}
+.subject-card:nth-child(1)  .s-icon { animation-name: sh-sway;      animation-duration: 4s; }
+.subject-card:nth-child(2)  .s-icon { animation-name: sh-spin-slow; animation-duration: 8s; animation-timing-function: linear; }
+.subject-card:nth-child(3)  .s-icon { animation-name: sh-float;     animation-duration: 3s; }
+.subject-card:nth-child(4)  .s-icon { animation-name: sh-scale;     animation-duration: 3.5s; }
+.subject-card:nth-child(5)  .s-icon { animation-name: sh-sway;      animation-duration: 3s; }
+.subject-card:nth-child(6)  .s-icon { animation-name: sh-jitter;    animation-duration: 3.5s; }
+.subject-card:nth-child(7)  .s-icon { animation-name: sh-float;     animation-duration: 4s; animation-delay: -.5s; }
+.subject-card:nth-child(8)  .s-icon { animation-name: sh-scale;     animation-duration: 3s; }
+.subject-card:nth-child(9)  .s-icon { animation-name: sh-glow;      animation-duration: 3.5s; }
+.subject-card:nth-child(10) .s-icon { animation-name: sh-spin-slow; animation-duration: 10s; animation-timing-function: linear; }
+.subject-card:hover .s-icon { animation-duration: 1.5s !important; }
+
+/* ── Empty state icon: lơ lửng ── */
+.empty-state .e-icon {
+  display: inline-block;
+  animation: sh-float 3s ease-in-out infinite;
+}
+
+/* ── Back link: trượt nhẹ ── */
+.back-home {
+  display: inline-block;
+  animation: sh-arrow 2s ease-in-out infinite;
+}
+
+/* ── Practice logo: shimmer nhẹ ── */
+#pr-logo { animation: sh-logo 4s ease-in-out infinite; }
+
+/* ── Section title: chỉ icon ── */
+.section-title .icon {
+  display: inline-block;
+  animation: sh-float 3s ease-in-out infinite;
+}
+
+/* ── Rank badge: scale nhẹ ── */
+.rank-badge { animation: sh-scale 3s ease-in-out infinite; }
+
+/* ── Lesson number: float rất nhẹ ── */
+.l-num { display: inline-flex; animation: sh-float 4s ease-in-out infinite; }

@@ -297,10 +297,34 @@ html, body {
   width: 80px; height: 80px; border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), var(--teal));
   display: flex; align-items: center; justify-content: center;
-  font-size: 2.2rem;
   flex-shrink: 0;
   box-shadow: 0 4px 20px rgba(0,206,209,.4);
+  overflow: visible;   /* allow glow effect */
+  line-height: 1;
+  font-size: 0;        /* reset font-size, controlled by inner span */
+  padding: 0;
+  text-align: center;
+  position: relative;
 }
+/* Inner icon span: căn giữa tuyệt đối trong hình tròn */
+.dev-avatar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2.4rem;
+  line-height: 1;
+  position: absolute;
+  top: 0; left: 0;
+  /* Animation: xoay nhẹ như robot đang "suy nghĩ" */
+  animation: dev-avatar-think 3s ease-in-out infinite;
+}
+@keyframes dev-avatar-think {
+  0%,100% { transform: scale(1);    filter: brightness(1); }
+  50%     { transform: scale(1.12); filter: brightness(1.2) drop-shadow(0 0 8px rgba(0,206,209,.6)); }
+}
+
 .dev-info { flex: 1; min-width: 0; }
 .dev-name { font-size: 1.35rem; font-weight: 900; margin-bottom: 2px; }
 .dev-role { font-size: .88rem; color: var(--cyan); font-weight: 600; margin-bottom: 12px; }
@@ -476,6 +500,8 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 14px;
   margin-top: 4px;
+  padding-top: 20px;            /* thêm khoảng trống cho chữ zoom */
+  overflow: visible;
 }
 
 .member-card {
@@ -487,10 +513,11 @@ html, body {
   background: var(--surface);
   border: 1.5px solid var(--border);
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   animation: memberIn .4s cubic-bezier(.34,1.3,.64,1) both;
   animation-delay: var(--m-delay, 0ms);
   transition: transform .2s, box-shadow .2s, border-color .2s;
+  isolation: isolate;           /* stacking context riêng */
 }
 .member-card:hover {
   transform: translateY(-4px);
@@ -533,15 +560,18 @@ html, body {
 .member-body {
   flex: 1; min-width: 0;
   position: relative; z-index: 1;
-  text-align: justify;          /* căn đều 2 bên */
+  overflow: visible;
+  /* Không clip chữ zoom */
+  isolation: isolate;
 }
 .member-name {
   font-size: .97rem;
   font-weight: 800;
-  color: var(--text);           /* tự động đổi theo theme sáng/tối */
+  color: var(--text);
   letter-spacing: .01em;
-  line-height: 1.3;
-  text-align: justify;
+  line-height: 1.4;
+  white-space: nowrap;          /* chữ trên 1 dòng */
+  overflow: visible;
 }
 .member-role {
   font-size: .76rem;
@@ -666,4 +696,112 @@ html, body {
   .step-badge{ width: 34px; height: 34px; font-size: .9rem; }
   .dev-card  { padding: 14px 12px; }
   .cl-timeline { padding-left: 20px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   STUDY HELPER — INSTRUCT ANIMATED ICONS v3
+   Đa dạng, chuyên nghiệp, phù hợp giáo dục
+═══════════════════════════════════════════════════════════ */
+
+@keyframes sh-float    { 0%,100%{transform:translateY(0)}                             50%{transform:translateY(-4px)} }
+@keyframes sh-sway     { 0%,100%{transform:rotate(0)}           30%{transform:rotate(-8deg)} 70%{transform:rotate(8deg)} }
+@keyframes sh-scale    { 0%,100%{transform:scale(1)}                                  50%{transform:scale(1.1)} }
+@keyframes sh-nudge    { 0%,100%{transform:translateY(0) scale(1)}                   50%{transform:translateY(-3px) scale(1.05)} }
+@keyframes sh-logo     { 0%,100%{filter:brightness(1)}                               50%{filter:brightness(1.15) drop-shadow(0 0 6px rgba(0,206,209,.4))} }
+@keyframes sh-glow     { 0%,100%{opacity:1; filter:brightness(1)}                    50%{opacity:.85; filter:brightness(1.3) drop-shadow(0 0 5px currentColor)} }
+@keyframes sh-breathe  { 0%,100%{transform:scale(1); opacity:.9}                     50%{transform:scale(1.07); opacity:1} }
+@keyframes sh-spin-slow{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
+@keyframes sh-jitter   { 0%,100%{transform:rotate(0)}           25%{transform:rotate(-5deg)} 75%{transform:rotate(5deg)} }
+@keyframes sh-flip-y   { 0%,75%,100%{transform:scaleX(1)}       37%{transform:scaleX(-1)} }
+@keyframes sh-orbit    { 0%{transform:rotate(-15deg) scale(1)}  50%{transform:rotate(15deg) scale(1.12)} 100%{transform:rotate(-15deg) scale(1)} }
+@keyframes sh-typewriter{ 0%,100%{transform:translateX(0) translateY(0)}
+                          25%{transform:translateX(-2px) translateY(-1px)}
+                          75%{transform:translateX(2px) translateY(1px)} }
+@keyframes sh-scroll   { 0%,100%{transform:translateY(0) rotate(0)}
+                         33%{transform:translateY(-3px) rotate(-5deg)}
+                         66%{transform:translateY(2px) rotate(3deg)} }
+
+/* ── Logo Hướng Dẫn: shimmer ── */
+#in-logo { animation: sh-logo 4s ease-in-out infinite; }
+
+/* ── Tab icon: mỗi tab 1 hiệu ứng riêng, CHỈ icon không chữ ── */
+.icon-tab-guide     { display:inline-block; animation: sh-sway      4.5s ease-in-out infinite; }   /* 📋 lắc như clipboard */
+.icon-tab-video     { display:inline-block; animation: sh-flip-y    6s   ease-in-out infinite; }   /* 🎬 lật như phim */
+.icon-tab-dev       { display:inline-block; animation: sh-typewriter 2.5s ease-in-out infinite; }  /* 👨‍💻 gõ phím */
+.icon-tab-changelog { display:inline-block; animation: sh-scroll    4s   ease-in-out infinite; }   /* 📜 cuộn giấy */
+
+/* Tab active: badge glow nhẹ */
+.tab-btn { transition: transform .2s ease, color .2s; }
+.tab-btn:hover { transform: translateY(-2px); }
+.tab-btn.active { box-shadow: inset 0 -2px 0 var(--cyan); }
+
+/* ── Section title icon: float nhẹ ── */
+.sec-title .icon {
+  display: inline-block !important;
+  animation: sh-float 3.5s ease-in-out infinite;
+}
+
+/* ── Step badge: breathe ── */
+.step-badge { animation: sh-breathe 3.5s ease-in-out infinite; }
+
+/* ── Step icon (bên trong step card) ── */
+.step-icon {
+  display: inline-block !important;
+  animation: sh-sway 4s ease-in-out infinite;
+}
+/* Mỗi step icon 1 nhịp khác (stagger) */
+.step-card:nth-child(2) .step-icon { animation-delay: -.8s; }
+.step-card:nth-child(3) .step-icon { animation-name: sh-float;   animation-duration: 3.2s; animation-delay: -1.2s; }
+.step-card:nth-child(4) .step-icon { animation-name: sh-nudge;   animation-duration: 4s; animation-delay: -.4s; }
+.step-card:nth-child(5) .step-icon { animation-name: sh-scale;   animation-duration: 3.5s; }
+.step-card:nth-child(6) .step-icon { animation-name: sh-jitter;  animation-duration: 3.8s; animation-delay: -.6s; }
+
+/* ── Tip icon 💡: glow vàng ── */
+.tip-icon {
+  display: inline-block !important;
+  animation: sh-glow 2.5s ease-in-out infinite;
+  color: var(--yellow, #FFD700);
+}
+
+/* ── Video thumbnail icon ── */
+.thumb-icon {
+  display: inline-block !important;
+  animation: sh-scale 3s ease-in-out infinite;
+}
+/* Play button: breathe ── */
+.play-btn { animation: sh-breathe 2s ease-in-out infinite; }
+
+/* ── Dev avatar: orbit nhẹ ── */
+
+
+/* ── Dev AI card icons ── */
+.dev-ai-icon {
+  display: inline-block;
+  animation: sh-spin-slow 10s linear infinite;
+}
+
+/* ── Changelog dot: glow ── */
+.cl-dot { animation: sh-glow 3s ease-in-out infinite; }
+.cl-entry:nth-child(even) .cl-dot { animation-delay: -1.5s; }
+.cl-entry:nth-child(3n)   .cl-dot { animation-name: sh-scale; animation-duration: 2.5s; }
+
+/* ── Empty state icon: float ── */
+.empty-state .e-icon {
+  display: inline-block;
+  animation: sh-float 3s ease-in-out infinite;
+}
+
+/* ── Member name / Dev name: zoom nhẹ vào ra ── */
+  50%     { transform: scale(1.04); letter-spacing: .01em; }
+}
+
+/* .name-lead: layout only — animation do JS rAF xử lý */
+.name-lead {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  z-index: 30;
+  font-weight: 900;
+  overflow: visible;
+  transform-origin: center center;
 }

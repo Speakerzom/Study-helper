@@ -190,7 +190,7 @@
 
       <!-- Hero card -->
       <div class="dev-hero">
-        <div class="dev-avatar">👨‍💻</div>
+        <div class="dev-avatar"><span class="dev-avatar-icon">🏢</span></div>
         <div class="dev-info">
           <div class="dev-name">${esc(dev.name || d.product_name)}</div>
           <div class="dev-role">${esc(dev.role || 'Developer')}</div>
@@ -217,16 +217,22 @@
         <div class="dev-section members-section">
           <div class="dev-section-title">👥 Thành viên phát triển</div>
           <div class="members-grid">
-            ${d.members.map((m, i) => `
-              <div class="member-card" style="--m-color:${esc(m.color || '#00CED1')};--m-delay:${i * 80}ms">
+            ${d.members.map((m, i) => {
+              const isLead = i === 0;
+              const leadStyle = isLead
+                ? 'style="display:inline-block;white-space:nowrap;position:relative;z-index:30;"'
+                : '';
+              return `
+              <div class="member-card" style="--m-color:${esc(m.color || '#00CED1')};--m-delay:${i * 80}ms;overflow:visible;">
                 <div class="member-glow"></div>
                 <div class="member-avatar">${esc(m.emoji || '👤')}</div>
-                <div class="member-body">
-                  <div class="member-name">${esc(m.name)}</div>
+                <div class="member-body" style="overflow:visible;">
+                  <div class="${isLead ? 'member-name name-lead' : 'member-name'}" ${leadStyle}>${esc(m.name)}</div>
                   <div class="member-role">${esc(m.role || '')}</div>
                 </div>
                 <div class="member-index">${String(i + 1).padStart(2, '0')}</div>
-              </div>`).join('')}
+              </div>`;
+            }).join('')}
           </div>
         </div>` : ''}
 
@@ -284,7 +290,94 @@
                 <span class="mod-status ${statusClass(m.status)}">${esc(m.status || 'Chưa rõ')}</span>
               </div>`).join('')}
           </div>
-        </div>` : ''}`;
+        </div>` : ''}` ;
+
+    /* ── JS Animation mượt: Trần Lê Tiến Dũng ── */
+    requestAnimationFrame(() => {
+      const el = wrap.querySelector('.name-lead');
+      if (!el) return;
+
+      // Reset mọi CSS animation cũ, chỉ dùng JS rAF
+      Object.assign(el.style, {
+        display       : 'inline-block',
+        whiteSpace    : 'nowrap',
+        transformOrigin: 'center center',
+        position      : 'relative',
+        zIndex        : '30',
+        fontWeight    : '900',
+        overflow      : 'visible',
+        willChange    : 'transform, color, text-shadow',
+        animation     : 'none',   /* tắt mọi CSS animation */
+        transition    : 'none',   /* tắt mọi CSS transition */
+      });
+
+      // Hiệu ứng theo video:
+      // - Màu: trắng → xanh lá sáng → xanh đậm (đỉnh) → vàng cam → trắng
+      // - Scale: 1 → 1.35 (linear, đều) → 1
+      // - Glow theo màu
+      // Chu kỳ: 2.4s
+
+      const DUR = 2400; // ★ Chu kỳ hiệu ứng (ms). Đổi số này để nhanh/chậm hơn
+      let t0 = null;
+
+      // Lerp màu hex tuyến tính
+      function lerpHex(c1, c2, t) {
+        const h = s => [parseInt(s.slice(1,3),16), parseInt(s.slice(3,5),16), parseInt(s.slice(5,7),16)];
+        const [r1,g1,b1] = h(c1), [r2,g2,b2] = h(c2);
+        return `rgb(${Math.round(r1+(r2-r1)*t)},${Math.round(g1+(g2-g1)*t)},${Math.round(b1+(b2-b1)*t)})`;
+      }
+
+      // Keyframes màu theo video (p=0→1)
+      // 0.0: trắng  #FFFFFF  scale=1.0
+      // 0.3: xanh sáng #66FF66  scale=1.18
+      // 0.5: xanh đậm #00CC44  scale=1.35 (đỉnh)
+      // 0.7: vàng  #FFCC00  scale=1.18
+      // 1.0: trắng #FFFFFF  scale=1.0
+      // ── KEYFRAMES ─────────────────────────────────────────────
+      // Phóng to (p=0→0.5): cam #FF6B00 → xanh lá mạ #7FFF00
+      // Thu nhỏ  (p=0.5→1): xanh lá mạ #7FFF00 → cam #FF6B00
+      //
+      // ★ Tỉ lệ phóng to tối đa: scale tại p=0.5 (dòng đỉnh bên dưới)
+      //   Giá trị hiện tại: 1.50 (= 150%)
+      //   Đổi thành 1.30 để phóng 130%, 1.70 để phóng 170%, v.v.
+      //
+      // ★ Thời gian chu kỳ: const DUR ở trên (ms)
+      //   Giá trị hiện tại: 2400ms = 2.4 giây
+      //   Đổi thành 1500 để nhanh hơn, 3000 để chậm hơn
+      const KF = [
+        { p:0.0, color:'#FF6B00', scale:1.00 }, // bắt đầu: cam, kích thước gốc
+        { p:0.5, color:'#7FFF00', scale:1.50 }, // đỉnh: xanh lá mạ, TO NHẤT ← đổi scale ở đây
+        { p:1.0, color:'#FF6B00', scale:1.00 }, // kết thúc: cam, kích thước gốc
+      ];
+
+      function tick(ts) {
+        if (!t0) t0 = ts;
+        const p = ((ts - t0) % DUR) / DUR; // 0→1 linear
+
+        // Tìm 2 keyframe bao quanh p
+        let i = 0;
+        while (i < KF.length-2 && KF[i+1].p <= p) i++;
+        const kA = KF[i], kB = KF[i+1];
+        const seg = kB.p - kA.p;
+        const t = seg > 0 ? (p - kA.p) / seg : 0; // linear trong segment
+
+        const sc  = kA.scale + (kB.scale - kA.scale) * t;
+        const col = lerpHex(kA.color, kB.color, t);
+
+        // Glow tỉ lệ với mức phóng to
+        const glowSize = Math.round((sc - 1) * 60);
+        const glow = glowSize > 2
+          ? `0 0 ${glowSize}px ${col}, 0 0 ${glowSize*2}px ${col}55`
+          : 'none';
+
+        el.style.transform  = `scale(${sc.toFixed(4)})`;
+        el.style.color      = col;
+        el.style.textShadow = glow;
+
+        if (el.isConnected) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
   }
 
   /* ══════════════════════════════════════════

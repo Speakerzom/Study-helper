@@ -9,15 +9,15 @@
         "formulas": [
           {
             "label": "Hợp hai tập hợp",
-            "expr": "A ∪ B = {x | x ∈ A hoặc x ∈ B}"
+            "expr": "A \\cup B = \\{x \\mid x \\in A \\text{ hoặc } x \\in B\\}"
           },
           {
             "label": "Giao hai tập hợp",
-            "expr": "A ∩ B = {x | x ∈ A và x ∈ B}"
+            "expr": "A \\cap B = \\{x \\mid x \\in A \\text{ và } x \\in B\\}"
           },
           {
             "label": "Luật De Morgan",
-            "expr": "Cₐ(A ∪ B) = CₐA ∩ CₐB"
+            "expr": "C_A(A \\cup B) = C_A A \\cap C_A B"
           }
         ]
       },
@@ -28,15 +28,15 @@
         "formulas": [
           {
             "label": "Hàm số bậc nhất",
-            "expr": "y = ax + b, a ≠ 0"
+            "expr": "y = ax + b, \\quad a \\neq 0"
           },
           {
             "label": "Điều kiện đồng biến",
-            "expr": "a > 0 ⟹ hàm đồng biến trên ℝ"
+            "expr": "a > 0 \\Rightarrow \\text{hàm đồng biến trên } \\mathbb{R}"
           },
           {
             "label": "Điều kiện nghịch biến",
-            "expr": "a < 0 ⟹ hàm nghịch biến trên ℝ"
+            "expr": "a < 0 \\Rightarrow \\text{hàm nghịch biến trên } \\mathbb{R}"
           }
         ]
       },
@@ -47,19 +47,19 @@
         "formulas": [
           {
             "label": "Biệt thức",
-            "expr": "Δ = b² - 4ac"
+            "expr": "\\Delta = b^2 - 4ac"
           },
           {
             "label": "Công thức nghiệm",
-            "expr": "x = (-b ± √Δ) / 2a"
+            "expr": "x = \\dfrac{-b \\pm \\sqrt{\\Delta}}{2a}"
           },
           {
             "label": "Vi-ét (tổng)",
-            "expr": "x₁ + x₂ = -b/a"
+            "expr": "x_1 + x_2 = -\\dfrac{b}{a}"
           },
           {
             "label": "Vi-ét (tích)",
-            "expr": "x₁ · x₂ = c/a"
+            "expr": "x_1 \\cdot x_2 = \\dfrac{c}{a}"
           }
         ]
       },
@@ -69,16 +69,16 @@
         "content": "Bất phương trình bậc nhất một ẩn có dạng ax + b > 0 (hoặc <, ≥, ≤).\n\nNghiệm của bất phương trình là tập hợp tất cả các giá trị x thỏa mãn bất phương trình.\n\nQuy tắc giải:\n• Cộng/trừ cùng một số vào hai vế: chiều bất phương trình không đổi\n• Nhân/chia hai vế với số dương: chiều không đổi\n• Nhân/chia hai vế với số âm: chiều đảo ngược\n\nHệ bất phương trình: nghiệm là giao của tập nghiệm từng bất phương trình.\n\nBất phương trình bậc hai ax² + bx + c > 0: xét dấu tam thức f(x) dựa vào Δ và dấu của a.",
         "formulas": [
           {
-            "label": "BPT bậc nhất (a > 0)",
-            "expr": "ax + b > 0 ⟹ x > -b/a"
+            "label": "BPT bậc nhất (a>0)",
+            "expr": "ax + b > 0 \\Rightarrow x > -\\dfrac{b}{a}"
           },
           {
-            "label": "Nghiệm BPT bậc hai (a>0, Δ>0)",
-            "expr": "ax²+bx+c < 0 ⟺ x₁ < x < x₂"
+            "label": "Nghiệm BPT bậc hai (Δ>0)",
+            "expr": "ax^2+bx+c < 0 \\Leftrightarrow x_1 < x < x_2"
           },
           {
-            "label": "Nghiệm BPT bậc hai (a>0, Δ<0)",
-            "expr": "ax²+bx+c > 0 với mọi x ∈ R"
+            "label": "Nghiệm BPT bậc hai (Δ<0, a>0)",
+            "expr": "ax^2+bx+c > 0 \\quad \\forall x \\in \\mathbb{R}"
           }
         ]
       },
@@ -89,19 +89,19 @@
         "formulas": [
           {
             "label": "Đỉnh parabol",
-            "expr": "I = (-b/2a ; -Δ/4a)"
+            "expr": "I\\!\\left(-\\dfrac{b}{2a};\\,-\\dfrac{\\Delta}{4a}\\right)"
           },
           {
             "label": "Trục đối xứng",
-            "expr": "x = -b/2a"
+            "expr": "x = -\\dfrac{b}{2a}"
           },
           {
             "label": "Giá trị lớn nhất (a<0)",
-            "expr": "y_max = -Δ/4a tại x = -b/2a"
+            "expr": "y_{\\max} = -\\dfrac{\\Delta}{4a} \\text{ tại } x = -\\dfrac{b}{2a}"
           },
           {
             "label": "Giá trị nhỏ nhất (a>0)",
-            "expr": "y_min = -Δ/4a tại x = -b/2a"
+            "expr": "y_{\\min} = -\\dfrac{\\Delta}{4a} \\text{ tại } x = -\\dfrac{b}{2a}"
           }
         ]
       },
@@ -112,19 +112,19 @@
         "formulas": [
           {
             "label": "Quy tắc 3 điểm",
-            "expr": "AB + BC = AC"
+            "expr": "\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}"
           },
           {
             "label": "Tích vô hướng",
-            "expr": "a·b = |a|·|b|·cosθ"
+            "expr": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos\\theta"
           },
           {
             "label": "Điều kiện vuông góc",
-            "expr": "a ⊥ b ⟺ a·b = 0"
+            "expr": "\\vec{a} \\perp \\vec{b} \\Leftrightarrow \\vec{a} \\cdot \\vec{b} = 0"
           },
           {
             "label": "Độ dài vectơ tọa độ",
-            "expr": "|a| = √(x² + y²)"
+            "expr": "|\\vec{a}| = \\sqrt{x^2 + y^2}"
           }
         ]
       },
@@ -135,19 +135,19 @@
         "formulas": [
           {
             "label": "Khoảng cách AB",
-            "expr": "AB = √[(x₂-x₁)² + (y₂-y₁)²]"
+            "expr": "AB = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}"
           },
           {
             "label": "Trung điểm AB",
-            "expr": "I = ((x₁+x₂)/2 ; (y₁+y₂)/2)"
+            "expr": "I = \\left(\\dfrac{x_1+x_2}{2};\\,\\dfrac{y_1+y_2}{2}\\right)"
           },
           {
-            "label": "Khoảng cách điểm đến đường thẳng",
-            "expr": "d = |ax₀+by₀+c| / √(a²+b²)"
+            "label": "Khoảng cách điểm→đường thẳng",
+            "expr": "d = \\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}"
           },
           {
             "label": "Phương trình đường tròn",
-            "expr": "(x-a)² + (y-b)² = R²"
+            "expr": "(x-a)^2 + (y-b)^2 = R^2"
           }
         ]
       },
@@ -158,15 +158,15 @@
         "formulas": [
           {
             "label": "Số trung bình cộng",
-            "expr": "x̄ = (x₁+x₂+...+xₙ) / n"
+            "expr": "\\bar{x} = \\dfrac{x_1+x_2+\\cdots+x_n}{n}"
           },
           {
             "label": "Phương sai",
-            "expr": "S² = (1/n)·Σ(xᵢ - x̄)²"
+            "expr": "S^2 = \\dfrac{1}{n}\\sum_{i=1}^{n}(x_i - \\bar{x})^2"
           },
           {
             "label": "Độ lệch chuẩn",
-            "expr": "S = √S²"
+            "expr": "S = \\sqrt{S^2}"
           }
         ]
       },
@@ -177,15 +177,15 @@
         "formulas": [
           {
             "label": "Xác suất cổ điển",
-            "expr": "P(A) = |A| / |Ω|"
+            "expr": "P(A) = \\dfrac{|A|}{|\\Omega|}"
           },
           {
             "label": "Biến cố đối",
-            "expr": "P(A') = 1 − P(A)"
+            "expr": "P(A') = 1 - P(A)"
           },
           {
             "label": "Cộng xác suất",
-            "expr": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)"
+            "expr": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)"
           }
         ]
       },
@@ -196,15 +196,15 @@
         "formulas": [
           {
             "label": "Hoán vị",
-            "expr": "Pₙ = n!"
+            "expr": "P_n = n!"
           },
           {
             "label": "Chỉnh hợp",
-            "expr": "Aₙᵏ = n! / (n−k)!"
+            "expr": "A_n^k = \\dfrac{n!}{(n-k)!}"
           },
           {
             "label": "Tổ hợp",
-            "expr": "C(n,k) = n! / (k!(n−k)!)"
+            "expr": "C_n^k = \\dfrac{n!}{k!(n-k)!}"
           }
         ]
       }
@@ -217,15 +217,15 @@
         "formulas": [
           {
             "label": "Vận tốc trung bình",
-            "expr": "v̄ = Δx / Δt = (x₂ - x₁) / (t₂ - t₁)"
+            "expr": "\\bar{v} = \\dfrac{\\Delta x}{\\Delta t} = \\dfrac{x_2-x_1}{t_2-t_1}"
           },
           {
             "label": "Phương trình chuyển động thẳng đều",
-            "expr": "x = x₀ + v·t"
+            "expr": "x = x_0 + v \\cdot t"
           },
           {
             "label": "Quãng đường",
-            "expr": "s = v·t"
+            "expr": "s = v \\cdot t"
           }
         ]
       },
@@ -236,19 +236,19 @@
         "formulas": [
           {
             "label": "Gia tốc",
-            "expr": "a = Δv / Δt = (v - v₀) / t"
+            "expr": "a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{v - v_0}{t}"
           },
           {
             "label": "Vận tốc",
-            "expr": "v = v₀ + a·t"
+            "expr": "v = v_0 + a \\cdot t"
           },
           {
             "label": "Phương trình chuyển động",
-            "expr": "x = x₀ + v₀·t + ½·a·t²"
+            "expr": "x = x_0 + v_0 t + \\dfrac{1}{2}at^2"
           },
           {
             "label": "Công thức độc lập thời gian",
-            "expr": "v² - v₀² = 2·a·s"
+            "expr": "v^2 - v_0^2 = 2as"
           }
         ]
       },
@@ -259,19 +259,19 @@
         "formulas": [
           {
             "label": "Tốc độ góc",
-            "expr": "ω = 2π / T = 2πf  (rad/s)"
+            "expr": "\\omega = \\dfrac{2\\pi}{T} = 2\\pi f \\quad (\\text{rad/s})"
           },
           {
             "label": "Tốc độ dài",
-            "expr": "v = ω·R = 2πR / T"
+            "expr": "v = \\omega R = \\dfrac{2\\pi R}{T}"
           },
           {
             "label": "Gia tốc hướng tâm",
-            "expr": "a_ht = v²/R = ω²·R"
+            "expr": "a_{ht} = \\dfrac{v^2}{R} = \\omega^2 R"
           },
           {
             "label": "Lực hướng tâm",
-            "expr": "F_ht = m·v²/R = m·ω²·R"
+            "expr": "F_{ht} = \\dfrac{mv^2}{R} = m\\omega^2 R"
           }
         ]
       },
@@ -282,19 +282,19 @@
         "formulas": [
           {
             "label": "Định luật II Newton",
-            "expr": "F = m·a  (N)"
+            "expr": "F = ma \\quad (N)"
           },
           {
             "label": "Trọng lực",
-            "expr": "P = m·g,  g ≈ 9,8 m/s²"
+            "expr": "P = mg, \\quad g \\approx 9{,}8 \\text{ m/s}^2"
           },
           {
             "label": "Lực ma sát trượt",
-            "expr": "F_ms = μ·N"
+            "expr": "F_{ms} = \\mu N"
           },
           {
             "label": "Định luật III",
-            "expr": "F_AB = -F_BA"
+            "expr": "\\vec{F}_{AB} = -\\vec{F}_{BA}"
           }
         ]
       },
@@ -305,23 +305,23 @@
         "formulas": [
           {
             "label": "Công của lực",
-            "expr": "A = F·s·cosα"
+            "expr": "A = Fs\\cos\\alpha"
           },
           {
             "label": "Động năng",
-            "expr": "Ek = ½·m·v²"
+            "expr": "E_k = \\dfrac{1}{2}mv^2"
           },
           {
             "label": "Thế năng trọng trường",
-            "expr": "Ep = m·g·h"
+            "expr": "E_p = mgh"
           },
           {
             "label": "Bảo toàn cơ năng",
-            "expr": "Ek1 + Ep1 = Ek2 + Ep2 = const"
+            "expr": "E_{k1} + E_{p1} = E_{k2} + E_{p2} = \\text{const}"
           },
           {
             "label": "Công suất",
-            "expr": "P = A/t = F·v  (W)"
+            "expr": "P = \\dfrac{A}{t} = Fv \\quad (W)"
           }
         ]
       },
@@ -336,11 +336,11 @@
           },
           {
             "label": "Lực đàn hồi (Hooke)",
-            "expr": "F = k·|Δl|"
+            "expr": "F = k|\\Delta l|"
           },
           {
             "label": "Ma sát trượt",
-            "expr": "F_ms = μ·N"
+            "expr": "F_{ms} = \\mu N"
           }
         ]
       },
@@ -351,15 +351,15 @@
         "formulas": [
           {
             "label": "Động lượng",
-            "expr": "p = m·v"
+            "expr": "p = mv"
           },
           {
             "label": "Bảo toàn động lượng",
-            "expr": "p₁ + p₂ = p₁' + p₂'"
+            "expr": "p_1 + p_2 = p_1' + p_2'"
           },
           {
             "label": "Xung lực",
-            "expr": "F·Δt = Δp = m·Δv"
+            "expr": "F\\Delta t = \\Delta p = m\\Delta v"
           }
         ]
       }
@@ -376,11 +376,11 @@
           },
           {
             "label": "Điện tích hạt nhân",
-            "expr": "Q = Z · e, e = 1,6 × 10⁻¹⁹ C"
+            "expr": "Q = Ze, \\quad e = 1{,}6 \\times 10^{-19} \\text{ C}"
           },
           {
             "label": "Số electron tối đa lớp n",
-            "expr": "e_max = 2n²"
+            "expr": "e_{\\max} = 2n^2"
           }
         ]
       },
@@ -391,11 +391,11 @@
         "formulas": [
           {
             "label": "Số thứ tự chu kỳ",
-            "expr": "n_chu_kỳ = số lớp electron"
+            "expr": "n_{\\text{chu kỳ}} = \\text{số lớp electron}"
           },
           {
             "label": "Số thứ tự nhóm A",
-            "expr": "n_nhóm = số electron lớp ngoài cùng"
+            "expr": "n_{\\text{nhóm}} = \\text{số electron lớp ngoài cùng}"
           }
         ]
       },
@@ -406,15 +406,15 @@
         "formulas": [
           {
             "label": "Điều kiện liên kết ion",
-            "expr": "Δχ ≥ 1,7"
+            "expr": "\\Delta\\chi \\geq 1{,}7"
           },
           {
             "label": "LK CHT không cực",
-            "expr": "Δχ = 0"
+            "expr": "\\Delta\\chi = 0"
           },
           {
             "label": "LK CHT phân cực",
-            "expr": "0 < Δχ < 1,7"
+            "expr": "0 < \\Delta\\chi < 1{,}7"
           }
         ]
       },
@@ -425,15 +425,15 @@
         "formulas": [
           {
             "label": "Tốc độ phản ứng trung bình",
-            "expr": "v = ΔC / Δt  (mol/L·s)"
+            "expr": "v = \\dfrac{\\Delta C}{\\Delta t} \\quad (\\text{mol/L}{\\cdot}\\text{s})"
           },
           {
             "label": "Quy tắc Van't Hoff",
-            "expr": "v₂/v₁ = γ^(ΔT/10)  với γ = 2÷4"
+            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\Delta T/10}, \\quad \\gamma = 2 \\div 4"
           },
           {
             "label": "Hằng số cân bằng",
-            "expr": "Kc = [C]^c·[D]^d / ([A]^a·[B]^b)"
+            "expr": "K_c = \\dfrac{[C]^c[D]^d}{[A]^a[B]^b}"
           }
         ]
       },
@@ -444,15 +444,15 @@
         "formulas": [
           {
             "label": "Cl₂ tác dụng với nước",
-            "expr": "Cl₂ + H₂O ⇌ HCl + HClO"
+            "expr": "\\text{Cl}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{HCl} + \\text{HClO}"
           },
           {
             "label": "Điều chế Cl₂ (PTN)",
-            "expr": "MnO₂ + 4HCl(đặc) → MnCl₂ + Cl₂ + 2H₂O"
+            "expr": "\\text{MnO}_2 + 4\\text{HCl(đặc)} \\to \\text{MnCl}_2 + \\text{Cl}_2 + 2\\text{H}_2\\text{O}"
           },
           {
             "label": "Nhận biết ion Cl⁻",
-            "expr": "Ag⁺ + Cl⁻ → AgCl↓ (trắng)"
+            "expr": "\\text{Ag}^+ + \\text{Cl}^- \\to \\text{AgCl}\\downarrow"
           }
         ]
       },
@@ -462,16 +462,16 @@
         "content": "Oxi (O₂): chiếm 21% thể tích không khí, cần thiết cho sự sống và đốt cháy.\nOzon (O₃): dạng thù hình của oxi, có trong tầng bình lưu bảo vệ Trái Đất.\n\nLưu huỳnh (S): tồn tại dạng đơn chất vàng, vừa có tính oxi hóa vừa có tính khử.\nHợp chất quan trọng:\n• H₂S: khí hydro sunfua, mùi trứng thối, độc\n• SO₂: khí sunfurơ, gây mưa axit\n• H₂SO₄: axit sunfuric đặc — hút ẩm, oxi hóa mạnh",
         "formulas": [
           {
-            "label": "Phản ứng đốt cháy S",
-            "expr": "S + O₂ → SO₂"
+            "label": "Đốt cháy S",
+            "expr": "\\text{S} + \\text{O}_2 \\to \\text{SO}_2"
           },
           {
             "label": "Tạo axit sunfuric",
-            "expr": "SO₃ + H₂O → H₂SO₄"
+            "expr": "\\text{SO}_3 + \\text{H}_2\\text{O} \\to \\text{H}_2\\text{SO}_4"
           },
           {
-            "label": "H₂SO₄ đặc + kim loại",
-            "expr": "Cu + 2H₂SO₄(đặc) → CuSO₄ + SO₂ + 2H₂O"
+            "label": "H₂SO₄ đặc + Cu",
+            "expr": "\\text{Cu} + 2\\text{H}_2\\text{SO}_4\\text{(đặc)} \\to \\text{CuSO}_4 + \\text{SO}_2 + 2\\text{H}_2\\text{O}"
           }
         ]
       },
@@ -482,11 +482,11 @@
         "formulas": [
           {
             "label": "Hằng số cân bằng",
-            "expr": "Kc = [C]^c·[D]^d / ([A]^a·[B]^b)"
+            "expr": "K_c = \\dfrac{[C]^c[D]^d}{[A]^a[B]^b}"
           },
           {
             "label": "Quy tắc Van't Hoff",
-            "expr": "v₂/v₁ = γ^(ΔT/10)"
+            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\Delta T/10}"
           }
         ]
       }
@@ -498,12 +498,12 @@
         "content": "Tế bào là đơn vị cơ bản của sự sống. Thành phần hóa học gồm các nguyên tố và hợp chất hóa học.\n\nNguyên tố đại lượng: C, H, O, N, P, S (chiếm > 99% khối lượng tế bào).\nNguyên tố vi lượng: Fe, Cu, Mn, Mo… (chiếm < 0.01%, rất quan trọng với enzym).\n\nNước chiếm 70-90% khối lượng tế bào. Vai trò: dung môi hòa tan, điều hòa nhiệt độ, tham gia phản ứng hóa học.\n\nCarbohydrate (glucid): cung cấp năng lượng chính, cấu trúc tế bào.\nLipid: dự trữ năng lượng, cấu trúc màng tế bào.\nProtein: đa chức năng nhất — xúc tác, vận chuyển, bảo vệ, cấu trúc.",
         "formulas": [
           {
-            "label": "Công thức chung monosaccharide",
-            "expr": "Cₙ(H₂O)ₙ"
+            "label": "Monosaccharide",
+            "expr": "C_n(H_2O)_n"
           },
           {
-            "label": "Phản ứng tổng hợp nước",
-            "expr": "n(aa) → Protein + (n-1)H₂O"
+            "label": "Tổng hợp protein",
+            "expr": "n(\\text{aa}) \\to \\text{Protein} + (n-1)\\text{H}_2\\text{O}"
           }
         ]
       },
@@ -514,15 +514,15 @@
         "formulas": [
           {
             "label": "Diện tích tế bào hình cầu",
-            "expr": "S = 4πr²"
+            "expr": "S = 4\\pi r^2"
           },
           {
             "label": "Thể tích tế bào hình cầu",
-            "expr": "V = (4/3)πr³"
+            "expr": "V = \\dfrac{4}{3}\\pi r^3"
           },
           {
             "label": "Tỉ lệ S/V",
-            "expr": "S/V = 3/r  → tế bào nhỏ trao đổi chất hiệu quả hơn"
+            "expr": "\\dfrac{S}{V} = \\dfrac{3}{r}"
           }
         ]
       },
@@ -533,11 +533,11 @@
         "formulas": [
           {
             "label": "Áp suất thẩm thấu",
-            "expr": "π = iCRT"
+            "expr": "\\pi = iCRT"
           },
           {
             "label": "Thế nước tế bào",
-            "expr": "Ψ_tế_bào = Ψ_s + Ψ_p"
+            "expr": "\\Psi_{\\text{tế bào}} = \\Psi_s + \\Psi_p"
           }
         ]
       },
@@ -552,11 +552,11 @@
           },
           {
             "label": "Số giao tử từ 1 tế bào sinh dục",
-            "expr": "4 (giảm phân)"
+            "expr": "4 \\text{ (giảm phân)}"
           },
           {
-            "label": "Bộ NST tế bào con (nguyên phân)",
-            "expr": "2n (giữ nguyên)"
+            "label": "Bộ NST sau nguyên phân",
+            "expr": "2n \\text{ (giữ nguyên)}"
           }
         ]
       },
@@ -566,12 +566,12 @@
         "content": "Quang hợp: quá trình tổng hợp chất hữu cơ từ CO₂ và H₂O nhờ năng lượng ánh sáng.\nDiễn ra trong lục lạp, gồm 2 pha:\n• Pha sáng (lưới tilacoit): H₂O → O₂ + ATP + NADPH\n• Pha tối (chu trình Calvin, chất nền): CO₂ → C₃H₁₂O₆\n\nHô hấp tế bào: phân giải glucose → CO₂ + H₂O + ATP\nGồm 3 giai đoạn:\n• Đường phân (tế bào chất): glucose → 2 pyruvate, tạo 2 ATP\n• Chu trình Krebs (chất nền ti thể): 2 ATP\n• Chuỗi chuyền electron (màng trong ti thể): ~34 ATP",
         "formulas": [
           {
-            "label": "Phương trình quang hợp",
-            "expr": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂"
+            "label": "Quang hợp",
+            "expr": "6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\to C_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2"
           },
           {
-            "label": "Hô hấp tế bào",
-            "expr": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP"
+            "label": "Hô hấp TB",
+            "expr": "C_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\to 6\\text{CO}_2 + 6\\text{H}_2\\text{O} + 38\\text{ATP}"
           }
         ]
       },
@@ -590,7 +590,7 @@
         "formulas": [
           {
             "label": "Tỉ lệ bản vẽ",
-            "expr": "TL = Kích thước trên bản vẽ / Kích thước thực"
+            "expr": "TL = \\dfrac{\\text{Kích thước trên bản vẽ}}{\\text{Kích thước thực}}"
           }
         ]
       },
@@ -612,11 +612,11 @@
         "formulas": [
           {
             "label": "Dung sai kích thước",
-            "expr": "IT = A_max - A_min"
+            "expr": "IT = A_{\\max} - A_{\\min}"
           },
           {
             "label": "Tốc độ cắt tiện",
-            "expr": "v = π·d·n / 1000  (m/phút)"
+            "expr": "v = \\dfrac{\\pi d n}{1000} \\quad (\\text{m/phút})"
           }
         ]
       },
@@ -633,11 +633,11 @@
         "formulas": [
           {
             "label": "Tỉ số truyền đai",
-            "expr": "i = n₂/n₁ = D₁/D₂"
+            "expr": "i = \\dfrac{n_2}{n_1} = \\dfrac{D_1}{D_2}"
           },
           {
             "label": "Tỉ số truyền bánh răng",
-            "expr": "i = n₂/n₁ = Z₁/Z₂"
+            "expr": "i = \\dfrac{n_2}{n_1} = \\dfrac{Z_1}{Z_2}"
           }
         ]
       }
@@ -650,15 +650,15 @@
         "formulas": [
           {
             "label": "Chuyển nhị phân → thập phân",
-            "expr": "(1011)₂ = 1·2³ + 0·2² + 1·2¹ + 1·2⁰ = 11"
+            "expr": "(1011)_2 = 1\\cdot2^3 + 0\\cdot2^2 + 1\\cdot2^1 + 1\\cdot2^0 = 11"
           },
           {
             "label": "1 byte",
-            "expr": "1 byte = 8 bit"
+            "expr": "1 \\text{ byte} = 8 \\text{ bit}"
           },
           {
             "label": "Đơn vị lưu trữ",
-            "expr": "1 KB = 1024 B, 1 MB = 1024 KB, 1 GB = 1024 MB"
+            "expr": "1\\text{KB} = 1024\\text{B},\\; 1\\text{MB} = 1024\\text{KB},\\; 1\\text{GB} = 1024\\text{MB}"
           }
         ]
       },
@@ -669,15 +669,15 @@
         "formulas": [
           {
             "label": "Số nguyên âm (bù 2)",
-            "expr": "-n = đảo bit(n) + 1"
+            "expr": "-n = \\overline{\\text{bit}(n)} + 1"
           },
           {
-            "label": "Số màu RGB (24-bit)",
-            "expr": "2^24 = 16.777.216 màu"
+            "label": "Số màu RGB 24-bit",
+            "expr": "2^{24} = 16{,}777{,}216 \\text{ màu}"
           },
           {
             "label": "Thời gian tải file",
-            "expr": "t = dung_lượng(bit) / băng_thông(bps)"
+            "expr": "t = \\dfrac{\\text{dung lượng (bit)}}{\\text{băng thông (bps)}}"
           }
         ]
       },
@@ -688,11 +688,11 @@
         "formulas": [
           {
             "label": "Số địa chỉ IPv4",
-            "expr": "2^32 ≈ 4,3 tỷ địa chỉ"
+            "expr": "2^{32} \\approx 4{,}3 \\text{ tỷ địa chỉ}"
           },
           {
             "label": "Số địa chỉ IPv6",
-            "expr": "2^128 ≈ 3,4 × 10^38 địa chỉ"
+            "expr": "2^{128} \\approx 3{,}4 \\times 10^{38} \\text{ địa chỉ}"
           }
         ]
       },
@@ -921,11 +921,11 @@
         "formulas": [
           {
             "label": "Gradient nhiệt theo độ cao",
-            "expr": "ΔT = -0,6°C / 100m"
+            "expr": "\\Delta T = -0{,}6°\\text{C} / 100\\text{m}"
           },
           {
             "label": "Độ ẩm tương đối",
-            "expr": "RH (%) = a/A × 100"
+            "expr": "RH\\,(\\%) = \\dfrac{a}{A} \\times 100"
           }
         ]
       },
@@ -951,11 +951,11 @@
         "formulas": [
           {
             "label": "Tỉ lệ gia tăng tự nhiên",
-            "expr": "r(‰) = CBR − CDR"
+            "expr": "r\\,(\\text{‰}) = CBR - CDR"
           },
           {
             "label": "Mật độ dân số",
-            "expr": "D = Dân số / Diện tích (người/km²)"
+            "expr": "D = \\dfrac{\\text{Dân số}}{\\text{Diện tích}} \\quad (\\text{người/km}^2)"
           }
         ]
       },
@@ -975,20 +975,20 @@
         "content": "Các hàm số lượng giác cơ bản: sin, cos, tan, cot được định nghĩa trên đường tròn đơn vị.\n\nHàm y = sin(x): tập xác định ℝ, tập giá trị [-1; 1], chu kỳ 2π, lẻ.\nHàm y = cos(x): tập xác định ℝ, tập giá trị [-1; 1], chu kỳ 2π, chẵn.\nHàm y = tan(x): xác định khi x ≠ π/2 + kπ, tập giá trị ℝ, chu kỳ π, lẻ.\nHàm y = cot(x): xác định khi x ≠ kπ, tập giá trị ℝ, chu kỳ π, lẻ.",
         "formulas": [
           {
-            "label": "Công thức cơ bản",
-            "expr": "sin²x + cos²x = 1"
+            "label": "Hàm số lượng giác",
+            "expr": "y = \\sin x,\\quad y = \\cos x,\\quad y = \\tan x"
           },
           {
-            "label": "Tan và cot",
-            "expr": "tan(x) = sin(x)/cos(x);  cot(x) = cos(x)/sin(x)"
+            "label": "Hệ thức cơ bản",
+            "expr": "\\sin^2 x + \\cos^2 x = 1"
           },
           {
-            "label": "Công thức cộng",
-            "expr": "sin(a±b) = sin(a)cos(b) ± cos(a)sin(b)"
+            "label": "Công thức cộng sin",
+            "expr": "\\sin(a\\pm b)=\\sin a\\cos b\\pm\\cos a\\sin b"
           },
           {
             "label": "Công thức nhân đôi",
-            "expr": "sin(2x) = 2sin(x)cos(x)"
+            "expr": "\\sin 2x = 2\\sin x\\cos x;\\quad \\cos 2x = \\cos^2 x - \\sin^2 x"
           }
         ]
       },
@@ -998,16 +998,20 @@
         "content": "Giới hạn của hàm số f(x) khi x → a là giá trị L mà f(x) tiếp cận khi x tiến đến a.\n\nHàm số liên tục tại x₀ nếu: giới hạn tồn tại, f(x₀) xác định, và lim = f(x₀).\n\nGiới hạn đặc biệt quan trọng: lim(sin x/x) = 1 khi x→0.",
         "formulas": [
           {
-            "label": "Định nghĩa giới hạn",
-            "expr": "lim[x→a] f(x) = L"
+            "label": "PT sinx = a",
+            "expr": "\\sin x = a \\Rightarrow x = \\arcsin a + 2k\\pi \\text{ hoặc } x = \\pi - \\arcsin a + 2k\\pi"
           },
           {
-            "label": "Giới hạn đặc biệt",
-            "expr": "lim[x→0] (sin x / x) = 1"
+            "label": "PT cosx = a",
+            "expr": "\\cos x = a \\Rightarrow x = \\pm\\arccos a + 2k\\pi"
           },
           {
-            "label": "Điều kiện liên tục",
-            "expr": "lim[x→x₀] f(x) = f(x₀)"
+            "label": "PT tanx = a",
+            "expr": "\\tan x = a \\Rightarrow x = \\arctan a + k\\pi"
+          },
+          {
+            "label": "Giới hạn sin/x",
+            "expr": "\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1"
           }
         ]
       },
@@ -1017,20 +1021,12 @@
         "content": "Phương trình lượng giác cơ bản là các phương trình có ẩn xuất hiện trong biểu thức lượng giác.\n\nPhương trình sin(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = arcsin(m) + 2kπ hoặc x = π - arcsin(m) + 2kπ\n\nPhương trình cos(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = ±arccos(m) + 2kπ\n\nPhương trình tan(x) = m:\n• Luôn có nghiệm: x = arctan(m) + kπ\n\nPhương trình bậc nhất theo sinx, cosx: a·sinx + b·cosx = c\nChia cả hai vế cho √(a²+b²), đặt cosφ = a/√(a²+b²), sinφ = b/√(a²+b²).",
         "formulas": [
           {
-            "label": "sinx = m (|m|≤1)",
-            "expr": "x = arcsin(m) + 2kπ  hoặc  x = π - arcsin(m) + 2kπ"
+            "label": "Dạng kết hợp sinx và cosx",
+            "expr": "a\\sin x + b\\cos x = \\sqrt{a^2+b^2}\\sin(x+\\varphi)"
           },
           {
-            "label": "cosx = m (|m|≤1)",
-            "expr": "x = ±arccos(m) + 2kπ"
-          },
-          {
-            "label": "tanx = m",
-            "expr": "x = arctan(m) + kπ"
-          },
-          {
-            "label": "Phương trình bậc nhất",
-            "expr": "a·sinx + b·cosx = c  →  √(a²+b²)·sin(x+φ) = c"
+            "label": "PT bậc hai lượng giác",
+            "expr": "a\\sin^2 x + b\\sin x\\cos x + c\\cos^2 x = 0"
           }
         ]
       },
@@ -1040,20 +1036,20 @@
         "content": "Dãy số là một hàm số xác định trên tập số tự nhiên.\n\nCấp số cộng (CSC): mỗi số hạng (từ số hạng thứ hai) bằng số hạng liền trước cộng thêm một số không đổi d (công sai).\n\nCấp số nhân (CSN): mỗi số hạng (từ số hạng thứ hai) bằng số hạng liền trước nhân với một số không đổi q (công bội, q ≠ 0).\n\nỨng dụng: tính lãi suất ngân hàng, tăng trưởng dân số, vật lý hạt nhân.",
         "formulas": [
           {
-            "label": "Số hạng tổng quát CSC",
-            "expr": "uₙ = u₁ + (n-1)·d"
+            "label": "CSC – số hạng tổng quát",
+            "expr": "u_n = u_1 + (n-1)d"
           },
           {
-            "label": "Tổng n số hạng CSC",
-            "expr": "Sₙ = n·(u₁ + uₙ)/2 = n·u₁ + n(n-1)d/2"
+            "label": "CSC – tổng n số hạng",
+            "expr": "S_n = \\dfrac{n(u_1 + u_n)}{2}"
           },
           {
-            "label": "Số hạng tổng quát CSN",
-            "expr": "uₙ = u₁ · q^(n-1)"
+            "label": "CSN – số hạng tổng quát",
+            "expr": "u_n = u_1 \\cdot q^{n-1}"
           },
           {
-            "label": "Tổng n số hạng CSN (q≠1)",
-            "expr": "Sₙ = u₁·(qⁿ - 1) / (q - 1)"
+            "label": "CSN – tổng n số hạng",
+            "expr": "S_n = u_1\\cdot\\dfrac{q^n - 1}{q - 1} \\quad (q \\neq 1)"
           }
         ]
       },
@@ -1063,24 +1059,20 @@
         "content": "Quy tắc đếm:\n• Quy tắc cộng: hai hành động không đồng thời, tổng số cách = tổng số cách của mỗi hành động\n• Quy tắc nhân: hai hành động liên tiếp, số cách = tích số cách\n\nHoán vị: số cách sắp xếp n phần tử phân biệt thành hàng.\nChỉnh hợp (chập k): chọn k phần tử từ n và sắp xếp có thứ tự.\nTổ hợp (chập k): chọn k phần tử từ n, không xét thứ tự.\n\nXác suất cổ điển: P(A) = số kết quả thuận lợi / tổng số kết quả đồng khả năng.",
         "formulas": [
           {
-            "label": "Hoán vị",
-            "expr": "Pₙ = n!"
-          },
-          {
-            "label": "Chỉnh hợp chập k",
-            "expr": "Aₙᵏ = n! / (n-k)!"
-          },
-          {
-            "label": "Tổ hợp chập k",
-            "expr": "Cₙᵏ = n! / [k!·(n-k)!]"
-          },
-          {
             "label": "Xác suất cổ điển",
-            "expr": "P(A) = |A| / |Ω|"
+            "expr": "P(A) = \\dfrac{|A|}{|\\Omega|}"
           },
           {
-            "label": "Công thức cộng xác suất",
-            "expr": "P(A∪B) = P(A) + P(B) - P(A∩B)"
+            "label": "Xác suất có điều kiện",
+            "expr": "P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}"
+          },
+          {
+            "label": "Xác suất độc lập",
+            "expr": "P(A \\cap B) = P(A)\\cdot P(B)"
+          },
+          {
+            "label": "Phân phối nhị thức",
+            "expr": "P(X=k) = C_n^k\\, p^k(1-p)^{n-k}"
           }
         ]
       },
@@ -1091,23 +1083,19 @@
         "formulas": [
           {
             "label": "Định nghĩa đạo hàm",
-            "expr": "f'(x₀) = lim[Δx→0] Δy/Δx = lim[Δx→0] [f(x₀+Δx)-f(x₀)]/Δx"
-          },
-          {
-            "label": "Đạo hàm lũy thừa",
-            "expr": "(xⁿ)' = n·xⁿ⁻¹"
-          },
-          {
-            "label": "Đạo hàm tích",
-            "expr": "(u·v)' = u'·v + u·v'"
-          },
-          {
-            "label": "Đạo hàm thương",
-            "expr": "(u/v)' = (u'·v - u·v') / v²"
+            "expr": "f'(x_0) = \\lim_{\\Delta x \\to 0} \\dfrac{f(x_0+\\Delta x)-f(x_0)}{\\Delta x}"
           },
           {
             "label": "Đạo hàm hàm hợp",
-            "expr": "[f(u)]' = f'(u)·u'"
+            "expr": "[f(g(x))]' = f'(g(x))\\cdot g'(x)"
+          },
+          {
+            "label": "Đạo hàm thương",
+            "expr": "\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}"
+          },
+          {
+            "label": "Phương trình tiếp tuyến",
+            "expr": "y = f'(x_0)(x - x_0) + f(x_0)"
           }
         ]
       },
@@ -1117,16 +1105,12 @@
         "content": "Trong không gian, đường thẳng và mặt phẳng có các vị trí tương đối:\n\nĐường thẳng và mặt phẳng:\n• Song song: đường thẳng không có điểm chung với mặt phẳng\n• Cắt nhau: đường thẳng có đúng 1 điểm chung\n• Nằm trong: đường thẳng có vô số điểm chung\n\nHai mặt phẳng:\n• Song song: không có điểm chung\n• Cắt nhau: giao là một đường thẳng\n\nĐường thẳng vuông góc với mặt phẳng: đường thẳng vuông góc với mọi đường thẳng nằm trong mặt phẳng qua chân đường vuông góc.\n\nHai mặt phẳng vuông góc: góc nhị diện giữa hai mặt phẳng bằng 90°.",
         "formulas": [
           {
-            "label": "Điều kiện d ⊥ (P)",
-            "expr": "d ⊥ a và d ⊥ b  (a, b cắt nhau trong (P))"
+            "label": "Ba điểm không thẳng hàng xác định mp",
+            "expr": "3 \\text{ điểm không thẳng hàng} \\Rightarrow \\exists! \\text{ mặt phẳng}"
           },
           {
-            "label": "Góc giữa đường thẳng và mp",
-            "expr": "sinα = |cos(d, n̂)|  (n̂ là pháp tuyến mp)"
-          },
-          {
-            "label": "Khoảng cách từ điểm đến mặt phẳng",
-            "expr": "d(M, P) = |ax₀+by₀+cz₀+d| / √(a²+b²+c²)"
+            "label": "Điều kiện vuông góc hai mp",
+            "expr": "(P) \\perp (Q) \\Leftrightarrow \\vec{n}_P \\cdot \\vec{n}_Q = 0"
           }
         ]
       },
@@ -1136,20 +1120,20 @@
         "content": "Trong không gian Oxyz, mỗi điểm M xác định bởi bộ ba số (x; y; z).\n\nVectơ trong không gian: a⃗ = (x; y; z)\nCác phép toán vectơ tương tự mặt phẳng nhưng thêm tọa độ z.\n\nPhương trình mặt phẳng:\n• Dạng tổng quát: ax + by + cz + d = 0 (pháp tuyến n⃗ = (a;b;c))\n• Qua điểm M₀ có pháp tuyến n⃗: a(x-x₀) + b(y-y₀) + c(z-z₀) = 0\n\nPhương trình đường thẳng trong không gian:\n• Dạng tham số: x = x₀+at, y = y₀+bt, z = z₀+ct\n• Vectơ chỉ phương u⃗ = (a; b; c)",
         "formulas": [
           {
-            "label": "Độ dài vectơ không gian",
-            "expr": "|a| = √(x²+y²+z²)"
+            "label": "Tọa độ vectơ trong không gian",
+            "expr": "\\vec{AB} = (x_B - x_A;\\; y_B - y_A;\\; z_B - z_A)"
+          },
+          {
+            "label": "Độ dài vectơ",
+            "expr": "|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}"
           },
           {
             "label": "Tích vô hướng",
-            "expr": "a·b = x₁x₂+y₁y₂+z₁z₂"
+            "expr": "\\vec{a}\\cdot\\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2"
           },
           {
-            "label": "Phương trình mặt phẳng",
-            "expr": "ax + by + cz + d = 0"
-          },
-          {
-            "label": "Khoảng cách 2 điểm",
-            "expr": "AB = √[(x₂-x₁)²+(y₂-y₁)²+(z₂-z₁)²]"
+            "label": "Trung điểm trong không gian",
+            "expr": "I = \\left(\\dfrac{x_A+x_B}{2};\\,\\dfrac{y_A+y_B}{2};\\,\\dfrac{z_A+z_B}{2}\\right)"
           }
         ]
       },
@@ -1159,12 +1143,12 @@
         "content": "Đạo hàm cho phép xác định tính đơn điệu và cực trị của hàm số.\n\nHàm tăng/giảm:\n• f'(x) > 0 trên (a,b) → f tăng trên (a,b)\n• f'(x) < 0 trên (a,b) → f giảm trên (a,b)\n\nCực trị:\n• Cực đại tại x₀: f'(x₀)=0, f' đổi dấu từ + sang −\n• Cực tiểu tại x₀: f'(x₀)=0, f' đổi dấu từ − sang +\n\nGiá trị lớn nhất/nhỏ nhất trên [a,b]:\n• So sánh f(a), f(b) và giá trị tại các điểm cực trị trong (a,b)",
         "formulas": [
           {
-            "label": "Điều kiện cực trị",
-            "expr": "f'(x₀)=0 và f' đổi dấu qua x₀"
+            "label": "Điều kiện cực đại",
+            "expr": "f'(x_0)=0,\\; f''(x_0)<0 \\Rightarrow \\text{cực đại}"
           },
           {
-            "label": "Quy tắc L'Hôpital",
-            "expr": "lim f(x)/g(x) = lim f'(x)/g'(x) khi 0/0 hoặc ∞/∞"
+            "label": "Điều kiện cực tiểu",
+            "expr": "f'(x_0)=0,\\; f''(x_0)>0 \\Rightarrow \\text{cực tiểu}"
           }
         ]
       },
@@ -1174,12 +1158,16 @@
         "content": "Tích phân xác định ∫[a,b] f(x)dx là diện tích có dấu giữa đồ thị y=f(x) và trục Ox.\n\nĐịnh lý Newton-Leibniz:\n∫[a,b] f(x)dx = F(b) − F(a), trong đó F là nguyên hàm của f.\n\nCác tính chất:\n• ∫[a,b] f = −∫[b,a] f\n• ∫[a,b] (f+g) = ∫[a,b] f + ∫[a,b] g\n• ∫[a,b] kf = k·∫[a,b] f\n• ∫[a,c] f = ∫[a,b] f + ∫[b,c] f\n\nPhương pháp tính:\n• Đổi biến số\n• Tích phân từng phần: ∫udv = uv − ∫vdu",
         "formulas": [
           {
-            "label": "Newton-Leibniz",
-            "expr": "∫[a,b] f(x)dx = F(b)−F(a)"
+            "label": "Nguyên hàm lũy thừa",
+            "expr": "\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)"
           },
           {
-            "label": "Tích phân từng phần",
-            "expr": "∫u dv = uv − ∫v du"
+            "label": "Nguyên hàm sin/cos",
+            "expr": "\\int \\sin x\\,dx = -\\cos x + C;\\quad \\int \\cos x\\,dx = \\sin x + C"
+          },
+          {
+            "label": "Newton–Leibniz",
+            "expr": "\\int_a^b f(x)\\,dx = F(b) - F(a)"
           }
         ]
       },
@@ -1189,16 +1177,20 @@
         "content": "Số phức có dạng z = a + bi, trong đó a,b ∈ ℝ, i là đơn vị ảo với i² = −1.\n\nPhần thực: Re(z)=a; Phần ảo: Im(z)=b\nSố phức liên hợp: z̄ = a − bi\nMô-đun: |z| = √(a²+b²)\n\nCác phép toán:\n• Cộng: (a+bi)+(c+di) = (a+c)+(b+d)i\n• Nhân: (a+bi)(c+di) = (ac−bd)+(ad+bc)i\n• Chia: z₁/z₂ = z₁·z̄₂/|z₂|²\n\nDạng lượng giác: z = r(cosθ + i·sinθ)\nCông thức De Moivre: zⁿ = rⁿ(cos nθ + i·sin nθ)",
         "formulas": [
           {
-            "label": "Mô-đun",
-            "expr": "|z| = √(a²+b²)"
+            "label": "Số phức",
+            "expr": "z = a + bi,\\quad a,b \\in \\mathbb{R},\\quad i^2 = -1"
           },
           {
-            "label": "De Moivre",
-            "expr": "zⁿ = rⁿ(cos nθ + i sin nθ)"
+            "label": "Môđun số phức",
+            "expr": "|z| = \\sqrt{a^2 + b^2}"
           },
           {
             "label": "Số phức liên hợp",
-            "expr": "z·z̄ = |z|²"
+            "expr": "\\bar{z} = a - bi"
+          },
+          {
+            "label": "Phép chia số phức",
+            "expr": "\\dfrac{z_1}{z_2} = \\dfrac{z_1 \\cdot \\bar{z}_2}{|z_2|^2}"
           }
         ]
       }
@@ -1210,16 +1202,20 @@
         "content": "Điện tích là thuộc tính của vật chất gây ra và chịu tác dụng của lực điện.\nHai loại điện tích: dương (+) và âm (-). Cùng dấu đẩy nhau, trái dấu hút nhau.\n\nĐịnh luật Coulomb: lực tương tác giữa hai điện tích điểm tỉ lệ thuận với tích hai điện tích, tỉ lệ nghịch với bình phương khoảng cách.\n\nĐiện trường là môi trường vật chất tồn tại xung quanh điện tích, tác dụng lực lên điện tích khác đặt trong nó.",
         "formulas": [
           {
-            "label": "Lực Coulomb",
-            "expr": "F = k·|q₁·q₂| / (ε·r²),  k = 9×10⁹ N·m²/C²"
+            "label": "Định luật Coulomb",
+            "expr": "F = k\\dfrac{|q_1 q_2|}{\\varepsilon r^2},\\quad k = 9\\times10^9 \\;\\text{N}{\\cdot}\\text{m}^2/\\text{C}^2"
           },
           {
             "label": "Cường độ điện trường",
-            "expr": "E = F / q = k·|Q| / (ε·r²)"
+            "expr": "E = \\dfrac{F}{q} = k\\dfrac{|Q|}{\\varepsilon r^2}"
           },
           {
-            "label": "Lực điện",
-            "expr": "F = q·E"
+            "label": "Điện thế",
+            "expr": "V_M = \\dfrac{A_{M\\infty}}{q} \\quad (\\text{V} = \\text{J/C})"
+          },
+          {
+            "label": "Hiệu điện thế",
+            "expr": "U_{MN} = V_M - V_N = \\dfrac{A_{MN}}{q}"
           }
         ]
       },
@@ -1229,20 +1225,16 @@
         "content": "Điện thế tại một điểm M trong điện trường là đại lượng đặc trưng cho khả năng sinh công của điện trường khi di chuyển điện tích từ M ra vô cực.\n\nHiệu điện thế (điện áp) U_MN = V_M - V_N đặc trưng cho khả năng sinh công của điện trường khi di chuyển điện tích từ M đến N.\n\nTụ điện là hệ hai vật dẫn đặt gần nhau, ngăn cách bởi lớp điện môi, dùng tích trữ điện tích và năng lượng điện trường.\n\nĐiện dung C là đại lượng đặc trưng cho khả năng tích điện của tụ.",
         "formulas": [
           {
-            "label": "Điện thế",
-            "expr": "V_M = A_M∞ / q  (V = J/C)"
+            "label": "Điện dung tụ điện",
+            "expr": "C = \\dfrac{Q}{U} \\quad (\\text{F})"
           },
           {
-            "label": "Hiệu điện thế",
-            "expr": "U_MN = V_M - V_N = A_MN / q"
-          },
-          {
-            "label": "Điện dung tụ phẳng",
-            "expr": "C = ε·ε₀·S / d  (F)"
+            "label": "Tụ điện phẳng",
+            "expr": "C = \\dfrac{\\varepsilon\\varepsilon_0 S}{d}"
           },
           {
             "label": "Năng lượng tụ điện",
-            "expr": "W = Q²/2C = CU²/2 = QU/2"
+            "expr": "W = \\dfrac{Q^2}{2C} = \\dfrac{CU^2}{2} = \\dfrac{QU}{2}"
           }
         ]
       },
@@ -1252,24 +1244,16 @@
         "content": "Dòng điện không đổi là dòng điện có chiều và cường độ không thay đổi theo thời gian.\n\nCường độ dòng điện I là lượng điện tích chuyển qua tiết diện thẳng của dây dẫn trong một đơn vị thời gian.\n\nĐịnh luật Ohm cho đoạn mạch: I = U/R\nĐịnh luật Ohm cho toàn mạch: I = ξ / (R + r)\ntrong đó ξ là suất điện động, r là điện trở trong của nguồn.\n\nMạch ngoài:\n• Điện trở nối tiếp: R = R₁ + R₂ + ...\n• Điện trở song song: 1/R = 1/R₁ + 1/R₂ + ...",
         "formulas": [
           {
-            "label": "Cường độ dòng điện",
-            "expr": "I = Δq / Δt  (A = C/s)"
+            "label": "Định luật Ohm",
+            "expr": "I = \\dfrac{U}{R} \\quad (\\text{A})"
           },
           {
-            "label": "Định luật Ohm (đoạn mạch)",
-            "expr": "I = U / R"
-          },
-          {
-            "label": "Định luật Ohm (toàn mạch)",
-            "expr": "I = ξ / (R + r)"
+            "label": "Định luật Ohm toàn mạch",
+            "expr": "I = \\dfrac{\\xi}{R + r}"
           },
           {
             "label": "Công suất điện",
-            "expr": "P = U·I = I²R = U²/R  (W)"
-          },
-          {
-            "label": "Điện trở theo nhiệt độ",
-            "expr": "R = R₀[1 + α(t - t₀)]"
+            "expr": "P = UI = I^2 R = \\dfrac{U^2}{R} \\quad (\\text{W})"
           }
         ]
       },
@@ -1279,20 +1263,16 @@
         "content": "Từ trường là môi trường vật chất tồn tại xung quanh nam châm, dây dẫn mang dòng điện, tác dụng lực lên nam châm và dây dẫn mang dòng điện khác đặt trong nó.\n\nCảm ứng từ B⃗ đặc trưng cho từ trường về phương diện lực từ (T - Tesla).\n\nLực Lorentz: lực từ tác dụng lên hạt mang điện chuyển động trong từ trường. Vuông góc với cả v⃗ và B⃗ → hạt chuyển động tròn.\n\nLực Ampere: lực từ tác dụng lên đoạn dây dẫn mang dòng điện đặt trong từ trường.",
         "formulas": [
           {
-            "label": "Cảm ứng từ dây dẫn thẳng dài",
-            "expr": "B = 2×10⁻⁷ · I / r"
+            "label": "Cảm ứng từ dây thẳng dài",
+            "expr": "B = 2\\times10^{-7}\\dfrac{I}{r} \\quad (\\text{T})"
           },
           {
             "label": "Lực Ampere",
-            "expr": "F = B·I·l·sinα"
+            "expr": "F = BIl\\sin\\alpha"
           },
           {
-            "label": "Lực Lorentz",
-            "expr": "f = |q|·v·B·sinα"
-          },
-          {
-            "label": "Bán kính quỹ đạo hạt trong B",
-            "expr": "r = m·v / (|q|·B)"
+            "label": "Bán kính quỹ đạo tròn",
+            "expr": "r = \\dfrac{mv}{|q|B}"
           }
         ]
       },
@@ -1303,19 +1283,19 @@
         "formulas": [
           {
             "label": "Từ thông",
-            "expr": "Φ = B·S·cosα  (Wb = T·m²)"
+            "expr": "\\Phi = BS\\cos\\alpha \\quad (\\text{Wb})"
           },
           {
             "label": "Định luật Faraday",
-            "expr": "ξ = -ΔΦ / Δt  (V)"
+            "expr": "\\xi = -\\dfrac{\\Delta\\Phi}{\\Delta t} \\quad (\\text{V})"
           },
           {
             "label": "Suất điện động thanh dẫn",
-            "expr": "ξ = B·l·v·sinα"
+            "expr": "\\xi = Blv\\sin\\alpha"
           },
           {
             "label": "Hệ số tự cảm",
-            "expr": "L = Φ / I  (H = Wb/A)"
+            "expr": "L = \\dfrac{\\Phi}{I} \\quad (\\text{H})"
           }
         ]
       },
@@ -1325,16 +1305,16 @@
         "content": "Khúc xạ ánh sáng: ánh sáng truyền qua mặt phân cách giữa hai môi trường thay đổi hướng.\n\nĐịnh luật Snell: n₁ sin i = n₂ sin r\n• n: chiết suất của môi trường\n• i: góc tới, r: góc khúc xạ\n\nChiết suất tuyệt đối: n = c/v (c: tốc độ ánh sáng trong chân không)\n\nPhản xạ toàn phần:\n• Xảy ra khi ánh sáng đi từ môi trường chiết quang hơn sang kém chiết quang hơn\n• Góc tới ≥ góc giới hạn: sin i_gh = n₂/n₁\n• Ứng dụng: cáp quang, lăng kính phản xạ toàn phần",
         "formulas": [
           {
-            "label": "Định luật Snell",
-            "expr": "n₁ sin i = n₂ sin r"
+            "label": "Định luật khúc xạ",
+            "expr": "n_1 \\sin i = n_2 \\sin r"
           },
           {
             "label": "Chiết suất",
-            "expr": "n = c/v"
+            "expr": "n = \\dfrac{c}{v}"
           },
           {
             "label": "Góc giới hạn phản xạ toàn phần",
-            "expr": "sin i_gh = n₂/n₁"
+            "expr": "\\sin i_{gh} = \\dfrac{n_2}{n_1}"
           }
         ]
       },
@@ -1344,16 +1324,16 @@
         "content": "Thấu kính hội tụ (rìa mỏng) và phân kỳ (rìa dày).\n\nCông thức thấu kính: 1/f = 1/d + 1/d'\n• d: khoảng cách vật; d': khoảng cách ảnh; f: tiêu cự\n• Độ tụ: D = 1/f (đơn vị diop, f tính bằng mét)\n\nSố phóng đại: k = −d'/d = y'/y\n\nMắt người:\n• Điểm cực cận CC (điểm gần nhất nhìn rõ)\n• Điểm cực viễn CV (điểm xa nhất nhìn rõ)\n• Mắt bình thường: CC ≈ 25 cm, CV = ∞\n• Cận thị: CV hữu hạn (kính phân kỳ)\n• Viễn thị: CC xa hơn 25 cm (kính hội tụ)",
         "formulas": [
           {
-            "label": "Công thức thấu kính",
-            "expr": "1/f = 1/d + 1/d'"
-          },
-          {
-            "label": "Độ tụ",
-            "expr": "D = 1/f (diop)"
+            "label": "Phương trình thấu kính",
+            "expr": "\\dfrac{1}{f} = \\dfrac{1}{d_o} + \\dfrac{1}{d_i}"
           },
           {
             "label": "Độ phóng đại",
-            "expr": "k = −d'/d"
+            "expr": "k = -\\dfrac{d_i}{d_o}"
+          },
+          {
+            "label": "Độ tụ",
+            "expr": "D = \\dfrac{1}{f} \\quad (\\text{diop})"
           }
         ]
       },
@@ -1363,16 +1343,20 @@
         "content": "Dao động điều hòa: x = A cos(ωt + φ)\n• A: biên độ, ω: tần số góc, φ: pha ban đầu\n\nCon lắc lò xo:\n• ω = √(k/m); T = 2π√(m/k)\n• Cơ năng: W = ½kA² = ½mω²A²\n\nCon lắc đơn (biên độ nhỏ):\n• ω = √(g/l); T = 2π√(l/g)\n• Không phụ thuộc khối lượng vật nặng\n\nCộng hưởng: xảy ra khi tần số kích thích = tần số riêng của hệ, biên độ đạt cực đại",
         "formulas": [
           {
-            "label": "Con lắc lò xo",
-            "expr": "T = 2π√(m/k)"
+            "label": "Tổng trở mạch RLC",
+            "expr": "Z = \\sqrt{R^2 + (Z_L - Z_C)^2}"
           },
           {
-            "label": "Con lắc đơn",
-            "expr": "T = 2π√(l/g)"
+            "label": "Cảm kháng và dung kháng",
+            "expr": "Z_L = \\omega L;\\quad Z_C = \\dfrac{1}{\\omega C}"
           },
           {
-            "label": "Phương trình dao động",
-            "expr": "x = A·cos(ωt + φ)"
+            "label": "Hệ số công suất",
+            "expr": "\\cos\\varphi = \\dfrac{R}{Z}"
+          },
+          {
+            "label": "Tần số cộng hưởng",
+            "expr": "\\omega_0 = \\dfrac{1}{\\sqrt{LC}}"
           }
         ]
       }
@@ -1384,16 +1368,12 @@
         "content": "Sự điện li là quá trình phân li các chất trong nước tạo thành ion.\nChất điện li mạnh phân li hoàn toàn (axit mạnh, bazơ mạnh, hầu hết muối).\nChất điện li yếu phân li một phần (axit yếu, bazơ yếu, nước).\n\nThuyết Arrhenius:\n• Axit: chất khi tan trong nước phân li ra ion H⁺\n• Bazơ: chất khi tan trong nước phân li ra ion OH⁻\n• Muối: sản phẩm của phản ứng axit + bazơ",
         "formulas": [
           {
-            "label": "pH của dung dịch",
-            "expr": "pH = -lg[H⁺]"
-          },
-          {
             "label": "Tích số ion của nước",
-            "expr": "Kw = [H⁺]·[OH⁻] = 10⁻¹⁴ (25°C)"
+            "expr": "K_w = [\\text{H}^+][\\text{OH}^-] = 10^{-14}"
           },
           {
-            "label": "Dung dịch trung tính",
-            "expr": "[H⁺] = [OH⁻] = 10⁻⁷ M ⟹ pH = 7"
+            "label": "pH",
+            "expr": "\\text{pH} = -\\lg[\\text{H}^+]"
           }
         ]
       },
@@ -1403,16 +1383,8 @@
         "content": "Nitơ (N₂): chiếm ~78% thể tích không khí, phân tử có liên kết ba bền, ít hoạt động ở nhiệt độ thường.\n\nAmoniac (NH₃): khí không màu, mùi khai, tan nhiều trong nước. Tính bazơ yếu. Dùng sản xuất phân đạm, axit nitric.\n\nAxit nitric (HNO₃): axit mạnh, có tính oxi hóa rất mạnh. Tác dụng với hầu hết kim loại (trừ Au, Pt).\n• HNO₃ đặc + kim loại (Cu, Fe...) → NO₂ (nâu đỏ)\n• HNO₃ loãng + kim loại → NO (không màu)\n\nMuối nitrat (NO₃⁻): đều tan trong nước, kém bền nhiệt, ứng dụng làm phân bón, thuốc nổ.",
         "formulas": [
           {
-            "label": "Tổng hợp NH₃ (Haber)",
-            "expr": "N₂ + 3H₂ ⇌ 2NH₃  (Fe, 400-500°C, 200 atm)"
-          },
-          {
-            "label": "Cu + HNO₃ đặc",
-            "expr": "Cu + 4HNO₃(đặc) → Cu(NO₃)₂ + 2NO₂ + 2H₂O"
-          },
-          {
-            "label": "Cu + HNO₃ loãng",
-            "expr": "3Cu + 8HNO₃(loãng) → 3Cu(NO₃)₂ + 2NO + 4H₂O"
+            "label": "Tổng hợp NH₃",
+            "expr": "\\text{N}_2 + 3\\text{H}_2 \\rightleftharpoons 2\\text{NH}_3"
           }
         ]
       },
@@ -1422,20 +1394,8 @@
         "content": "Cacbon (C): tồn tại các dạng thù hình: kim cương (cứng nhất), than chì (mềm, dẫn điện), fullerene (C₆₀).\nTính chất: vừa có tính khử (C + O₂, C + CuO), vừa có tính oxi hóa (C + H₂, C + Al).\n\nCO: oxit không tạo muối, chất khử mạnh, rất độc (kết hợp hemoglobin).\nCO₂: tham gia quang hợp, gây hiệu ứng nhà kính.\nAxit cacbonic H₂CO₃: axit yếu, không bền, phân li hai nấc.\n\nSilic (Si): á kim, là nền tảng công nghệ bán dẫn.\nSiO₂: không tan trong nước, tan trong HF và dung dịch kiềm đặc nóng.",
         "formulas": [
           {
-            "label": "C khử CuO",
-            "expr": "C + 2CuO → 2Cu + CO₂  (to cao)"
-          },
-          {
-            "label": "CO₂ + kiềm (tỉ lệ 1:1)",
-            "expr": "CO₂ + NaOH → NaHCO₃"
-          },
-          {
-            "label": "CO₂ + kiềm (tỉ lệ 1:2)",
-            "expr": "CO₂ + 2NaOH → Na₂CO₃ + H₂O"
-          },
-          {
             "label": "SiO₂ + HF",
-            "expr": "SiO₂ + 4HF → SiF₄ + 2H₂O"
+            "expr": "\\text{SiO}_2 + 4\\text{HF} \\to \\text{SiF}_4 + 2\\text{H}_2\\text{O}"
           }
         ]
       },
@@ -1445,20 +1405,20 @@
         "content": "Hóa học hữu cơ nghiên cứu các hợp chất của cacbon (trừ CO, CO₂, muối cacbonat, xianua).\n\nĐặc điểm liên kết trong hợp chất hữu cơ: chủ yếu liên kết cộng hóa trị, bền nhiệt kém, phản ứng chậm.\n\nPhân loại:\n• Hiđrocacbon: chỉ chứa C và H (ankan, anken, ankyn, aren)\n• Dẫn xuất hiđrocacbon: ngoài C, H còn có O, N, halogen...\n\nĐồng đẳng: cùng công thức tổng quát, hơn kém nhau một hay nhiều nhóm CH₂.\nĐồng phân: cùng CTPT nhưng CTCT khác nhau (đồng phân mạch C, vị trí, nhóm chức, hình học).\n\nDanh pháp IUPAC: đặt tên theo mạch C dài nhất, đánh số từ đầu gần nhánh nhất.",
         "formulas": [
           {
-            "label": "Công thức tổng quát ankan",
-            "expr": "CₙH₂ₙ₊₂  (n ≥ 1)"
+            "label": "Ankan",
+            "expr": "C_nH_{2n+2} \\quad (n \\geq 1)"
           },
           {
-            "label": "Công thức tổng quát anken",
-            "expr": "CₙH₂ₙ  (n ≥ 2)"
+            "label": "Anken",
+            "expr": "C_nH_{2n} \\quad (n \\geq 2)"
           },
           {
-            "label": "Công thức tổng quát ankyn",
-            "expr": "CₙH₂ₙ₋₂  (n ≥ 2)"
+            "label": "Ankin",
+            "expr": "C_nH_{2n-2} \\quad (n \\geq 2)"
           },
           {
-            "label": "Độ bất bão hòa (DBE)",
-            "expr": "DBE = (2C + 2 + N - H - X) / 2"
+            "label": "Độ bất bão hòa",
+            "expr": "k = \\dfrac{2C + 2 + N - H - X}{2}"
           }
         ]
       },
@@ -1468,20 +1428,8 @@
         "content": "Ankan (parafin) CₙH₂ₙ₊₂: chỉ có liên kết đơn C-C. Phản ứng đặc trưng: thế (halogen hóa), crackinh, reforming. Không tác dụng với axit, bazơ, thuốc tím.\n\nAnken (olefin) CₙH₂ₙ: có một liên kết đôi C=C. Phản ứng đặc trưng: cộng (H₂, Br₂, HX, H₂O), trùng hợp, oxi hóa (mất màu KMnO₄).\n• Quy tắc Markovnikov: H cộng vào C bậc thấp, X vào C bậc cao\n\nAnkyn CₙH₂ₙ₋₂: có một liên kết ba C≡C. Phản ứng: cộng, thế nguyên tử H ở C đầu mạch (do tính axit yếu).\nAxetylen (C₂H₂): nguyên liệu quan trọng trong công nghiệp.",
         "formulas": [
           {
-            "label": "Phản ứng thế ankan",
-            "expr": "CH₄ + Cl₂ → CH₃Cl + HCl  (as)"
-          },
-          {
-            "label": "Cộng HX vào anken (Markovnikov)",
-            "expr": "CH₃-CH=CH₂ + HBr → CH₃-CHBr-CH₃"
-          },
-          {
-            "label": "Trùng hợp etilen",
-            "expr": "n(CH₂=CH₂) → (-CH₂-CH₂-)ₙ  (PE)"
-          },
-          {
-            "label": "Điều chế axetylen",
-            "expr": "CaC₂ + 2H₂O → Ca(OH)₂ + C₂H₂"
+            "label": "Đốt cháy ankan",
+            "expr": "C_nH_{2n+2} + \\dfrac{3n+1}{2}\\text{O}_2 \\to n\\text{CO}_2 + (n+1)\\text{H}_2\\text{O}"
           }
         ]
       },
@@ -1491,16 +1439,8 @@
         "content": "Dẫn xuất halogen: thay H trong hidrocacbon bằng X (F, Cl, Br, I)\nVí dụ: CH₃Cl (clometan), CHCl₃ (clorofom), CH₂Cl₂\n\nAncol: chứa nhóm −OH liên kết với C no\n• Ancol đơn chức: CH₃OH, C₂H₅OH\n• Phản ứng: với Na, oxi hóa, este hóa, dehydrat hóa\n• C₂H₅OH + Na → C₂H₅ONa + ½H₂↑\n\nPhenol (C₆H₅OH): nhóm −OH gắn trực tiếp vào vòng benzen\n• Tính axit yếu: C₆H₅OH + NaOH → C₆H₅ONa + H₂O\n• Phản ứng thế vào nhân benzen dễ hơn benzen",
         "formulas": [
           {
-            "label": "Ancol + Na",
-            "expr": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑"
-          },
-          {
-            "label": "Ancol + axit (este hóa)",
-            "expr": "C₂H₅OH + CH₃COOH ⇌ CH₃COOC₂H₅ + H₂O"
-          },
-          {
-            "label": "Phenol + NaOH",
-            "expr": "C₆H₅OH + NaOH → C₆H₅ONa + H₂O"
+            "label": "Oxi hóa ancol bậc 1",
+            "expr": "\\text{R-CH}_2\\text{OH} + \\text{CuO} \\to \\text{R-CHO} + \\text{Cu} + \\text{H}_2\\text{O}"
           }
         ]
       },
@@ -1511,15 +1451,7 @@
         "formulas": [
           {
             "label": "Phản ứng tráng bạc",
-            "expr": "RCHO + 2[Ag(NH₃)₂]OH → RCOONH₄ + 2Ag↓ + 3NH₃ + H₂O"
-          },
-          {
-            "label": "Axit + ancol (este)",
-            "expr": "RCOOH + R'OH ⇌ RCOOR' + H₂O"
-          },
-          {
-            "label": "Axit + Na₂CO₃",
-            "expr": "2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂"
+            "expr": "\\text{R-CHO} + 2[\\text{Ag(NH}_3)_2]\\text{OH} \\to \\text{R-COONH}_4 + 2\\text{Ag}\\downarrow + 3\\text{NH}_3 + \\text{H}_2\\text{O}"
           }
         ]
       },
@@ -1529,16 +1461,12 @@
         "content": "Este: sản phẩm của phản ứng ancol + axit cacboxylic\nCông thức chung: RCOOR'\nTính chất: mùi thơm đặc trưng, ít tan trong nước\n\nPhản ứng thủy phân este:\n• Trong axit: RCOOR' + H₂O ⇌ RCOOH + R'OH\n• Trong kiềm (xà phòng hóa): RCOOR' + NaOH → RCOONa + R'OH\n\nLipit (chất béo):\n• Là trieste của glixerol với axit béo (triglixerit)\n• Chất béo no: rắn (mỡ động vật); không no: lỏng (dầu thực vật)\n\nXà phòng hóa chất béo:\n(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa + C₃H₅(OH)₃",
         "formulas": [
           {
-            "label": "Este hóa",
-            "expr": "RCOOH + R'OH ⇌ RCOOR' + H₂O (xt: H₂SO₄ đặc)"
-          },
-          {
             "label": "Xà phòng hóa",
-            "expr": "(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa + C₃H₅(OH)₃"
+            "expr": "(\\text{RCOO})_3\\text{C}_3\\text{H}_5 + 3\\text{NaOH} \\to 3\\text{RCOONa} + \\text{C}_3\\text{H}_5(\\text{OH})_3"
           },
           {
-            "label": "Thủy phân trong axit",
-            "expr": "RCOOR' + H₂O ⇌ RCOOH + R'OH"
+            "label": "Este hóa",
+            "expr": "\\text{RCOOH} + \\text{R\\'OH} \\rightleftharpoons \\text{RCOOR\\'} + \\text{H}_2\\text{O}"
           }
         ]
       }
@@ -1550,12 +1478,12 @@
         "content": "Trao đổi nước ở thực vật gồm 3 giai đoạn: hấp thụ nước từ đất → vận chuyển qua thân → thoát hơi nước qua lá.\n\nQuang hợp: quá trình tổng hợp chất hữu cơ từ CO₂ và H₂O dưới tác dụng của ánh sáng và diệp lục.\nGồm 2 pha: pha sáng (ở tilacoit) và pha tối (chu trình Calvin, ở stroma).\n\nHô hấp tế bào: phân giải chất hữu cơ giải phóng năng lượng ATP. Diễn ra ở ty thể.",
         "formulas": [
           {
-            "label": "Phương trình quang hợp",
-            "expr": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂"
+            "label": "Áp suất thẩm thấu",
+            "expr": "\\pi = iCRT"
           },
           {
-            "label": "Phương trình hô hấp",
-            "expr": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP"
+            "label": "Thế nước",
+            "expr": "\\Psi = \\Psi_s + \\Psi_p"
           }
         ]
       },
@@ -1565,12 +1493,8 @@
         "content": "Tiêu hóa là quá trình biến đổi thức ăn thành các chất dinh dưỡng đơn giản để cơ thể hấp thụ.\n\nHình thức tiêu hóa theo tiến hóa:\n• Tiêu hóa nội bào: trùng amip, thủy tức\n• Tiêu hóa ngoại bào: ruột khoang, giun dẹp trở lên\n• Ống tiêu hóa hoàn chỉnh: hai đầu mở, phân hóa các bộ phận\n\nHô hấp ở động vật:\n• Hô hấp qua bề mặt cơ thể: giun, ếch nhái ở nước\n• Hô hấp bằng mang: cá, tôm, cua\n• Hô hấp bằng ống khí (khí quản): côn trùng\n• Hô hấp bằng phổi: bò sát, chim, thú",
         "formulas": [
           {
-            "label": "Diện tích trao đổi khí",
-            "expr": "S_phổi người ≈ 70-100 m²"
-          },
-          {
-            "label": "Thể tích khí lưu thông",
-            "expr": "V_bình thường ≈ 500 mL/lần thở"
+            "label": "Cardiac output",
+            "expr": "CO = SV \\times HR \\quad (\\text{L/phút})"
           }
         ]
       },
@@ -1599,12 +1523,8 @@
         "content": "Sinh trưởng là quá trình tăng kích thước cơ thể do tăng số lượng và kích thước tế bào.\nPhát triển là toàn bộ những biến đổi diễn ra trong chu kỳ sống của sinh vật.\n\nSinh trưởng ở thực vật:\n• Mô phân sinh đỉnh: tăng chiều dài thân và rễ\n• Mô phân sinh bên: tăng đường kính thân (tầng sinh vỏ, tầng sinh trụ)\n• Hoocmôn thực vật: auxin (kéo dài tế bào), gibberellin (tăng chiều cao), cytokinin (phân chia tế bào)\n\nPhát triển ở động vật:\n• Biến thái hoàn toàn: trứng → ấu trùng → nhộng → trưởng thành (bướm, ong)\n• Biến thái không hoàn toàn: trứng → ấu trùng → trưởng thành (châu chấu)\n• Không biến thái: thú, chim, bò sát",
         "formulas": [
           {
-            "label": "Tốc độ sinh trưởng tuyệt đối",
-            "expr": "G = (W₂ - W₁) / (t₂ - t₁)"
-          },
-          {
-            "label": "Tốc độ sinh trưởng tương đối",
-            "expr": "RGR = (lnW₂ - lnW₁) / (t₂ - t₁)"
+            "label": "Tốc độ tăng trưởng",
+            "expr": "RGR = \\dfrac{\\ln W_2 - \\ln W_1}{t_2 - t_1}"
           }
         ]
       },
@@ -1631,12 +1551,12 @@
         "content": "Gregor Mendel (1822–1884): cha đẻ di truyền học.\n\nQuy luật phân li:\n• Mỗi tính trạng được quy định bởi cặp nhân tố di truyền (gen)\n• Trong giảm phân, các alen phân li về các giao tử\n• Lai Aa × Aa → 1AA : 2Aa : 1aa (kiểu gen) = 3 trội : 1 lặn (kiểu hình)\n\nQuy luật phân li độc lập:\n• Các cặp nhân tố di truyền phân li độc lập khi các gen ở các cặp NST tương đồng khác nhau\n• AaBb × AaBb → tỉ lệ kiểu hình 9:3:3:1\n\nChú ý: kết quả chỉ đúng khi trội hoàn toàn và gen trên NST thường",
         "formulas": [
           {
-            "label": "Lai một cặp tính trạng",
-            "expr": "Aa × Aa → 1AA:2Aa:1aa → 3 trội:1 lặn"
+            "label": "Phân li – Aa x Aa",
+            "expr": "Aa \\times Aa \\to 1AA : 2Aa : 1aa"
           },
           {
-            "label": "Lai hai cặp tính trạng",
-            "expr": "AaBb × AaBb → 9A_B_:3A_bb:3aaB_:1aabb"
+            "label": "Phân li độc lập – F2",
+            "expr": "9A\\_B\\_ : 3A\\_bb : 3aaB\\_ : 1aabb"
           }
         ]
       }
@@ -1659,16 +1579,8 @@
         "content": "Gia công cơ khí tạo ra chi tiết có hình dạng và kích thước theo yêu cầu.\n\nCác phương pháp gia công cắt gọt:\n• Tiện: chi tiết quay, dao tịnh tiến — gia công bề mặt tròn xoay\n• Phay: dao quay, phôi tịnh tiến — gia công mặt phẳng, rãnh, bánh răng\n• Khoan, khoét, doa: gia công lỗ\n• Mài: hoàn thiện bề mặt, đạt độ chính xác cao\n\nDung sai lắp ghép:\n• Kích thước danh nghĩa (dN): kích thước thiết kế\n• Sai lệch giới hạn: sai lệch trên (es/ES) và sai lệch dưới (ei/EI)\n• Dung sai IT = |ES - EI| = |es - ei|\n• Lắp ghép: lỏng (khe hở > 0), chặt (độ dôi > 0), trung gian",
         "formulas": [
           {
-            "label": "Dung sai kích thước",
-            "expr": "IT = A_max - A_min = ES - EI"
-          },
-          {
-            "label": "Khe hở lắp ghép lỏng",
-            "expr": "S = D - d > 0"
-          },
-          {
-            "label": "Độ dôi lắp ghép chặt",
-            "expr": "N = d - D > 0"
+            "label": "Dung sai",
+            "expr": "IT = ES - EI"
           }
         ]
       },
@@ -1678,16 +1590,8 @@
         "content": "Truyền động cơ khí là bộ phận truyền và biến đổi chuyển động từ trục dẫn sang trục bị dẫn.\n\nCác cơ cấu truyền động phổ biến:\n\n1. Truyền động đai (dây curoa): qua ma sát giữa đai và puli. Ưu: êm, giá rẻ, cách ly chấn động. Nhược: có trượt, tỉ số truyền không ổn định.\n\n2. Truyền động xích: qua sự ăn khớp xích với đĩa xích. Ưu: không trượt, khoảng cách trục lớn. Dùng trên xe đạp, xe máy.\n\n3. Truyền động bánh răng: qua sự ăn khớp giữa các răng. Ưu: tỉ số truyền chính xác, hiệu suất cao. Dùng trong hộp số.\n\n4. Truyền động vít — đai ốc: biến chuyển động quay thành tịnh tiến.",
         "formulas": [
           {
-            "label": "Tỉ số truyền chung",
-            "expr": "i = n₁ / n₂ = D₂ / D₁  (đai, bánh răng)"
-          },
-          {
             "label": "Tỉ số truyền xích",
-            "expr": "i = n₁ / n₂ = z₂ / z₁"
-          },
-          {
-            "label": "Công suất truyền",
-            "expr": "P₂ = P₁ · η  (η: hiệu suất)"
+            "expr": "i = \\dfrac{n_2}{n_1} = \\dfrac{Z_1}{Z_2}"
           }
         ]
       },
@@ -1697,12 +1601,8 @@
         "content": "Động cơ đốt trong: đốt cháy nhiên liệu trong xi lanh để tạo ra công cơ học.\n\nPhân loại theo chu trình:\n• Động cơ 4 kỳ: nạp → nén → nổ → xả\n• Động cơ 2 kỳ: mỗi vòng quay là 1 chu trình\n\nCấu tạo cơ bản: xi lanh, pittong, trục khuỷu, thanh truyền, xupap, bugi\n\nĐộng cơ xăng: đánh lửa bằng bugi\nĐộng cơ diesel: tự bốc cháy do nén\n\nHiệu suất nhiệt: η = W_ích / Q_cung cấp\nThải khí gây ô nhiễm: CO, NOx, HC → xúc tác khử độc khí thải",
         "formulas": [
           {
-            "label": "Hiệu suất",
-            "expr": "η = W_ích / Q_cấp × 100%"
-          },
-          {
-            "label": "Công suất",
-            "expr": "P = W/t (W)"
+            "label": "Hiệu suất động cơ",
+            "expr": "\\eta = \\dfrac{W_{\\text{ich}}}{Q_{\\text{cap}}} \\times 100\\%"
           }
         ]
       },
@@ -1712,12 +1612,8 @@
         "content": "Mạng điện sinh hoạt ở Việt Nam: xoay chiều 220V/50Hz.\n\nSơ đồ mạch điện: ký hiệu tiêu chuẩn cho nguồn, dây dẫn, thiết bị.\n\nCác thiết bị bảo vệ:\n• Cầu chì: đứt khi quá tải, bảo vệ mạch\n• Áp tô mát (CB): cắt điện tự động, có thể tái sử dụng\n• Cầu dao: đóng/cắt nguồn\n• ELCB/RCD: bảo vệ chống điện giật rò\n\nAn toàn điện:\n• Không chạm vào dây điện trần\n• Dùng dụng cụ cách điện\n• Đảm bảo nối đất thiết bị\n• Điện trở tiếp xúc < 4 Ω",
         "formulas": [
           {
-            "label": "Điện năng tiêu thụ",
-            "expr": "A = P·t (kWh)"
-          },
-          {
-            "label": "Công suất tỏa nhiệt",
-            "expr": "P = I²R = U²/R = U·I"
+            "label": "Công suất điện",
+            "expr": "P = UI = I^2 R = \\dfrac{U^2}{R}"
           }
         ]
       },
@@ -1727,12 +1623,12 @@
         "content": "Hệ thống điện quốc gia gồm: nguồn điện → truyền tải → phân phối → tiêu thụ.\n\nTruyền tải điện năng đi xa:\n• Tăng điện áp (MBA tăng áp) → giảm dòng → giảm tổn thất P = I²R\n• Cuối đường dây: MBA hạ áp → phân phối\n\nCác dạng năng lượng tái tạo:\n• Điện mặt trời (PV): tế bào quang điện, hiệu suất 15–22%\n• Điện gió: tuốc bin gió, phát triển mạnh ven biển\n• Thủy điện: lớn nhất trong cơ cấu điện VN\n• Địa nhiệt, sóng biển, thủy triều\n\nViệt Nam: mục tiêu 50% năng lượng tái tạo vào 2030",
         "formulas": [
           {
-            "label": "Tổn thất công suất trên đường dây",
-            "expr": "ΔP = I²R"
+            "label": "Tổn hao truyền tải",
+            "expr": "\\Delta P = I^2 R = \\dfrac{P^2 R}{U^2}"
           },
           {
-            "label": "Giảm tổn thất khi tăng điện áp",
-            "expr": "ΔP' = ΔP/k² (k: hệ số tăng áp)"
+            "label": "Máy biến áp",
+            "expr": "\\dfrac{U_1}{U_2} = \\dfrac{N_1}{N_2};\\quad \\dfrac{I_1}{I_2} = \\dfrac{N_2}{N_1}"
           }
         ]
       }
@@ -1759,12 +1655,8 @@
         "content": "Trong lập trình, dữ liệu được phân loại thành các kiểu cụ thể để máy tính xử lý đúng cách.\n\nCác kiểu dữ liệu cơ bản:\n• Integer (int): số nguyên (-2,147,483,648 đến 2,147,483,647 với 32 bit)\n• Float/Double: số thực dấu phẩy động\n• Char: ký tự đơn, mã ASCII\n• Boolean: chỉ nhận True hoặc False\n• String: chuỗi ký tự\n\nBiến là vùng nhớ có tên dùng lưu trữ dữ liệu; phải khai báo kiểu trước khi dùng (trong ngôn ngữ tĩnh).\n\nBiểu thức: toán học (+,-,*,/,%), quan hệ (==,!=,<,>), logic (and, or, not).\nThứ tự ưu tiên: (), **, *, /, +, - (từ cao đến thấp).",
         "formulas": [
           {
-            "label": "Phạm vi int 32-bit có dấu",
-            "expr": "-2³¹ đến 2³¹-1  (-2.147.483.648 đến 2.147.483.647)"
-          },
-          {
-            "label": "Phạm vi byte",
-            "expr": "0 đến 255  (8 bit không dấu)"
+            "label": "Phép chia nguyên và dư",
+            "expr": "a = b \\cdot q + r,\\quad 0 \\leq r < b"
           }
         ]
       },
@@ -1793,12 +1685,8 @@
         "content": "Mảng (Array): tập hợp các phần tử cùng kiểu, lưu liên tiếp trong bộ nhớ, truy xuất qua chỉ số (index bắt đầu từ 0).\n\nMảng một chiều: danh sách phần tử.\nMảng hai chiều (ma trận): bảng m hàng × n cột.\n\nHàm (Function): khối lệnh có tên, nhận tham số đầu vào và trả về kết quả. Giúp tái sử dụng code, chia nhỏ bài toán.\n• Tham trị: hàm nhận bản sao — thay đổi không ảnh hưởng ngoài\n• Tham chiếu: hàm nhận địa chỉ — thay đổi ảnh hưởng ngoài\n\nĐệ quy (Recursion): hàm gọi lại chính nó. Cần có điều kiện dừng (base case) để tránh vòng lặp vô hạn.",
         "formulas": [
           {
-            "label": "Giai thừa (đệ quy)",
-            "expr": "fact(n) = 1  nếu n=0\nfact(n) = n × fact(n-1)"
-          },
-          {
-            "label": "Fibonacci (đệ quy)",
-            "expr": "fib(1)=fib(2)=1\nfib(n) = fib(n-1)+fib(n-2)"
+            "label": "Giai thừa đệ quy",
+            "expr": "n! = n \\cdot (n-1)!,\\quad 0! = 1"
           }
         ]
       },
@@ -2002,11 +1890,11 @@
         "formulas": [
           {
             "label": "Tỉ suất gia tăng tự nhiên",
-            "expr": "RNI (‰) = CBR - CDR"
+            "expr": "r\\,(\\permille) = CBR - CDR"
           },
           {
-            "label": "Thời gian tăng gấp đôi dân số",
-            "expr": "T ≈ 70 / r%  (Quy tắc 70)"
+            "label": "Mật độ dân số",
+            "expr": "D = \\dfrac{\\text{Dan so}}{\\text{Dien tich}} \\quad (\\text{nguoi/km}^2)"
           }
         ]
       },
@@ -2078,15 +1966,15 @@
         "formulas": [
           {
             "label": "Điều kiện cực đại",
-            "expr": "f'(x₀) = 0 và f''(x₀) < 0"
+            "expr": "f'(x_0)=0,\\; f''(x_0)<0 \\Rightarrow \\text{cực đại}"
           },
           {
             "label": "Điều kiện cực tiểu",
-            "expr": "f'(x₀) = 0 và f''(x₀) > 0"
+            "expr": "f'(x_0)=0,\\; f''(x_0)>0 \\Rightarrow \\text{cực tiểu}"
           },
           {
             "label": "Tiếp tuyến tại x₀",
-            "expr": "y = f'(x₀)·(x - x₀) + f(x₀)"
+            "expr": "y = f'(x_0)(x-x_0) + f(x_0)"
           }
         ]
       },
@@ -2096,20 +1984,20 @@
         "content": "Tích phân xác định của f(x) trên [a,b] là giới hạn của tổng Riemann, biểu diễn diện tích hình thang cong.\n\nĐịnh lý Newton-Leibniz: nếu F(x) là nguyên hàm của f(x) trên [a,b] thì tích phân xác định bằng F(b) - F(a).\n\nMột số nguyên hàm cơ bản cần nhớ: ∫xⁿdx, ∫sinx dx, ∫cosx dx, ∫eˣdx.",
         "formulas": [
           {
-            "label": "Newton-Leibniz",
-            "expr": "∫[a→b] f(x)dx = F(b) - F(a)"
+            "label": "Newton–Leibniz",
+            "expr": "\\int_a^b f(x)\\,dx = F(b) - F(a)"
           },
           {
             "label": "Nguyên hàm lũy thừa",
-            "expr": "∫xⁿdx = xⁿ⁺¹/(n+1) + C,  n ≠ -1"
+            "expr": "\\int x^n\\,dx = \\dfrac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)"
           },
           {
             "label": "Nguyên hàm sin/cos",
-            "expr": "∫sin(x)dx = -cos(x) + C"
+            "expr": "\\int \\sin x\\,dx = -\\cos x + C;\\quad \\int \\cos x\\,dx = \\sin x + C"
           },
           {
-            "label": "Diện tích hình thang cong",
-            "expr": "S = |∫[a→b] f(x) dx|"
+            "label": "Diện tích hình phẳng",
+            "expr": "S = \\int_a^b |f(x)|\\,dx"
           }
         ]
       },
@@ -2119,20 +2007,12 @@
         "content": "Sơ đồ khảo sát hàm số đầy đủ:\n1. Tập xác định D\n2. Sự biến thiên:\n   a. Tính đạo hàm f'(x), tìm điểm làm f'(x) = 0 hoặc không xác định\n   b. Lập bảng biến thiên\n   c. Tìm cực trị (cực đại, cực tiểu)\n3. Giới hạn tại vô cực và tiệm cận\n4. Điểm đặc biệt: giao với trục tọa độ\n5. Vẽ đồ thị\n\nTiệm cận:\n• Tiệm cận đứng x = a: lim f(x) = ±∞ khi x→a\n• Tiệm cận ngang y = b: lim f(x) = b khi x→±∞\n• Tiệm cận xiên y = ax+b: khi bậc tử = bậc mẫu + 1\n\nBốn dạng đồ thị thường gặp: bậc ba, bậc bốn trùng phương, hàm phân thức bậc nhất/bậc nhất.",
         "formulas": [
           {
-            "label": "Hàm bậc 3",
-            "expr": "y = ax³ + bx² + cx + d,  a ≠ 0"
+            "label": "Tiệm cận đứng",
+            "expr": "\\lim_{x\\to x_0} f(x) = \\pm\\infty \\Rightarrow x = x_0 \\text{ là TCĐ}"
           },
           {
-            "label": "Hàm trùng phương",
-            "expr": "y = ax⁴ + bx² + c,  a ≠ 0"
-          },
-          {
-            "label": "Hàm phân thức",
-            "expr": "y = (ax+b)/(cx+d),  ad-bc ≠ 0"
-          },
-          {
-            "label": "Tiệm cận ngang hàm phân thức",
-            "expr": "y = a/c"
+            "label": "Tiệm cận ngang",
+            "expr": "\\lim_{x\\to\\pm\\infty} f(x) = L \\Rightarrow y = L \\text{ là TCN}"
           }
         ]
       },
@@ -2142,20 +2022,16 @@
         "content": "Hàm số mũ y = aˣ (a > 0, a ≠ 1):\n• a > 1: hàm đồng biến trên ℝ\n• 0 < a < 1: hàm nghịch biến trên ℝ\n• Luôn đi qua điểm (0; 1), đồ thị nằm trên trục Ox\n\nHàm số logarit y = logₐx (a > 0, a ≠ 1), x > 0:\n• a > 1: đồng biến; 0 < a < 1: nghịch biến\n• Là hàm ngược của hàm mũ\n\nLũy thừa và logarit:\n• Hàm mũ tự nhiên: y = eˣ (e ≈ 2,718)\n• Logarit tự nhiên: ln x = logₑx\n• Logarit thập phân: log x = log₁₀x\n\nPhương trình và bất phương trình mũ – logarit: đưa về cùng cơ số hoặc đặt ẩn phụ.",
         "formulas": [
           {
-            "label": "Tính chất logarit",
-            "expr": "logₐ(MN) = logₐM + logₐN"
+            "label": "Logarithm cơ bản",
+            "expr": "\\log_a b = c \\Leftrightarrow a^c = b \\quad (a>0,\\;a\\neq1,\\;b>0)"
           },
           {
             "label": "Đổi cơ số",
-            "expr": "logₐb = logcb / logcа"
+            "expr": "\\log_a b = \\dfrac{\\ln b}{\\ln a}"
           },
           {
-            "label": "Đạo hàm hàm mũ",
-            "expr": "(aˣ)' = aˣ·ln a;  (eˣ)' = eˣ"
-          },
-          {
-            "label": "Đạo hàm logarit",
-            "expr": "(ln x)' = 1/x;  (logₐx)' = 1/(x·ln a)"
+            "label": "Tính chất log",
+            "expr": "\\log_a(mn) = \\log_a m + \\log_a n;\\quad \\log_a\\dfrac{m}{n} = \\log_a m - \\log_a n"
           }
         ]
       },
@@ -2165,20 +2041,16 @@
         "content": "Số phức z = a + bi trong đó a, b ∈ ℝ, i là đơn vị ảo với i² = -1.\na là phần thực, b là phần ảo.\n\nTập số phức ℂ mở rộng tập số thực ℝ. Số thực là số phức có phần ảo bằng 0.\n\nSố phức liên hợp: z̄ = a - bi\nMô-đun: |z| = √(a² + b²)\n\nBiểu diễn hình học: điểm M(a; b) trong mặt phẳng phức Oxy.\n\nDạng lượng giác: z = r(cosφ + i·sinφ), r = |z|, φ = arg(z)\n\nPhương trình bậc hai với hệ số thực luôn có nghiệm trong ℂ.",
         "formulas": [
           {
-            "label": "Đơn vị ảo",
-            "expr": "i² = -1;  i³ = -i;  i⁴ = 1"
+            "label": "Số phức",
+            "expr": "z = a + bi,\\quad i^2 = -1"
           },
           {
-            "label": "Mô-đun",
-            "expr": "|z| = √(a² + b²)"
+            "label": "Môđun",
+            "expr": "|z| = \\sqrt{a^2+b^2}"
           },
           {
-            "label": "Nhân hai số phức",
-            "expr": "(a+bi)(c+di) = (ac-bd) + (ad+bc)i"
-          },
-          {
-            "label": "Chia số phức",
-            "expr": "z₁/z₂ = z₁·z̄₂ / |z₂|²"
+            "label": "Phép chia",
+            "expr": "\\dfrac{z_1}{z_2} = \\dfrac{z_1\\bar{z}_2}{|z_2|^2}"
           }
         ]
       },
@@ -2188,20 +2060,12 @@
         "content": "Nguyên hàm F(x) của f(x) trên (a;b) là hàm thỏa mãn F'(x) = f(x) với mọi x ∈ (a;b).\n\nHọ nguyên hàm: ∫f(x)dx = F(x) + C\n\nPhương pháp tính nguyên hàm:\n1. Nguyên hàm cơ bản: tra bảng\n2. Phương pháp đổi biến: đặt t = g(x)\n3. Phương pháp từng phần: ∫u dv = uv - ∫v du\n\nTích phân xác định — ứng dụng:\n• Diện tích hình phẳng giới hạn bởi đường cong\n• Thể tích vật thể tròn xoay\n• Quãng đường trong vật lý",
         "formulas": [
           {
-            "label": "Nguyên hàm cơ bản",
-            "expr": "∫xⁿdx = xⁿ⁺¹/(n+1)+C;  ∫eˣdx = eˣ+C"
+            "label": "Tích phân từng phần",
+            "expr": "\\int u\\,dv = uv - \\int v\\,du"
           },
           {
-            "label": "Nguyên hàm từng phần",
-            "expr": "∫u dv = uv - ∫v du"
-          },
-          {
-            "label": "Diện tích hình phẳng",
-            "expr": "S = ∫[a→b] |f(x) - g(x)| dx"
-          },
-          {
-            "label": "Thể tích tròn xoay (quanh Ox)",
-            "expr": "V = π·∫[a→b] [f(x)]² dx"
+            "label": "Thể tích khối tròn xoay",
+            "expr": "V = \\pi\\int_a^b [f(x)]^2\\,dx"
           }
         ]
       },
@@ -2212,19 +2076,19 @@
         "formulas": [
           {
             "label": "Thể tích lăng trụ/hình trụ",
-            "expr": "V = S_đáy × h"
+            "expr": "V = S_{\\text{đáy}} \\times h"
           },
           {
             "label": "Thể tích chóp/hình nón",
-            "expr": "V = (1/3) × S_đáy × h"
+            "expr": "V = \\dfrac{1}{3} S_{\\text{đáy}} \\times h"
           },
           {
-            "label": "Thể tích hình cầu",
-            "expr": "V = (4/3)πR³"
+            "label": "Thể tích khối cầu",
+            "expr": "V = \\dfrac{4}{3}\\pi R^3"
           },
           {
-            "label": "Diện tích xung quanh hình nón",
-            "expr": "S_xq = πRl  (l: đường sinh)"
+            "label": "Diện tích mặt cầu",
+            "expr": "S = 4\\pi R^2"
           }
         ]
       },
@@ -2234,16 +2098,12 @@
         "content": "Phương trình mũ: aˣ = b (a>0, a≠1)\n• aˣ = aᵏ ↔ x = k\n• Đưa về cùng cơ số hoặc đặt t = aˣ\n\nPhương trình logarit: log_a(x) = b ↔ x = aᵇ\n• log_a f(x) = log_a g(x) ↔ f(x) = g(x) (f,g > 0)\n\nBất phương trình mũ:\n• a > 1: aˣ > aʸ ↔ x > y\n• 0 < a < 1: aˣ > aʸ ↔ x < y (đổi chiều)\n\nBất phương trình logarit:\n• a > 1: log_a f > log_a g ↔ f > g > 0\n• 0 < a < 1: log_a f > log_a g ↔ 0 < f < g",
         "formulas": [
           {
-            "label": "Pt mũ cơ bản",
-            "expr": "aˣ = aᵏ ↔ x = k"
+            "label": "Phương trình mũ",
+            "expr": "a^x = b \\Rightarrow x = \\log_a b"
           },
           {
-            "label": "Pt logarit",
-            "expr": "log_a x = b ↔ x = aᵇ"
-          },
-          {
-            "label": "Đổi cơ số",
-            "expr": "log_a b = ln b / ln a"
+            "label": "Phương trình logarithm",
+            "expr": "\\log_a f(x) = \\log_a g(x) \\Rightarrow f(x) = g(x)"
           }
         ]
       },
@@ -2253,16 +2113,16 @@
         "content": "Hệ tọa độ Oxyz:\n• Điểm M(x,y,z), vectơ a⃗=(a₁,a₂,a₃)\n• |AB| = √((x₂−x₁)²+(y₂−y₁)²+(z₂−z₁)²)\n\nMặt phẳng: ax+by+cz+d=0\n• Vectơ pháp tuyến n⃗=(a,b,c)\n• Khoảng cách từ M₀(x₀,y₀,z₀) đến mp: d = |ax₀+by₀+cz₀+d|/√(a²+b²+c²)\n\nĐường thẳng trong không gian:\n• Phương trình tham số: x=x₀+at, y=y₀+bt, z=z₀+ct\n• Vectơ chỉ phương u⃗=(a,b,c)\n\nMặt cầu (S): (x−a)²+(y−b)²+(z−c)²=R²\n• Tâm I(a,b,c), bán kính R",
         "formulas": [
           {
-            "label": "Khoảng cách 2 điểm",
-            "expr": "|AB|=√((x₂-x₁)²+(y₂-y₁)²+(z₂-z₁)²)"
+            "label": "Phương trình mặt phẳng",
+            "expr": "ax + by + cz + d = 0"
           },
           {
-            "label": "Mặt cầu",
-            "expr": "(x-a)²+(y-b)²+(z-c)²=R²"
+            "label": "Phương trình đường thẳng",
+            "expr": "\\dfrac{x-x_0}{a} = \\dfrac{y-y_0}{b} = \\dfrac{z-z_0}{c}"
           },
           {
-            "label": "d(M₀,mp)",
-            "expr": "d=|ax₀+by₀+cz₀+d|/√(a²+b²+c²)"
+            "label": "Khoảng cách điểm đến mp",
+            "expr": "d(M,(P)) = \\dfrac{|ax_0+by_0+cz_0+d|}{\\sqrt{a^2+b^2+c^2}}"
           }
         ]
       },
@@ -2272,16 +2132,16 @@
         "content": "Biến ngẫu nhiên rời rạc X: bảng phân phối xác suất P(X=xᵢ)=pᵢ\n• Kỳ vọng: E(X) = Σ xᵢ·pᵢ\n• Phương sai: D(X) = E(X²) − [E(X)]²\n• Độ lệch chuẩn: σ = √D(X)\n\nPhân phối nhị thức B(n,p):\n• X = số lần thành công trong n phép thử Bernoulli\n• P(X=k) = C(n,k)·pᵏ·(1−p)ⁿ⁻ᵏ\n• E(X) = np; D(X) = np(1−p)\n\nPhân phối chuẩn N(μ,σ²):\n• Hàm mật độ chuẩn, đường cong hình chuông\n• 68-95-99,7: P(μ−σ<X<μ+σ) ≈ 68%",
         "formulas": [
           {
-            "label": "Kỳ vọng",
-            "expr": "E(X) = Σ xᵢ·pᵢ"
-          },
-          {
             "label": "Phân phối nhị thức",
-            "expr": "P(X=k)=C(n,k)·pᵏ·(1−p)ⁿ⁻ᵏ"
+            "expr": "P(X=k) = C_n^k\\,p^k(1-p)^{n-k}"
           },
           {
-            "label": "Phương sai nhị thức",
-            "expr": "D(X)=np(1−p)"
+            "label": "Kỳ vọng và phương sai",
+            "expr": "E(X) = np;\\quad D(X) = np(1-p)"
+          },
+          {
+            "label": "Hàm mật độ chuẩn",
+            "expr": "f(x) = \\dfrac{1}{\\sigma\\sqrt{2\\pi}}\\,e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}"
           }
         ]
       },
@@ -2291,12 +2151,12 @@
         "content": "Quan hệ đường thẳng — mặt phẳng:\n• d ∥ mp ↔ d // một đường thẳng trong mp và d ⊄ mp\n• d ⊥ mp ↔ d ⊥ mọi đường thẳng trong mp qua chân đường vuông góc\n\nGóc giữa đường thẳng và mặt phẳng:\n• α = góc giữa d và hình chiếu d' của d lên mp (0° ≤ α ≤ 90°)\n\nGóc nhị diện:\n• Góc giữa hai nửa mặt phẳng chung cạnh\n• Đo bằng góc phẳng (vẽ ⊥ cạnh trong mỗi nửa mp)\n\nKhoảng cách:\n• d(M, mp) = |ax₀+by₀+cz₀+d| / √(a²+b²+c²)\n• d(d₁, d₂) khi chéo nhau: dùng vectơ pháp tuyến chung\n• Khoảng cách hai mp song song ax+by+cz+d₁=0 và ax+by+cz+d₂=0:\n  δ = |d₁−d₂| / √(a²+b²+c²)",
         "formulas": [
           {
-            "label": "d(M, mp)",
-            "expr": "d=|ax₀+by₀+cz₀+d|/√(a²+b²+c²)"
+            "label": "Khoảng cách hai mặt phẳng song song",
+            "expr": "d = \\dfrac{|d_1 - d_2|}{\\sqrt{a^2+b^2+c^2}}"
           },
           {
-            "label": "d(mp₁, mp₂) song song",
-            "expr": "δ=|d₁-d₂|/√(a²+b²+c²)"
+            "label": "Góc giữa đường thẳng và mặt phẳng",
+            "expr": "\\sin\\varphi = \\dfrac{|a\\cdot a_1 + b\\cdot b_1 + c\\cdot c_1|}{\\sqrt{a^2+b^2+c^2}\\sqrt{a_1^2+b_1^2+c_1^2}}"
           }
         ]
       },
@@ -2306,16 +2166,12 @@
         "content": "Quy tắc đếm:\n• Quy tắc cộng: A hoặc B xảy ra → n(A) + n(B) (A, B không đồng thời)\n• Quy tắc nhân: A và B đồng thời → n(A) × n(B)\n\nÔn tập nhanh:\n• Hoán vị: Pₙ = n!\n• Chỉnh hợp: Aₙᵏ = n!/(n−k)!\n• Tổ hợp: Cₙᵏ = n!/(k!(n−k)!)\n\nXác suất có điều kiện:\n• P(A|B) = P(A∩B)/P(B)\n• P(A∩B) = P(A)·P(B|A)\n• A và B độc lập: P(A∩B)=P(A)·P(B)\n\nCông thức Bayes:\nP(Hᵢ|A) = P(Hᵢ)·P(A|Hᵢ) / Σ P(Hⱼ)·P(A|Hⱼ)\n\nXác suất toàn phần: P(A) = Σ P(Hᵢ)·P(A|Hᵢ)",
         "formulas": [
           {
-            "label": "Xác suất có điều kiện",
-            "expr": "P(A|B) = P(A∩B)/P(B)"
-          },
-          {
-            "label": "Nhân xác suất",
-            "expr": "P(A∩B) = P(A)·P(B|A)"
+            "label": "Công thức Bayes",
+            "expr": "P(H_i|A) = \\dfrac{P(H_i)\\cdot P(A|H_i)}{\\sum_j P(H_j)\\cdot P(A|H_j)}"
           },
           {
             "label": "Xác suất toàn phần",
-            "expr": "P(A) = ΣP(Hᵢ)·P(A|Hᵢ)"
+            "expr": "P(A) = \\sum_{i=1}^n P(H_i)\\cdot P(A|H_i)"
           }
         ]
       },
@@ -2325,12 +2181,12 @@
         "content": "Dạng bài thường gặp trong đề thi THPT Quốc gia:\n\n1. Hàm số: tìm cực trị, khoảng đồng biến, tiệm cận, đọc đồ thị\n2. Mũ và Logarit: phương trình, bất phương trình, bài toán thực tế\n3. Tích phân: tính diện tích, thể tích vật thể tròn xoay\n4. Hình học không gian: góc, khoảng cách, thể tích\n5. Số phức: tính toán, tìm modulus, biểu diễn\n6. Tổ hợp–Xác suất: đếm, tính xác suất\n7. Thống kê: trung bình, phương sai, phân phối\n\nKhung thời gian 90 phút / 50 câu trắc nghiệm:\n• Câu dễ (1–30): 45 phút\n• Câu khó (31–50): 45 phút\n• Không để trống câu nào: xác suất đúng 25%",
         "formulas": [
           {
-            "label": "Thể tích vật thể tròn xoay",
-            "expr": "V=π∫[a,b] f²(x)dx"
+            "label": "Tiệm cận của hàm phân thức",
+            "expr": "y = \\dfrac{ax+b}{cx+d}:\\; \\text{TCĐ } x=-\\dfrac{d}{c},\\; \\text{TCN } y=\\dfrac{a}{c}"
           },
           {
-            "label": "Diện tích hình phẳng",
-            "expr": "S=∫[a,b]|f(x)−g(x)|dx"
+            "label": "Công thức diện tích hình phẳng",
+            "expr": "S = \\int_a^b |f(x)-g(x)|\\,dx"
           }
         ]
       }
@@ -2342,24 +2198,24 @@
         "content": "Dao động điều hòa là dao động được mô tả bởi hàm sin hoặc cos theo thời gian.\n\nCon lắc lò xo và con lắc đơn là hai hệ dao động điều hòa phổ biến.\n\nPha dao động φ = ωt + φ₀ xác định trạng thái tại thời điểm t.\nNăng lượng dao động: tổng động năng và thế năng luôn bảo toàn trong dao động không tắt dần.",
         "formulas": [
           {
-            "label": "Phương trình dao động",
-            "expr": "x = A·cos(ωt + φ₀)"
+            "label": "Phương trình dao động điều hòa",
+            "expr": "x = A\\cos(\\omega t + \\varphi_0)"
           },
           {
-            "label": "Tần số góc (lò xo)",
-            "expr": "ω = √(k/m)"
+            "label": "Tần số góc con lắc lò xo",
+            "expr": "\\omega = \\sqrt{\\dfrac{k}{m}}"
           },
           {
-            "label": "Tần số góc (con lắc đơn)",
-            "expr": "ω = √(g/l)"
+            "label": "Tần số góc con lắc đơn",
+            "expr": "\\omega = \\sqrt{\\dfrac{g}{l}}"
           },
           {
             "label": "Chu kỳ",
-            "expr": "T = 2π/ω"
+            "expr": "T = \\dfrac{2\\pi}{\\omega}"
           },
           {
-            "label": "Năng lượng dao động",
-            "expr": "W = ½·k·A² = ½·m·ω²·A²"
+            "label": "Vận tốc cực đại",
+            "expr": "v_{\\max} = A\\omega"
           }
         ]
       },
@@ -2370,19 +2226,15 @@
         "formulas": [
           {
             "label": "Liên hệ v, λ, f, T",
-            "expr": "v = λ·f = λ/T"
+            "expr": "v = \\lambda f = \\dfrac{\\lambda}{T}"
           },
           {
             "label": "Phương trình sóng",
-            "expr": "u(x,t) = A·cos(ωt - 2πx/λ)"
+            "expr": "u(x,t) = A\\cos\\!\\left(\\omega t - \\dfrac{2\\pi x}{\\lambda}\\right)"
           },
           {
             "label": "Mức cường độ âm",
-            "expr": "L = 10·log(I/I₀)  (dB),  I₀ = 10⁻¹² W/m²"
-          },
-          {
-            "label": "Hiệu ứng Doppler (nguồn lại gần)",
-            "expr": "f' = f·(v+v_obs)/(v-v_s)"
+            "expr": "L = 10\\lg\\dfrac{I}{I_0} \\quad (\\text{dB}),\\quad I_0 = 10^{-12}\\,\\text{W/m}^2"
           }
         ]
       },
@@ -2392,20 +2244,16 @@
         "content": "Sóng điện từ: sóng ngang do điện trường và từ trường biến thiên lan truyền trong không gian, tốc độ c = 3×10⁸ m/s trong chân không.\n\nPhổ sóng điện từ (bước sóng tăng dần): tia γ → tia X → tia tử ngoại → ánh sáng nhìn thấy → hồng ngoại → sóng vô tuyến.\n\nÁnh sáng nhìn thấy: 380-760 nm (tím → đỏ).\n\nQuang học hình học:\n• Phản xạ: góc tới = góc phản xạ\n• Khúc xạ: n₁sinθ₁ = n₂sinθ₂ (Định luật Snell)\n• Phản xạ toàn phần: khi θ ≥ θ_gh và ánh sáng đi từ môi trường chiết quang hơn sang kém hơn\n• Thấu kính: hội tụ (f > 0) và phân kỳ (f < 0)",
         "formulas": [
           {
-            "label": "Định luật khúc xạ (Snell)",
-            "expr": "n₁sinθ₁ = n₂sinθ₂"
+            "label": "Chiết suất",
+            "expr": "n = \\dfrac{c}{v}"
           },
           {
-            "label": "Chiết suất tuyệt đối",
-            "expr": "n = c/v"
+            "label": "Định luật khúc xạ",
+            "expr": "n_1\\sin i = n_2\\sin r"
           },
           {
-            "label": "Công thức thấu kính",
-            "expr": "1/f = 1/d_o + 1/d_i"
-          },
-          {
-            "label": "Góc phản xạ toàn phần",
-            "expr": "sinθ_gh = n₂/n₁  (n₁ > n₂)"
+            "label": "Góc giới hạn phản xạ toàn phần",
+            "expr": "\\sin i_{gh} = \\dfrac{n_2}{n_1} \\quad (n_1>n_2)"
           }
         ]
       },
@@ -2415,20 +2263,16 @@
         "content": "Hạt nhân nguyên tử gồm proton (Z) và neutron (N), số khối A = Z + N.\n\nPhóng xạ tự nhiên: hạt nhân không bền tự phát ra bức xạ.\n• Tia α (²₄He): xuyên thấu yếu, ion hóa mạnh\n• Tia β⁻ (electron): n → p + e⁻ + ν̄\n• Tia β⁺ (positron): p → n + e⁺ + ν\n• Tia γ (photon): không mang điện, xuyên thấu mạnh\n\nĐịnh luật phóng xạ: số hạt nhân phóng xạ giảm theo hàm mũ.\n\nPhản ứng hạt nhân: phân hạch (hạt nhân nặng vỡ ra) và nhiệt hạch (hạt nhân nhẹ kết hợp).\nBảo toàn: số khối A, điện tích Z, năng lượng-khối lượng (E = mc²).",
         "formulas": [
           {
-            "label": "Định luật phóng xạ",
-            "expr": "N(t) = N₀·(1/2)^(t/T) = N₀·e^(-λt)"
+            "label": "Phóng xạ",
+            "expr": "N(t) = N_0\\left(\\dfrac{1}{2}\\right)^{t/T} = N_0 e^{-\\lambda t}"
           },
           {
-            "label": "Chu kỳ bán rã và hằng số phóng xạ",
-            "expr": "T = ln2 / λ ≈ 0,693/λ"
+            "label": "Hằng số phóng xạ",
+            "expr": "\\lambda = \\dfrac{\\ln 2}{T}"
           },
           {
-            "label": "Năng lượng liên kết hạt nhân",
-            "expr": "E = Δm·c²  (Δm = độ hụt khối)"
-          },
-          {
-            "label": "Einstein",
-            "expr": "E = mc²,  c = 3×10⁸ m/s"
+            "label": "Năng lượng liên kết",
+            "expr": "E_{lk} = \\Delta m\\cdot c^2"
           }
         ]
       },
@@ -2439,19 +2283,19 @@
         "formulas": [
           {
             "label": "Tổng trở mạch RLC",
-            "expr": "Z = √[R² + (Z_L - Z_C)²]"
+            "expr": "Z = \\sqrt{R^2 + (Z_L - Z_C)^2}"
           },
           {
             "label": "Cảm kháng và dung kháng",
-            "expr": "Z_L = ωL;  Z_C = 1/(ωC)"
+            "expr": "Z_L = \\omega L;\\quad Z_C = \\dfrac{1}{\\omega C}"
           },
           {
-            "label": "Điều kiện cộng hưởng",
-            "expr": "ω₀ = 1/√(LC)"
+            "label": "Công suất",
+            "expr": "P = UI\\cos\\varphi = I^2 R"
           },
           {
-            "label": "Máy biến áp",
-            "expr": "U₁/U₂ = N₁/N₂;  I₁·N₁ = I₂·N₂"
+            "label": "Hệ số công suất",
+            "expr": "\\cos\\varphi = \\dfrac{R}{Z}"
           }
         ]
       },
@@ -2462,15 +2306,15 @@
         "formulas": [
           {
             "label": "Năng lượng photon",
-            "expr": "ε = hf = hc/λ"
+            "expr": "E = hf = \\dfrac{hc}{\\lambda}"
           },
           {
-            "label": "Einstein quang điện",
-            "expr": "hf = A + ½mv²_max"
+            "label": "Phương trình Einstein",
+            "expr": "hf = A + \\dfrac{1}{2}mv_{\\max}^2"
           },
           {
-            "label": "Giới hạn quang điện",
-            "expr": "λ₀ = hc/A"
+            "label": "Bước sóng giới hạn",
+            "expr": "\\lambda_0 = \\dfrac{hc}{A}"
           }
         ]
       },
@@ -2480,16 +2324,12 @@
         "content": "Cấu tạo hạt nhân: Z proton + N neutron, A=Z+N\nKý hiệu: ᴬ_Z X\n\nPhóng xạ — 3 loại:\n• α: ⁴₂He → A−4, Z−2\n• β⁻: ⁰₋₁e → A không đổi, Z+1\n• β⁺: ⁰₊₁e → A không đổi, Z−1\n• γ: không đổi A, Z; chỉ giảm năng lượng\n\nĐịnh luật phóng xạ: N = N₀·e^(−λt) = N₀·(1/2)^(t/T)\nT: chu kỳ bán rã; λ = ln2/T\n\nNăng lượng liên kết: E_lk = Δm·c²\nΔm = (Z·mₚ + N·mₙ) − m_hạtnhân (độ hụt khối)\n\nPhản ứng phân hạch: U-235 + n → 2 hạt nhân trung bình + 2-3n + E\nPhản ứng nhiệt hạch: D + T → He + n + 17,6 MeV",
         "formulas": [
           {
-            "label": "Định luật phóng xạ",
-            "expr": "N = N₀·(½)^(t/T)"
+            "label": "Hệ thức Einstein",
+            "expr": "E = mc^2,\\quad c = 3\\times10^8\\,\\text{m/s}"
           },
           {
-            "label": "Năng lượng liên kết",
-            "expr": "E_lk = Δm·c²"
-          },
-          {
-            "label": "Hằng số phóng xạ",
-            "expr": "λ = ln2/T"
+            "label": "Năng lượng liên kết riêng",
+            "expr": "\\varepsilon = \\dfrac{E_{lk}}{A} \\quad (\\text{MeV/nuclon})"
           }
         ]
       },
@@ -2499,16 +2339,12 @@
         "content": "Mạch RLC nối tiếp:\n• u = U₀cos(ωt), i = I₀cos(ωt−φ)\n• Z = √(R²+(Z_L−Z_C)²)\n• tan φ = (Z_L−Z_C)/R\n\nCộng hưởng: Z_L = Z_C → ω = 1/√(LC)\n• Z_min = R, I_max = U/R, cos φ = 1\n\nCông suất:\n• P = UI·cos φ = I²R (công suất thực)\n• Q = UI·sin φ (công suất phản kháng)\n• S = UI (công suất biểu kiến)\n• cos φ: hệ số công suất\n\nMáy biến áp lý tưởng:\n• U₁/U₂ = N₁/N₂; I₁/I₂ = N₂/N₁\n• P₁ = P₂ (không tổn thất)",
         "formulas": [
           {
-            "label": "Tổng trở RLC",
-            "expr": "Z=√(R²+(Z_L-Z_C)²)"
-          },
-          {
-            "label": "Công suất thực",
-            "expr": "P=UI cosφ=I²R"
-          },
-          {
             "label": "Máy biến áp",
-            "expr": "U₁/U₂=N₁/N₂"
+            "expr": "\\dfrac{U_1}{U_2} = \\dfrac{N_1}{N_2};\\quad I_1 N_1 = I_2 N_2"
+          },
+          {
+            "label": "Tổn hao truyền tải",
+            "expr": "\\Delta P = I^2 R = \\dfrac{P^2 R}{U^2}"
           }
         ]
       },
@@ -2518,16 +2354,16 @@
         "content": "Giao thoa sóng:\n• Điều kiện: hai nguồn kết hợp (cùng tần số, hiệu pha không đổi)\n• Tăng cường (cực đại): d₂−d₁ = kλ (k∈ℤ)\n• Triệt tiêu (cực tiểu): d₂−d₁ = (k+½)λ\n\nSóng dừng:\n• Phản xạ sóng + giao thoa với sóng tới → sóng dừng\n• Nút: biên độ = 0; Bụng: biên độ cực đại\n• Dây 2 đầu cố định: l = kλ/2 (k=1,2,3...)\n• Dây 1 đầu tự do: l = (2k−1)λ/4\n\nKhoảng cách:\n• Nút−Nút hoặc Bụng−Bụng = λ/2\n• Nút−Bụng liền kề = λ/4",
         "formulas": [
           {
-            "label": "Cực đại giao thoa",
-            "expr": "d₂−d₁ = kλ"
+            "label": "Điều kiện giao thoa cực đại",
+            "expr": "d_1 - d_2 = k\\lambda \\quad (k \\in \\mathbb{Z})"
           },
           {
-            "label": "Sóng dừng 2 đầu cố định",
-            "expr": "l = kλ/2 (k=1,2,3...)"
+            "label": "Điều kiện giao thoa cực tiểu",
+            "expr": "d_1 - d_2 = \\left(k+\\dfrac{1}{2}\\right)\\lambda"
           },
           {
-            "label": "Bước sóng",
-            "expr": "λ = v/f"
+            "label": "Sóng dừng – bụng và nút",
+            "expr": "l = k\\dfrac{\\lambda}{2} \\quad (k = 1,2,3,\\ldots)"
           }
         ]
       },
@@ -2537,12 +2373,16 @@
         "content": "Dao động cơ:\n• x=Acos(ωt+φ); v=−Aωsin(ωt+φ); a=−ω²x\n• Con lắc lò xo: T=2π√(m/k); con lắc đơn: T=2π√(l/g)\n• W=½kA²=½mω²A²\n\nSóng cơ: λ=vT=v/f; giao thoa: cực đại d₂−d₁=kλ\n\nĐiện xoay chiều:\n• u=U₀cosωt; i=I₀cos(ωt−φ)\n• Z=√(R²+(Z_L−Z_C)²); tan φ=(Z_L−Z_C)/R\n• P=UIcosφ=I²R; MBA: U₁/U₂=N₁/N₂\n\nLượng tử:\n• ε=hf; hf=A+½mv²_max (quang điện)\n• N=N₀(½)^(t/T); E_lk=Δm·c²\n\nQuang học:\n• n₁sini=n₂sinr; 1/f=1/d+1/d'; k=−d'/d",
         "formulas": [
           {
-            "label": "Tổng hợp Z RLC",
-            "expr": "Z=√(R²+(ωL-1/ωC)²)"
+            "label": "Phương trình thấu kính",
+            "expr": "\\dfrac{1}{f} = \\dfrac{1}{d_o} + \\dfrac{1}{d_i}"
           },
           {
-            "label": "Hệ số phóng đại ảnh",
-            "expr": "k=-d'/d"
+            "label": "Độ phóng đại",
+            "expr": "k = -\\dfrac{d_i}{d_o}"
+          },
+          {
+            "label": "Độ tụ",
+            "expr": "D = \\dfrac{1}{f} \\quad (\\text{diop})"
           }
         ]
       }
@@ -2554,12 +2394,12 @@
         "content": "Este là sản phẩm của phản ứng axit (hữu cơ hoặc vô cơ) với rượu, có mùi thơm đặc trưng.\n\nCông thức tổng quát este của axit cacboxylic: RCOOR'\nPhản ứng este hóa là phản ứng thuận nghịch, cần xúc tác H₂SO₄ đặc, đun nóng.\n\nLipit gồm chất béo (triglixerit), sáp, photpholipit, steorit.\nChất béo: este của glixerol và axit béo. Chất béo lỏng (dầu) → nhiều axit béo không no. Chất béo rắn (mỡ) → nhiều axit béo no.",
         "formulas": [
           {
-            "label": "Phản ứng este hóa",
-            "expr": "RCOOH + R'OH ⇌ RCOOR' + H₂O"
+            "label": "Este hóa",
+            "expr": "\\text{RCOOH} + \\text{R\\'OH} \\rightleftharpoons \\text{RCOOR\\'} + \\text{H}_2\\text{O}"
           },
           {
-            "label": "Phản ứng xà phòng hóa",
-            "expr": "(RCOO)₃C₃H₅ + 3NaOH → 3RCOONa + C₃H₅(OH)₃"
+            "label": "Xà phòng hóa",
+            "expr": "\\text{RCOOR\\'} + \\text{NaOH} \\to \\text{RCOONa} + \\text{R\\'OH}"
           }
         ]
       },
@@ -2570,15 +2410,15 @@
         "formulas": [
           {
             "label": "Phản ứng tráng bạc glucozơ",
-            "expr": "C₆H₁₂O₆ + Ag₂O → C₆H₁₂O₇ + 2Ag↓  (NH₃, to)"
+            "expr": "\\text{C}_6\\text{H}_{12}\\text{O}_6 + \\text{Ag}_2\\text{O} \\xrightarrow{\\text{NH}_3} \\text{C}_6\\text{H}_{12}\\text{O}_7 + 2\\text{Ag}\\downarrow"
           },
           {
             "label": "Lên men glucozơ",
-            "expr": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂  (men rượu)"
+            "expr": "\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{men}} 2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{CO}_2\\uparrow"
           },
           {
             "label": "Thủy phân tinh bột",
-            "expr": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆  (H⁺, to)"
+            "expr": "(\\text{C}_6\\text{H}_{10}\\text{O}_5)_n + n\\text{H}_2\\text{O} \\xrightarrow{H^+} n\\text{C}_6\\text{H}_{12}\\text{O}_6"
           }
         ]
       },
@@ -2588,12 +2428,12 @@
         "content": "Amin: dẫn xuất của NH₃ thay H bởi gốc hidrocacbon.\n• Bậc amin = số nguyên tử H thay thế\n• Amin thơm (anilin C₆H₅NH₂): tính bazơ rất yếu, không làm đổi màu quỳ\n• Amin béo: tính bazơ mạnh hơn NH₃, dung dịch làm quỳ chuyển xanh\n\nAmino axit: phân tử có cả nhóm -NH₂ và -COOH → lưỡng tính.\nPhản ứng trùng ngưng amino axit → peptide → protein.\n\nProtein: polymer của amino axit, liên kết peptide (-CO-NH-).\n• Phản ứng màu biuret (protein + Cu(OH)₂ → màu tím): nhận biết protein\n• Phản ứng thủy phân protein → amino axit (enzym tiêu hóa)",
         "formulas": [
           {
-            "label": "Phản ứng tạo peptide",
-            "expr": "H₂N-CHR-COOH + H₂N-CHR'-COOH → H₂N-CHR-CO-NH-CHR'-COOH + H₂O"
+            "label": "Liên kết peptide",
+            "expr": "-\\text{CO}-\\text{NH}- \\text{ (liên kết peptide)}"
           },
           {
-            "label": "Lưỡng tính amino axit",
-            "expr": "H₂N-R-COOH + HCl → ClH₃N-R-COOH\nH₂N-R-COOH + NaOH → H₂N-R-COONa + H₂O"
+            "label": "Thủy phân peptide",
+            "expr": "\\text{Peptide} + (n-1)\\text{H}_2\\text{O} \\xrightarrow{H^+/OH^-} n\\text{ amino axit}"
           }
         ]
       },
@@ -2603,16 +2443,12 @@
         "content": "Polime (polymer) là hợp chất có phân tử khối lớn, gồm nhiều mắt xích nhỏ (monome) liên kết lại.\n\nPhân loại:\n• Polime thiên nhiên: tinh bột, xenlulozơ, cao su thiên nhiên, protein\n• Polime tổng hợp: PE, PVC, PS, nylon, Teflon\n• Polime bán tổng hợp: tơ axetat, tơ visco\n\nPhản ứng điều chế:\n• Trùng hợp: các monome có liên kết đôi cộng hợp với nhau\n• Trùng ngưng: các monome có ≥2 nhóm chức phản ứng với nhau, loại phân tử nhỏ\n\nVật liệu polymer: chất dẻo, cao su, tơ sợi, keo dán.",
         "formulas": [
           {
-            "label": "Trùng hợp etilen",
-            "expr": "n CH₂=CH₂ → (-CH₂-CH₂-)ₙ  (PE)"
+            "label": "Phản ứng trùng hợp",
+            "expr": "n\\text{CH}_2\\text{=CH}_2 \\xrightarrow{xt,t^\\circ,p} (-\\text{CH}_2-\\text{CH}_2-)_n"
           },
           {
-            "label": "Trùng ngưng nylon-6,6",
-            "expr": "n H₂N(CH₂)₆NH₂ + n HOOC(CH₂)₄COOH → [-NH(CH₂)₆NH-CO(CH₂)₄CO-]ₙ + nH₂O"
-          },
-          {
-            "label": "Độ trùng hợp",
-            "expr": "n = M_polime / M_monome"
+            "label": "Phản ứng trùng ngưng nylon-6,6",
+            "expr": "n\\text{HOOC(CH}_2)_4\\text{COOH} + n\\text{H}_2\\text{N(CH}_2)_6\\text{NH}_2 \\to [-\\text{CO}(\\text{CH}_2)_4\\text{CO-NH}(\\text{CH}_2)_6\\text{NH}-]_n + 2n\\text{H}_2\\text{O}"
           }
         ]
       },
@@ -2622,16 +2458,12 @@
         "content": "Kim loại chiếm 80% nguyên tố trong bảng tuần hoàn. Cấu trúc tinh thể kim loại với electron tự do giải thích tính dẫn điện, dẫn nhiệt, ánh kim.\n\nDãy hoạt động hóa học (dãy thế điện cực): K, Na, Mg, Al, Zn, Fe, Ni, Sn, Pb, H, Cu, Hg, Ag, Pt, Au.\n\nPhản ứng của kim loại:\n• Với phi kim: đốt cháy tạo oxit hoặc muối\n• Với axit: kim loại trước H khử H⁺ thành H₂ (HCl, H₂SO₄ loãng)\n• Với HNO₃, H₂SO₄ đặc: sản phẩm khử khác\n• Với dung dịch muối: kim loại mạnh đẩy kim loại yếu\n\nSự ăn mòn điện hóa: xảy ra khi hai kim loại khác nhau tiếp xúc trong dung dịch điện li.",
         "formulas": [
           {
-            "label": "Fe + HCl",
-            "expr": "Fe + 2HCl → FeCl₂ + H₂↑"
+            "label": "Dãy hoạt động điện hóa",
+            "expr": "K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > H > Cu > Hg > Ag > Pt > Au"
           },
           {
-            "label": "Fe + CuSO₄",
-            "expr": "Fe + CuSO₄ → FeSO₄ + Cu↓"
-          },
-          {
-            "label": "Điều chế bằng điện phân",
-            "expr": "Tại catod: ion KL + ne → KL\nTại anod: ion âm - ne → phi kim"
+            "label": "Ăn mòn điện hóa",
+            "expr": "\\text{Cực âm (anot): oxi hóa (mất e}^-\\text{)};\\quad \\text{Cực dương (catot): khử (nhận e}^-\\text{)}"
           }
         ]
       },
@@ -2641,16 +2473,12 @@
         "content": "Kim loại kiềm (nhóm IA): Li, Na, K, Rb, Cs\n• Rất mềm, khử mạnh nhất\n• Tác dụng mạnh với nước: 2Na + 2H₂O → 2NaOH + H₂↑\n• NaOH: bazơ mạnh, tan tốt\n• Na₂CO₃: muối cacbonat natri\n\nKim loại kiềm thổ (nhóm IIA): Be, Mg, Ca, Sr, Ba\n• Ca + 2H₂O → Ca(OH)₂ + H₂↑\n• Nước cứng: chứa Ca²⁺, Mg²⁺\n• Làm mềm nước: đun sôi (tạm thời), dùng Na₂CO₃ (vĩnh cửu)\n\nNhôm (Al): kim loại nhẹ, bền trong không khí (màng oxit Al₂O₃)\n• Tính lưỡng tính: td với axit và kiềm\n  Al + NaOH + H₂O → NaAlO₂ + 3/2H₂↑\n• Phản ứng nhiệt nhôm: 2Al + Fe₂O₃ → Al₂O₃ + 2Fe",
         "formulas": [
           {
-            "label": "Na + H₂O",
-            "expr": "2Na + 2H₂O → 2NaOH + H₂↑"
+            "label": "Al tác dụng NaOH",
+            "expr": "2\\text{Al} + 2\\text{NaOH} + 2\\text{H}_2\\text{O} \\to 2\\text{NaAlO}_2 + 3\\text{H}_2\\uparrow"
           },
           {
-            "label": "Al + NaOH",
-            "expr": "Al + NaOH + H₂O → NaAlO₂ + 3/2H₂↑"
-          },
-          {
-            "label": "Nhiệt nhôm",
-            "expr": "2Al + Fe₂O₃ → Al₂O₃ + 2Fe"
+            "label": "Al₂O₃ lưỡng tính",
+            "expr": "\\text{Al}_2\\text{O}_3 + 6\\text{HCl} \\to 2\\text{AlCl}_3 + 3\\text{H}_2\\text{O};\\quad \\text{Al}_2\\text{O}_3 + 2\\text{NaOH} \\to 2\\text{NaAlO}_2 + \\text{H}_2\\text{O}"
           }
         ]
       },
@@ -2660,16 +2488,8 @@
         "content": "Sắt (Fe): Z=26, cấu hình [Ar]3d⁶4s²\n• Có 2 số oxi hóa chính: +2 (FeO, FeCl₂) và +3 (Fe₂O₃, FeCl₃)\n• Fe tác dụng HCl loãng: Fe + 2HCl → FeCl₂ + H₂\n• Fe tác dụng HNO₃ loãng: Fe + 4HNO₃(loãng) → Fe(NO₃)₃ + NO + 2H₂O\n• Thụ động hóa trong HNO₃ đặc, H₂SO₄ đặc nguội\n\nCrom (Cr): Z=24\n• Số oxi hóa: +2, +3 (bền), +6\n• Cr₂O₃: oxit lưỡng tính\n• CrO₄²⁻ (vàng) ⇌ Cr₂O₇²⁻ (da cam) trong axit\n\nHợp kim: thép (Fe+C), gang (Fe+C>2%), thép không gỉ (Fe+Cr+Ni)",
         "formulas": [
           {
-            "label": "Fe + HCl",
-            "expr": "Fe + 2HCl → FeCl₂ + H₂↑"
-          },
-          {
-            "label": "Fe + HNO₃ loãng",
-            "expr": "Fe + 4HNO₃(l) → Fe(NO₃)₃ + NO↑ + 2H₂O"
-          },
-          {
-            "label": "Thụ động hóa",
-            "expr": "Fe, Al thụ động trong HNO₃ đặc nguội, H₂SO₄ đặc nguội"
+            "label": "Sản xuất gang, thép",
+            "expr": "\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\xrightarrow{t^\\circ} 2\\text{Fe} + 3\\text{CO}_2"
           }
         ]
       },
@@ -2679,12 +2499,12 @@
         "content": "Điện phân: dùng dòng điện gây ra phản ứng oxi hóa khử không tự phát.\n• Cực âm (catot): xảy ra khử (nhận electron)\n• Cực dương (anot): xảy ra oxi hóa (nhường electron)\n\nĐịnh luật Faraday:\n• m = (A·I·t)/(n·F)\n  m: khối lượng (g), A: nguyên tử khối, I: cường độ (A)\n  t: thời gian (s), n: số electron, F=96500 C/mol\n\nỨng dụng: mạ điện, điện phân tinh chế đồng, điều chế Al, Cl₂, NaOH\n\nĂn mòn điện hóa:\n• Điều kiện: hai điện cực khác nhau + chất điện li\n• Kim loại âm hơn bị ăn mòn (là cực âm)\n• Chống ăn mòn: sơn, mạ, bảo vệ catot",
         "formulas": [
           {
-            "label": "Faraday",
-            "expr": "m = A·I·t / (n·F)"
+            "label": "Định luật Faraday",
+            "expr": "m = \\dfrac{A\\cdot I\\cdot t}{n\\cdot F},\\quad F = 96500\\,\\text{C/mol}"
           },
           {
-            "label": "F",
-            "expr": "F = 96500 C/mol (hằng số Faraday)"
+            "label": "Điện phân NaCl nóng chảy",
+            "expr": "2\\text{NaCl} \\xrightarrow{\\text{đpnc}} 2\\text{Na} + \\text{Cl}_2\\uparrow"
           }
         ]
       },
@@ -2694,12 +2514,8 @@
         "content": "Nhận biết các chất bằng thuốc thử:\n\nNhận biết ion:\n• Cl⁻: dd AgNO₃ → AgCl↓ trắng\n• SO₄²⁻: dd BaCl₂ → BaSO₄↓ trắng không tan trong HCl\n• CO₃²⁻: dd HCl → CO₂↑ (làm đục nước vôi)\n• NH₄⁺: dd NaOH, đun nóng → NH₃ (mùi khai)\n• Fe²⁺: KMnO₄ mất màu; Fe³⁺: KSCN → đỏ máu\n\nNhận biết hữu cơ:\n• Anđehit: tráng bạc (Ag↓); khử Cu(OH)₂ → Cu₂O↓ đỏ\n• Ancol đa chức: Cu(OH)₂ tan → dd xanh lam\n• Protein: Biuret → tím; xanthoprotein → vàng\n• Tinh bột: dd I₂ → xanh tím\n• Glucozơ: tráng bạc; phân biệt với saccarozơ\n\nTách chất: chưng cất, chiết, kết tinh, sắc ký",
         "formulas": [
           {
-            "label": "Nhận biết Cl⁻",
-            "expr": "Cl⁻ + Ag⁺ → AgCl↓ (trắng)"
-          },
-          {
-            "label": "Nhận biết Fe³⁺",
-            "expr": "Fe³⁺ + 3SCN⁻ → Fe(SCN)₃ (đỏ máu)"
+            "label": "Nhận biết glucozơ",
+            "expr": "\\text{Glucozơ} + [\\text{Ag(NH}_3)_2]\\text{OH} \\to \\text{Ag}\\downarrow \\text{ (tráng bạc)}"
           }
         ]
       },
@@ -2709,12 +2525,16 @@
         "content": "Bảng tóm tắt phân loại hợp chất hữu cơ lớp 12:\n\nEste RCOOR': mùi thơm, phản ứng thủy phân\nCacbohydrat: Glucozơ (C₆H₁₂O₆), Saccarozơ, Tinh bột, Xenlulozơ\nAmin R−NH₂: tính bazơ; amino axit: lưỡng tính\nPolime: trùng hợp (PE, PP, PVC) hay trùng ngưng (nylon, tơ tằm)\n\nKim loại lớp 12:\n• Kiềm (IA): khử mạnh nhất, tác dụng H₂O\n• Kiềm thổ (IIA): Ca, Mg quan trọng\n• Al: nhẹ, bền, lưỡng tính\n• Fe: SOH +2/+3; thụ động hóa HNO₃ đặc nguội\n• Cr: SOH +2/+3/+6\n\nChuỗi phản ứng điện phân – ăn mòn – luyện kim\n\nChiến lược: đọc kỹ câu hỏi, loại trừ, dùng bảo toàn mol/electron",
         "formulas": [
           {
-            "label": "Bảo toàn mol electron",
-            "expr": "n_e_nhường = n_e_nhận"
+            "label": "Bảo toàn electron",
+            "expr": "\\sum n_{e^-\\text{ nhường}} = \\sum n_{e^-\\text{ nhận}}"
           },
           {
             "label": "Bảo toàn khối lượng",
-            "expr": "m_trước = m_sau (mọi phản ứng)"
+            "expr": "m_{\\text{chất tham gia}} = m_{\\text{sản phẩm}}"
+          },
+          {
+            "label": "Điện phân (Faraday)",
+            "expr": "m = \\dfrac{A\\cdot I\\cdot t}{n\\cdot F}"
           }
         ]
       }
@@ -2726,12 +2546,16 @@
         "content": "Gen là một đoạn phân tử ADN mang thông tin mã hóa cho một chuỗi polipeptit hay một phân tử ARN.\n\nMã di truyền là mã bộ ba (codon): 3 nucleotit liên tiếp trên mARN mã hóa cho 1 axit amin.\nMã di truyền có tính phổ biến, đặc hiệu, thoái hóa và không gối nhau.\n\nNhân đôi ADN (tái bản): diễn ra ở nhân tế bào, nguyên tắc bổ sung và bán bảo toàn. Mỗi ADN mẹ tạo ra 2 ADN con, mỗi ADN con có 1 mạch mẹ và 1 mạch mới.",
         "formulas": [
           {
-            "label": "Số codon có thể có",
-            "expr": "4³ = 64 bộ ba (61 mã hóa aa + 3 mã kết thúc)"
+            "label": "Số nucleotide ADN",
+            "expr": "N = \\dfrac{2L}{3{,}4\\,\\text{\\AA}}"
           },
           {
             "label": "Nguyên tắc bổ sung",
-            "expr": "A-T, G-X (ADN);  A-U, G-X (ARN)"
+            "expr": "A = T,\\quad G \\equiv C"
+          },
+          {
+            "label": "Số chu kỳ xoắn",
+            "expr": "\\text{Số chu kỳ xoắn} = \\dfrac{N}{20}"
           }
         ]
       },
@@ -2741,16 +2565,12 @@
         "content": "Phiên mã (Transcription): tổng hợp ARN từ khuôn mẫu ADN, xảy ra trong nhân tế bào.\n• mARN: mang thông tin từ ADN ra ribosome\n• tARN: vận chuyển amino axit, có anticodon\n• rARN: cấu tạo nên ribosome\n\nDịch mã (Translation): tổng hợp protein từ mARN, diễn ra ở ribosome trong tế bào chất.\nQuy trình:\n1. Khởi đầu: ribosome gắn vào mARN tại codon mở đầu AUG\n2. Kéo dài: ribosome dịch chuyển theo chiều 5'→3', tARN mang aa vào, hình thành liên kết peptide\n3. Kết thúc: gặp codon kết thúc (UAA, UAG, UGA)\n\nQuá trình từ ADN → ARN → Protein gọi là sự biểu hiện gene.",
         "formulas": [
           {
-            "label": "Nguyên tắc bổ sung (phiên mã)",
-            "expr": "ADN: A-T, G-X → mARN: U-A, G-X"
+            "label": "Số codon mã hóa",
+            "expr": "4^3 = 64 \\text{ codon}"
           },
           {
-            "label": "Số amino axit trong chuỗi polipeptit",
-            "expr": "N_aa = N_codon - 1  (trừ codon kết thúc)"
-          },
-          {
-            "label": "Chiều dài mARN",
-            "expr": "L = N_nucleotit × 3,4Å / 3"
+            "label": "Số amino axit",
+            "expr": "n_{aa} = \\dfrac{N_{mARN}}{3} - 1 \\text{ (trừ codon kết thúc)}"
           }
         ]
       },
@@ -2775,16 +2595,12 @@
         "content": "Gregor Mendel (1865) đặt nền móng cho di truyền học qua thí nghiệm với đậu Hà Lan.\n\nQuy luật phân li (Mendel I):\nMỗi tính trạng do một cặp nhân tố di truyền (allele) quy định. Trong quá trình hình thành giao tử, các allele phân li đồng đều. Tỉ lệ kiểu hình F₂: 3 trội : 1 lặn.\n\nQuy luật phân li độc lập (Mendel II):\nCác cặp nhân tố di truyền phân li và tổ hợp tự do trong quá trình sinh sản (khi các gene nằm trên NST khác nhau).\nTỉ lệ F₂ (2 tính trạng): 9:3:3:1.\n\nCác dạng tương tác gene: át chế, bổ sung, cộng gộp — tạo tỉ lệ khác 9:3:3:1.",
         "formulas": [
           {
-            "label": "Tỉ lệ F₂ (1 cặp gene)",
-            "expr": "1 AA : 2 Aa : 1 aa  →  3 trội : 1 lặn"
+            "label": "Tỉ lệ kiểu hình F2 (1 cặp gen)",
+            "expr": "Aa \\times Aa \\to 3\\text{ trội} : 1\\text{ lặn}"
           },
           {
-            "label": "Tỉ lệ F₂ (2 cặp gene)",
-            "expr": "9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb"
-          },
-          {
-            "label": "Xác suất kiểu gen",
-            "expr": "P(AaBb) = P(Aa) × P(Bb)"
+            "label": "Tỉ lệ F2 (2 cặp gen độc lập)",
+            "expr": "AaBb \\times AaBb \\to 9:3:3:1"
           }
         ]
       },
@@ -2794,12 +2610,8 @@
         "content": "Di truyền liên kết gene:\nCác gene cùng nằm trên một NST tạo thành nhóm liên kết, thường di truyền cùng nhau → phá vỡ tỉ lệ Mendel.\nHoán vị gene (trao đổi chéo): xảy ra ở kỳ đầu giảm phân I → tạo giao tử tổ hợp mới.\n\nDi truyền liên kết với giới tính:\n• Gene trên NST X nhưng không có allele trên Y: nữ (XX) mang 2 allele, nam (XY) chỉ có 1\n• Bệnh máu khó đông, mù màu: lặn trên X → nam dễ mắc hơn\n\nDi truyền học người:\n• Phương pháp nghiên cứu phả hệ, sinh đôi, tế bào, phân tử\n• Bệnh di truyền: Down (thêm NST 21), Patau, Edwards\n• Tư vấn di truyền: xác suất sinh con mắc bệnh",
         "formulas": [
           {
-            "label": "Tần số hoán vị gene",
-            "expr": "f = số cá thể tái tổ hợp / tổng số cá thể × 100%"
-          },
-          {
-            "label": "Bệnh mù màu (lặn X)",
-            "expr": "Nam mắc: X^a Y;  Nữ mắc: X^a X^a;  Nữ mang gen: X^A X^a"
+            "label": "Tần số hoán vị gen",
+            "expr": "f = \\dfrac{\\text{số cá thể tái tổ hợp}}{\\text{tổng số cá thể}} \\times 100\\%"
           }
         ]
       },
@@ -2809,12 +2621,8 @@
         "content": "Quần thể là tập hợp cá thể cùng loài, cùng nơi sống, có khả năng sinh sản.\n\nVốn gen quần thể: tập hợp tất cả alen trong quần thể.\nTần số alen: tỉ lệ mỗi alen so với tổng số alen ở locus đó.\n\nĐịnh luật Hardy-Weinberg:\nQuần thể ngẫu phối, kích thước lớn, không có đột biến/chọn lọc/di cư:\n• Tần số alen không đổi qua các thế hệ\n• Tần số kiểu gen: p²AA : 2pqAa : q²aa\n  (p + q = 1)\n\nSai lệch khỏi Hardy-Weinberg: chọn lọc tự nhiên, đột biến, phiêu bạt di truyền, di nhập gen, giao phối không ngẫu nhiên",
         "formulas": [
           {
-            "label": "Hardy-Weinberg",
-            "expr": "p²AA + 2pq Aa + q²aa = 1"
-          },
-          {
-            "label": "Tần số alen",
-            "expr": "p + q = 1 (p=f(A), q=f(a))"
+            "label": "Tần số alen (Hardy-Weinberg)",
+            "expr": "p^2 + 2pq + q^2 = 1;\\quad p + q = 1"
           }
         ]
       },
@@ -2822,7 +2630,12 @@
         "id": "c12_bio_l7",
         "title": "Bài 7: Tiến hóa — Thuyết Darwin và Thuyết tổng hợp hiện đại",
         "content": "Darwin (1859): thuyết tiến hóa bằng chọn lọc tự nhiên.\n• Biến dị cá thể + Di truyền + Chọn lọc tự nhiên → Thích nghi → Loài mới\n• Đấu tranh sinh tồn: giữa cá thể cùng loài, khác loài, với môi trường\n\nThuyết tổng hợp hiện đại:\n• Tiến hóa nhỏ: thay đổi tần số alen trong quần thể\n• Các nhân tố tiến hóa: đột biến, chọn lọc, di nhập gen, phiêu bạt, giao phối không ngẫu nhiên\n• Tiến hóa lớn: hình thành loài mới (cách li địa lí, cách li sinh sản)\n\nCách hình thành loài:\n• Cách li địa lí → phân hóa → cách li sinh sản → loài mới\n• Đa bội hóa (ở thực vật): nhanh nhất",
-        "formulas": []
+        "formulas": [
+          {
+            "label": "Tốc độ tiến hóa",
+            "expr": "\\Delta p = p_{t} - p_0 \\quad (\\text{thay đổi tần số alen})"
+          }
+        ]
       },
       {
         "id": "c12_bio_l8",
@@ -2830,12 +2643,8 @@
         "content": "Quần thể sinh vật:\n• Tập hợp cá thể cùng loài, cùng nơi, cùng thời gian, có khả năng giao phối\n• Đặc trưng: mật độ, tỉ lệ giới tính, cấu trúc tuổi, tỉ lệ sinh/tử\n• Tăng trưởng: hàm J (tăng trưởng vô hạn) và hàm S (giới hạn sức chứa K)\n\nQuần xã sinh vật:\n• Gồm nhiều quần thể của các loài khác nhau\n• Đặc trưng: đa dạng loài, độ phong phú, loài ưu thế, loài đặc trưng\n• Quan hệ: cộng sinh, hội sinh, ký sinh, ức chế cảm nhiễm, cạnh tranh, con mồi-vật dữ\n\nDiễn thế sinh thái:\n• Nguyên sinh: diễn thế trên môi trường chưa có sinh vật\n• Thứ sinh: diễn thế thay thế quần xã cũ bị phá hủy",
         "formulas": [
           {
-            "label": "Tăng trưởng logistic",
-            "expr": "dN/dt = rN(K-N)/K"
-          },
-          {
-            "label": "Sức chứa",
-            "expr": "K = hằng số sức chứa môi trường"
+            "label": "Hiệu suất sinh thái",
+            "expr": "H = \\dfrac{\\text{Năng lượng bậc trên}}{\\text{Năng lượng bậc dưới}} \\times 100\\% \\approx 10\\%"
           }
         ]
       },
@@ -2845,12 +2654,12 @@
         "content": "Hệ sinh thái = quần xã + môi trường vô sinh, có trao đổi vật chất và năng lượng.\n\nChuỗi và lưới thức ăn:\n• Sinh vật sản xuất → Sinh vật tiêu thụ cấp 1 → cấp 2 → cấp 3 → ...\n• Sinh vật phân giải: vi khuẩn, nấm phân hủy chất hữu cơ\n\nDòng năng lượng:\n• Năng lượng mặt trời → quang hợp → tích lũy → thất thoát qua hô hấp\n• Hiệu suất sinh thái: 10% (Quy tắc 10%)\n• Kim tự tháp sinh thái: số lượng, sinh khối, năng lượng\n\nChu trình vật chất:\n• Chu trình carbon: quang hợp ↔ hô hấp; đốt cháy → CO₂\n• Chu trình nitơ: cố định N₂ → NH₃ → NO₃⁻ → đồng hóa\n• Chu trình nước, photpho\n\nỨng dụng: nông nghiệp sinh thái, bảo tồn đa dạng sinh học",
         "formulas": [
           {
-            "label": "Hiệu suất sinh thái",
-            "expr": "10% năng lượng truyền qua mỗi bậc dinh dưỡng"
+            "label": "Chu trình sinh địa hóa",
+            "expr": "\\text{Quang hợp: } 6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\to \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2"
           },
           {
-            "label": "Năng suất sinh học",
-            "expr": "P = A - R (A: quang hợp, R: hô hấp)"
+            "label": "Hô hấp",
+            "expr": "\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\to 6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{ATP}"
           }
         ]
       }
@@ -2862,8 +2671,8 @@
         "content": "Động cơ đốt trong là loại động cơ nhiệt, trong đó quá trình đốt cháy nhiên liệu xảy ra bên trong xi-lanh.\n\nPhân loại theo nhiên liệu: xăng và diesel.\nPhân loại theo kỳ: 4 kỳ và 2 kỳ.\n\nCác kỳ của động cơ 4 kỳ:\n1. Kỳ nạp: piston đi xuống, hút hỗn hợp khí-nhiên liệu vào xi-lanh\n2. Kỳ nén: piston đi lên, nén hỗn hợp\n3. Kỳ nổ (sinh công): hỗn hợp cháy giãn nở, đẩy piston xuống\n4. Kỳ xả: piston đi lên, đẩy khí thải ra ngoài",
         "formulas": [
           {
-            "label": "Hiệu suất nhiệt lý thuyết",
-            "expr": "η = 1 - 1/ε^(γ-1),  ε = tỉ số nén"
+            "label": "Hiệu suất nhiệt động cơ",
+            "expr": "\\eta = 1 - \\dfrac{T_2}{T_1} \\quad (\\text{Carnot})"
           }
         ]
       },
@@ -2873,12 +2682,12 @@
         "content": "Hệ thống điện quốc gia: tập hợp các nhà máy điện, đường dây truyền tải, trạm biến áp và hộ tiêu thụ.\n\nNguồn điện Việt Nam:\n• Nhiệt điện: đốt than, khí, dầu — chiếm tỉ trọng lớn\n• Thủy điện: Hòa Bình, Sơn La, Lai Châu\n• Điện tái tạo: điện mặt trời, điện gió đang phát triển nhanh\n\nTruyền tải điện năng:\n• Dùng máy biến áp tăng điện áp khi truyền → giảm tổn hao\n• Điện áp truyền tải: 110 kV, 220 kV, 500 kV\n\nAn toàn điện:\n• Nguyên nhân tai nạn: chạm vào vật mang điện, điện rò\n• Biện pháp: nối đất, cầu dao CB (circuit breaker), RCD/ELCB",
         "formulas": [
           {
-            "label": "Công suất tổn hao truyền tải",
-            "expr": "P_tt = I²·R = P²·R / U²  → tăng U giảm tổn hao"
+            "label": "Tổn hao truyền tải",
+            "expr": "\\Delta P = \\dfrac{P^2 R}{U^2} \\Rightarrow \\text{tăng } U \\text{ giảm tổn hao}"
           },
           {
-            "label": "Tỉ số máy biến áp",
-            "expr": "U₁/U₂ = N₁/N₂"
+            "label": "Máy biến áp",
+            "expr": "\\dfrac{U_1}{U_2} = \\dfrac{N_1}{N_2}"
           }
         ]
       },
@@ -2888,12 +2697,8 @@
         "content": "Máy CNC (Computer Numerical Control): máy công cụ được điều khiển bằng máy tính qua chương trình số.\n\nƯu điểm CNC so với máy thông thường:\n• Độ chính xác cao, lặp lại tốt\n• Năng suất cao, ít phụ thuộc vào tay nghề\n• Linh hoạt thay đổi sản phẩm bằng cách thay chương trình\n\nCác loại máy CNC: tiện CNC, phay CNC, trung tâm gia công (machining center), máy cắt laser/plasma.\n\nTự động hóa sản xuất:\n• Robot công nghiệp: hàn, sơn, lắp ráp, bốc dỡ\n• Dây chuyền sản xuất tự động\n• Hệ thống sản xuất linh hoạt FMS\n• Xu hướng: Công nghiệp 4.0, IoT trong sản xuất",
         "formulas": [
           {
-            "label": "Hiệu suất máy",
-            "expr": "η = P_có_ích / P_đầu_vào × 100%"
-          },
-          {
-            "label": "Năng suất gia công",
-            "expr": "NS = Số sản phẩm / Thời gian sản xuất"
+            "label": "Tốc độ cắt CNC",
+            "expr": "v = \\dfrac{\\pi d n}{1000} \\quad (\\text{m/phút})"
           }
         ]
       },
@@ -2901,7 +2706,12 @@
         "id": "c12_tec_l4",
         "title": "Bài 4: Robot công nghiệp và Tự động hóa",
         "content": "Robot công nghiệp: máy có thể lập trình để thực hiện nhiều tác vụ.\n\nPhân loại theo cấu trúc:\n• Robot tay máy (articulated): linh hoạt nhất, dùng lắp ráp ô tô\n• Robot SCARA: lắp ráp điện tử\n• Robot delta: tốc độ cao, đóng gói thực phẩm\n• Robot cobots: làm việc an toàn cạnh người\n\nCác thành phần cơ bản:\n• Cơ cấu chấp hành (tay máy)\n• Hệ thống dẫn động (servo motor, hydraulic)\n• Hệ thống điều khiển (PLC, máy tính)\n• Cảm biến (force, vision, proximity)\n\nỨng dụng: hàn, sơn, lắp ráp, kiểm tra chất lượng, kho hàng\nCông nghiệp 4.0: IIoT, AI, robot tự học",
-        "formulas": []
+        "formulas": [
+          {
+            "label": "Bậc tự do robot",
+            "expr": "M = 6 \\text{ DOF} = 3\\text{ vị trí} + 3\\text{ hướng}"
+          }
+        ]
       },
       {
         "id": "c12_tec_l5",
@@ -2909,12 +2719,12 @@
         "content": "Linh kiện điện tử cơ bản:\n• Điện trở (R): cản dòng, đơn vị Ω\n• Tụ điện (C): lưu trữ điện tích, đơn vị F\n• Cuộn cảm (L): lưu trữ từ trường, đơn vị H\n• Diode: cho dòng một chiều, ứng dụng chỉnh lưu\n• Transistor (BJT, FET): khuếch đại và khóa điện tử\n• IC (Integrated Circuit): mạch tích hợp\n\nMạch chỉnh lưu: AC → DC\n• Chỉnh lưu nửa chu kỳ: 1 diode\n• Chỉnh lưu cầu: 4 diode\n\nKhuếch đại: dùng transistor, Op-Amp\nVi điều khiển: Arduino, ESP32, STM32 — não của thiết bị nhúng",
         "formulas": [
           {
-            "label": "Chia áp",
-            "expr": "V_out = V_in × R₂/(R₁+R₂)"
+            "label": "Khuếch đại transistor",
+            "expr": "I_C = \\beta I_B;\\quad I_E = I_B + I_C"
           },
           {
-            "label": "RC charging",
-            "expr": "V_C(t) = V(1-e^(-t/RC))"
+            "label": "Chia áp",
+            "expr": "V_{out} = V_{in} \\cdot \\dfrac{R_2}{R_1 + R_2}"
           }
         ]
       },
@@ -2922,7 +2732,12 @@
         "id": "c12_tec_l6",
         "title": "Bài 6: Công nghệ sinh học — Ứng dụng trong sản xuất và đời sống",
         "content": "Công nghệ sinh học (CNSH): ứng dụng sinh vật/tế bào/phân tử sinh học vào sản xuất.\n\nCNSH lên men:\n• Sản xuất rượu, bia, sữa chua, tương, nước mắm\n• Vi khuẩn, nấm men thực hiện lên men\n\nCNSH nông nghiệp:\n• Cây chuyển gen: Bt-cotton (kháng sâu), lúa vàng (vitamin A), soy kháng thuốc diệt cỏ\n• Kỹ thuật nuôi cấy mô: nhân giống nhanh\n• Phân bón vi sinh, thuốc trừ sâu sinh học\n\nCNSH y tế:\n• Sản xuất insulin, vaccine, kháng sinh\n• Liệu pháp gen: chữa bệnh di truyền\n• Kỹ thuật PCR: phát hiện DNA, chẩn đoán COVID-19\n\nCNSH môi trường:\n• Vi sinh vật phân giải dầu tràn, rác thải\n• Xử lý nước thải bằng vi khuẩn",
-        "formulas": []
+        "formulas": [
+          {
+            "label": "PCR – nhiệt độ",
+            "expr": "94^\\circ\\text{C (biến tính)} \\to 55^\\circ\\text{C (bắt cặp)} \\to 72^\\circ\\text{C (kéo dài)}"
+          }
+        ]
       }
     ],
     "informatics": [
@@ -2962,12 +2777,8 @@
         "content": "Sắp xếp (Sorting): sắp xếp các phần tử theo một thứ tự nhất định.\n\nCác thuật toán sắp xếp phổ biến:\n• Bubble Sort: so sánh hai phần tử liền kề, đổi chỗ nếu sai thứ tự. O(n²)\n• Selection Sort: tìm phần tử nhỏ nhất, đặt vào vị trí đầu. O(n²)\n• Insertion Sort: chèn từng phần tử vào vị trí đúng. O(n²), tốt với mảng gần sắp xếp\n• Merge Sort: chia đôi, sắp xếp, trộn. O(n log n)\n• Quick Sort: chọn pivot, phân hoạch. O(n log n) trung bình\n\nTìm kiếm (Searching):\n• Tìm kiếm tuyến tính (Linear Search): duyệt tuần tự. O(n)\n• Tìm kiếm nhị phân (Binary Search): mảng đã sắp xếp, chia đôi lặp lại. O(log n)",
         "formulas": [
           {
-            "label": "Binary Search",
-            "expr": "mid = (left + right) / 2\nnếu arr[mid] == target: tìm thấy\nnếu arr[mid] < target: left = mid+1\nnếu arr[mid] > target: right = mid-1"
-          },
-          {
-            "label": "Độ phức tạp Binary Search",
-            "expr": "O(log₂ n)  →  n=1024: chỉ cần 10 bước"
+            "label": "Độ phức tạp sắp xếp",
+            "expr": "O(n\\log n): \\text{Merge Sort, Quick Sort (TB)};\\quad O(n^2): \\text{Bubble, Insertion, Selection}"
           }
         ]
       },
@@ -2990,7 +2801,12 @@
         "id": "c12_inf_l5",
         "title": "Bài 5: Trí tuệ nhân tạo và Học máy",
         "content": "Trí tuệ nhân tạo (AI): hệ thống máy tính mô phỏng trí tuệ con người.\n\nCác nhánh chính:\n• Machine Learning (ML): máy học từ dữ liệu\n  - Học có giám sát: phân loại, hồi quy\n  - Học không giám sát: phân cụm, giảm chiều\n  - Học tăng cường: thưởng/phạt\n• Deep Learning: mạng nơ-ron sâu (nhiều lớp ẩn)\n• NLP (xử lý ngôn ngữ tự nhiên): ChatGPT, Google Translate\n• Computer Vision: nhận dạng ảnh, khuôn mặt\n\nỨng dụng AI: y tế (chẩn đoán), xe tự lái, tài chính, game, sáng tạo nội dung\n\nThách thức: thiên lệch dữ liệu, quyền riêng tư, mất việc làm, an toàn AI",
-        "formulas": []
+        "formulas": [
+          {
+            "label": "Hàm mất mát (MSE)",
+            "expr": "MSE = \\dfrac{1}{n}\\sum_{i=1}^n (y_i - \\hat{y}_i)^2"
+          }
+        ]
       },
       {
         "id": "c12_inf_l6",
@@ -3210,8 +3026,8 @@
         "content": "Việt Nam có nền kinh tế đang phát triển với cơ cấu chuyển dịch theo hướng công nghiệp hóa, hiện đại hóa.\n\nCơ cấu GDP (xu hướng): nông-lâm-ngư nghiệp giảm, công nghiệp-xây dựng và dịch vụ tăng.\n\nCác vùng kinh tế trọng điểm:\n• Vùng kinh tế trọng điểm Bắc Bộ: Hà Nội, Hải Phòng, Quảng Ninh\n• Vùng kinh tế trọng điểm miền Trung: Đà Nẵng, Thừa Thiên Huế, Quảng Nam\n• Vùng kinh tế trọng điểm phía Nam: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu\n\nXuất khẩu chủ lực: điện tử, dệt may, giày dép, nông sản (gạo, cà phê, hạt điều).",
         "formulas": [
           {
-            "label": "Tốc độ tăng trưởng GDP",
-            "expr": "g = (GDP_t - GDP_(t-1)) / GDP_(t-1) × 100%"
+            "label": "HDI",
+            "expr": "HDI = \\dfrac{I_{\\text{sức khỏe}} + I_{\\text{giáo dục}} + I_{\\text{thu nhập}}}{3}"
           }
         ]
       },
@@ -3221,12 +3037,8 @@
         "content": "Việt Nam có 7 vùng địa lý - kinh tế:\n\nTrung du và miền núi Bắc Bộ:\n• Giàu khoáng sản (than Quảng Ninh, sắt Thái Nguyên, apatit Lào Cai)\n• Thủy điện lớn: Hòa Bình, Sơn La, Lai Châu\n\nĐồng bằng sông Hồng:\n• Vựa lúa lớn thứ 2, mật độ dân số cao nhất\n• Trung tâm: Hà Nội, Hải Phòng, Quảng Ninh\n\nDuyên hải miền Trung:\n• Du lịch biển: Đà Nẵng, Hội An, Nha Trang, Huế\n\nTây Nguyên:\n• Cao nguyên đất đỏ bazan, cà phê (Đắk Lắk), cao su, hồ tiêu\n\nĐông Nam Bộ:\n• Vùng kinh tế năng động nhất, trung tâm TP.HCM\n• Công nghiệp, dầu mỏ Vũng Tàu\n\nĐồng bằng sông Cửu Long:\n• Vựa lúa, trái cây, thủy sản lớn nhất cả nước",
         "formulas": [
           {
-            "label": "Đóng góp ĐNB vào GDP",
-            "expr": "Đông Nam Bộ ≈ 45% GDP cả nước"
-          },
-          {
-            "label": "Sản lượng lúa ĐBSCL",
-            "expr": "Chiếm ≈ 50% sản lượng lúa cả nước"
+            "label": "Mật độ dân số",
+            "expr": "D = \\dfrac{\\text{Dân số}}{\\text{Diện tích}} \\quad (\\text{người/km}^2)"
           }
         ]
       },
@@ -3264,7 +3076,12 @@
         "id": "c12_geo_l5",
         "title": "Bài 5: Địa lý vùng Đông Nam Bộ và Đồng bằng sông Cửu Long",
         "content": "Đông Nam Bộ:\n• Gồm: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu, Bình Phước, Tây Ninh\n• GDP lớn nhất cả nước (45%+)\n• Công nghiệp: KCN Bình Dương, Đồng Nai, nhà máy lọc dầu Dung Quất\n• Dầu khí: thềm lục địa Bà Rịa-Vũng Tàu\n• TP.HCM: đầu tàu kinh tế, tài chính, thương mại\n\nĐồng bằng sông Cửu Long (ĐBSCL):\n• 13 tỉnh/thành, diện tích 40.000 km², 17 triệu dân\n• Vựa lúa và thủy sản lớn nhất cả nước\n• Xuất khẩu gạo, tôm, cá tra hàng đầu thế giới\n• Thách thức: xâm nhập mặn, sụt lún, biến đổi khí hậu\n• Giải pháp: chuyển dịch từ lúa sang tôm/rau quả/du lịch",
-        "formulas": []
+        "formulas": [
+          {
+            "label": "Tỉ lệ đô thị hóa",
+            "expr": "\\text{Tỉ lệ đô thị} = \\dfrac{\\text{Dân đô thị}}{\\text{Tổng dân}} \\times 100\\%"
+          }
+        ]
       },
       {
         "id": "c12_geo_l6",

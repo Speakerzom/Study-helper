@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Game Học Tập – Study Helper</title>
   <link rel="stylesheet" href="game.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -50,7 +52,7 @@
 
       <!-- VOLUME CONTROL -->
       <div id="vol-ctrl">
-        <button id="vol-btn" title="Âm lượng">🔊</button>
+        <button id="vol-btn" title="Âm lượng"><span class="icon-volume">🔊</span></button>
         <div id="vol-panel">
           <div class="vol-row">
             <span class="vol-lbl">🎵</span>
@@ -72,7 +74,7 @@
       <span id="phase-badge" class="phase-normal">⚡ NORMAL</span>
     </div>
     <div id="hud-right">
-      <span class="energy-lbl">⚡</span>
+      <span class="energy-lbl icon-energy">⚡</span>
       <div id="energy-bar-bg">
         <div id="energy-bar-fill"></div>
       </div>

@@ -31,22 +31,22 @@
 
   /* ─── Metadata cố định ─── */
   const CLASS_META = {
-    class10: { label: 'Khối 10', icon: '1️⃣0️⃣', badge: 'badge-c10' },
-    class11: { label: 'Khối 11', icon: '1️⃣1️⃣', badge: 'badge-c11' },
-    class12: { label: 'Khối 12', icon: '1️⃣2️⃣', badge: 'badge-c12' },
+    class10: { label: 'Khối 10', icon: '<span class="icon-class">1️⃣0️⃣</span>', badge: 'badge-c10' },
+    class11: { label: 'Khối 11', icon: '<span class="icon-class">1️⃣1️⃣</span>', badge: 'badge-c11' },
+    class12: { label: 'Khối 12', icon: '<span class="icon-class">1️⃣2️⃣</span>', badge: 'badge-c12' },
   };
 
   const SUBJECT_META = {
-    math       : { label: 'Toán',       icon: '📐' },
-    physics    : { label: 'Vật lý',     icon: '⚛️'  },
-    chemistry  : { label: 'Hóa học',    icon: '🧪' },
-    biology    : { label: 'Sinh học',   icon: '🌿' },
-    technology : { label: 'Công nghệ',  icon: '⚙️'  },
-    informatics: { label: 'Tin học',    icon: '💻' },
-    literature : { label: 'Ngữ văn',    icon: '📚' },
-    english    : { label: 'Tiếng Anh',  icon: '🔤' },
-    history    : { label: 'Lịch sử',    icon: '🏛️'  },
-    geography  : { label: 'Địa lí',     icon: '🌏' },
+    math       : { label: 'Toán',       icon: '<span class="icon-math">📐</span>' },
+    physics    : { label: 'Vật lý',     icon: '<span class="icon-physics">⚛️</span>'  },
+    chemistry  : { label: 'Hóa học',    icon: '<span class="icon-chemistry">🧪</span>' },
+    biology    : { label: 'Sinh học',   icon: '<span class="icon-biology">🌿</span>' },
+    technology : { label: 'Công nghệ',  icon: '<span class="icon-technology">⚙️</span>'  },
+    informatics: { label: 'Tin học',    icon: '<span class="icon-informatics">💻</span>' },
+    literature : { label: 'Ngữ văn',    icon: '<span class="icon-literature">📚</span>' },
+    english    : { label: 'Tiếng Anh',  icon: '<span class="icon-english">🔤</span>' },
+    history    : { label: 'Lịch sử',    icon: '<span class="icon-history">🏛️</span>'  },
+    geography  : { label: 'Địa lí',     icon: '<span class="icon-geography">🌏</span>' },
   };
 
   /* ══════════════════════════════════════════
@@ -234,7 +234,7 @@
   ══════════════════════════════════════════ */
   function renderHome(wrap) {
     wrap.innerHTML = `
-      <div class="section-title"><span class="icon">✏️</span> Luyện Tập</div>
+      <div class="section-title"><span class="icon icon-practice-logo">✏️</span> Luyện Tập</div>
       <p class="section-sub">Chọn khối lớp để bắt đầu luyện tập.</p>
       <div class="class-grid">
         ${Object.keys(CLASS_META).map(cid => {

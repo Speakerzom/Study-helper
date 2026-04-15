@@ -221,6 +221,82 @@
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
+  /* ── renderMath: render ký hiệu toán học qua KaTeX ─────────
+     Approach: convert toàn bộ chuỗi → 1 LaTeX expr → render 1 lần
+     để tránh khoảng cách sai giữa các mảnh riêng lẻ.
+  ─────────────────────────────────────────────────────────── */
+  function renderMath(text) {
+    if (!text) return '';
+    const raw = String(text);
+    if (typeof katex === 'undefined') return esc(raw);
+
+    // Tách câu thành: [đoạn text thường] xen kẽ [đoạn có ký hiệu toán]
+    // Nhận diện đoạn toán: chứa ký hiệu unicode math hoặc biểu thức toán
+    const MATH_RE = /[²³⁰¹⁴⁵⁶⁷⁸⁹ⁿ⁻₀₁₂₃₄₅₆₇₈₉ₙₘₖ·×√±≤≥≠≈∞∈∉∪∩αβγδεζηθλμξπρστφψωΩΔΦΛ]/;
+
+    // Tách câu theo word boundaries, giữ cấu trúc
+    // Segment = dãy ký tự không có dấu cách dài (= 1 token/biểu thức)
+    const parts = raw.split(/(\s+)/);  // tách theo khoảng trắng, giữ lại khoảng trắng
+
+    return parts.map(part => {
+      // Khoảng trắng → giữ nguyên
+      if (/^\s+$/.test(part)) return part;
+      // Nếu không có ký hiệu toán → text thường
+      if (!MATH_RE.test(part) && !/\//.test(part)) return esc(part);
+      // Thử convert phần này sang LaTeX và render
+      try {
+        const latex = toKatexString(part);
+        if (latex === part) return esc(part); // Không có gì thay đổi
+        return katex.renderToString(latex, {
+          throwOnError: false,
+          displayMode: false,
+          output: 'html',
+          strict: false,
+        });
+      } catch(e) {
+        return esc(part);
+      }
+    }).join('');
+  }
+
+  /* Convert 1 token/segment sang LaTeX string */
+  function toKatexString(s) {
+    const SUB = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ₙ':'n','ₘ':'m','ₖ':'k'};
+    const SUP = {'\u207B':'-','⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','ⁿ':'n'};
+
+    // subscript unicode
+    s = s.replace(/[₀₁₂₃₄₅₆₇₈₉ₙₘₖ]+/g, m => '_{'+[...m].map(c=>SUB[c]||c).join('')+'}');
+    // superscript unicode
+    s = s.replace(/[\u207B⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ]+/g, m => '^{'+[...m].map(c=>SUP[c]||c).join('')+'}');
+    // operators
+    s = s.replace(/·/g,'\\cdot ').replace(/×/g,'\\times ').replace(/±/g,'\\pm ');
+    s = s.replace(/≤/g,'\\leq ').replace(/≥/g,'\\geq ').replace(/≠/g,'\\neq ').replace(/≈/g,'\\approx ');
+    s = s.replace(/∞/g,'\\infty ').replace(/∈/g,'\\in ').replace(/∉/g,'\\notin ');
+    s = s.replace(/∪/g,'\\cup ').replace(/∩/g,'\\cap ');
+    // sqrt
+    s = s.replace(/√\(([^)]+)\)/g,'\\sqrt{$1}').replace(/√([A-Za-z0-9_{}^\\]+)/g,'\\sqrt{$1}');
+    // Greek letters
+    const G = {
+      'π':'\\pi{}','α':'\\alpha{}','β':'\\beta{}','γ':'\\gamma{}','Δ':'\\Delta{}','δ':'\\delta{}',
+      'ε':'\\varepsilon{}','θ':'\\theta{}','λ':'\\lambda{}','μ':'\\mu{}','ξ':'\\xi{}',
+      'ρ':'\\rho{}','φ':'\\varphi{}','ψ':'\\psi{}','ω':'\\omega{}','Ω':'\\Omega{}','Φ':'\\Phi{}'
+    };
+    for (const [g,l] of Object.entries(G)) s = s.replaceAll(g,l);
+    // Frac: (a)/(b)
+    s = s.replace(/\(([^()]{1,50})\)\/\(([^()]{1,50})\)/g,'\\frac{$1}{$2}');
+    // Frac: a/b — convert TẤT CẢ, chỉ skip đơn vị SI rõ ràng
+    s = s.replace(/([\w\\{}\^._]+)\/([\w\\{}\^._]+)/g, (m,a,b) => {
+      const ac = a.replace(/[\\{}_^ ]/g,''), bc = b.replace(/[\\{}_^ ]/g,'');
+      // Chỉ skip đơn vị đo lường thực sự
+      const SI_UNITS = new Set(['m','s','km','h','J','W','N','kg','mol','L','g','rad','mL','Hz','Pa','V','A','F','Wb','C','min','kWh']);
+      if (SI_UNITS.has(ac) && SI_UNITS.has(bc)) return m;
+      return '\\frac{'+a+'}{'+b+'}';
+    });
+    return s;
+  }
+
+
+
   const shuffle = arr => {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -602,12 +678,14 @@
     return { dx: cx - cW/2, dy: groundY - cH, dw: cW, dh: cH };
   }
 
-  /* ── NORMAL SCENE: player = face.jpg (giữa), enemy = face.jpg (phải) ── */
+  /* ── NORMAL SCENE: player căn giữa, enemy bên phải khi xuất hiện ── */
   function drawNormalScene(ctx, W, H, groundY, cW, cH) {
     const isMobile = W < 520;
     const maxH = Math.min(cH * (isMobile ? 1.6 : 2), H * (isMobile ? 0.55 : 0.7));
     const maxW = maxH * 0.8;
-    const px   = W * 0.35;
+
+    /* Player: giữa màn khi 1 mình, lệch trái khi có enemy */
+    const px = G._enemyVisible ? W * 0.30 : W * 0.50;
 
     /* Player: dùng playerFace (face.jpg) */
     if (G.sprites.playerFace) {
@@ -743,7 +821,7 @@
     badge.textContent = labels[q.type] || 'Câu hỏi';
     badge.className   = mode === 'boss' ? 'boss-q' : '';
 
-    $('q-text').textContent = q.question;
+    $('q-text').innerHTML = renderMath(q.question);
     $('q-explanation').classList.add('hidden');
     $('q-explanation').classList.remove('wrong-expl');
 
@@ -762,7 +840,7 @@
     q.options.forEach((opt, i) => {
       const btn = document.createElement('button');
       btn.className = 'opt-btn';
-      btn.innerHTML = `<span class="o-ltr">${letters[i]}</span>${esc(opt)}`;
+      btn.innerHTML = `<span class="o-ltr">${letters[i]}</span>${renderMath(opt)}`;
       btn.addEventListener('click', () => {
         if (G.answered) return;
         handleAnswer(i === q.answer, q, mode, () => {
@@ -886,7 +964,7 @@
     box.classList.remove('hidden', 'wrong-expl');
     if (!isRight) box.classList.add('wrong-expl');
     $('expl-icon').textContent = isRight ? '✅' : '❌';
-    $('expl-text').textContent = q.explanation || (isRight ? 'Chính xác!' : 'Chưa đúng.');
+    $('expl-text').innerHTML = renderMath(q.explanation || (isRight ? 'Chính xác!' : 'Chưa đúng.'));
   }
 
   function addNextButton(mode, q, isRight) {

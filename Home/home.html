@@ -535,7 +535,67 @@
       #ai-widget { bottom: 16px; right: 16px; }
       #ai-chatbox { width: calc(100vw - 32px); }
     }
-  </style>
+  
+    
+
+    
+    
+
+    
+    /* ═══════════════════════════════════════════════════════════
+       STUDY HELPER — HOME ANIMATED ICONS v3
+    ═══════════════════════════════════════════════════════════ */
+    @keyframes sh-float    { 0%,100%{transform:translateY(0)}                             50%{transform:translateY(-4px)} }
+    @keyframes sh-sway     { 0%,100%{transform:rotate(0)}           30%{transform:rotate(-8deg)} 70%{transform:rotate(8deg)} }
+    @keyframes sh-scale    { 0%,100%{transform:scale(1)}                                  50%{transform:scale(1.1)} }
+    @keyframes sh-nudge    { 0%,100%{transform:translateY(0) scale(1)}                   50%{transform:translateY(-3px) scale(1.05)} }
+    @keyframes sh-logo     { 0%,100%{filter:brightness(1)}                               50%{filter:brightness(1.15) drop-shadow(0 0 6px rgba(0,206,209,.4))} }
+    @keyframes sh-badge    { 0%,100%{box-shadow:0 0 0 0 rgba(255,107,0,0)}               50%{box-shadow:0 0 0 3px rgba(255,107,0,.22)} }
+    @keyframes sh-arrow    { 0%,100%{transform:translateX(0)}                            50%{transform:translateX(-3px)} }
+    @keyframes sh-breathe  { 0%,100%{transform:scale(1); opacity:.85}                   50%{transform:scale(1.08); opacity:1} }
+    @keyframes sh-jitter   { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-5deg)} 75%{transform:rotate(5deg)} }
+    @keyframes sh-moon     { 0%,100%{transform:rotate(-20deg) scale(1)}                 50%{transform:rotate(20deg) scale(1.2)} }
+    @keyframes sh-sun      { from{transform:rotate(0deg) scale(1)} 50%{transform:rotate(180deg) scale(1.15)} to{transform:rotate(360deg) scale(1)} }
+
+    /* ── Logo: shimmer tinh tế ── */
+    #logo { animation: sh-logo 4s ease-in-out infinite; }
+
+    /* ── Active badge: glow cam ── */
+    #active-badge { animation: sh-badge 3s ease-in-out infinite; }
+
+    /* ── Hamburger: chỉ hover ── */
+    #btn-menu { transition: transform .2s; }
+    #btn-menu:hover { transform: scale(1.08); }
+
+    /* ── Nav icons: mỗi cái 1 hiệu ứng riêng, KHÔNG ảnh hưởng chữ ── */
+    nav#sidebar-nav a .nav-icon { display: inline-block; }
+    nav#sidebar-nav a:nth-child(1) .nav-icon { animation: sh-sway   4.5s ease-in-out infinite; }
+    nav#sidebar-nav a:nth-child(2) .nav-icon { animation: sh-nudge  3.2s ease-in-out infinite; }
+    nav#sidebar-nav a:nth-child(3) .nav-icon { animation: sh-jitter 3.8s ease-in-out infinite; }
+
+    /* ── Icon 🌙/☀️ cạnh toggle: animate riêng, không ảnh hưởng chữ ── */
+    #theme-label { display: inline-flex; align-items: center; gap: 6px; }
+    .icon-theme  { display: inline-block; animation: sh-moon 4s ease-in-out infinite; }
+    body.dark .icon-theme { animation: sh-sun 8s linear infinite; }
+
+    /* Toggle glow khi dark mode */
+    body.dark .toggle-thumb {
+      transform: translateX(20px);
+      box-shadow: 0 0 6px rgba(0,206,209,.5), 0 1px 4px rgba(0,0,0,.3);
+    }
+    body.dark .toggle-track {
+      background: var(--cyan);
+      box-shadow: 0 0 8px rgba(0,206,209,.3);
+    }
+
+    /* ── AI toggle: breathe + image sway ── */
+    #ai-toggle { animation: sh-breathe 3.5s ease-in-out infinite; }
+    #ai-toggle img { animation: sh-sway 6s ease-in-out infinite; }
+
+    /* ── AI status dot ── */
+    .ai-status { animation: sh-scale 2s ease-in-out infinite; }
+
+    </style>
 </head>
 <body>
   <!-- Đốm sáng nền CSS -->
@@ -558,19 +618,19 @@
     <nav id="sidebar-nav">
       <!-- [SỬA] data-src trỏ đúng đường dẫn file thực -->
       <a data-page="theory" data-src="../Theory/theory.html" class="active">
-        <span class="nav-icon">📖</span> Lý thuyết
+        <span class="nav-icon icon-menu-theory">📖</span> Lý thuyết
       </a>
       <a data-page="practice" data-src="../Practice/practice.html">
-        <span class="nav-icon">✏️</span> Luyện tập
+        <span class="nav-icon icon-menu-practice">✏️</span> Luyện tập
       </a>
       <div class="nav-divider"></div>
       <a data-page="instruct" data-src="../Instruct/instruct.html">
-        <span class="nav-icon">❓</span> Hướng dẫn sử dụng
+        <span class="nav-icon icon-menu-instruct">❓</span> Hướng dẫn sử dụng
       </a>
     </nav>
     <div class="sidebar-footer">
       <button id="btn-theme" aria-label="Chuyển chế độ sáng/tối">
-        <span id="theme-label">🌙 Chế độ tối</span>
+        <span id="theme-label"><span class="icon-theme">🌙</span> Chế độ tối</span>
         <div class="toggle-track"><div class="toggle-thumb"></div></div>
       </button>
     </div>
@@ -699,7 +759,7 @@
       /* ── DARK / LIGHT ── */
       function applyTheme(dark) {
         body.classList.toggle('dark', dark);
-        themeLabel.textContent = dark ? '☀️ Chế độ sáng' : '🌙 Chế độ tối';
+        themeLabel.innerHTML = dark ? '<span class="icon-theme">☀️</span> Chế độ sáng' : '<span class="icon-theme">🌙</span> Chế độ tối';
         localStorage.setItem('sh-theme', dark ? 'dark' : 'light');
         /* [SỬA] Truyền theme vào iframe qua postMessage */
         try {

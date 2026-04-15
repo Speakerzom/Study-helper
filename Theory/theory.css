@@ -479,3 +479,94 @@ body {
   .subject-grid { grid-template-columns: repeat(2, 1fr); }
   .class-card   { padding: 14px 12px; }
 }
+/* ═══════════════════════════════════════════════════════════
+   STUDY HELPER — ANIMATED ICONS v3
+═══════════════════════════════════════════════════════════ */
+
+@keyframes sh-float    { 0%,100%{transform:translateY(0)}          50%{transform:translateY(-4px)} }
+@keyframes sh-spin-slow{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
+@keyframes sh-sway     { 0%,100%{transform:rotate(0)}              30%{transform:rotate(-8deg)} 70%{transform:rotate(8deg)} }
+@keyframes sh-scale    { 0%,100%{transform:scale(1)}               50%{transform:scale(1.1)} }
+@keyframes sh-nudge    { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-3px) scale(1.05)} }
+@keyframes sh-jitter   { 0%,100%{transform:rotate(0)}              25%{transform:rotate(-5deg)} 75%{transform:rotate(5deg)} }
+@keyframes sh-glow     { 0%,100%{opacity:1;filter:brightness(1)}   50%{opacity:.85;filter:brightness(1.3) drop-shadow(0 0 4px currentColor)} }
+@keyframes sh-arrow    { 0%,100%{transform:translateX(0)}          50%{transform:translateX(-3px)} }
+@keyframes sh-logo     { 0%,100%{filter:brightness(1)}             50%{filter:brightness(1.15) drop-shadow(0 0 6px rgba(0,206,209,.4))} }
+@keyframes sh-breathe  { 0%,100%{transform:scale(1);opacity:.9}    50%{transform:scale(1.07);opacity:1} }
+@keyframes sh-orbit    { from{transform:rotate(0) scale(1)} 50%{transform:rotate(180deg) scale(1.1)} to{transform:rotate(360deg) scale(1)} }
+
+/* Logo */
+#th-logo { animation:sh-logo 4s ease-in-out infinite; }
+
+.section-title .icon { display:inline-block; animation:sh-float 3s ease-in-out infinite; }
+
+
+/* ── Class card icon: nudge nhẹ ── */
+.class-card .c-icon { display:inline-block; animation:sh-nudge 4.5s ease-in-out infinite; }
+.class-card:hover .c-icon { animation-duration:2s; }
+
+/* ── Subject icons: mỗi môn 1 hiệu ứng riêng, tất cả đa dạng ── */
+.subject-card .s-icon { display:inline-block; animation:sh-float 3.5s ease-in-out infinite; }
+/* Toán: lắc thước */
+.subject-card:nth-child(1)  .s-icon { animation-name:sh-sway;      animation-duration:4.5s; }
+/* Vật lý: xoay chậm */
+.subject-card:nth-child(2)  .s-icon { animation-name:sh-spin-slow; animation-duration:9s; animation-timing-function:linear; }
+/* Hóa học: float lên xuống */
+.subject-card:nth-child(3)  .s-icon { animation-name:sh-float;     animation-duration:3s; }
+/* Sinh học: scale hít thở */
+.subject-card:nth-child(4)  .s-icon { animation-name:sh-scale;     animation-duration:3.5s; }
+/* Công nghệ: jitter rung nhẹ */
+.subject-card:nth-child(5)  .s-icon { animation-name:sh-jitter;    animation-duration:3.5s; }
+/* Tin học: orbit */
+.subject-card:nth-child(6)  .s-icon { animation-name:sh-orbit;     animation-duration:7s; }
+/* Ngữ văn: sway */
+.subject-card:nth-child(7)  .s-icon { animation-name:sh-sway;      animation-duration:5s; animation-delay:-.5s; }
+/* Tiếng Anh: scale */
+.subject-card:nth-child(8)  .s-icon { animation-name:sh-scale;     animation-duration:3s; animation-delay:-.8s; }
+/* Lịch sử: glow vàng */
+.subject-card:nth-child(9)  .s-icon { animation-name:sh-glow;      animation-duration:3.5s; }
+/* Địa lý: xoay chậm */
+.subject-card:nth-child(10) .s-icon { animation-name:sh-spin-slow; animation-duration:11s; animation-timing-function:linear; }
+.subject-card:hover .s-icon { animation-duration:1.5s !important; }
+
+/* ── Empty state icon ── */
+.empty-state .e-icon { display:inline-block; animation:sh-float 3s ease-in-out infinite; }
+
+/* ── Back arrow ── */
+.back-home { display:inline-block; animation:sh-arrow 2.5s ease-in-out infinite; }
+
+
+/* ── KaTeX formula display ── */
+.katex-expr {
+  padding: 8px 4px;
+  overflow-x: auto;
+  text-align: center;
+}
+.katex-expr .katex {
+  font-size: 1.1rem;
+}
+.katex-expr .katex-display {
+  margin: 0;
+}
+.f-expr-plain {
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: .95rem;
+  color: var(--cyan);
+  word-break: break-all;
+}
+/* Dark mode KaTeX */
+body.dark .katex { color: #e8e8e8; }
+body.dark .katex-expr { background: rgba(0,206,209,.04); border-radius: 6px; }
+
+/* ── KaTeX inline trong lesson-content ── */
+.lesson-content .katex {
+  font-size: 1em;
+  vertical-align: middle;
+}
+.lesson-content .katex-display {
+  margin: 0;
+  display: inline;
+}
+.lesson-content .katex-html {
+  display: inline;
+}

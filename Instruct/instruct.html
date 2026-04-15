@@ -4,22 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hướng dẫn sử dụng – Study Helper</title>
-  <link rel="stylesheet" href="instruct.css" />
+  <link rel="stylesheet" href="instruct.css?v=1775798302" />
+
+  <style id="mc-anim">
+  @keyframes sh-mc-zoom {
+    0%   { transform:scale(1);    color:#FF6B00; text-shadow:1px 1px 0 rgba(0,0,0,.8); letter-spacing:.02em; }
+    18%  { transform:scale(1.45); color:#FFD700; text-shadow:0 0 16px #FFD700,2px 2px 0 rgba(0,0,0,.6); letter-spacing:.04em; }
+    35%  { transform:scale(1.7);  color:#FF6B00; text-shadow:0 0 28px #FF6B00,0 0 50px rgba(255,107,0,.5); letter-spacing:.06em; }
+    52%  { transform:scale(1.45); color:#7FFF00; text-shadow:0 0 18px #7FFF00; letter-spacing:.04em; }
+    68%  { transform:scale(1.65); color:#00CED1; text-shadow:0 0 22px #00CED1; letter-spacing:.05em; }
+    84%  { transform:scale(1.3);  color:#FFD700; text-shadow:0 0 14px #FFD700; letter-spacing:.03em; }
+    100% { transform:scale(1);    color:#FF6B00; text-shadow:1px 1px 0 rgba(0,0,0,.8); letter-spacing:.02em; }
+  }
+  </style>
 </head>
 <body>
-  </div>
 
   <!-- ===== HEADER ===== -->
   <header id="in-header">
-    <span id="in-logo">❓ Hướng Dẫn</span>
+    <span id="in-logo"><span class="icon-instruct-logo">❓</span> Hướng Dẫn</span>
   </header>
 
   <!-- ===== TAB NAV ===== -->
   <nav id="tab-nav" aria-label="Điều hướng nội dung">
-    <button class="tab-btn active" data-tab="guide">📋 Hướng dẫn sử dụng</button>
-    <button class="tab-btn" data-tab="videos">🎬 Video hướng dẫn</button>
-    <button class="tab-btn" data-tab="dev">👨‍💻 Nhà phát triển</button>
-    <button class="tab-btn" data-tab="changelog">📜 Nhật ký phát triển</button>
+    <button class="tab-btn active" data-tab="guide"><span class="icon-tab-guide">📋</span> Hướng dẫn sử dụng</button>
+    <button class="tab-btn" data-tab="videos"><span class="icon-tab-video">🎬</span> Video hướng dẫn</button>
+    <button class="tab-btn" data-tab="dev"><span class="icon-tab-dev">👨‍💻</span> Nhà phát triển</button>
+    <button class="tab-btn" data-tab="changelog"><span class="icon-tab-changelog">📜</span> Nhật ký phát triển</button>
   </nav>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -27,6 +38,6 @@
     <!-- inject bởi instruct.js -->
   </main>
 
-  <script src="instruct.js"></script>
+  <script src="instruct.js?v=1775798302"></script>
 </body>
 </html>

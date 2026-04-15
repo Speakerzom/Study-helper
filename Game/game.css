@@ -358,12 +358,12 @@ input[type=range]#vol-sfx::-moz-range-thumb {
   animation: pulse-boss-badge 1.5s ease-in-out infinite;
 }
 @keyframes pulse-badge {
-  0%,100% { box-shadow: 0 0 10px rgba(0,206,209,.4); }
-  50%     { box-shadow: 0 0 22px rgba(0,206,209,.8); }
+  0%,100% { box-shadow: 0 0 8px rgba(0,206,209,.35); }
+  50%     { box-shadow: 0 0 20px rgba(0,206,209,.75); }
 }
 @keyframes pulse-boss-badge {
-  0%,100% { box-shadow: 0 0 12px rgba(255,107,0,.5); transform: scale(1); }
-  50%     { box-shadow: 0 0 28px rgba(255,107,0,.9); transform: scale(1.06); }
+  0%,100% { box-shadow: 0 0 10px rgba(255,107,0,.4); }
+  50%     { box-shadow: 0 0 24px rgba(255,107,0,.85); }
 }
 
 #hud-right {
@@ -483,8 +483,11 @@ body.light #music-name .mn-inner {
 /* ── BTN TIẾN ── */
 #btn-advance {
   position: absolute;
-  bottom: 32px; left: 50%;
-  transform: translateX(-50%);
+  bottom: 32px;
+  left: 0; right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  transform: none;
   padding: 15px 48px; border-radius: var(--radius); border: none;
   background: linear-gradient(135deg, var(--orange), #FF9F45, var(--yellow));
   background-size: 200% 200%;
@@ -505,13 +508,13 @@ body.light #music-name .mn-inner {
   100% { background-position: 0% 50%; }
 }
 #btn-advance:hover:not(:disabled) {
-  transform: translateX(-50%) translateY(-5px) scale(1.04);
+  transform: translateY(-5px) scale(1.04);
   box-shadow: 0 12px 44px rgba(255,107,0,.75);
 }
 #btn-advance:active:not(:disabled) {
-  transform: translateX(-50%) translateY(-1px) scale(.98);
+  transform: translateY(-1px) scale(.98);
 }
-#btn-advance:disabled { opacity: .3; cursor: default; transform: translateX(-50%); animation: none; }
+#btn-advance:disabled { opacity: .3; cursor: default; transform: none; animation: none; }
 #btn-advance.hidden { display: none; }
 
 /* ── ATTACK FLASH ── */
@@ -1118,3 +1121,74 @@ body.light .short-inp {
   .opt-btn .o-ltr { width: 22px; height: 22px; font-size: .7rem; }
   #question-panel { max-height: 42vh; }
 }
+/* ═══════════════════════════════════════════════════════════
+   STUDY HELPER — GAME ANIMATED ICONS v3
+═══════════════════════════════════════════════════════════ */
+
+@keyframes sh-float    { 0%,100%{transform:translateY(0)}                       50%{transform:translateY(-4px)} }
+@keyframes sh-sway     { 0%,100%{transform:rotate(0)}       30%{transform:rotate(-8deg)} 70%{transform:rotate(8deg)} }
+@keyframes sh-scale    { 0%,100%{transform:scale(1)}                            50%{transform:scale(1.1)} }
+@keyframes sh-nudge    { 0%,100%{transform:translateY(0) scale(1)}              50%{transform:translateY(-3px) scale(1.05)} }
+@keyframes sh-glow     { 0%,100%{opacity:1; filter:brightness(1)}               50%{opacity:.85; filter:brightness(1.4) drop-shadow(0 0 5px currentColor)} }
+@keyframes sh-arrow    { 0%,100%{transform:translateX(0)}                       50%{transform:translateX(-3px)} }
+@keyframes sh-breathe  { 0%,100%{transform:scale(1); opacity:.9}               50%{transform:scale(1.07); opacity:1} }
+
+/* ── Back arrow HUD: trượt ← nhẹ ── */
+.hud-back {
+  display: inline-block;
+  animation: sh-arrow 2.5s ease-in-out infinite;
+}
+
+/* ── Energy ⚡: glow vàng ── */
+.energy-lbl {
+  display: inline-block;
+  animation: sh-glow 1.8s ease-in-out infinite;
+}
+
+/* ── Vol button: breathe nhẹ ── */
+#vol-btn { animation: sh-breathe 3s ease-in-out infinite; }
+
+/* ── Advance button: nudge nhẹ ── */
+#btn-advance { animation: sh-nudge 2.8s ease-in-out infinite; }
+#btn-advance:hover { animation-duration: .8s; }
+
+/* ── End icon 🏆💀: scale ── */
+.end-icon {
+  display: inline-block;
+  animation: sh-scale 2.5s ease-in-out infinite;
+}
+
+/* ── Explanation icon ✅/❌: float ── */
+#expl-icon {
+  display: inline-block;
+  animation: sh-float 2s ease-in-out infinite;
+}
+
+/* ── Btn end: hover lift ── */
+.btn-end { transition: transform .2s ease, box-shadow .2s; }
+.btn-end:hover { transform: translateY(-2px); }
+
+/* ── KaTeX inline trong game ─────────────────────────────── */
+/* Đảm bảo inline KaTeX không có margin/padding thừa */
+#q-text .katex,
+.opt-btn .katex,
+#expl-text .katex {
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline;
+}
+#q-text .katex-html,
+.opt-btn .katex-html,
+#expl-text .katex-html {
+  display: inline;
+}
+#q-text .katex-display,
+.opt-btn .katex-display,
+#expl-text .katex-display {
+  display: inline;
+  margin: 0;
+}
+/* Base size cho KaTeX trong các context khác nhau */
+#q-text { font-size: 1rem; }
+.opt-btn { font-size: 0.92rem; }
+#expl-text { font-size: 0.88rem; }

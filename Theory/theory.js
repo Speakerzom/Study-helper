@@ -23,22 +23,22 @@
 
   /* ─── Metadata hiển thị ─── */
   const CLASS_META = {
-    class10: { label: 'Khối 10', icon: '1️⃣0️⃣', badge: 'badge-c10' },
-    class11: { label: 'Khối 11', icon: '1️⃣1️⃣', badge: 'badge-c11' },
-    class12: { label: 'Khối 12', icon: '1️⃣2️⃣', badge: 'badge-c12' }
+    class10: { label: 'Khối 10', icon: '<span class="icon-class">1️⃣0️⃣</span>', badge: 'badge-c10' },
+    class11: { label: 'Khối 11', icon: '<span class="icon-class">1️⃣1️⃣</span>', badge: 'badge-c11' },
+    class12: { label: 'Khối 12', icon: '<span class="icon-class">1️⃣2️⃣</span>', badge: 'badge-c12' }
   };
 
   const SUBJECT_META = {
-    math       : { label: 'Toán',         icon: '📐' },
-    physics    : { label: 'Vật lý',        icon: '⚛️'  },
-    chemistry  : { label: 'Hóa học',       icon: '🧪' },
-    biology    : { label: 'Sinh học',      icon: '🌿' },
-    technology : { label: 'Công nghệ',     icon: '⚙️'  },
-    informatics: { label: 'Tin học',       icon: '💻' },
-    literature : { label: 'Ngữ văn',       icon: '📚' },
-    english    : { label: 'Tiếng Anh',     icon: '🔤' },
-    history    : { label: 'Lịch sử',       icon: '🏛️'  },
-    geography  : { label: 'Địa lí',        icon: '🌏' }
+    math       : { label: 'Toán',         icon: '<span class="icon-math">📐</span>' },
+    physics    : { label: 'Vật lý',        icon: '<span class="icon-physics">⚛️</span>'  },
+    chemistry  : { label: 'Hóa học',       icon: '<span class="icon-chemistry">🧪</span>' },
+    biology    : { label: 'Sinh học',      icon: '<span class="icon-biology">🌿</span>' },
+    technology : { label: 'Công nghệ',     icon: '<span class="icon-technology">⚙️</span>'  },
+    informatics: { label: 'Tin học',       icon: '<span class="icon-informatics">💻</span>' },
+    literature : { label: 'Ngữ văn',       icon: '<span class="icon-literature">📚</span>' },
+    english    : { label: 'Tiếng Anh',     icon: '<span class="icon-english">🔤</span>' },
+    history    : { label: 'Lịch sử',       icon: '<span class="icon-history">🏛️</span>'  },
+    geography  : { label: 'Địa lí',        icon: '<span class="icon-geography">🌏</span>' }
   };
 
   /* ══════════════════════════════════════════
@@ -129,9 +129,34 @@
   /* ══════════════════════════════════════════
      4. VIEW_HOME — Chọn khối lớp
   ══════════════════════════════════════════ */
+  /* ══════════════════════════════════════════
+     NAVIGATE + HASH
+  ══════════════════════════════════════════ */
+  function navigate(view, classId = null, subjectId = null, lessonId = null) {
+    state.view      = view;
+    state.classId   = classId;
+    state.subjectId = subjectId;
+    state.lessonId  = lessonId;
+    const parts = [view, classId, subjectId, lessonId].filter(Boolean);
+    history.replaceState(null, '', '#' + parts.join('/'));
+    renderView();
+  }
+
+  function restoreFromHash() {
+    const hash  = location.hash.replace('#', '');
+    const parts = hash.split('/').filter(Boolean);
+    const views = ['home', 'class', 'subject', 'lesson'];
+    if (parts.length > 0 && views.includes(parts[0])) {
+      state.view      = parts[0];
+      state.classId   = parts[1] || null;
+      state.subjectId = parts[2] || null;
+      state.lessonId  = parts[3] || null;
+    }
+  }
+
   function renderHome(wrap) {
     wrap.innerHTML = `
-      <div class="section-title"><span class="icon">📖</span> Lý Thuyết</div>
+      <div class="section-title"><span class="icon icon-theory-logo">📖</span> Lý Thuyết</div>
       <p class="section-sub">Chọn khối lớp để xem danh sách môn học.</p>
       <div class="class-grid">
         ${Object.keys(CLASS_META).map(cid => {
@@ -231,22 +256,105 @@
   /* ══════════════════════════════════════════
      7. VIEW_LESSON — Chi tiết bài học
   ══════════════════════════════════════════ */
+
+  /* ══════════════════════════════════════════
+     LATEX CONVERTER + KATEX RENDER
+  ══════════════════════════════════════════ */
+  /* ──────────────────────────────────────────
+     KATEX RENDER
+     expr: chuỗi LaTeX thuần từ JSON
+  ────────────────────────────────────────── */
+  function renderFormula(latexStr) {
+    if (!latexStr) return '';
+    if (typeof katex === 'undefined') {
+      return '<span class="f-expr-plain">' + escHtml(latexStr) + '</span>';
+    }
+    try {
+      return katex.renderToString(latexStr, {
+        throwOnError: false,
+        displayMode: true,
+        output: 'html',
+        strict: false,
+      });
+    } catch(e) {
+      return '<span class="f-expr-plain">' + escHtml(latexStr) + '</span>';
+    }
+  }
+
+  /* Render nội dung bài (text thường, giữ nguyên) */
+  function renderContent(text) {
+    if (!text) return '';
+    const raw = String(text);
+
+    // Đơn vị vật lý KHÔNG convert thành phân số
+    const UNIT_PAIRS = new Set([
+      'm/s','km/h','J/C','C/s','W/m','N/m','kg/m','mol/L','g/mol',
+      'rad/s','mL/min','Wb/A','m/s2','J/mol','kJ/mol','kcal/mol',
+    ]);
+
+    // Ký tự sub/superscript Unicode → LaTeX
+    const SUB = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ₙ':'n','ₘ':'m','ₖ':'k'};
+    const SUP = {'\u207B':'-','⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','ⁿ':'n'};
+
+    function tokenToLatex(tok) {
+      // Convert sub/sup Unicode trong token
+      tok = tok.replace(/[₀₁₂₃₄₅₆₇₈₉ₙₘₖ]+/g, m => '_{' + [...m].map(c=>SUB[c]||c).join('') + '}');
+      tok = tok.replace(/[\u207B⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ]+/g, m => '^{' + [...m].map(c=>SUP[c]||c).join('') + '}');
+      tok = tok.replace(/·/g, '\\cdot{}').replace(/×/g, '\\times{}');
+      const GREEK = {'π':'\\pi{}','α':'\\alpha{}','β':'\\beta{}','Δ':'\\Delta{}','ε':'\\varepsilon{}','ω':'\\omega{}','ξ':'\\xi{}','φ':'\\varphi{}','λ':'\\lambda{}','μ':'\\mu{}','Φ':'\\Phi{}','θ':'\\theta{}'};
+      for (const [g,l] of Object.entries(GREEK)) tok = tok.replaceAll(g, l);
+      return tok;
+    }
+
+    // Xử lý từng dòng
+    const lines = raw.split('\n');
+    const out = lines.map(line => {
+      // Tìm pattern a/b trong dòng và convert thành \frac
+      let result = '';
+      let lastIdx = 0;
+
+      // Regex: token / token (bao gồm sub/superscript unicode)
+      const FRAC = /([-]?[A-Za-zα-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]+[A-Za-z0-9α-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]*|[-]?[0-9]+[A-Za-z0-9₀-₉⁰-⁹]*)\s*\/\s*([-]?[A-Za-zα-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]+[A-Za-z0-9α-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]*|[-]?[0-9]+[A-Za-z0-9₀-₉⁰-⁹]*)/g;
+
+      let m;
+      while ((m = FRAC.exec(line)) !== null) {
+        const a = m[1].trim(), b = m[2].trim();
+        // Bỏ qua đơn vị vật lý
+        const combo = a + '/' + b;
+        if (UNIT_PAIRS.has(combo)) continue;
+        // Bỏ qua nếu là đơn vị đo lường SI thuần túy
+        const UNIT_SI = /^(m|s|km|h|J|W|N|kg|mol|L|g|rad|mL|Hz|Pa|V|A|F|Wb|C|min|kWh)$/;
+        if (UNIT_SI.test(a) && UNIT_SI.test(b)) continue;
+
+        result += escHtml(line.slice(lastIdx, m.index));
+        lastIdx = m.index + m[0].length;
+
+        if (typeof katex !== 'undefined') {
+          try {
+            const latex = '\\dfrac{' + tokenToLatex(a) + '}{' + tokenToLatex(b) + '}';
+            result += katex.renderToString(latex, {throwOnError:false, displayMode:false, strict:false, output:'html'});
+          } catch(e) { result += escHtml(m[0]); }
+        } else {
+          result += escHtml(m[0]);
+        }
+      }
+      result += escHtml(line.slice(lastIdx));
+      return result;
+    });
+
+    return out.join('\n');
+  }
+
   function renderLesson(wrap) {
     const lessons = DB[state.classId]?.[state.subjectId] || [];
     const lesson  = lessons.find(l => l.id === state.lessonId);
-
     if (!lesson) {
-      wrap.innerHTML = `
-        <div class="empty-state">
-          <div class="e-icon">🔍</div><p>Không tìm thấy bài học.</p>
-        </div>`;
+      wrap.innerHTML = `<div class="empty-state"><div class="e-icon">🔍</div><p>Không tìm thấy bài học.</p></div>`;
       return;
     }
-
     const cm = CLASS_META[state.classId];
     const sm = SUBJECT_META[state.subjectId] || { label: state.subjectId, icon: '📄' };
 
-    /* Nội dung công thức */
     const formulaHtml = lesson.formulas?.length
       ? `<div class="formula-section">
            <h2>🔢 Công thức</h2>
@@ -254,13 +362,12 @@
              ${lesson.formulas.map(f => `
                <div class="formula-card">
                  <div class="f-label">${escHtml(f.label)}</div>
-                 <div class="f-expr">${escHtml(f.expr)}</div>
+                 <div class="f-expr katex-expr">${renderFormula(f.expr)}</div>
                </div>`).join('')}
            </div>
          </div>`
       : '';
 
-    /* URL sang Practice với params */
     const practiceURL =
       `../Practice/practice.html?class=${encodeURIComponent(state.classId)}`
       + `&subject=${encodeURIComponent(state.subjectId)}`
@@ -273,16 +380,11 @@
           <div class="lesson-meta">
             <span class="meta-tag" style="background:var(--cyan);color:var(--black)">${cm.label}</span>
             <span class="meta-tag" style="background:var(--teal);color:var(--white)">${sm.icon} ${sm.label}</span>
-
           </div>
         </div>
-
-        <div class="lesson-content">${escHtml(lesson.content)}</div>
-
+        <div class="lesson-content">${renderContent(lesson.content)}</div>
         ${formulaHtml}
-
         <div class="lesson-divider"></div>
-
         <button class="btn-practice" onclick="(function(){
           window.parent.postMessage({
             type: 'SH_NAVIGATE',
@@ -295,41 +397,6 @@
       </div>`;
   }
 
-  /* ══════════════════════════════════════════
-     8. NAVIGATE — thay đổi state → re-render
-  ══════════════════════════════════════════ */
-  function navigate(view, classId = null, subjectId = null, lessonId = null) {
-    state.view      = view;
-    state.classId   = classId;
-    state.subjectId = subjectId;
-    state.lessonId  = lessonId;
-
-    /* Ghi vào URL hash để hỗ trợ back/forward */
-    const hash = [view, classId, subjectId, lessonId].filter(Boolean).join('/');
-    history.replaceState(null, '', `#${hash}`);
-
-    renderView();
-  }
-
-  /* ══════════════════════════════════════════
-     9. RESTORE STATE từ URL hash
-  ══════════════════════════════════════════ */
-  function restoreFromHash() {
-    const hash  = location.hash.replace('#', '');
-    const parts = hash.split('/').filter(Boolean);
-    const views = ['home', 'class', 'subject', 'lesson'];
-
-    if (parts.length > 0 && views.includes(parts[0])) {
-      state.view      = parts[0] || 'home';
-      state.classId   = parts[1] || null;
-      state.subjectId = parts[2] || null;
-      state.lessonId  = parts[3] || null;
-    }
-  }
-
-  /* ══════════════════════════════════════════
-     10. UTIL
-  ══════════════════════════════════════════ */
   function escHtml(str) {
     return String(str)
       .replace(/&/g, '&amp;')
