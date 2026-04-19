@@ -221,79 +221,29 @@
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
-  /* ── renderMath: render ký hiệu toán học qua KaTeX ─────────
-     Approach: convert toàn bộ chuỗi → 1 LaTeX expr → render 1 lần
-     để tránh khoảng cách sai giữa các mảnh riêng lẻ.
-  ─────────────────────────────────────────────────────────── */
+
+  /* ── renderMath: render $...$ qua KaTeX ──────────────────────
+     Dữ liệu JSON đã được pre-convert sang LaTeX chuẩn với $...$
+     JS chỉ cần tìm $...$ và render, không cần convert runtime.
+  ────────────────────────────────────────────────────────────── */
   function renderMath(text) {
     if (!text) return '';
-    const raw = String(text);
-    if (typeof katex === 'undefined') return esc(raw);
+    if (typeof katex === 'undefined') return esc(String(text));
 
-    // Tách câu thành: [đoạn text thường] xen kẽ [đoạn có ký hiệu toán]
-    // Nhận diện đoạn toán: chứa ký hiệu unicode math hoặc biểu thức toán
-    const MATH_RE = /[²³⁰¹⁴⁵⁶⁷⁸⁹ⁿ⁻₀₁₂₃₄₅₆₇₈₉ₙₘₖ·×√±≤≥≠≈∞∈∉∪∩αβγδεζηθλμξπρστφψωΩΔΦΛ]/;
-
-    // Tách câu theo word boundaries, giữ cấu trúc
-    // Segment = dãy ký tự không có dấu cách dài (= 1 token/biểu thức)
-    const parts = raw.split(/(\s+)/);  // tách theo khoảng trắng, giữ lại khoảng trắng
-
-    return parts.map(part => {
-      // Khoảng trắng → giữ nguyên
-      if (/^\s+$/.test(part)) return part;
-      // Nếu không có ký hiệu toán → text thường
-      if (!MATH_RE.test(part) && !/\//.test(part)) return esc(part);
-      // Thử convert phần này sang LaTeX và render
+    return String(text).replace(/\$(.*?)\$/g, (match, expr) => {
       try {
-        const latex = toKatexString(part);
-        if (latex === part) return esc(part); // Không có gì thay đổi
-        return katex.renderToString(latex, {
+        return katex.renderToString(expr, {
           throwOnError: false,
           displayMode: false,
           output: 'html',
           strict: false,
         });
       } catch(e) {
-        return esc(part);
+        return esc(match);
       }
-    }).join('');
-  }
-
-  /* Convert 1 token/segment sang LaTeX string */
-  function toKatexString(s) {
-    const SUB = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ₙ':'n','ₘ':'m','ₖ':'k'};
-    const SUP = {'\u207B':'-','⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','ⁿ':'n'};
-
-    // subscript unicode
-    s = s.replace(/[₀₁₂₃₄₅₆₇₈₉ₙₘₖ]+/g, m => '_{'+[...m].map(c=>SUB[c]||c).join('')+'}');
-    // superscript unicode
-    s = s.replace(/[\u207B⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ]+/g, m => '^{'+[...m].map(c=>SUP[c]||c).join('')+'}');
-    // operators
-    s = s.replace(/·/g,'\\cdot ').replace(/×/g,'\\times ').replace(/±/g,'\\pm ');
-    s = s.replace(/≤/g,'\\leq ').replace(/≥/g,'\\geq ').replace(/≠/g,'\\neq ').replace(/≈/g,'\\approx ');
-    s = s.replace(/∞/g,'\\infty ').replace(/∈/g,'\\in ').replace(/∉/g,'\\notin ');
-    s = s.replace(/∪/g,'\\cup ').replace(/∩/g,'\\cap ');
-    // sqrt
-    s = s.replace(/√\(([^)]+)\)/g,'\\sqrt{$1}').replace(/√([A-Za-z0-9_{}^\\]+)/g,'\\sqrt{$1}');
-    // Greek letters
-    const G = {
-      'π':'\\pi{}','α':'\\alpha{}','β':'\\beta{}','γ':'\\gamma{}','Δ':'\\Delta{}','δ':'\\delta{}',
-      'ε':'\\varepsilon{}','θ':'\\theta{}','λ':'\\lambda{}','μ':'\\mu{}','ξ':'\\xi{}',
-      'ρ':'\\rho{}','φ':'\\varphi{}','ψ':'\\psi{}','ω':'\\omega{}','Ω':'\\Omega{}','Φ':'\\Phi{}'
-    };
-    for (const [g,l] of Object.entries(G)) s = s.replaceAll(g,l);
-    // Frac: (a)/(b)
-    s = s.replace(/\(([^()]{1,50})\)\/\(([^()]{1,50})\)/g,'\\frac{$1}{$2}');
-    // Frac: a/b — convert TẤT CẢ, chỉ skip đơn vị SI rõ ràng
-    s = s.replace(/([\w\\{}\^._]+)\/([\w\\{}\^._]+)/g, (m,a,b) => {
-      const ac = a.replace(/[\\{}_^ ]/g,''), bc = b.replace(/[\\{}_^ ]/g,'');
-      // Chỉ skip đơn vị đo lường thực sự
-      const SI_UNITS = new Set(['m','s','km','h','J','W','N','kg','mol','L','g','rad','mL','Hz','Pa','V','A','F','Wb','C','min','kWh']);
-      if (SI_UNITS.has(ac) && SI_UNITS.has(bc)) return m;
-      return '\\frac{'+a+'}{'+b+'}';
     });
-    return s;
   }
+
 
 
 
@@ -886,10 +836,12 @@
   function buildType3(body, q, mode) {
     const wrap = document.createElement('div');
     wrap.className = 'short-wrap';
+
     const inp = document.createElement('input');
     inp.type = 'text'; inp.className = 'short-inp';
-    inp.placeholder = 'Nhập câu trả lời…';
+    inp.placeholder = 'Nhập đáp án…';
     inp.autocomplete = 'off';
+
     const btn = document.createElement('button');
     btn.className = 'btn-submit-short';
     btn.textContent = 'Xác nhận';
@@ -898,11 +850,14 @@
       if (G.answered) return;
       const raw = inp.value.trim().toLowerCase().replace(/\s+/g, ' ');
       if (!raw) { inp.focus(); return; }
-      /* Chuẩn hóa: lowercase, bỏ khoảng trắng thừa — chấp nhận HNO3/hno3/Hno3 */
       const correct = (Array.isArray(q.answer) ? q.answer : [q.answer])
                         .map(a => String(a).trim().toLowerCase().replace(/\s+/g, ' '));
-      /* So sánh CHÍNH XÁC — không dùng includes để tránh nhận sai */
-      const isRight = correct.some(a => raw === a);
+      /* Chuẩn hóa số thập phân: dấu , và . đều chấp nhận */
+      const normalize = s => s.replace(/,/g, '.');
+      const rawN = normalize(raw);
+      const correctN = correct.map(normalize);
+      const isRight = correct.some(a => raw === a)         /* exact */
+                   || correctN.some(a => rawN === a);      /* normalized */
       inp.disabled = true; btn.disabled = true;
       inp.style.borderColor = isRight ? C.teal : '#D32F2F';
       handleAnswer(isRight, q, mode, () => {});
@@ -910,7 +865,8 @@
 
     btn.addEventListener('click', submit);
     inp.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
-    wrap.appendChild(inp); wrap.appendChild(btn);
+    wrap.appendChild(inp);
+    wrap.appendChild(btn);
     body.appendChild(wrap);
     setTimeout(() => inp.focus(), 100);
   }

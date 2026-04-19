@@ -1192,3 +1192,16 @@ body.light .short-inp {
 #q-text { font-size: 1rem; }
 .opt-btn { font-size: 0.92rem; }
 #expl-text { font-size: 0.88rem; }
+
+/* ── Short answer hint ── */
+.short-hint {
+  font-size: .78rem;
+  color: var(--cyan);
+  opacity: .85;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  background: rgba(0,206,209,.08);
+  border-radius: 6px;
+  border-left: 2px solid var(--cyan);
+}
+.short-hint strong { color: var(--yellow); }
