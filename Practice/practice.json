@@ -222,7 +222,7 @@
           {
             "id": "q6",
             "type": 3,
-            "question": "Tìm tập xác định của hàm số y = $\\sqrt(x$ - 2).",
+            "question": "Tìm tập xác định của hàm số y = $\\sqrt{x-2}$.",
             "answer": [
               "[2;+∞)",
               "x≥2",
@@ -523,7 +523,7 @@
             "question": "Khi nhân hai vế bất phương trình với số âm, chiều bất phương trình đổi ngược.",
             "answer": true,
             "options": true,
-            "explanation": "Đây là quy tắc cơ bản: nhâ$\\frac{n}{chia}$ số âm → đổi chiều."
+            "explanation": "Đây là quy tắc cơ bản: nhân/chia số âm → đổi chiều."
           }
         ],
         "boss": [
@@ -830,11 +830,11 @@
           {
             "id": "c10_math_l6_b4",
             "type": 3,
-            "question": "|a⃗| = $\\sqrt(3^{2}+4^{2})$ = ?",
+            "question": "|a⃗| = $\\sqrt{3^{2}+4^{2}}$ = ?",
             "answer": [
               "5"
             ],
-            "explanation": "|a⃗|$=\\sqrt(9+16)=\\sqrt25=5$."
+            "explanation": "|a⃗|$=\\sqrt{9+16}=\\sqrt{25}=5$."
           },
           {
             "id": "c10_math_l6_b5",
@@ -844,7 +844,7 @@
               "2",
               "0",
               "1",
-              "$\\sqrt2$"
+              "$\\sqrt{2}$"
             ],
             "answer": 1,
             "explanation": "a⃗$\\cdot b$⃗$=1\\times 1+1\\times (-1)=0$ → vuông góc."
@@ -865,7 +865,7 @@
             "type": 1,
             "question": "Khoảng cách giữa A(1;2) và B(4;6) là?",
             "answer": 2,
-            "explanation": "$d=\\sqrt((4$−$1)^{2}+(6$−$2)^{2})=\\sqrt(9+16)=5$.",
+            "explanation": "$d=\\sqrt{(4-1)^{2}+(6-2)^{2}}=\\sqrt{9+16}=5$.",
             "options": [
               "3",
               "4",
@@ -963,7 +963,7 @@
             "type": 1,
             "question": "Khoảng cách từ điểm M(1;2) đến đường thẳng 3x+4y−5=0 là?",
             "answer": 0,
-            "explanation": "d=|$3\\times 1+4\\times 2$−5|$/\\sqrt(9+16)=$|3+8−5|$/5=\\frac{6}{5}$. Tự sửa: $\\frac{6}{5\\neq 1}$. Đáp án đúng là $\\frac{6}{5}$.",
+            "explanation": "d=|$3\\times 1+4\\times 2$−5|$/\\sqrt{9+16}=$|3+8−5|$/5=\\frac{6}{5}$. Tự sửa: $\\frac{6}{5\\neq 1}$. Đáp án đúng là $\\frac{6}{5}$.",
             "options": [
               "1",
               "2",
@@ -1066,7 +1066,7 @@
             "answer": [
               "2,83"
             ],
-            "explanation": "x̄=7. $s^{2}=$[(3−$7)^{2}+(5$−$7)^{2}+(7$−$7)^{2}+(9$−$7)^{2}+(11$−$7)^{2}$]/5=(16+4+0+4+16)/5=8. $s=\\sqrt8=2\\sqrt2$."
+            "explanation": "x̄=7. $s^{2}=$[(3−$7)^{2}+(5$−$7)^{2}+(7$−$7)^{2}+(9$−$7)^{2}+(11$−$7)^{2}$]/5=(16+4+0+4+16)/5=8. $s=\\sqrt{8}=2\\sqrt{2}$."
           }
         ],
         "boss": [
@@ -1414,7 +1414,7 @@
             "type": 2,
             "question": "Trong chuyển động thẳng đều, gia tốc bằng 0.",
             "answer": true,
-            "explanation": "Chuyển động thẳng đều có vận tốc không đổi, nên gia tốc a = $\\frac{\\Deltav}{\\Deltat}$ = 0."
+            "explanation": "Chuyển động thẳng đều có vận tốc không đổi, nên gia tốc a = $\\frac{\\Delta v}{\\Delta t}$ = 0."
           },
           {
             "id": "q4",
@@ -1434,7 +1434,7 @@
             "type": 2,
             "question": "Vận tốc tức thời là giá trị vận tốc tại một thời điểm xác định.",
             "answer": true,
-            "explanation": "Vận tốc tức thời = giới hạn của vận tốc trung bình khi $\\Deltat$ → 0."
+            "explanation": "Vận tốc tức thời = giới hạn của vận tốc trung bình khi $\\Delta t$ → 0."
           },
           {
             "id": "q6",
@@ -1563,7 +1563,7 @@
               "$N/kg$"
             ],
             "answer": 2,
-            "explanation": "Gia tốc = $\\frac{\\Deltav}{\\Deltat}$ có đơn vị (m/s)/s = m/s²."
+            "explanation": "Gia tốc = $\\frac{\\Delta v}{\\Delta t}$ có đơn vị (m/s)/s = m/s²."
           },
           {
             "id": "q5",
@@ -1723,7 +1723,7 @@
           {
             "id": "q5",
             "type": 1,
-            "question": "Vật quay 120 vò$\\frac{ng}{phút}$. Tần số f (Hz) là?",
+            "question": "Vật quay 120 vòng/phút. Tần số f (Hz) là?",
             "answer": 1,
             "explanation": "f=120 vò$\\frac{ng}{60s}=2$ Hz.",
             "options": [
@@ -1757,7 +1757,7 @@
             "type": 1,
             "question": "Kim giờ đồng hồ quay 1 vòng trong 12 giờ. Tốc độ góc của nó là?",
             "answer": 2,
-            "explanation": "$T=12\\times 3600=43200s$. $\\omega=\\frac{2\\pi}{43200}$ rad/s$\\approx 1$,$45\\times 10$⁻$^{4}$ rad/s.",
+            "explanation": "$T=12\\times 3600=43200s$. $\\omega=\\frac{2\\pi}{43200}$ rad/s$\\approx 1$,$45\\times 10^{-4}$ rad/s.",
             "options": [
               "$\\frac{\\pi}{6}$ $rad/h$",
               "$\\frac{\\pi}{21600}$ rad/s",
@@ -1972,7 +1972,7 @@
               "$A=F/s$",
               "$A=F\\times s\\times cos\\alpha$",
               "$A=m\\times g\\times h$",
-              "A=½$mv^{2}$"
+              "A=$\\frac{1}{2}mv^{2}$"
             ]
           },
           {
@@ -1981,7 +1981,7 @@
             "question": "Động năng của vật tỉ lệ với bình phương vận tốc.",
             "answer": true,
             "options": true,
-            "explanation": "Wđ=½$mv^{2}$. Tăng v 2 lần → Wđ tăng 4 lần."
+            "explanation": "Wđ=$\\frac{1}{2}mv^{2}$. Tăng v 2 lần → Wđ tăng 4 lần."
           },
           {
             "id": "q3",
@@ -2042,7 +2042,7 @@
             "type": 1,
             "question": "Vật m=1kg rơi tự do từ h=20m (g=10). Vận tốc khi chạm đất là?",
             "answer": 1,
-            "explanation": "Bảo toàn cơ năng: mgh=½$mv^{2}$ → $v=\\sqrt(2gh)=\\sqrt400=20$ m/s.",
+            "explanation": "Bảo toàn cơ năng: mgh=$\\frac{1}{2}mv^{2}$ → $v=\\sqrt{2gh}=\\sqrt{400}=20$ m/s.",
             "options": [
               "10 m/s",
               "20 m/s",
@@ -2215,7 +2215,7 @@
               "≈26N",
               "N=mg cos30°=3×10×√3/2≈26N"
             ],
-            "explanation": "N=mg $cos\\alpha=3\\times 10\\times cos30$°$=30\\times (\\sqrt3/2)\\approx 26N$."
+            "explanation": "N=mg $cos\\alpha=3\\times 10\\times cos30$°$=30\\times (\\sqrt{3}/2)\\approx 26N$."
           },
           {
             "id": "c10_phy_l6_b5",
@@ -2274,7 +2274,7 @@
           {
             "id": "c10_phy_l7_n4",
             "type": 1,
-            "question": "Xung lực $F\\cdot \\Deltat$ bằng:",
+            "question": "Xung lực $F\\cdot \\Delta t$ bằng:",
             "options": [
               "Công của lực",
               "Độ biến thiên động lượng",
@@ -2282,7 +2282,7 @@
               "Thế năng"
             ],
             "answer": 1,
-            "explanation": "$F\\cdot \\Deltat$ = $\\Deltap$ — định lí xung-động lượng."
+            "explanation": "$F\\cdot \\Delta t$ = $\\Deltap$ — định lí xung-động lượng."
           },
           {
             "id": "c10_phy_l7_n5",
@@ -2342,7 +2342,7 @@
               "0,2 kg.m/s"
             ],
             "answer": 2,
-            "explanation": "$\\Deltap=F\\cdot \\Deltat=10\\times 2=20$ $kg\\cdot $m/s."
+            "explanation": "$\\Deltap=F\\cdot \\Delta t=10\\times 2=20$ $kg\\cdot $m/s."
           },
           {
             "id": "c10_phy_l7_b4",
@@ -2364,7 +2364,7 @@
               "100 kg.m/s"
             ],
             "answer": 0,
-            "explanation": "$\\Deltap=F\\Deltat=20\\times 0$,5=10 kg.m/s."
+            "explanation": "$\\Deltap=F\\Delta t=20\\times 0$,5=10 kg.m/s."
           },
           {
             "id": "c10_phy_l7_b6",
@@ -2689,7 +2689,7 @@
             "type": 1,
             "question": "Liên kết hiđro (H-bond) hình thành khi?",
             "answer": 1,
-            "explanation": "H liên kết với N, O, F → bị phân cực mạnh → tạo liên kết H với cặp e tự do của $\\frac{N}{O/F}$ khác.",
+            "explanation": "H liên kết với N, O, F → bị phân cực mạnh → tạo liên kết H với cặp e tự do của N/O/F khác.",
             "options": [
               "H liên kết với C",
               "H liên kết với N, O hoặc F có độ âm điện cao",
@@ -2770,7 +2770,7 @@
             "type": 1,
             "question": "Tốc độ phản ứng hóa học được định nghĩa là?",
             "answer": 1,
-            "explanation": "v = $\\Delta$[chất]$/\\Deltat$: tốc độ biến đổi nồng độ (mol/L/s).",
+            "explanation": "v = $\\Delta$[chất]$/\\Delta t$: tốc độ biến đổi nồng độ (mol/L/s).",
             "options": [
               "Lượng chất phản ứng",
               "Sự thay đổi nồng độ chất theo thời gian",
@@ -2965,7 +2965,7 @@
             "options": [
               "Không phản ứng",
               "$Cl_{2}+2NaBr$→$2NaCl+Br_{2}$",
-              "$2Cl_{2}+NaBr$→$2NaCl+\\frac{Br_{2}}{2}$",
+              "$2\\text{Cl}_2 + \\text{NaBr} \\rightarrow 2\\text{NaCl} + \\text{Br}_2$",
               "$Cl_{2}+NaBr$→NaCl+ClBr"
             ]
           },
@@ -3357,7 +3357,7 @@
             "question": "Lipit khác carbohydrate về đặc điểm nào sau đây?",
             "options": [
               "Đều cấu tạo từ C, H, O",
-              "Tỉ lệ $\\frac{H}{O}$ trong lipit lớn hơn nhiều so với carbohydrate",
+              "Tỉ lệ H/O trong lipit lớn hơn nhiều so với carbohydrate",
               "Lipit không tan trong nước nhưng carbohydrate tan được",
               "Cả B và C"
             ],
@@ -3940,7 +3940,7 @@
               "Không cần điều kiện đặc biệt"
             ],
             "answer": 1,
-            "explanation": "Môi trường vô trùng và cân bằng $\\frac{auxin}{cytokinin}$ quyết định thành công."
+            "explanation": "Môi trường vô trùng và cân bằng auxin/cytokinin quyết định thành công."
           },
           {
             "id": "c10_bio_l6_b2",
@@ -4466,7 +4466,7 @@
               "Phanh xe"
             ],
             "answer": 1,
-            "explanation": "Cam điều khiển đó$\\frac{ng}{mở}$ xupap theo chu kỳ trong động cơ."
+            "explanation": "Cam điều khiển đóng/mở xupap theo chu kỳ trong động cơ."
           },
           {
             "id": "c10_tec_l5_n5",
@@ -4502,15 +4502,15 @@
           {
             "id": "c10_tec_l5_b1",
             "type": 1,
-            "question": "Bánh chủ động quay 300 vò$\\frac{ng}{phút}$, i=2,5. Bánh bị động quay:",
+            "question": "Bánh chủ động quay 300 vòng/phút, i=2,5. Bánh bị động quay:",
             "options": [
-              "75 vò$\\frac{ng}{phút}$",
-              "120 vò$\\frac{ng}{phút}$",
-              "750 vò$\\frac{ng}{phút}$",
-              "300 vò$\\frac{ng}{phút}$"
+              "75 vòng/phút",
+              "120 vòng/phút",
+              "750 vòng/phút",
+              "300 vòng/phút"
             ],
             "answer": 1,
-            "explanation": "$n_{2}=\\frac{n_{1}}{i}=\\frac{300}{2}$,5=120 vò$\\frac{ng}{phút}$."
+            "explanation": "$n_{2}=\\frac{n_{1}}{i}=\\frac{300}{2}$,5=120 vòng/phút."
           },
           {
             "id": "c10_tec_l5_b2",
@@ -5318,7 +5318,7 @@
             "explanation": "Tục ngữ: ngắn gọn, đúc kết kinh nghiệm và triết lý sống. Ca dao: thơ dân gian, bộc lộ tình cảm.",
             "options": [
               "Tục ngữ dài hơn",
-              "Tục ngữ đúc kết kinh nghiệ$\\frac{m}{triết}$ lý, ca dao bộc lộ cảm xúc",
+              "Tục ngữ đúc kết kinh nghiệm/triết lý, ca dao bộc lộ cảm xúc",
               "Ca dao mới hơn",
               "Tục ngữ chỉ dùng ở Nam Bộ"
             ]
@@ -5631,7 +5631,7 @@
               "Bình luận"
             ],
             "answer": 1,
-            "explanation": "Giải thích = làm rõ nghĩa, nội dung của từ/khái niệ$\\frac{m}{vấn}$ đề."
+            "explanation": "Giải thích = làm rõ nghĩa, nội dung của từ/khái niệm/vấn đề."
           },
           {
             "id": "c10_lit_l5_n2",
@@ -5765,7 +5765,7 @@
             "question": "Phần kết bài trong nghị luận xã hội cần:",
             "options": [
               "Đặt câu hỏi mới",
-              "Tóm lại vấn đề và rút ra bài họ$\\frac{c}{liên}$ hệ",
+              "Tóm lại vấn đề và rút ra bài học/liên hệ",
               "Kể thêm dẫn chứng",
               "Mở ra một chủ đề mới"
             ],
@@ -5919,7 +5919,7 @@
               "He is wanting a new phone."
             ],
             "answer": 0,
-            "explanation": "HTTD + always diễn tả thói quen gây bực bộ$\\frac{i}{phàn}$ nàn → \"always losing\" ✓. Các câu còn lại dùng stative verbs $(know/believe/want)$ sai khi ở thì tiếp diễn."
+            "explanation": "HTTD + always diễn tả thói quen gây bực bội/phàn nàn → \"always losing\" ✓. Các câu còn lại dùng stative verbs $(know/believe/want)$ sai khi ở thì tiếp diễn."
           },
           {
             "id": "b4",
@@ -7791,7 +7791,7 @@
               "9 tỉ"
             ],
             "answer": 2,
-            "explanation": "Dân số thế giới đạt 8 tỉ người vào tháng $\\frac{11}{2022}$."
+            "explanation": "Dân số thế giới đạt 8 tỉ người vào tháng 11/2022."
           },
           {
             "id": "c10_geo_l5_b2",
@@ -7997,8 +7997,8 @@
             "options": [
               "0",
               "1",
-              "$\\frac{\\sqrt3}{2}$",
-              "$\\frac{\\sqrt2}{2}$"
+              "$\\frac{\\sqrt{3}}{2}$",
+              "$\\frac{\\sqrt{2}}{2}$"
             ],
             "answer": 1,
             "explanation": "sin(30°) = $\\frac{1}{2}$, cos(60°) = $\\frac{1}{2}$. Tổng = $\\frac{1}{2}$ + $\\frac{1}{2}$ = 1."
@@ -8021,7 +8021,7 @@
           {
             "id": "b2",
             "type": 1,
-            "question": "Phương trình sin(x) = $\\frac{\\sqrt3}{2}$ có các nghiệm là?",
+            "question": "Phương trình sin(x) = $\\frac{\\sqrt{3}}{2}$ có các nghiệm là?",
             "options": [
               "x = $\\frac{\\pi}{3}$ + $2k\\pi$",
               "x = $\\frac{\\pi}{3}$ + $2k\\pi$ hoặc x = $\\frac{2\\pi}{3}$ + $2k\\pi$",
@@ -8029,7 +8029,7 @@
               "x = $\\frac{\\pi}{3}$ + $k\\pi$"
             ],
             "answer": 1,
-            "explanation": "sin(x) = $\\frac{\\sqrt3}{2}$ → x = $\\frac{\\pi}{3}$ + $2k\\pi$ hoặc x = $\\pi$ − $\\frac{\\pi}{3}$ + $2k\\pi$ = $\\frac{2\\pi}{3}$ + $2k\\pi$."
+            "explanation": "sin(x) = $\\frac{\\sqrt{3}}{2}$ → x = $\\frac{\\pi}{3}$ + $2k\\pi$ hoặc x = $\\pi$ − $\\frac{\\pi}{3}$ + $2k\\pi$ = $\\frac{2\\pi}{3}$ + $2k\\pi$."
           },
           {
             "id": "b3",
@@ -8258,7 +8258,7 @@
             "question": "Phương trình $a\\cdot sin(x)+b\\cdot cos(x)=c$ vô nghiệm khi $c^{2}$>$a^{2}+b^{2}$.",
             "answer": true,
             "options": true,
-            "explanation": "Biến đổi về $R\\cdot sin(x+\\varphi)=c$, $R=\\sqrt(a^{2}+b^{2})$. Có nghiệm ⟺ |c|$\\leq R$, tức $c^{2}\\leq a^{2}+b^{2}$."
+            "explanation": "Biến đổi về $R\\cdot sin(x+\\varphi)=c$, $R=\\sqrt{a^{2}+b^{2}}$. Có nghiệm ⟺ |c|$\\leq R$, tức $c^{2}\\leq a^{2}+b^{2}$."
           },
           {
             "id": "q6",
@@ -8287,9 +8287,9 @@
           {
             "id": "b1",
             "type": 1,
-            "question": "Phương trình $sin(x)=\\frac{\\sqrt3}{2}$ trên (0;$2\\pi)$ có nghiệm là?",
+            "question": "Phương trình $sin(x)=\\frac{\\sqrt{3}}{2}$ trên (0;$2\\pi)$ có nghiệm là?",
             "answer": 1,
-            "explanation": "$sin(x)=\\frac{\\sqrt3}{2}$>0 trong góc phần tư I và II: $x=\\frac{\\pi}{3}$ và $x=\\pi$−$\\frac{\\pi}{3}=\\frac{2\\pi}{3}$.",
+            "explanation": "$sin(x)=\\frac{\\sqrt{3}}{2}$>0 trong góc phần tư I và II: $x=\\frac{\\pi}{3}$ và $x=\\pi$−$\\frac{\\pi}{3}=\\frac{2\\pi}{3}$.",
             "options": [
               "$x=\\frac{\\pi}{3}$",
               "$x=\\frac{\\pi}{3}$ và $x=\\frac{2\\pi}{3}$",
@@ -8349,7 +8349,7 @@
             "answer": 1,
             "explanation": "CSC: $u_{n}$ = $u_{1}$ + (n−1)d, trong đó d là công sai.",
             "options": [
-              "$u_{n}$ = $u_{1}$ $\\times $ $q^{n}$⁻$^{1}$",
+              "$u_{n}$ = $u_{1}$ $\\times $ $q^{n}^{-1}$",
               "$u_{n}$ = $u_{1}$ + (n−1)d",
               "$u_{n}$ = $u_{1}$ $\\times $ n",
               "$u_{n}$ = $n^{2}$"
@@ -8361,7 +8361,7 @@
             "question": "Trong cấp số nhân (CSN), tỉ số giữa hai số hạng liên tiếp là hằng số q.",
             "answer": true,
             "options": true,
-            "explanation": "$u_{n}$₊$\\frac{_{1}}{u_{n}}$ = q (công bội). CSN: $u_{n}$ = $u_{1}\\cdot q^{n}$⁻$^{1}$."
+            "explanation": "$u_{n}$₊$\\frac{_{1}}{u_{n}}$ = q (công bội). CSN: $u_{n}$ = $u_{1}\\cdot q^{n}^{-1}$."
           },
           {
             "id": "q3",
@@ -8427,7 +8427,7 @@
               "b=a+c",
               "2b=a+c",
               "$b^{2}=ac$",
-              "$b=\\sqrt(ac)$"
+              "$b=\\sqrt{ac}$"
             ]
           },
           {
@@ -8631,12 +8631,12 @@
             "type": 1,
             "question": "Đạo hàm của hàm số $y=x^{n}$ là?",
             "answer": 1,
-            "explanation": "$(x^{n})$'$=nx^{n}$⁻$^{1}$. Ví dụ: $(x^{3})$'$=3x^{2}$.",
+            "explanation": "$(x^{n})$'$=nx^{n}^{-1}$. Ví dụ: $(x^{3})$'$=3x^{2}$.",
             "options": [
-              "y'$=x^{n}$⁻$^{1}$",
-              "y'$=nx^{n}$⁻$^{1}$",
+              "y'$=x^{n}^{-1}$",
+              "y'$=nx^{n}^{-1}$",
               "y'$=nx^{n}$",
-              "y'=(n−$1)x^{n}$⁻$^{1}$"
+              "y'=(n−$1)x^{n}^{-1}$"
             ]
           },
           {
@@ -8734,7 +8734,7 @@
             "answer": [
               "3"
             ],
-            "explanation": "$(x^{n})$'$=nx^{n}$⁻$^{1}$ → $(x^{3})$'$=3x^{2}$."
+            "explanation": "$(x^{n})$'$=nx^{n}^{-1}$ → $(x^{3})$'$=3x^{2}$."
           },
           {
             "id": "c11_math_l6_b5",
@@ -8889,11 +8889,11 @@
             "type": 1,
             "question": "Vectơ trong không gian có tọa độ (x;y;z). Độ lớn của vectơ a⃗=(1;2;2) là?",
             "answer": 0,
-            "explanation": "|a⃗|$=\\sqrt(1^{2}+2^{2}+2^{2})=\\sqrt(1+4+4)=\\sqrt9=3$.",
+            "explanation": "|a⃗|$=\\sqrt{1^{2}+2^{2}+2^{2}}=\\sqrt{1+4+4}=\\sqrt{9}=3$.",
             "options": [
               "3",
               "5",
-              "$\\sqrt5$",
+              "$\\sqrt{5}$",
               "7"
             ]
           },
@@ -8955,7 +8955,7 @@
             "type": 1,
             "question": "Góc giữa a⃗=(1;1;0) và b⃗=(1;0;1) bằng?",
             "answer": 2,
-            "explanation": "$cos\\theta=a$⃗$\\cdot b$⃗/(|a⃗||b⃗|$)=1/(\\sqrt2\\cdot \\sqrt2)=1/2$ → $\\theta=60$°.",
+            "explanation": "$cos\\theta=a$⃗$\\cdot b$⃗/(|a⃗||b⃗|$)=1/(\\sqrt{2}\\cdot \\sqrt{2})=1/2$ → $\\theta=60$°.",
             "options": [
               "30°",
               "45°",
@@ -8976,7 +8976,7 @@
             "type": 1,
             "question": "Khoảng cách từ M(1;1;1) đến mặt phẳng 2x+2y+z−4=0 là?",
             "answer": 0,
-            "explanation": "d=|2(1)+2(1)+1−4|$/\\sqrt(4+4+1)=$|2+2+1−4|/3=|1|$/3=\\frac{1}{3}$.",
+            "explanation": "d=|2(1)+2(1)+1−4|$/\\sqrt{4+4+1}=$|2+2+1−4|/3=|1|$/3=\\frac{1}{3}$.",
             "options": [
               "$\\frac{1}{3}$",
               "1",
@@ -8991,7 +8991,7 @@
             "answer": [
               "√14"
             ],
-            "explanation": "$\\sqrt(9+1+4)=\\sqrt14$."
+            "explanation": "$\\sqrt{9+1+4}=\\sqrt{14}$."
           },
           {
             "id": "c11_math_l8_b5",
@@ -9274,7 +9274,7 @@
               "7"
             ],
             "answer": 2,
-            "explanation": "|z|$=\\sqrt(9+16)=\\sqrt25=5$."
+            "explanation": "|z|$=\\sqrt{9+16}=\\sqrt{25}=5$."
           },
           {
             "id": "c11_math_l11_n3",
@@ -9329,7 +9329,7 @@
             "question": "z=1+i. |z|$^{2}$ bằng:",
             "options": [
               "1",
-              "$\\sqrt2$",
+              "$\\sqrt{2}$",
               "2",
               "4"
             ],
@@ -9359,7 +9359,7 @@
             "answer": [
               "5"
             ],
-            "explanation": "|3−4i|$=\\sqrt(9+16)=5$."
+            "explanation": "|3−4i|$=\\sqrt{9+16}=5$."
           },
           {
             "id": "c11_math_l11_b5",
@@ -9430,12 +9430,12 @@
           {
             "id": "q6",
             "type": 3,
-            "question": "Hai điện tích $q_{1}$ = $q_{2}$ = $3\\times 10$⁻$^{6}$ C, r = 0,3 m, k = $9\\times 10^{9}$. Tính lực Coulomb (N).",
+            "question": "Hai điện tích $q_{1}$ = $q_{2}$ = $3\\times 10^{-6}$ C, r = 0,3 m, k = $9\\times 10^{9}$. Tính lực Coulomb (N).",
             "answer": [
               "0,9",
               "0.9"
             ],
-            "explanation": "F = k|$q_{1}q_{2}$|$/r^{2}$ = $9\\times 10^{9}$ $\\times $ $(3\\times 10$⁻$^{6})^{2}$ / (0,$3)^{2}$ = $9\\times 10^{9}$ $\\times $ $9\\times 10$⁻$^{12}$ / 0,09 = 0,9 N."
+            "explanation": "F = k|$q_{1}q_{2}$|$/r^{2}$ = $9\\times 10^{9}$ $\\times $ $(3\\times 10$⁻$^{6})^{2}$ / (0,$3)^{2}$ = $9\\times 10^{9}$ $\\times $ $9\\times 10^{-12}$ / 0,09 = 0,9 N."
           },
           {
             "id": "q7",
@@ -9460,19 +9460,19 @@
           {
             "id": "q9",
             "type": 3,
-            "question": "Điện tích q = $2\\times 10$⁻$^{6}$ C đặt trong điện trường E = $5\\times 10^{4}$ $V/m$. Lực điện tác dụng là bao nhiêu Newton?",
+            "question": "Điện tích q = $2\\times 10^{-6}$ C đặt trong điện trường E = $5\\times 10^{4}$ $V/m$. Lực điện tác dụng là bao nhiêu Newton?",
             "answer": [
               "0,1",
               "0.1"
             ],
-            "explanation": "F = qE = $2\\times 10$⁻$^{6}$ $\\times $ $5\\times 10^{4}$ = 0,1 N."
+            "explanation": "F = qE = $2\\times 10^{-6}$ $\\times $ $5\\times 10^{4}$ = 0,1 N."
           }
         ],
         "boss": [
           {
             "id": "b1",
             "type": 1,
-            "question": "Hai điện tích $q_{1}=q_{2}=2\\times 10$⁻$^{6}$ C, r=0,1 m, $\\varepsilon=1$. Lực tương tác là?",
+            "question": "Hai điện tích $q_{1}=q_{2}=2\\times 10^{-6}$ C, r=0,1 m, $\\varepsilon=1$. Lực tương tác là?",
             "options": [
               "1,8 N",
               "3,6 N",
@@ -9480,7 +9480,7 @@
               "18 N"
             ],
             "answer": 0,
-            "explanation": "F = k|$q_{1}q_{2}$|$/r^{2}$ = $9\\times 10^{9}$ $\\times $ $(2\\times 10$⁻$^{6})^{2}$ / (0,$1)^{2}$ = $9\\times 10^{9}$ $\\times $ $4\\times 10$⁻$^{12}$ / 0,01 = 3,6 N. Đã tự sửa: đáp án đúng là 3,6 N (index 1)."
+            "explanation": "F = k|$q_{1}q_{2}$|$/r^{2}$ = $9\\times 10^{9}$ $\\times $ $(2\\times 10$⁻$^{6})^{2}$ / (0,$1)^{2}$ = $9\\times 10^{9}$ $\\times $ $4\\times 10^{-12}$ / 0,01 = 3,6 N. Đã tự sửa: đáp án đúng là 3,6 N (index 1)."
           },
           {
             "id": "b2",
@@ -9488,12 +9488,12 @@
             "question": "Ba điện tích bằng nhau q đặt tại ba đỉnh tam giác đều cạnh a. Lực tổng hợp tác dụng lên mỗi điện tích có độ lớn là?",
             "options": [
               "$\\frac{kq^{2}}{a^{2}}$",
-              "$\\frac{\\sqrt3\\cdot kq^{2}}{a^{2}}$",
+              "$\\frac{\\sqrt{3}\\cdot kq^{2}}{a^{2}}$",
               "$\\frac{2kq^{2}}{a^{2}}$",
               "$\\frac{3kq^{2}}{a^{2}}$"
             ],
             "answer": 1,
-            "explanation": "Mỗi điện tích chịu 2 lực bằng nhau $F=\\frac{kq^{2}}{a^{2}}$, góc giữa hai lực là 60°. Tổng hợp: $F_{\\text{tổng}}$ = $\\frac{\\sqrt3\\cdot kq^{2}}{a^{2}}$."
+            "explanation": "Mỗi điện tích chịu 2 lực bằng nhau $F=\\frac{kq^{2}}{a^{2}}$, góc giữa hai lực là 60°. Tổng hợp: $F_{\\text{tổng}}$ = $\\frac{\\sqrt{3}\\cdot kq^{2}}{a^{2}}$."
           },
           {
             "id": "b3",
@@ -9505,16 +9505,16 @@
           {
             "id": "b4",
             "type": 3,
-            "question": "Cường độ điện trường tại điểm M cách điện tích q = $4\\times 10$⁻$^{6}$ C một đoạn r = 0,2 m là bao nhiêu $V/m$? (k = $9\\times 10^{9})$",
+            "question": "Cường độ điện trường tại điểm M cách điện tích q = $4\\times 10^{-6}$ C một đoạn r = 0,2 m là bao nhiêu $V/m$? (k = $9\\times 10^{9})$",
             "answer": [
               "900000"
             ],
-            "explanation": "E = $\\frac{kq}{r^{2}}$ = $9\\times 10^{9}$ $\\times $ $4\\times 10$⁻$^{6}$ / 0,04 = $36\\times 10^{3}$ / 0,04 = $9\\times 10^{5}$ $V/m$."
+            "explanation": "E = $\\frac{kq}{r^{2}}$ = $9\\times 10^{9}$ $\\times $ $4\\times 10^{-6}$ / 0,04 = $36\\times 10^{3}$ / 0,04 = $9\\times 10^{5}$ $V/m$."
           },
           {
             "id": "c11_phy_l1_b5",
             "type": 3,
-            "question": "Hai điện tích $+4\\muC$ và −$2\\muC$ đặt cách 6cm trong không khí. Lực Coulomb?",
+            "question": "Hai điện tích $+4\\mu\\text{C}$ và −$2\\mu\\text{C}$ đặt cách 6cm trong không khí. Lực Coulomb?",
             "answer": [
               "≈20 N",
               "F=kq1q2/r²"
@@ -9556,18 +9556,18 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Tụ điện $C=2\\muF$, U=100V. Điện tích trên tụ là bao nhiêu $\\muC$?",
+            "question": "Tụ điện $C=2\\mu\\text{F}$, U=100V. Điện tích trên tụ là bao nhiêu $\\mu\\text{C}$?",
             "answer": [
               "200"
             ],
-            "explanation": "$Q=CU=2\\times 10$⁻$^{6}\\times 100=2\\times 10$⁻$^{4}C=200\\muC$."
+            "explanation": "$Q=CU=2\\times 10$⁻$^{6}\\times 100=2\\times 10$⁻$^{4}C=200\\mu\\text{C}$."
           },
           {
             "id": "q4",
             "type": 1,
             "question": "Đơn vị của điện dung tụ điện là?",
             "answer": 2,
-            "explanation": "Điện dung $C=\\frac{Q}{U}$, đơn vị Farad (F). Thực tế dùng $\\muF$, nF, pF.",
+            "explanation": "Điện dung $C=\\frac{Q}{U}$, đơn vị Farad (F). Thực tế dùng $\\mu\\text{F}$, nF, pF.",
             "options": [
               "Volt",
               "Coulomb",
@@ -9580,7 +9580,7 @@
             "type": 1,
             "question": "Tụ điện phẳng: khi tăng khoảng cách hai bản tụ lên 2 lần, điện dung?",
             "answer": 1,
-            "explanation": "$C=\\frac{\\varepsilon_{0}\\varepsilonS}{d}$. d tăng 2 lần → C giảm 2 lần.",
+            "explanation": "$C=\\frac{\\varepsilon_{0}\\varepsilon S}{d}$. d tăng 2 lần → C giảm 2 lần.",
             "options": [
               "Tăng 2 lần",
               "Giảm 2 lần",
@@ -9599,25 +9599,25 @@
           {
             "id": "q7",
             "type": 3,
-            "question": "Hai tụ $C_{1}=3\\muF$, $C_{2}=6\\muF$ mắc song song. Điện dung tương đương là?",
+            "question": "Hai tụ $C_{1}=3\\mu\\text{F}$, $C_{2}=6\\mu\\text{F}$ mắc song song. Điện dung tương đương là?",
             "answer": [
               "9"
             ],
-            "explanation": "Song song: $C=C_{1}+C_{2}=3+6=9\\muF$."
+            "explanation": "Song song: $C=C_{1}+C_{2}=3+6=9\\mu\\text{F}$."
           }
         ],
         "boss": [
           {
             "id": "b1",
             "type": 1,
-            "question": "Hai tụ $C_{1}=4\\muF$, $C_{2}=4\\muF$ mắc nối tiếp. Điện dung tương đương là?",
+            "question": "Hai tụ $C_{1}=4\\mu\\text{F}$, $C_{2}=4\\mu\\text{F}$ mắc nối tiếp. Điện dung tương đương là?",
             "answer": 2,
-            "explanation": "Nối tiếp: $\\frac{1}{C}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}=\\frac{1}{4}+\\frac{1}{4}=\\frac{1}{2}$ → $C=2\\muF$.",
+            "explanation": "Nối tiếp: $\\frac{1}{C}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}=\\frac{1}{4}+\\frac{1}{4}=\\frac{1}{2}$ → $C=2\\mu\\text{F}$.",
             "options": [
-              "8 $\\muF$",
-              "4 $\\muF$",
-              "2 $\\muF$",
-              "1 $\\muF$"
+              "8 $\\mu\\text{F}$",
+              "4 $\\mu\\text{F}$",
+              "2 $\\mu\\text{F}$",
+              "1 $\\mu\\text{F}$"
             ]
           },
           {
@@ -9631,7 +9631,7 @@
           {
             "id": "b3",
             "type": 1,
-            "question": "Tụ $C=10\\muF$ tích điện đến U=200V. Năng lượng tích trữ là?",
+            "question": "Tụ $C=10\\mu\\text{F}$ tích điện đến U=200V. Năng lượng tích trữ là?",
             "answer": 1,
             "explanation": "$W=\\frac{CU^{2}}{2}=10\\times 10$⁻$\\frac{^{6}\\times 200^{2}}{2}=10\\times 10$⁻$^{6}\\times 20000=0$,2J.",
             "options": [
@@ -9644,7 +9644,7 @@
           {
             "id": "c11_phy_l2_b4",
             "type": 3,
-            "question": "Tụ điện $C=10\\muF$, U=100V. Điện tích Q=?",
+            "question": "Tụ điện $C=10\\mu\\text{F}$, U=100V. Điện tích Q=?",
             "answer": [
               "10⁻³ C = 1mC",
               "Q=CU=10⁻⁵×100=10⁻³C"
@@ -9912,10 +9912,10 @@
             "answer": 0,
             "explanation": "$B=\\mu_{0}nI=4\\pi\\times 10$⁻$^{7}\\times (1000/0$,$2)\\times 2=4\\pi\\times 10$⁻$^{7}\\times 5000\\times 2=4\\pi\\times 10$⁻$^{3}T$.",
             "options": [
-              "$4\\pi\\times 10$⁻$^{3}$ T",
-              "$2\\pi\\times 10$⁻$^{3}$ T",
-              "$8\\pi\\times 10$⁻$^{3}$ T",
-              "$\\pi\\times 10$⁻$^{3}$ T"
+              "$4\\pi\\times 10^{-3}$ T",
+              "$2\\pi\\times 10^{-3}$ T",
+              "$8\\pi\\times 10^{-3}$ T",
+              "$\\pi\\times 10^{-3}$ T"
             ]
           },
           {
@@ -9956,10 +9956,10 @@
             "type": 1,
             "question": "Định luật Faraday: suất điện động cảm ứng eₓ=?",
             "answer": 1,
-            "explanation": "e=−$\\frac{\\Delta\\Phi}{\\Deltat}$ (dấu − thể hiện quy tắc Lenz). Đơn vị V.",
+            "explanation": "e=−$\\frac{\\Delta\\Phi}{\\Delta t}$ (dấu − thể hiện quy tắc Lenz). Đơn vị V.",
             "options": [
               "$B\\cdot I\\cdot L$",
-              "−$\\frac{\\Delta\\Phi}{\\Deltat}$",
+              "−$\\frac{\\Delta\\Phi}{\\Delta t}$",
               "$B\\cdot v\\cdot L$",
               "$\\frac{\\Phi}{t}$"
             ]
@@ -9980,7 +9980,7 @@
               "0,02",
               "20"
             ],
-            "explanation": "|e|$=\\frac{\\Delta\\Phi}{\\Deltat}=\\frac{S\\DeltaB}{\\Deltat}=100\\times 10$⁻$^{4}\\times (0$,5−0,1)/0,2=10⁻$^{2}\\times 2=0$,02V."
+            "explanation": "|e|$=\\frac{\\Delta\\Phi}{\\Delta t}=\\frac{S\\DeltaB}{\\Delta t}=100\\times 10$⁻$^{4}\\times (0$,5−0,1)/0,2=10⁻$^{2}\\times 2=0$,02V."
           },
           {
             "id": "q4",
@@ -10000,7 +10000,7 @@
             "type": 1,
             "question": "Hiện tượng tự cảm xảy ra khi?",
             "answer": 1,
-            "explanation": "Tự cảm: từ thông biến thiên do I biến thiên → sinh ra suất điện động tự cảm e=−$\\frac{L\\DeltaI}{\\Deltat}$.",
+            "explanation": "Tự cảm: từ thông biến thiên do I biến thiên → sinh ra suất điện động tự cảm e=−$\\frac{L\\DeltaI}{\\Delta t}$.",
             "options": [
               "Dòng điện không đổi qua cuộn dây",
               "Từ thông qua cuộn dây biến thiên do dòng điện chính nó biến thiên",
@@ -10023,7 +10023,7 @@
             "answer": [
               "2"
             ],
-            "explanation": "|e|=L|$\\frac{\\DeltaI}{\\Deltat}$|=0,$\\frac{1\\times 4}{0}$,2=2V."
+            "explanation": "|e|=L|$\\frac{\\DeltaI}{\\Delta t}$|=0,$\\frac{1\\times 4}{0}$,2=2V."
           }
         ],
         "boss": [
@@ -10068,7 +10068,7 @@
             "answer": [
               "60"
             ],
-            "explanation": "|e|$=N\\times $|$\\frac{\\Delta\\Phi}{\\Deltat}$|$=200\\times (0$,05−0,02)/0,$1=200\\times 0$,3=60V."
+            "explanation": "|e|$=N\\times $|$\\frac{\\Delta\\Phi}{\\Delta t}$|$=200\\times (0$,05−0,02)/0,$1=200\\times 0$,3=60V."
           },
           {
             "id": "c11_phy_l5_b5",
@@ -10122,7 +10122,7 @@
               "$\\frac{3}{4}$",
               "$\\frac{4}{3}$",
               "1",
-              "$\\frac{\\sqrt3}{2}$"
+              "$\\frac{\\sqrt{3}}{2}$"
             ],
             "answer": 0,
             "explanation": "sin $i_{\\text{gh}}$ = $\\frac{n_{2}}{n_{1}}$ = $\\frac{1}{(4/3)}$ = $\\frac{3}{4}$."
@@ -10178,7 +10178,7 @@
           {
             "id": "c11_phy_l6_b3",
             "type": 1,
-            "question": "Ánh sáng đi từ môi trường A $(n=\\sqrt2)$ sang B (n=1). Góc giới hạn xấp xỉ:",
+            "question": "Ánh sáng đi từ môi trường A $(n=\\sqrt{2})$ sang B (n=1). Góc giới hạn xấp xỉ:",
             "options": [
               "30°",
               "45°",
@@ -10186,7 +10186,7 @@
               "90°"
             ],
             "answer": 1,
-            "explanation": "sin $i_{\\text{gh}}=\\frac{1}{\\sqrt2}$ → $i_{\\text{gh}}=45$°."
+            "explanation": "sin $i_{\\text{gh}}=\\frac{1}{\\sqrt{2}}$ → $i_{\\text{gh}}=45$°."
           },
           {
             "id": "c11_phy_l6_b6",
@@ -10325,17 +10325,17 @@
               "$\\frac{\\pi}{5}$ s",
               "$\\frac{2\\pi}{10}$ s",
               "0,$2\\pi$ s",
-              "$\\frac{2\\pi}{\\sqrt100}$ s"
+              "$\\frac{2\\pi}{\\sqrt{100}}$ s"
             ],
             "answer": 2,
-            "explanation": "$T=2\\pi\\sqrt(m/k)=2\\pi\\sqrt(0$,$\\frac{1}{10)=2\\pi/10=\\pi/5\\approx 0}$,628 s. Đáp án 0,$2\\pi=\\frac{\\pi}{5}$."
+            "explanation": "$T=2\\pi\\sqrt{m/k}=2\\pi\\sqrt{0{,}1/10}=2\\pi/10=\\pi/5\\approx 0{,}628$ s."
           },
           {
             "id": "c11_phy_l8_n3",
             "type": 2,
             "question": "Chu kỳ con lắc đơn không phụ thuộc khối lượng vật nặng.",
             "answer": true,
-            "explanation": "$T=2\\pi\\sqrt(l/g)$, chỉ phụ thuộc chiều dài l và gia tốc g."
+            "explanation": "$T=2\\pi\\sqrt{l/g}$, chỉ phụ thuộc chiều dài l và gia tốc g."
           },
           {
             "id": "c11_phy_l8_n5",
@@ -10343,12 +10343,12 @@
             "question": "Con lắc đơn l=1m, $g=\\frac{10m}{s^{2}}$. T=?",
             "options": [
               "$\\frac{\\pi}{5}$ s",
-              "$\\frac{\\pi}{\\sqrt10}$ s",
-              "$\\frac{2\\pi}{\\sqrt10}$ s",
+              "$\\frac{\\pi}{\\sqrt{10}}$ s",
+              "$\\frac{2\\pi}{\\sqrt{10}}$ s",
               "$2\\pi$ s"
             ],
             "answer": 2,
-            "explanation": "$T=2\\pi\\sqrt(1/10)=\\frac{2\\pi}{\\sqrt10\\approx 2}$ s."
+            "explanation": "$T=2\\pi\\sqrt{1/10}=\\frac{2\\pi}{\\sqrt{10}\\approx 2}$ s."
           },
           {
             "id": "c11_phy_l8_n6",
@@ -10389,7 +10389,7 @@
             "answer": [
               "1"
             ],
-            "explanation": "$T=2\\pi\\sqrt(l/g)$ → $l=g(T/2\\pi)^{2}=10\\times (1/\\pi)^{2}\\approx 1$,01 m $\\approx $ 1 m."
+            "explanation": "$T=2\\pi\\sqrt{l/g}$ → $l=g(T/2\\pi)^{2}=10\\times (1/\\pi)^{2}\\approx 1$,01 m $\\approx $ 1 m."
           },
           {
             "id": "c11_phy_l8_b3",
@@ -10444,14 +10444,14 @@
               "Muối"
             ],
             "answer": 2,
-            "explanation": "pH = 7 tương ứng [H⁺] = 10⁻$^{7}$ M = [OH⁻] → dung dịch trung tính."
+            "explanation": "pH = 7 tương ứng [H⁺] = 10^{-7}$ M = [OH⁻] → dung dịch trung tính."
           },
           {
             "id": "q2",
             "type": 2,
             "question": "Dung dịch có pH < 7 là dung dịch axit.",
             "answer": true,
-            "explanation": "pH < 7 → [H⁺] > 10⁻$^{7}$ M → môi trường axit."
+            "explanation": "pH < 7 → [H⁺] > 10^{-7}$ M → môi trường axit."
           },
           {
             "id": "q3",
@@ -10460,7 +10460,7 @@
             "answer": [
               "0,001"
             ],
-            "explanation": "[H⁺] = 10^(-pH) = 10⁻$^{3}$ M = 0,001 M."
+            "explanation": "[H⁺] = 10^(-pH) = 10^{-3}$ M = 0,001 M."
           },
           {
             "id": "q4",
@@ -10480,7 +10480,7 @@
             "type": 2,
             "question": "Nước nguyên chất là chất không điện li.",
             "answer": false,
-            "explanation": "Nước điện li rất yếu: $H_{2}O$ ⇌ H⁺ + OH⁻. [H⁺]=[OH⁻]=10⁻$^{7}$ M ở 25°C → pH=7."
+            "explanation": "Nước điện li rất yếu: $H_{2}O$ ⇌ H⁺ + OH⁻. [H⁺]=[OH⁻]=10^{-7}$ M ở 25°C → pH=7."
           },
           {
             "id": "q6",
@@ -10490,7 +10490,7 @@
               "0,01",
               "0.01"
             ],
-            "explanation": "[H⁺] = 10⁻ᵖᴴ = 10⁻$^{2}$ = 0,01 mol/L."
+            "explanation": "[H⁺] = 10⁻ᵖᴴ = 10^{-2}$ = 0,01 mol/L."
           },
           {
             "id": "q7",
@@ -10516,14 +10516,14 @@
               "12"
             ],
             "answer": 1,
-            "explanation": "HCl mạnh, điện li hoàn toàn: [H⁺] = 0,01 = 10⁻$^{2}$ M → pH = 2."
+            "explanation": "HCl mạnh, điện li hoàn toàn: [H⁺] = 0,01 = 10^{-2}$ M → pH = 2."
           },
           {
             "id": "q9",
             "type": 2,
             "question": "Giá trị pH < 7 biểu thị môi trường axit ở 25°C.",
             "answer": true,
-            "explanation": "pH < 7 → [H⁺] > 10⁻$^{7}$ > [OH⁻] → môi trường axit."
+            "explanation": "pH < 7 → [H⁺] > 10^{-7}$ > [OH⁻] → môi trường axit."
           },
           {
             "id": "q10",
@@ -10533,7 +10533,7 @@
               "0,01",
               "0.01"
             ],
-            "explanation": "pH = 12 → pOH = 14−12 = 2 → [OH⁻] = 10⁻$^{2}$ = 0,01 M."
+            "explanation": "pH = 12 → pOH = 14−12 = 2 → [OH⁻] = 10^{-2}$ = 0,01 M."
           }
         ],
         "boss": [
@@ -10566,9 +10566,9 @@
           {
             "id": "b3",
             "type": 2,
-            "question": "Tích số ion của nước Kw = [H⁺][OH⁻] = 10⁻$^{14}$ ở 25°C.",
+            "question": "Tích số ion của nước Kw = [H⁺][OH⁻] = 10^{-14}$ ở 25°C.",
             "answer": true,
-            "explanation": "Kw = 10⁻$^{14}$ là hằng số tích ion của nước ở 25°C. Khi pH + pOH = 14."
+            "explanation": "Kw = 10^{-14}$ là hằng số tích ion của nước ở 25°C. Khi pH + pOH = 14."
           },
           {
             "id": "c11_che_l1_b5",
@@ -10577,7 +10577,7 @@
             "answer": [
               "2"
             ],
-            "explanation": "HCl mạnh → [H⁺]=0,01=10⁻$^{2}$ → pH=2."
+            "explanation": "HCl mạnh → [H⁺]=0,01=10^{-2}$ → pH=2."
           },
           {
             "id": "c11_che_l1_b6",
@@ -12507,7 +12507,7 @@
             "type": 1,
             "question": "Tỉ số truyền i của cơ cấu bánh răng được tính như thế nào?",
             "answer": 1,
-            "explanation": "$i=\\frac{n_{1}}{n_{2}}=\\frac{Z_{2}}{Z_{1}}$ (bánh răng ăn khớp ngoài). n: số vò$\\frac{ng}{phút}$, Z: số răng.",
+            "explanation": "$i=\\frac{n_{1}}{n_{2}}=\\frac{Z_{2}}{Z_{1}}$ (bánh răng ăn khớp ngoài). n: số vòng/phút, Z: số răng.",
             "options": [
               "$i=\\frac{n_{2}}{n_{1}}$",
               "$i=\\frac{n_{1}}{n_{2}}$",
@@ -12564,12 +12564,12 @@
             "type": 1,
             "question": "Bánh răng $Z_{1}=20$ răng $(n_{1}=1500$ vò$\\frac{ng}{phút)}$ ăn khớp bánh $Z_{2}=60$ răng. Tốc độ $n_{2}$ là?",
             "answer": 1,
-            "explanation": "$i=\\frac{Z_{2}}{Z_{1}}=\\frac{60}{20}=3$. $n_{2}=\\frac{n_{1}}{i}=\\frac{1500}{3}=500$ vò$\\frac{ng}{phút}$.",
+            "explanation": "$i=\\frac{Z_{2}}{Z_{1}}=\\frac{60}{20}=3$. $n_{2}=\\frac{n_{1}}{i}=\\frac{1500}{3}=500$ vòng/phút.",
             "options": [
-              "4500 vò$\\frac{ng}{phút}$",
-              "500 vò$\\frac{ng}{phút}$",
-              "3000 vò$\\frac{ng}{phút}$",
-              "750 vò$\\frac{ng}{phút}$"
+              "4500 vòng/phút",
+              "500 vòng/phút",
+              "3000 vòng/phút",
+              "750 vòng/phút"
             ]
           },
           {
@@ -14568,7 +14568,7 @@
             "type": 1,
             "question": "Đại từ quan hệ nào dùng cho chủ ngữ chỉ người?",
             "answer": 2,
-            "explanation": "\"who\" thay thế chủ ngữ là người. \"whom\" thay tân ngữ người. \"which\" cho vậ$\\frac{t}{sự}$ việc.",
+            "explanation": "\"who\" thay thế chủ ngữ là người. \"whom\" thay tân ngữ người. \"which\" cho vật/sự việc.",
             "options": [
               "which",
               "whom",
@@ -16111,7 +16111,7 @@
             "question": "Dân số Việt Nam phân bố không đều: đông ở đồng bằng và ven biển, thưa ở miền núi.",
             "answer": true,
             "options": true,
-            "explanation": "Đồng bằng sông Hồng: >1000 ngườ$\\frac{i}{km^{2}}$. Tây Bắc, Tây Nguyên: <50 ngườ$\\frac{i}{km^{2}}$. Phân bố phụ thuộc địa hình, lịch sử và kinh tế."
+            "explanation": "Đồng bằng sông Hồng: >1000 người/km². Tây Bắc, Tây Nguyên: <50 người/km². Phân bố phụ thuộc địa hình, lịch sử và kinh tế."
           },
           {
             "id": "q4",
@@ -16833,7 +16833,7 @@
             "answer": 1,
             "explanation": "(eˣ)'=eˣ — hàm bất biến qua đạo hàm.",
             "options": [
-              "xeˣ⁻$^{1}$",
+              "xeˣ^{-1}$",
               "eˣ",
               "e^(x−1)",
               "xe^x"
@@ -16948,7 +16948,7 @@
             "question": "$i^{2}$ = −1, đây là định nghĩa của đơn vị ảo i.",
             "answer": true,
             "options": true,
-            "explanation": "$i=\\sqrt($−1) → $i^{2}=$−1. $i^{3}=$−i, $i^{4}=1$. Chu kỳ 4."
+            "explanation": "$i=\\sqrt{-1}$ → $i^{2}=$−1. $i^{3}=$−i, $i^{4}=1$. Chu kỳ 4."
           },
           {
             "id": "q3",
@@ -16965,7 +16965,7 @@
             "type": 1,
             "question": "Mô-đun của số phức z=3+4i là?",
             "answer": 0,
-            "explanation": "|z|$=\\sqrt(3^{2}+4^{2})=\\sqrt25=5$.",
+            "explanation": "|z|$=\\sqrt{3^{2}+4^{2}}=\\sqrt{25}=5$.",
             "options": [
               "5",
               "7",
@@ -17001,7 +17001,7 @@
             "type": 1,
             "question": "Giải phương trình $x^{2}+4=0$ trong tập số phức.",
             "answer": 1,
-            "explanation": "$x^{2}=$−4 → $x=\\pm \\sqrt($−$4)=\\pm 2i$.",
+            "explanation": "$x^{2}=$−4 → $x=\\pm\\sqrt{-4}=\\pm 2i$.",
             "options": [
               "$x=\\pm 2$",
               "$x=\\pm 2i$",
@@ -17020,12 +17020,12 @@
           {
             "id": "b3",
             "type": 1,
-            "question": "Dạng lượng giác của 1+i là? $(r=\\sqrt2$, $\\varphi=\\frac{\\pi}{4)}$",
+            "question": "Dạng lượng giác của 1+i là? $(r=\\sqrt{2}$, $\\varphi=\\frac{\\pi}{4)}$",
             "answer": 0,
-            "explanation": "r=|1+i|$=\\sqrt2$. $\\varphi=arctan(1/1)=\\frac{\\pi}{4}$. → $\\sqrt2(cos(\\pi/4)+i\\cdot sin(\\pi/4))$.",
+            "explanation": "r=|1+i|$=\\sqrt{2}$. $\\varphi=arctan(1/1)=\\frac{\\pi}{4}$. → $\\sqrt{2}(cos(\\pi/4)+i\\cdot sin(\\pi/4))$.",
             "options": [
-              "$\\sqrt2(cos(\\pi/4)+i\\cdot sin(\\pi/4))$",
-              "$\\sqrt2(cos(\\pi/4)$−$i\\cdot sin(\\pi/4))$",
+              "$\\sqrt{2}(cos(\\pi/4)+i\\cdot sin(\\pi/4))$",
+              "$\\sqrt{2}(cos(\\pi/4)$−$i\\cdot sin(\\pi/4))$",
               "$2(cos(\\pi/4)+i\\cdot sin(\\pi/4))$",
               "1+i"
             ]
@@ -17036,12 +17036,12 @@
             "question": "|2+2i|=?",
             "options": [
               "2",
-              "$2\\sqrt2$",
+              "$2\\sqrt{2}$",
               "4",
-              "$\\sqrt8$"
+              "$\\sqrt{8}$"
             ],
             "answer": 1,
-            "explanation": "$\\sqrt(4+4)=\\sqrt8=2\\sqrt2$."
+            "explanation": "$\\sqrt{4+4}=\\sqrt{8}=2\\sqrt{2}$."
           },
           {
             "id": "c12_math_l5_b6",
@@ -17101,9 +17101,9 @@
           {
             "id": "q5",
             "type": 1,
-            "question": "Tính ∫$_{0}^{1}$ $x\\cdot \\sqrt(1$−$x^{2})dx$ bằng cách đặt u=1−$x^{2}$.",
+            "question": "Tính ∫$_{0}^{1}$ $x\\cdot\\sqrt{1-x^{2}}\\\\,dx$ bằng cách đặt u=1−$x^{2}$.",
             "answer": 0,
-            "explanation": "u=1−$x^{2}$→du=−2xdx. x=0→u=1, x=1→u=0. ∫=−$\\frac{1}{2}$∫$_{1}^{0}\\sqrtu\\cdot du=\\frac{1}{2\\cdot }$[2u^$\\frac{(3/2)}{3}$]$_{0}^{1}=\\frac{1}{3}$.",
+            "explanation": "u=1−$x^{2}$→du=−2xdx. x=0→u=1, x=1→u=0. ∫=−$\\frac{1}{2}$∫$_{1}^{0}\\sqrt{u}\\cdot du=\\frac{1}{2\\cdot }$[2u^$\\frac{(3/2)}{3}$]$_{0}^{1}=\\frac{1}{3}$.",
             "options": [
               "$\\frac{1}{3}$",
               "$\\frac{1}{2}$",
@@ -17270,10 +17270,10 @@
             "type": 1,
             "question": "Tứ diện đều cạnh a có thể tích V=?",
             "answer": 0,
-            "explanation": "$V=\\frac{a^{3}\\sqrt2}{12}$. Có thể nhớ: $V=(1/3)\\cdot S_{\\text{đáy}}\\cdot h$ với S_đáy tam giác đều cạnh a, h từ đỉnh xuống đáy.",
+            "explanation": "$V=\\frac{a^{3}\\sqrt{2}}{12}$. Có thể nhớ: $V=(1/3)\\cdot S_{\\text{đáy}}\\cdot h$ với S_đáy tam giác đều cạnh a, h từ đỉnh xuống đáy.",
             "options": [
-              "$\\frac{a^{3}\\sqrt2}{12}$",
-              "$\\frac{a^{3}\\sqrt2}{6}$",
+              "$\\frac{a^{3}\\sqrt{2}}{12}$",
+              "$\\frac{a^{3}\\sqrt{2}}{6}$",
               "$\\frac{a^{3}}{6}$",
               "$\\frac{a^{3}}{12}$"
             ]
@@ -17291,12 +17291,12 @@
             "type": 1,
             "question": "Khối cầu ngoại tiếp hình lập phương cạnh a có bán kính R bằng?",
             "answer": 2,
-            "explanation": "Đường chéo hình lập phươ$ng=a\\sqrt3=đường$ kính cầu → $R=\\frac{a\\sqrt3}{2}$.",
+            "explanation": "Đường chéo hình lập phươ$ng=a\\sqrt{3}=đường$ kính cầu → $R=\\frac{a\\sqrt{3}}{2}$.",
             "options": [
               "$\\frac{a}{2}$",
-              "$\\frac{a\\sqrt2}{2}$",
-              "$\\frac{a\\sqrt3}{2}$",
-              "$a\\sqrt3$"
+              "$\\frac{a\\sqrt{2}}{2}$",
+              "$\\frac{a\\sqrt{3}}{2}$",
+              "$a\\sqrt{3}$"
             ]
           },
           {
@@ -17471,7 +17471,7 @@
             "answer": [
               "5"
             ],
-            "explanation": "|AB|$=\\sqrt(9+16+0)=\\sqrt25=5$."
+            "explanation": "|AB|$=\\sqrt{9+16+0}=\\sqrt{25}=5$."
           },
           {
             "id": "c12_math_l9_n2",
@@ -17484,7 +17484,7 @@
               "I(1,−2,0), R=9"
             ],
             "answer": 0,
-            "explanation": "$(x-a)^{2}+(y-b)^{2}+(z-c)^{2}=R^{2}$: tâm I(1,-2,0), $R=\\sqrt9=3$."
+            "explanation": "$(x-a)^{2}+(y-b)^{2}+(z-c)^{2}=R^{2}$: tâm I(1,-2,0), $R=\\sqrt{9}=3$."
           },
           {
             "id": "c12_math_l9_n3",
@@ -17530,7 +17530,7 @@
             "answer": [
               "3"
             ],
-            "explanation": "d=|0+0+0-9|$/\\sqrt(4+1+4)=\\frac{9}{3}=3$."
+            "explanation": "d=|0+0+0-9|$/\\sqrt{4+1+4}=\\frac{9}{3}=3$."
           }
         ],
         "boss": [
@@ -17759,7 +17759,7 @@
             "answer": [
               "3"
             ],
-            "explanation": "d=|0+0+0-9|$/\\sqrt(1+4+4)=\\frac{9}{3}=3$."
+            "explanation": "d=|0+0+0-9|$/\\sqrt{1+4+4}=\\frac{9}{3}=3$."
           },
           {
             "id": "c12_math_l11_n5",
@@ -17788,7 +17788,7 @@
             "answer": [
               "1"
             ],
-            "explanation": "$\\delta=$|1-4|$/\\sqrt(4+4+1)=\\frac{3}{3}=1$."
+            "explanation": "$\\delta=$|1-4|$/\\sqrt{4+4+1}=\\frac{3}{3}=1$."
           }
         ],
         "boss": [
@@ -17797,13 +17797,13 @@
             "type": 1,
             "question": "Mặt phẳng (P): x+y+z=3. Khoảng cách từ A(2,1,0) đến (P)?",
             "options": [
-              "$\\frac{\\sqrt3}{3}$",
-              "$\\frac{2\\sqrt3}{3}$",
-              "$\\sqrt3$",
+              "$\\frac{\\sqrt{3}}{3}$",
+              "$\\frac{2\\sqrt{3}}{3}$",
+              "$\\sqrt{3}$",
               "2"
             ],
             "answer": 1,
-            "explanation": "d=|2+1+0-3|$/\\sqrt3=\\frac{0}{\\sqrt3}=0$. A nằm trên (P)? 2+1+0=3 ✓. Vậy d=0. [Đề: A(2,2,0)] d=|2+2+0-3|$/\\sqrt3=\\frac{1}{\\sqrt3}=\\frac{\\sqrt3}{3}$."
+            "explanation": "d=|2+1+0-3|$/\\sqrt{3}=\\frac{0}{\\sqrt{3}}=0$. A nằm trên (P)? 2+1+0=3 ✓. Vậy d=0. [Đề: A(2,2,0)] d=|2+2+0-3|$/\\sqrt{3}=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$."
           },
           {
             "id": "c12_math_l11_b3",
@@ -17819,7 +17819,7 @@
             "answer": [
               "2"
             ],
-            "explanation": "$\\delta=$|1−7|$/\\sqrt(4+1+4)=\\frac{6}{3}=2$."
+            "explanation": "$\\delta=$|1−7|$/\\sqrt{4+1+4}=\\frac{6}{3}=2$."
           },
           {
             "id": "c12_math_l11_b5",
@@ -18112,10 +18112,10 @@
               "1 rad/s",
               "10 rad/s",
               "100 rad/s",
-              "$\\sqrt10$ rad/s"
+              "$\\sqrt{10}$ rad/s"
             ],
             "answer": 1,
-            "explanation": "$\\omega$ = $\\sqrt(k/m)$ = $\\sqrt(10/0$,1) = $\\sqrt100$ = 10 rad/s."
+            "explanation": "$\\omega = \\sqrt{k/m} = \\sqrt{10/0{,}1} = \\sqrt{100} = 10$ rad/s."
           },
           {
             "id": "q2",
@@ -18151,7 +18151,7 @@
             "answer": [
               "1,26"
             ],
-            "explanation": "$T=2\\pi\\sqrt(l/g)=2\\pi\\sqrt(0$,$\\frac{4}{10)=2\\pi\\sqrt0}$,$04=2\\pi\\times 0$,2=0,$4\\pi\\approx 1$,257s."
+            "explanation": "$T=2\\pi\\sqrt{l/g}=2\\pi\\sqrt{0{,}4/10}=2\\pi\\sqrt{0{,}04}=2\\pi\\times 0{,}2=0{,}4\\pi\\approx 1{,}257$ s."
           },
           {
             "id": "q7",
@@ -18193,7 +18193,7 @@
             "type": 2,
             "question": "Con lắc đơn dao động nhỏ có chu kỳ phụ thuộc vào biên độ dao động.",
             "answer": false,
-            "explanation": "Với góc nhỏ $(\\theta$ < 5°), T = $2\\pi\\sqrt(l/g)$ không phụ thuộc biên độ — đây là tính chất đẳng thời của con lắc đơn."
+            "explanation": "Với góc nhỏ $(\\theta$ < 5°), T = $2\\pi\\sqrt{l/g}$ không phụ thuộc biên độ — đây là tính chất đẳng thời của con lắc đơn."
           }
         ],
         "boss": [
@@ -18215,13 +18215,13 @@
             "type": 1,
             "question": "Vật dao động x = $10cos(\\pit$ + $\\frac{\\pi}{4)}$ cm. Tại t=0,5s, li độ của vật là?",
             "options": [
-              "−$5\\sqrt2$ cm",
-              "$5\\sqrt2$ cm",
+              "−$5\\sqrt{2}$ cm",
+              "$5\\sqrt{2}$ cm",
               "10 cm",
               "0 cm"
             ],
             "answer": 0,
-            "explanation": "x(0,5)=10cos(0,$5\\pi+\\frac{\\pi}{4)=10cos(3\\pi/4)=10\\times (}$−$\\frac{\\sqrt2}{2)=}$−$5\\sqrt2$ cm."
+            "explanation": "x(0,5)=10cos(0,$5\\pi+\\frac{\\pi}{4)=10cos(3\\pi/4)=10\\times (}$−$\\frac{\\sqrt{2}}{2)=}$−$5\\sqrt{2}$ cm."
           },
           {
             "id": "b3",
@@ -18237,7 +18237,7 @@
             "answer": [
               "5"
             ],
-            "explanation": "$\\omega=\\sqrt(k/m)=\\sqrt(25/0$,$1)=\\sqrt250=5\\sqrt10\\approx 15$,8 rad/s. Tự sửa: $\\sqrt250\\approx 15$,8."
+            "explanation": "$\\omega=\\sqrt{k/m}=\\sqrt{25/0{,}1}=\\sqrt{250}=5\\sqrt{10}\\approx 15{,}8$ rad/s."
           },
           {
             "id": "c12_phy_l1_b5",
@@ -18247,7 +18247,7 @@
               "ω=√(k/m)=√1000≈31,6rad/s; T≈0,199s",
               "T=2π/ω"
             ],
-            "explanation": "$\\omega=\\sqrt(100/0$,$1)=\\sqrt1000\\approx 31$,$\\frac{6rad}{s}$; $T=\\frac{2\\pi}{31}$,$6\\approx 0$,2s."
+            "explanation": "$\\omega=\\sqrt{100/0{,}1}=\\sqrt{1000}\\approx 31{,}6$ rad/s; $T=\\frac{2\\pi}{31{,}6}\\approx 0{,}2$ s."
           },
           {
             "id": "c12_phy_l1_b6",
@@ -18646,12 +18646,12 @@
             "type": 1,
             "question": "Giá trị hiệu dụng của dòng điện xoay chiều $i=I_{0}cos(\\omegat)$ là?",
             "answer": 2,
-            "explanation": "$I=\\frac{I_{0}}{\\sqrt2\\approx 0}$,$707\\cdot I_{0}$. Tương tự $U=\\frac{U_{0}}{\\sqrt2}$. Giá trị hiệu dụng = giá trị gây cùng công suất như DC.",
+            "explanation": "$I=\\frac{I_{0}}{\\sqrt{2}\\approx 0}$,$707\\cdot I_{0}$. Tương tự $U=\\frac{U_{0}}{\\sqrt{2}}$. Giá trị hiệu dụng = giá trị gây cùng công suất như DC.",
             "options": [
               "$I_{0}$",
               "$\\frac{I_{0}}{2}$",
-              "$\\frac{I_{0}}{\\sqrt2}$",
-              "$I_{0}\\sqrt2$"
+              "$\\frac{I_{0}}{\\sqrt{2}}$",
+              "$I_{0}\\sqrt{2}$"
             ]
           },
           {
@@ -18671,7 +18671,7 @@
               "Z_L=Z_C",
               "ω²LC=1"
             ],
-            "explanation": "Cộng hưởng: $Z_{\\text{L}}=Z_{\\text{C}}$ → $\\omegaL=\\frac{1}{(\\omegaC)}$ → $\\omega=\\frac{1}{\\sqrt(LC)}$. Lúc đó Z=R (nhỏ nhất), $I=\\frac{U}{R}$ (lớn nhất)."
+            "explanation": "Cộng hưởng: $Z_{\\text{L}}=Z_{\\text{C}}$ → $\\omega L=\\frac{1}{(\\omega C)}$ → $\\omega=\\frac{1}{\\sqrt{LC}}$. Lúc đó Z=R (nhỏ nhất), $I=\\frac{U}{R}$ (lớn nhất)."
           },
           {
             "id": "q4",
@@ -18691,21 +18691,21 @@
             "type": 1,
             "question": "Cảm kháng $Z_{\\text{L}}$ của cuộn dây và dung kháng $Z_{\\text{C}}$ của tụ là?",
             "answer": 1,
-            "explanation": "$Z_{\\text{L}}=\\omegaL$ $(\\Omega)$. $Z_{\\text{C}}=\\frac{1}{(\\omegaC)}$ $(\\Omega)$. $\\Omega=2\\pif$.",
+            "explanation": "$Z_{\\text{L}}=\\omega L$ $(\\Omega)$. $Z_{\\text{C}}=\\frac{1}{(\\omega C)}$ $(\\Omega)$. $\\Omega=2\\pif$.",
             "options": [
               "$Z_{\\text{L}}=R$, $Z_{\\text{C}}=R$",
-              "$Z_{\\text{L}}=\\omegaL$, $Z_{\\text{C}}=\\frac{1}{(\\omegaC)}$",
-              "$Z_{\\text{L}}=\\frac{1}{(\\omegaL)}$, $Z_{\\text{C}}=\\omegaC$",
+              "$Z_{\\text{L}}=\\omega L$, $Z_{\\text{C}}=\\frac{1}{(\\omega C)}$",
+              "$Z_{\\text{L}}=\\frac{1}{(\\omega L)}$, $Z_{\\text{C}}=\\omega C$",
               "$Z_{\\text{L}}=\\frac{L}{\\omega}$, $Z_{\\text{C}}=C\\omega$"
             ]
           },
           {
             "id": "q6",
             "type": 2,
-            "question": "Trong mạch RLC nối tiếp, điện áp hiệu dụng $U=\\sqrt(U_{\\text{R}}^{2}+(U_{\\text{L}}$−$U_{\\text{C}})^{2})$.",
+            "question": "Trong mạch RLC nối tiếp, điện áp hiệu dụng $U=\\sqrt{U_{\\text{R}}^{2}+(U_{\\text{L}}-U_{\\text{C}})^{2}}$.",
             "answer": true,
             "options": true,
-            "explanation": "Tổng trở $Z=\\sqrt(R^{2}+(Z_{\\text{L}}$−$Z_{\\text{C}})^{2})$. U=IZ, $U_{\\text{R}}=IR$, $U_{\\text{L}}=IZ_{\\text{L}}$, $U_{\\text{C}}=IZ_{\\text{C}}$."
+            "explanation": "Tổng trở $Z=\\sqrt{R^{2}+(Z_{\\text{L}}-Z_{\\text{C}})^{2}}$. U=IZ, $U_{\\text{R}}=IR$, $U_{\\text{L}}=IZ_{\\text{L}}$, $U_{\\text{C}}=IZ_{\\text{C}}$."
           }
         ],
         "boss": [
@@ -18714,9 +18714,9 @@
             "type": 1,
             "question": "Mạch gồm $R=100\\Omega$, $Z_{\\text{L}}=150\\Omega$, $Z_{\\text{C}}=50\\Omega$ nối tiếp. Tổng trở Z bằng?",
             "answer": 0,
-            "explanation": "$Z=\\sqrt(R^{2}+(Z_{\\text{L}}$−$Z_{\\text{C}})^{2})=\\sqrt(100^{2}+(150$−$50)^{2})=\\sqrt(10000+10000)=100\\sqrt2$ $\\Omega$.",
+            "explanation": "$Z=\\sqrt{R^{2}+(Z_{\\text{L}}-Z_{\\text{C}})^{2}}=\\sqrt{100^{2}+(150-50)^{2}}=\\sqrt{10000+10000}=100\\sqrt{2}\\Omega$.",
             "options": [
-              "$100\\sqrt2$ $\\Omega$",
+              "$100\\sqrt{2}\\Omega$",
               "200 $\\Omega$",
               "150 $\\Omega$",
               "100 $\\Omega$"
@@ -18770,12 +18770,12 @@
           {
             "id": "c12_phy_l6_n1",
             "type": 3,
-            "question": "Năng lượng photon ánh sáng có bước sóng $\\lambda=0$,$6\\mum$? (h=6,$625\\times 10$⁻$^{34}$, $c=3\\times 10^{8})$",
+            "question": "Năng lượng photon ánh sáng có bước sóng $\\lambda=0$,$6\\mum$? (h=6,$625\\times 10^{-34}$, $c=3\\times 10^{8})$",
             "answer": [
               "≈3,31×10⁻¹⁹ J",
               "3.31e-19 J"
             ],
-            "explanation": "$\\varepsilon=\\frac{hc}{\\lambda}=6$,$625\\times 10$⁻$\\frac{^{34}\\times 3\\times 10^{8}}{(0}$,$6\\times 10$⁻$^{6})\\approx 3$,$31\\times 10$⁻$^{19}$ J."
+            "explanation": "$\\varepsilon=\\frac{hc}{\\lambda}=6$,$625\\times 10$⁻$\\frac{^{34}\\times 3\\times 10^{8}}{(0}$,$6\\times 10$⁻$^{6})\\approx 3$,$31\\times 10^{-19}$ J."
           },
           {
             "id": "c12_phy_l6_n2",
@@ -18825,7 +18825,7 @@
               "6.626e-34 J.s",
               "6,626×10⁻³⁴ J·s"
             ],
-            "explanation": "h $\\approx $ 6,$626\\times 10$⁻$^{34}$ $J\\cdot s$ — hằng số cơ bản của cơ học lượng tử."
+            "explanation": "h $\\approx $ 6,$626\\times 10^{-34}$ $J\\cdot s$ — hằng số cơ bản của cơ học lượng tử."
           }
         ],
         "boss": [
@@ -19014,7 +19014,7 @@
             "answer": [
               "50"
             ],
-            "explanation": "$Z=\\sqrt(30^{2}+40^{2})=\\sqrt(900+1600)=\\sqrt2500=50\\Omega$."
+            "explanation": "$Z=\\sqrt{30^{2}+40^{2}}=\\sqrt{900+1600}=\\sqrt{2500}=50\\Omega$."
           },
           {
             "id": "c12_phy_l8_n2",
@@ -19064,7 +19064,7 @@
               "Z_L=omega*L",
               "Z_L=ωL"
             ],
-            "explanation": "$Z_{\\text{L}}=\\omegaL=2\\pifL$, đơn vị $\\Omega$."
+            "explanation": "$Z_{\\text{L}}=\\omega L=2\\pifL$, đơn vị $\\Omega$."
           }
         ],
         "boss": [
@@ -19246,7 +19246,7 @@
               "$kg\\cdot $m/s"
             ],
             "answer": 1,
-            "explanation": "h=6,$626\\times 10$⁻$^{34}$ $J\\cdot s$ — năng lượng $\\times $ thời gian."
+            "explanation": "h=6,$626\\times 10^{-34}$ $J\\cdot s$ — năng lượng $\\times $ thời gian."
           },
           {
             "id": "c12_phy_l10_n3",
@@ -19290,7 +19290,7 @@
           {
             "id": "c12_phy_l10_b1",
             "type": 1,
-            "question": "Mạch LC: L=1mH, $C=1\\muF$. Tần số cộng hưởng $f\\approx $?",
+            "question": "Mạch LC: L=1mH, $C=1\\mu\\text{F}$. Tần số cộng hưởng $f\\approx $?",
             "options": [
               "5033Hz",
               "500Hz",
@@ -19298,7 +19298,7 @@
               "503kHz"
             ],
             "answer": 0,
-            "explanation": "$\\omega=\\frac{1}{\\sqrt(LC)}=\\frac{1}{\\sqrt(10}$⁻$^{3}\\times 10$⁻$^{6})=1/\\sqrt10$⁻$^{9}=10$^4.$5\\approx 31623$ rad/s → $f\\approx 5033Hz$."
+            "explanation": "$\\omega=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{10^{-3}\\times 10^{-6}}}=\\frac{1}{\\sqrt{10^{-9}}}=10^{4.5}\\approx 31623$ rad/s → $f\\approx 5033$ Hz."
           },
           {
             "id": "c12_phy_l10_b2",
@@ -19308,7 +19308,7 @@
               "0.628",
               "0,628"
             ],
-            "explanation": "$T=2\\pi\\sqrt(0$,$\\frac{4}{40)=2\\pi\\sqrt0}$,$01=2\\pi\\times 0$,1=0,$2\\pi\\approx 0$,628s."
+            "explanation": "$T=2\\pi\\sqrt{0{,}4/40}=2\\pi\\sqrt{0{,}01}=2\\pi\\times 0{,}1=0{,}2\\pi\\approx 0{,}628$ s."
           },
           {
             "id": "c12_phy_l10_b3",
@@ -21447,7 +21447,7 @@
               "10000 kJ"
             ],
             "answer": 0,
-            "explanation": "10^6 $\\times $ 10% $\\times $ 10% $\\times $ 10% = 10^6 $\\times $ 10⁻$^{3}$ = 1000 kJ. Ồ: 3 bậc = 10^$6\\times (0$,$1)^{3}=1000kJ$."
+            "explanation": "10^6 $\\times $ 10% $\\times $ 10% $\\times $ 10% = 10^6 $\\times $ 10^{-3}$ = 1000 kJ. Ồ: 3 bậc = 10^$6\\times (0$,$1)^{3}=1000kJ$."
           },
           {
             "id": "c12_bio_l9_b3",
@@ -21990,7 +21990,7 @@
             "type": 2,
             "question": "Cuộn cảm cản dòng xoay chiều nhiều hơn dòng một chiều.",
             "answer": true,
-            "explanation": "$Z_{\\text{L}}=\\omegaL$: f cao → $Z_{\\text{L}}$ lớn → cản AC mạnh. DC: f=0 → $Z_{\\text{L}}=0$ → thông."
+            "explanation": "$Z_{\\text{L}}=\\omega L$: f cao → $Z_{\\text{L}}$ lớn → cản AC mạnh. DC: f=0 → $Z_{\\text{L}}=0$ → thông."
           },
           {
             "id": "c12_tec_l5_b5",
@@ -25780,7 +25780,7 @@
             "type": 1,
             "question": "Đồng bằng sông Hồng có mật độ dân số cao nhất cả nước vì?",
             "answer": 1,
-            "explanation": "ĐBSH: hơn 4000 năm khai thác, đất phù sa sông Hồng màu mỡ, hệ thống đê điều, Hà Nội là trung tâm → mật độ >1000 ngườ$\\frac{i}{km^{2}}$.",
+            "explanation": "ĐBSH: hơn 4000 năm khai thác, đất phù sa sông Hồng màu mỡ, hệ thống đê điều, Hà Nội là trung tâm → mật độ >1000 người/km².",
             "options": [
               "Diện tích lớn nhất",
               "Lịch sử khai thác lâu đời, đất màu mỡ, kinh tế phát triển và là cái nôi văn minh lúa nước",
@@ -26252,7 +26252,7 @@
             "type": 2,
             "question": "Vùng Đồng bằng sông Hồng là vùng đông dân nhất và có mật độ dân số cao nhất Việt Nam.",
             "answer": true,
-            "explanation": "ĐBSH: ~22 triệu dân, mật độ ~1000 ngườ$\\frac{i}{km^{2}}$ — cao nhất cả nước."
+            "explanation": "ĐBSH: ~22 triệu dân, mật độ ~1000 người/km² — cao nhất cả nước."
           }
         ]
       },
@@ -26276,7 +26276,7 @@
             "type": 2,
             "question": "Đồng bằng sông Hồng là vùng có mật độ dân số cao nhất Việt Nam.",
             "answer": true,
-            "explanation": "ĐBSH: ~1000 ngườ$\\frac{i}{km^{2}}$ — cao nhất cả nước."
+            "explanation": "ĐBSH: ~1000 người/km² — cao nhất cả nước."
           },
           {
             "id": "c12_geo_l7_n5",
@@ -26406,7 +26406,7 @@
               "TDMNBB"
             ],
             "answer": 2,
-            "explanation": "Tây Nguyên: mật độ ~100 ngườ$\\frac{i}{km^{2}}$ — thấp nhất. (Đúng hơn: TDMNBB thấp hơn, nhưng Tây Nguyên cũng rất thưa)."
+            "explanation": "Tây Nguyên: mật độ ~100 người/km² — thấp nhất. (Đúng hơn: TDMNBB thấp hơn, nhưng Tây Nguyên cũng rất thưa)."
           },
           {
             "id": "c12_geo_l8_b3",

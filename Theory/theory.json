@@ -192,7 +192,7 @@
       {
         "id": "c10_math_l10",
         "title": "Bài 10: Tổ hợp và Xếp hàng (Hoán vị, Chỉnh hợp, Tổ hợp)",
-        "content": "Đếm là nền tảng của xác suất và toán tổ hợp.\n\nHoán vị: số cách sắp xếp n phần tử phân biệt\nChỉnh hợp: số cách chọn và sắp xếp k trong n phần tử\nTổ hợp: số cách chọn k trong n phần tử (không quan tâm thứ tự)\n\nTam giác Pascal và Nhị thức Newton:\n$(a+b)^{n}$ = Σ C(n,k) $a^{n}$⁻ᵏ bᵏ",
+        "content": "Đếm là nền tảng của xác suất và toán tổ hợp.\n\nHoán vị: số cách sắp xếp n phần tử phân biệt\nChỉnh hợp: số cách chọn và sắp xếp k trong n phần tử\nTổ hợp: số cách chọn k trong n phần tử (không quan tâm thứ tự)\n\nTam giác Pascal và Nhị thức Newton:\n$(a+b)^{n}$ = Σ $C_{n}^{k}a^{n-k}b^{k}$",
         "formulas": [
           {
             "label": "Hoán vị",
@@ -1018,7 +1018,7 @@
       {
         "id": "c11_math_l3",
         "title": "Bài 3: Phương trình lượng giác",
-        "content": "Phương trình lượng giác cơ bản là các phương trình có ẩn xuất hiện trong biểu thức lượng giác.\n\nPhương trình sin(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = arcsin(m) + $2k\\pi$ hoặc x = $\\pi$ - arcsin(m) + $2k\\pi$\n\nPhương trình cos(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = $\\pm arccos(m)$ + $2k\\pi$\n\nPhương trình tan(x) = m:\n• Luôn có nghiệm: x = arctan(m) + $k\\pi$\n\nPhương trình bậc nhất theo sinx, cosx: $a\\cdot sinx$ + $b\\cdot cosx$ = c\nChia cả hai vế cho $\\sqrt(a^{2}+b^{2})$, đặt $cos\\varphi$ = $\\frac{a}{\\sqrt(a^{2}+b^{2})}$, $sin\\varphi$ = $\\frac{b}{\\sqrt(a^{2}+b^{2})}$.",
+        "content": "Phương trình lượng giác cơ bản là các phương trình có ẩn xuất hiện trong biểu thức lượng giác.\n\nPhương trình sin(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = arcsin(m) + $2k\\pi$ hoặc x = $\\pi$ - arcsin(m) + $2k\\pi$\n\nPhương trình cos(x) = m:\n• Vô nghiệm nếu |m| > 1\n• Có nghiệm: x = $\\pm arccos(m)$ + $2k\\pi$\n\nPhương trình tan(x) = m:\n• Luôn có nghiệm: x = arctan(m) + $k\\pi$\n\nPhương trình bậc nhất theo sinx, cosx: $a\\cdot sinx$ + $b\\cdot cosx$ = c\nChia cả hai vế cho $\\sqrt{a^{2}+b^{2}}$, đặt $cos\\varphi$ = $\\frac{a}{\\sqrt{a^{2}+b^{2}}}$, $sin\\varphi$ = $\\frac{b}{\\sqrt{a^{2}+b^{2}}}$.",
         "formulas": [
           {
             "label": "Dạng kết hợp sinx và cosx",
@@ -1380,7 +1380,7 @@
       {
         "id": "c11_che_l2",
         "title": "Bài 2: Nitơ và hợp chất của Nitơ",
-        "content": "Nitơ $(N_{2})$: chiếm ~78% thể tích không khí, phân tử có liên kết ba bền, ít hoạt động ở nhiệt độ thường.\n\nAmoniac $(NH_{3})$: khí không màu, mùi khai, tan nhiều trong nước. Tính bazơ yếu. Dùng sản xuất phân đạm, axit nitric.\n\nAxit nitric $(HNO_{3})$: axit mạnh, có tính oxi hóa rất mạnh. Tác dụng với hầu hết kim loại (trừ Au, Pt).\n• $HNO_{3}$ đặc + kim loại (Cu, Fe...) → $NO_{2}$ (nâu đỏ)\n• $HNO_{3}$ loãng + kim loại → NO (không màu)\n\nMuối nitrat $(NO_{3}$⁻): đều tan trong nước, kém bền nhiệt, ứng dụng làm phân bón, thuốc nổ.",
+        "content": "Nitơ $(N_{2})$: chiếm ~78% thể tích không khí, phân tử có liên kết ba bền, ít hoạt động ở nhiệt độ thường.\n\nAmoniac $(NH_{3})$: khí không màu, mùi khai, tan nhiều trong nước. Tính bazơ yếu. Dùng sản xuất phân đạm, axit nitric.\n\nAxit nitric $(HNO_{3})$: axit mạnh, có tính oxi hóa rất mạnh. Tác dụng với hầu hết kim loại (trừ Au, Pt).\n• $HNO_{3}$ đặc + kim loại (Cu, Fe...) → $NO_{2}$ (nâu đỏ)\n• $HNO_{3}$ loãng + kim loại → NO (không màu)\n\nMuối nitrat $(NO_{3}^{-})$: đều tan trong nước, kém bền nhiệt, ứng dụng làm phân bón, thuốc nổ.",
         "formulas": [
           {
             "label": "Tổng hợp NH₃",
@@ -1436,7 +1436,7 @@
       {
         "id": "c11_che_l6",
         "title": "Bài 6: Dẫn xuất halogen — Ancol — Phenol",
-        "content": "Dẫn xuất halogen: thay H trong hidrocacbon bằng X (F, Cl, Br, I)\nVí dụ: $CH_{3}Cl$ (clometan), $CHCl_{3}$ (clorofom), $CH_{2}Cl_{2}$\n\nAncol: chứa nhóm −OH liên kết với C no\n• Ancol đơn chức: $CH_{3}OH$, $C_{2}H_{5}OH$\n• Phản ứng: với Na, oxi hóa, este hóa, dehydrat hóa\n• $C_{2}H_{5}OH$ + Na → $C_{2}H_{5}ONa$ + ½$H_{2}$↑\n\nPhenol $(C_{6}H_{5}OH)$: nhóm −OH gắn trực tiếp vào vòng benzen\n• Tính axit yếu: $C_{6}H_{5}OH$ + NaOH → $C_{6}H_{5}ONa$ + $H_{2}O$\n• Phản ứng thế vào nhân benzen dễ hơn benzen",
+        "content": "Dẫn xuất halogen: thay H trong hidrocacbon bằng X (F, Cl, Br, I)\nVí dụ: $CH_{3}Cl$ (clometan), $CHCl_{3}$ (clorofom), $CH_{2}Cl_{2}$\n\nAncol: chứa nhóm −OH liên kết với C no\n• Ancol đơn chức: $CH_{3}OH$, $C_{2}H_{5}OH$\n• Phản ứng: với Na, oxi hóa, este hóa, dehydrat hóa\n• $C_{2}H_{5}OH$ + Na → $C_{2}H_{5}ONa$ + $\\frac{1}{2}H_{2}$↑\n\nPhenol $(C_{6}H_{5}OH)$: nhóm −OH gắn trực tiếp vào vòng benzen\n• Tính axit yếu: $C_{6}H_{5}OH$ + NaOH → $C_{6}H_{5}ONa$ + $H_{2}O$\n• Phản ứng thế vào nhân benzen dễ hơn benzen",
         "formulas": [
           {
             "label": "Oxi hóa ancol bậc 1",
@@ -2038,7 +2038,7 @@
       {
         "id": "c12_math_l5",
         "title": "Bài 5: Số phức",
-        "content": "Số phức z = a + bi trong đó a, b $\\in $ ℝ, i là đơn vị ảo với $i^{2}$ = -1.\na là phần thực, b là phần ảo.\n\nTập số phức ℂ mở rộng tập số thực ℝ. Số thực là số phức có phần ảo bằng 0.\n\nSố phức liên hợp: z̄ = a - bi\nMô-đun: |z| = $\\sqrt(a^{2}$ + $b^{2})$\n\nBiểu diễn hình học: điểm M(a; b) trong mặt phẳng phức Oxy.\n\nDạng lượng giác: z = $r(cos\\varphi$ + $i\\cdot sin\\varphi)$, r = |z|, $\\varphi$ = arg(z)\n\nPhương trình bậc hai với hệ số thực luôn có nghiệm trong ℂ.",
+        "content": "Số phức z = a + bi trong đó a, b $\\in $ ℝ, i là đơn vị ảo với $i^{2}$ = -1.\na là phần thực, b là phần ảo.\n\nTập số phức ℂ mở rộng tập số thực ℝ. Số thực là số phức có phần ảo bằng 0.\n\nSố phức liên hợp: z̄ = a - bi\nMô-đun: |z| = $\\sqrt{a^{2}+b^{2}}$\n\nBiểu diễn hình học: điểm M(a; b) trong mặt phẳng phức Oxy.\n\nDạng lượng giác: z = $r(cos\\varphi$ + $i\\cdot sin\\varphi)$, r = |z|, $\\varphi$ = arg(z)\n\nPhương trình bậc hai với hệ số thực luôn có nghiệm trong ℂ.",
         "formulas": [
           {
             "label": "Số phức",
@@ -2110,7 +2110,7 @@
       {
         "id": "c12_math_l9",
         "title": "Bài 9: Hình học giải tích trong không gian — Mặt cầu, Mặt trụ, Mặt nón",
-        "content": "Hệ tọa độ Oxyz:\n• Điểm M(x,y,z), vectơ a⃗$=(a_{1}$,$a_{2}$,$a_{3})$\n• |AB| = $\\sqrt((x_{2}$−$x_{1})^{2}+(y_{2}$−$y_{1})^{2}+(z_{2}$−$z_{1})^{2})$\n\nMặt phẳng: ax+by+cz+d=0\n• Vectơ pháp tuyến n⃗=(a,b,c)\n• Khoảng cách từ $M_{0}(x_{0}$,$y_{0}$,$z_{0})$ đến mp: d = |$ax_{0}+by_{0}+cz_{0}+d$|$/\\sqrt(a^{2}+b^{2}+c^{2})$\n\nĐường thẳng trong không gian:\n• Phương trình tham số: $x=x_{0}+at$, $y=y_{0}+bt$, $z=z_{0}+ct$\n• Vectơ chỉ phương u⃗=(a,b,c)\n\nMặt cầu (S): (x−$a)^{2}+(y$−$b)^{2}+(z$−$c)^{2}=R^{2}$\n• Tâm I(a,b,c), bán kính R",
+        "content": "Hệ tọa độ Oxyz:\n• Điểm M(x,y,z), vectơ a⃗$=(a_{1}$,$a_{2}$,$a_{3})$\n• |AB| = $\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}$\n\nMặt phẳng: ax+by+cz+d=0\n• Vectơ pháp tuyến n⃗=(a,b,c)\n• Khoảng cách từ $M_{0}(x_{0}$,$y_{0}$,$z_{0})$ đến mp: d = |$ax_{0}+by_{0}+cz_{0}+d$|$/\\sqrt{a^{2}+b^{2}+c^{2}}$\n\nĐường thẳng trong không gian:\n• Phương trình tham số: $x=x_{0}+at$, $y=y_{0}+bt$, $z=z_{0}+ct$\n• Vectơ chỉ phương u⃗=(a,b,c)\n\nMặt cầu (S): (x−$a)^{2}+(y$−$b)^{2}+(z$−$c)^{2}=R^{2}$\n• Tâm I(a,b,c), bán kính R",
         "formulas": [
           {
             "label": "Phương trình mặt phẳng",
@@ -2129,7 +2129,7 @@
       {
         "id": "c12_math_l10",
         "title": "Bài 10: Thống kê và Xác suất nâng cao",
-        "content": "Biến ngẫu nhiên rời rạc X: bảng phân phối xác suất P(X=xᵢ)=pᵢ\n• Kỳ vọng: E(X) = Σ xᵢ$\\cdot p$ᵢ\n• Phương sai: D(X) = $E(X^{2})$ − [E(X)]$^{2}$\n• Độ lệch chuẩn: $σ$ = $\\sqrtD(X)$\n\nPhân phối nhị thức B(n,p):\n• X = số lần thành công trong n phép thử Bernoulli\n• P(X=k) = C(n,$k)\\cdot p$ᵏ$\\cdot (1$−$p)^{n}$⁻ᵏ\n• E(X) = np; D(X) = np(1−p)\n\nPhân phối chuẩn $N(\\mu$,$σ^{2})$:\n• Hàm mật độ chuẩn, đường cong hình chuông\n• 68-95-99,7: $P(\\mu$−$σ$<X<$\\mu+σ)$ $\\approx$68%",
+        "content": "Biến ngẫu nhiên rời rạc X: bảng phân phối xác suất P(X=xᵢ)=pᵢ\n• Kỳ vọng: $E(X) = \\sum x_{i}\\cdot p_{i}$\n• Phương sai: D(X) = $E(X^{2})$ − [E(X)]$^{2}$\n• Độ lệch chuẩn: $σ$ = $\\sqrt{D(X)}$\n\nPhân phối nhị thức B(n,p):\n• X = số lần thành công trong n phép thử Bernoulli\n• $P(X=k) = C_{n}^{k}\\cdot p^{k}\\cdot (1-p)^{n-k}$\n• E(X) = np; D(X) = np(1−p)\n\nPhân phối chuẩn $N(\\mu,\\sigma^{2})$:\n• Hàm mật độ chuẩn, đường cong hình chuông\n• 68-95-99,7: $P(\\mu-\\sigma<X<\\mu+\\sigma)$ $\\approx$68%",
         "formulas": [
           {
             "label": "Phân phối nhị thức",
@@ -2148,7 +2148,7 @@
       {
         "id": "c12_math_l11",
         "title": "Bài 11: Đường thẳng và Mặt phẳng trong không gian — Góc và Khoảng cách",
-        "content": "Quan hệ đường thẳng — mặt phẳng:\n• d ∥ mp ↔ d // một đường thẳng trong mp và d ⊄ mp\n• d ⊥ mp ↔ d ⊥ mọi đường thẳng trong mp qua chân đường vuông góc\n\nGóc giữa đường thẳng và mặt phẳng:\n• $\\alpha$ = góc giữa d và hình chiếu d' của d lên mp (0° $\\leq $ $\\alpha$ $\\leq $ 90°)\n\nGóc nhị diện:\n• Góc giữa hai nửa mặt phẳng chung cạnh\n• Đo bằng góc phẳng (vẽ ⊥ cạnh trong mỗi nửa mp)\n\nKhoảng cách:\n• d(M, mp) = |$ax_{0}+by_{0}+cz_{0}+d$| / $\\sqrt(a^{2}+b^{2}+c^{2})$\n• $d(d_{1}$, $d_{2})$ khi chéo nhau: dùng vectơ pháp tuyến chung\n• Khoảng cách hai mp song song $ax+by+cz+d_{1}=0$ và $ax+by+cz+d_{2}=0$:\n  $\\delta$ = |$d_{1}$−$d_{2}$| / $\\sqrt(a^{2}+b^{2}+c^{2})$",
+        "content": "Quan hệ đường thẳng — mặt phẳng:\n• d ∥ mp ↔ d // một đường thẳng trong mp và d ⊄ mp\n• d ⊥ mp ↔ d ⊥ mọi đường thẳng trong mp qua chân đường vuông góc\n\nGóc giữa đường thẳng và mặt phẳng:\n• $\\alpha$ = góc giữa d và hình chiếu d' của d lên mp (0° $\\leq $ $\\alpha$ $\\leq $ 90°)\n\nGóc nhị diện:\n• Góc giữa hai nửa mặt phẳng chung cạnh\n• Đo bằng góc phẳng (vẽ ⊥ cạnh trong mỗi nửa mp)\n\nKhoảng cách:\n• d(M, mp) = |$ax_{0}+by_{0}+cz_{0}+d$| / $\\sqrt{a^{2}+b^{2}+c^{2}}$\n• $d(d_{1}$, $d_{2})$ khi chéo nhau: dùng vectơ pháp tuyến chung\n• Khoảng cách hai mp song song $ax+by+cz+d_{1}=0$ và $ax+by+cz+d_{2}=0$:\n  $\\delta$ = |$d_{1}$−$d_{2}$| / $\\sqrt{a^{2}+b^{2}+c^{2}}$",
         "formulas": [
           {
             "label": "Khoảng cách hai mặt phẳng song song",
@@ -2260,7 +2260,7 @@
       {
         "id": "c12_phy_l4",
         "title": "Bài 4: Vật lý hạt nhân",
-        "content": "Hạt nhân nguyên tử gồm proton (Z) và neutron (N), số khối A = Z + N.\n\nPhóng xạ tự nhiên: hạt nhân không bền tự phát ra bức xạ.\n• Tia $\\alpha$ $(^{2}_{4}He)$: xuyên thấu yếu, ion hóa mạnh\n• Tia $\\beta$⁻ (electron): n → p + e⁻ + ν̄\n• Tia $\\beta$⁺ (positron): p → n + e⁺ + ν\n• Tia $\\gamma$ (photon): không mang điện, xuyên thấu mạnh\n\nĐịnh luật phóng xạ: số hạt nhân phóng xạ giảm theo hàm mũ.\n\nPhản ứng hạt nhân: phân hạch (hạt nhân nặng vỡ ra) và nhiệt hạch (hạt nhân nhẹ kết hợp).\nBảo toàn: số khối A, điện tích Z, năng lượng-khối lượng (E = $mc^{2})$.",
+        "content": "Hạt nhân nguyên tử gồm proton (Z) và neutron (N), số khối A = Z + N.\n\nPhóng xạ tự nhiên: hạt nhân không bền tự phát ra bức xạ.\n• Tia $\\alpha$ $(^{2}_{4}He)$: xuyên thấu yếu, ion hóa mạnh\n• Tia $\\beta^{-}$ (electron): n → p + e⁻ + ν̄\n• Tia $\\beta^{+}$ (positron): p → n + e⁺ + ν\n• Tia $\\gamma$ (photon): không mang điện, xuyên thấu mạnh\n\nĐịnh luật phóng xạ: số hạt nhân phóng xạ giảm theo hàm mũ.\n\nPhản ứng hạt nhân: phân hạch (hạt nhân nặng vỡ ra) và nhiệt hạch (hạt nhân nhẹ kết hợp).\nBảo toàn: số khối A, điện tích Z, năng lượng-khối lượng (E = $mc^{2})$.",
         "formulas": [
           {
             "label": "Phóng xạ",
@@ -2302,7 +2302,7 @@
       {
         "id": "c12_phy_l6",
         "title": "Bài 6: Lượng tử ánh sáng — Hiệu ứng quang điện",
-        "content": "Thuyết lượng tử ánh sáng (Planck–Einstein):\n• Ánh sáng gồm các photon (hạt lượng tử)\n• Năng lượng photon: $\\varepsilon$ = hf = $\\frac{hc}{\\lambda}$\n  h = 6,$626\\times 10$⁻$^{34}$ $J\\cdot s$ (hằng số Planck)\n\nHiệu ứng quang điện ngoài:\n• Chiếu ánh sáng → kim loại giải phóng electron\n• Điều kiện: f $\\geq $ $f_{0}$ (tần số giới hạn)\n• Phương trình Einstein: hf = A + ½$mv^{2}_max$\n  A: công thoát; ½$mv^{2}_max$: động năng ban đầu cực đại\n\nGiới hạn quang điện: $\\lambda_{0}$ = $\\frac{hc}{A}$\n\nHiệu ứng Compton, tia X, quang phổ vạch nguyên tử hydrogen",
+        "content": "Thuyết lượng tử ánh sáng (Planck–Einstein):\n• Ánh sáng gồm các photon (hạt lượng tử)\n• Năng lượng photon: $\\varepsilon$ = hf = $\\frac{hc}{\\lambda}$\n  h = 6,$626\\times 10^{-34}$ $J\\cdot s$ (hằng số Planck)\n\nHiệu ứng quang điện ngoài:\n• Chiếu ánh sáng → kim loại giải phóng electron\n• Điều kiện: f $\\geq $ $f_{0}$ (tần số giới hạn)\n• Phương trình Einstein: $hf = A + \\frac{1}{2}mv^{2}_{max}$\n  A: công thoát; $\\frac{1}{2}mv^{2}_{max}$: động năng ban đầu cực đại\n\nGiới hạn quang điện: $\\lambda_{0}$ = $\\frac{hc}{A}$\n\nHiệu ứng Compton, tia X, quang phổ vạch nguyên tử hydrogen",
         "formulas": [
           {
             "label": "Năng lượng photon",
@@ -2321,7 +2321,7 @@
       {
         "id": "c12_phy_l7",
         "title": "Bài 7: Vật lý hạt nhân nâng cao — Phóng xạ và Phản ứng hạt nhân",
-        "content": "Cấu tạo hạt nhân: Z proton + N neutron, A=Z+N\nKý hiệu: ᴬ_Z X\n\nPhóng xạ — 3 loại:\n• $\\alpha$: $^{4}_{2}He$ → A−4, Z−2\n• $\\beta$⁻: $^{0}$₋$_{1}e$ → A không đổi, Z+1\n• $\\beta$⁺: $^{0}$₊$_{1}e$ → A không đổi, Z−1\n• $\\gamma$: không đổi A, Z; chỉ giảm năng lượng\n\nĐịnh luật phóng xạ: $N = N_0 \\cdot e^{-\\lambda t} = N_0 \\cdot \\left(\\dfrac{1}{2}\\right)^{t/T}$\nT: chu kỳ bán rã; $\\lambda$ = $\\frac{ln2}{T}$\n\nNăng lượng liên kết: $E_{lk}$ = $\\Delta m\\cdot c^{2}$\n$\\Delta m$ = $(Z\\cdot m$ₚ + $N\\cdot m_{n})$ − $m_{\\text{hạtnhân}}$ (độ hụt khối)\n\nPhản ứng phân hạch: U-235 + n → 2 hạt nhân trung bình + 2-3n + E\nPhản ứng nhiệt hạch: D + T → He + n + 17,6 MeV",
+        "content": "Cấu tạo hạt nhân: Z proton + N neutron, A=Z+N\nKý hiệu: ᴬ_Z X\n\nPhóng xạ — 3 loại:\n• $\\alpha$: $^{4}_{2}He$ → A−4, Z−2\n• $\\beta^{-}$: $^{0}$₋$_{1}e$ → A không đổi, Z+1\n• $\\beta^{+}$: $^{0}$₊$_{1}e$ → A không đổi, Z−1\n• $\\gamma$: không đổi A, Z; chỉ giảm năng lượng\n\nĐịnh luật phóng xạ: $N = N_0 \\cdot e^{-\\lambda t} = N_0 \\cdot \\left(\\dfrac{1}{2}\\right)^{t/T}$\nT: chu kỳ bán rã; $\\lambda$ = $\\frac{ln2}{T}$\n\nNăng lượng liên kết: $E_{lk}$ = $\\Delta m\\cdot c^{2}$\n$\\Delta m$ = $(Z\\cdot m$ₚ + $N\\cdot m_{n})$ − $m_{\\text{hạtnhân}}$ (độ hụt khối)\n\nPhản ứng phân hạch: U-235 + n → 2 hạt nhân trung bình + 2-3n + E\nPhản ứng nhiệt hạch: D + T → He + n + 17,6 MeV",
         "formulas": [
           {
             "label": "Hệ thức Einstein",
@@ -2351,7 +2351,7 @@
       {
         "id": "c12_phy_l9",
         "title": "Bài 9: Giao thoa sóng và Sóng dừng",
-        "content": "Giao thoa sóng:\n• Điều kiện: hai nguồn kết hợp (cùng tần số, hiệu pha không đổi)\n• Tăng cường (cực đại): $d_{2}$−$d_{1}$ = $k\\lambda$ $(k\\in $ℤ)\n• Triệt tiêu (cực tiểu): $d_{2}$−$d_{1}$ = (k+½$)\\lambda$\n\nSóng dừng:\n• Phản xạ sóng + giao thoa với sóng tới → sóng dừng\n• Nút: biên độ = 0; Bụng: biên độ cực đại\n• Dây 2 đầu cố định: l = $\\frac{k\\lambda}{2}$ (k=1,2,3...)\n• Dây 1 đầu tự do: l = (2k−$1)\\lambda/4$\n\nKhoảng cách:\n• Nút−Nút hoặc Bụng−Bụng = $\\frac{\\lambda}{2}$\n• Nút−Bụng liền kề = $\\frac{\\lambda}{4}$",
+        "content": "Giao thoa sóng:\n• Điều kiện: hai nguồn kết hợp (cùng tần số, hiệu pha không đổi)\n• Tăng cường (cực đại): $d_{2}$−$d_{1}$ = $k\\lambda$ $(k\\in $ℤ)\n• Triệt tiêu (cực tiểu): $d_{2}$−$d_{1}$ = $\\left(k+\\frac{1}{2}\\right)\\lambda$\n\nSóng dừng:\n• Phản xạ sóng + giao thoa với sóng tới → sóng dừng\n• Nút: biên độ = 0; Bụng: biên độ cực đại\n• Dây 2 đầu cố định: l = $\\frac{k\\lambda}{2}$ (k=1,2,3...)\n• Dây 1 đầu tự do: l = (2k−$1)\\lambda/4$\n\nKhoảng cách:\n• Nút−Nút hoặc Bụng−Bụng = $\\frac{\\lambda}{2}$\n• Nút−Bụng liền kề = $\\frac{\\lambda}{4}$",
         "formulas": [
           {
             "label": "Điều kiện giao thoa cực đại",
@@ -2370,7 +2370,7 @@
       {
         "id": "c12_phy_l10",
         "title": "Bài 10: Tổng ôn Vật lý 12 — Công thức trọng tâm",
-        "content": "Dao động cơ:\n• $x = A\\cos(\\omega t+\\varphi)$; $v = -A\\omega\\sin(\\omega t+\\varphi)$; $a = -\\omega^2 x$\n• Con lắc lò xo: $T=2\\pi\\sqrt(m/k)$; con lắc đơn: $T=2\\pi\\sqrt(l/g)$\n• W=½$kA^{2}=$½$m\\omega^{2}A^{2}$\n\nSóng cơ: $\\lambda=vT=\\frac{v}{f}$; giao thoa: cực đại $d_{2}$−$d_{1}=k\\lambda$\n\nĐiện xoay chiều:\n• $u = U_0\\cos(\\omega t)$; $i = I_0\\cos(\\omega t - \\varphi)$\n• $Z=\\sqrt(R^{2}+(Z_{L}$−$Z_{C})^{2})$; tan $\\varphi=(Z_{L}$−$Z_{C})/R$\n• $P=UIcos\\varphi=I^{2}R$; MBA: $\\frac{U_{1}}{U_{2}}=\\frac{N_{1}}{N_{2}}$\n\nLượng tử:\n• $\\varepsilon=hf$; hf=A+½$mv^{2}_max$ (quang điện)\n• $N=N_{0}($½)^$(t/T)$; $E_{lk}=\\Delta m\\cdot c^{2}$\n\nQuang học:\n• $n_1 \\sin i = n_2 \\sin r$; $\\dfrac{1}{f}=\\dfrac{1}{d}+\\dfrac{1}{d'}$; $k=-d'/d$",
+        "content": "Dao động cơ:\n• $x = A\\cos(\\omega t+\\varphi)$; $v = -A\\omega\\sin(\\omega t+\\varphi)$; $a = -\\omega^2 x$\n• Con lắc lò xo: $T=2\\pi\\sqrt{m/k}$; con lắc đơn: $T=2\\pi\\sqrt{l/g}$\n• $W=\\frac{1}{2}kA^{2}=\\frac{1}{2}m\\omega^{2}A^{2}$\n\nSóng cơ: $\\lambda=vT=\\frac{v}{f}$; giao thoa: cực đại $d_{2}$−$d_{1}=k\\lambda$\n\nĐiện xoay chiều:\n• $u = U_0\\cos(\\omega t)$; $i = I_0\\cos(\\omega t - \\varphi)$\n• $Z=\\sqrt{R^{2}+(Z_{L}-Z_{C})^{2}}$; tan $\\varphi=(Z_{L}$−$Z_{C})/R$\n• $P=UIcos\\varphi=I^{2}R$; MBA: $\\frac{U_{1}}{U_{2}}=\\frac{N_{1}}{N_{2}}$\n\nLượng tử:\n• $\\varepsilon=hf$; $hf=A+\\frac{1}{2}mv^{2}_{max}$ (quang điện)\n• $N=N_{0}\\left(\\frac{1}{2}\\right)^{t/T}$; $E_{lk}=\\Delta m\\cdot c^{2}$\n\nQuang học:\n• $n_1 \\sin i = n_2 \\sin r$; $\\dfrac{1}{f}=\\dfrac{1}{d}+\\dfrac{1}{d'}$; $k=-d'/d$",
         "formulas": [
           {
             "label": "Phương trình thấu kính",
@@ -2485,7 +2485,7 @@
       {
         "id": "c12_che_l7",
         "title": "Bài 7: Sắt, Crom và hợp kim",
-        "content": "Sắt (Fe): Z=26, cấu hình [Ar]$3d^{6}4s^{2}$\n• Có 2 số oxi hóa chính: +2 (FeO, $FeCl_{2})$ và +3 $(Fe_{2}O_{3}$, $FeCl_{3})$\n• Fe tác dụng HCl loãng: Fe + 2HCl → $FeCl_{2}$ + $H_{2}$\n• Fe tác dụng $HNO_{3}$ loãng: Fe + $4HNO_{3}(loãng)$ → $Fe(NO_{3})_{3}$ + NO + $2H_{2}O$\n• Thụ động hóa trong $HNO_{3}$ đặc, $H_{2}SO_{4}$ đặc nguội\n\nCrom (Cr): Z=24\n• Số oxi hóa: +2, +3 (bền), +6\n• $Cr_{2}O_{3}$: oxit lưỡng tính\n• $CrO_{4}^{2}$⁻ (vàng) ⇌ $Cr_{2}O_{7}^{2}$⁻ (da cam) trong axit\n\nHợp kim: thép (Fe+C), gang (Fe+C>2%), thép không gỉ (Fe+Cr+Ni)",
+        "content": "Sắt (Fe): Z=26, cấu hình [Ar]$3d^{6}4s^{2}$\n• Có 2 số oxi hóa chính: +2 (FeO, $FeCl_{2})$ và +3 $(Fe_{2}O_{3}$, $FeCl_{3})$\n• Fe tác dụng HCl loãng: Fe + 2HCl → $FeCl_{2}$ + $H_{2}$\n• Fe tác dụng $HNO_{3}$ loãng: Fe + $4HNO_{3}(loãng)$ → $Fe(NO_{3})_{3}$ + NO + $2H_{2}O$\n• Thụ động hóa trong $HNO_{3}$ đặc, $H_{2}SO_{4}$ đặc nguội\n\nCrom (Cr): Z=24\n• Số oxi hóa: +2, +3 (bền), +6\n• $Cr_{2}O_{3}$: oxit lưỡng tính\n• $CrO_{4}^{2-}$ (vàng) ⇌ $Cr_{2}O_{7}^{2-}$ (da cam) trong axit\n\nHợp kim: thép (Fe+C), gang (Fe+C>2%), thép không gỉ (Fe+Cr+Ni)",
         "formulas": [
           {
             "label": "Sản xuất gang, thép",
@@ -2511,7 +2511,7 @@
       {
         "id": "c12_che_l9",
         "title": "Bài 9: Nhận biết và Tách chất — Phương pháp hóa học",
-        "content": "Nhận biết các chất bằng thuốc thử:\n\nNhận biết ion:\n• Cl⁻: dd $AgNO_{3}$ → AgCl↓ trắng\n• $SO_{4}^{2}$⁻: dd $BaCl_{2}$ → $BaSO_{4}$↓ trắng không tan trong HCl\n• $CO_{3}^{2}$⁻: dd HCl → $CO_{2}$↑ (làm đục nước vôi)\n• $NH_{4}$⁺: dd NaOH, đun nóng → $NH_{3}$ (mùi khai)\n• $Fe^{2}$⁺: $KMnO_{4}$ mất màu; $Fe^{3}$⁺: KSCN → đỏ máu\n\nNhận biết hữu cơ:\n• Anđehit: tráng bạc (Ag↓); khử $Cu(OH)_{2}$ → $Cu_{2}O$↓ đỏ\n• Ancol đa chức: $Cu(OH)_{2}$ tan → dd xanh lam\n• Protein: Biuret → tím; xanthoprotein → vàng\n• Tinh bột: dd $I_{2}$ → xanh tím\n• Glucozơ: tráng bạc; phân biệt với saccarozơ\n\nTách chất: chưng cất, chiết, kết tinh, sắc ký",
+        "content": "Nhận biết các chất bằng thuốc thử:\n\nNhận biết ion:\n• Cl⁻: dd $AgNO_{3}$ → AgCl↓ trắng\n• $SO_{4}^{2-}$: dd $BaCl_{2}$ → $BaSO_{4}$↓ trắng không tan trong HCl\n• $CO_{3}^{2-}$: dd HCl → $CO_{2}$↑ (làm đục nước vôi)\n• $NH_{4}$⁺: dd NaOH, đun nóng → $NH_{3}$ (mùi khai)\n• $Fe^{2}$⁺: $KMnO_{4}$ mất màu; $Fe^{3}$⁺: KSCN → đỏ máu\n\nNhận biết hữu cơ:\n• Anđehit: tráng bạc (Ag↓); khử $Cu(OH)_{2}$ → $Cu_{2}O$↓ đỏ\n• Ancol đa chức: $Cu(OH)_{2}$ tan → dd xanh lam\n• Protein: Biuret → tím; xanthoprotein → vàng\n• Tinh bột: dd $I_{2}$ → xanh tím\n• Glucozơ: tráng bạc; phân biệt với saccarozơ\n\nTách chất: chưng cất, chiết, kết tinh, sắc ký",
         "formulas": [
           {
             "label": "Nhận biết glucozơ",
@@ -2522,7 +2522,7 @@
       {
         "id": "c12_che_l10",
         "title": "Bài 10: Tổng ôn Hóa học 12 — Phân loại và chiến lược làm bài",
-        "content": "Bảng tóm tắt phân loại hợp chất hữu cơ lớp 12:\n\nEste RCOOR': mùi thơm, phản ứng thủy phân\nCacbohydrat: Glucozơ $(C_{6}H_{12}O_{6})$, Saccarozơ, Tinh bột, Xenlulozơ\nAmin R−$NH_{2}$: tính bazơ; amino axit: lưỡng tính\nPolime: trùng hợp (PE, PP, PVC) hay trùng ngưng (nylon, tơ tằm)\n\nKim loại lớp 12:\n• Kiềm (IA): khử mạnh nhất, tác dụng $H_{2}O$\n• Kiềm thổ (IIA): Ca, Mg quan trọng\n• Al: nhẹ, bền, lưỡng tính\n• Fe: SOH +2/+3; thụ động hóa $HNO_{3}$ đặc nguội\n• Cr: SOH +2/+3/+6\n\nChuỗi phản ứng điện phân – ăn mòn – luyện kim\n\nChiến lược: đọc kỹ câu hỏi, loại trừ, dùng bảo toàn $\\frac{mol}{electron}$",
+        "content": "Bảng tóm tắt phân loại hợp chất hữu cơ lớp 12:\n\nEste RCOOR': mùi thơm, phản ứng thủy phân\nCacbohydrat: Glucozơ $(C_{6}H_{12}O_{6})$, Saccarozơ, Tinh bột, Xenlulozơ\nAmin R−$NH_{2}$: tính bazơ; amino axit: lưỡng tính\nPolime: trùng hợp (PE, PP, PVC) hay trùng ngưng (nylon, tơ tằm)\n\nKim loại lớp 12:\n• Kiềm (IA): khử mạnh nhất, tác dụng $H_{2}O$\n• Kiềm thổ (IIA): Ca, Mg quan trọng\n• Al: nhẹ, bền, lưỡng tính\n• Fe: SOH +2/+3; thụ động hóa $HNO_{3}$ đặc nguội\n• Cr: SOH +2/+3/+6\n\nChuỗi phản ứng điện phân – ăn mòn – luyện kim\n\nChiến lược: đọc kỹ câu hỏi, loại trừ, dùng bảo toàn mol electron",
         "formulas": [
           {
             "label": "Bảo toàn electron",
@@ -2618,7 +2618,7 @@
       {
         "id": "c12_bio_l6",
         "title": "Bài 6: Di truyền học quần thể — Định luật Hardy-Weinberg",
-        "content": "Quần thể là tập hợp cá thể cùng loài, cùng nơi sống, có khả năng sinh sản.\n\nVốn gen quần thể: tập hợp tất cả alen trong quần thể.\nTần số alen: tỉ lệ mỗi alen so với tổng số alen ở locus đó.\n\nĐịnh luật Hardy-Weinberg:\nQuần thể ngẫu phối, kích thước lớn, không có đột biến/chọn lọ$\\frac{c}{di}$ cư:\n• Tần số alen không đổi qua các thế hệ\n• Tần số kiểu gen: $p^{2}AA$ : 2pqAa : $q^{2}aa$\n  (p + q = 1)\n\nSai lệch khỏi Hardy-Weinberg: chọn lọc tự nhiên, đột biến, phiêu bạt di truyền, di nhập gen, giao phối không ngẫu nhiên",
+        "content": "Quần thể là tập hợp cá thể cùng loài, cùng nơi sống, có khả năng sinh sản.\n\nVốn gen quần thể: tập hợp tất cả alen trong quần thể.\nTần số alen: tỉ lệ mỗi alen so với tổng số alen ở locus đó.\n\nĐịnh luật Hardy-Weinberg:\nQuần thể ngẫu phối, kích thước lớn, không có đột biến/chọn lọc/di cư:\n• Tần số alen không đổi qua các thế hệ\n• Tần số kiểu gen: $p^{2}AA$ : 2pqAa : $q^{2}aa$\n  (p + q = 1)\n\nSai lệch khỏi Hardy-Weinberg: chọn lọc tự nhiên, đột biến, phiêu bạt di truyền, di nhập gen, giao phối không ngẫu nhiên",
         "formulas": [
           {
             "label": "Tần số alen (Hardy-Weinberg)",
@@ -2651,7 +2651,7 @@
       {
         "id": "c12_bio_l9",
         "title": "Bài 9: Hệ sinh thái — Năng lượng và Chu trình vật chất",
-        "content": "Hệ sinh thái = quần xã + môi trường vô sinh, có trao đổi vật chất và năng lượng.\n\nChuỗi và lưới thức ăn:\n• Sinh vật sản xuất → Sinh vật tiêu thụ cấp 1 → cấp 2 → cấp 3 → ...\n• Sinh vật phân giải: vi khuẩn, nấm phân hủy chất hữu cơ\n\nDòng năng lượng:\n• Năng lượng mặt trời → quang hợp → tích lũy → thất thoát qua hô hấp\n• Hiệu suất sinh thái: 10% (Quy tắc 10%)\n• Kim tự tháp sinh thái: số lượng, sinh khối, năng lượng\n\nChu trình vật chất:\n• Chu trình carbon: quang hợp ↔ hô hấp; đốt cháy → $CO_{2}$\n• Chu trình nitơ: cố định $N_{2}$ → $NH_{3}$ → $NO_{3}$⁻ → đồng hóa\n• Chu trình nước, photpho\n\nỨng dụng: nông nghiệp sinh thái, bảo tồn đa dạng sinh học",
+        "content": "Hệ sinh thái = quần xã + môi trường vô sinh, có trao đổi vật chất và năng lượng.\n\nChuỗi và lưới thức ăn:\n• Sinh vật sản xuất → Sinh vật tiêu thụ cấp 1 → cấp 2 → cấp 3 → ...\n• Sinh vật phân giải: vi khuẩn, nấm phân hủy chất hữu cơ\n\nDòng năng lượng:\n• Năng lượng mặt trời → quang hợp → tích lũy → thất thoát qua hô hấp\n• Hiệu suất sinh thái: 10% (Quy tắc 10%)\n• Kim tự tháp sinh thái: số lượng, sinh khối, năng lượng\n\nChu trình vật chất:\n• Chu trình carbon: quang hợp ↔ hô hấp; đốt cháy → $CO_{2}$\n• Chu trình nitơ: cố định $N_{2}$ → $NH_{3}$ → $NO_{3}^{-}$ → đồng hóa\n• Chu trình nước, photpho\n\nỨng dụng: nông nghiệp sinh thái, bảo tồn đa dạng sinh học",
         "formulas": [
           {
             "label": "Chu trình sinh địa hóa",
@@ -2694,7 +2694,7 @@
       {
         "id": "c12_tec_l3",
         "title": "Bài 3: Công nghệ chế tạo máy CNC và tự động hóa",
-        "content": "Máy CNC (Computer Numerical Control): máy công cụ được điều khiển bằng máy tính qua chương trình số.\n\nƯu điểm CNC so với máy thông thường:\n• Độ chính xác cao, lặp lại tốt\n• Năng suất cao, ít phụ thuộc vào tay nghề\n• Linh hoạt thay đổi sản phẩm bằng cách thay chương trình\n\nCác loại máy CNC: tiện CNC, phay CNC, trung tâm gia công (machining center), máy cắt $\\frac{laser}{plasma}$.\n\nTự động hóa sản xuất:\n• Robot công nghiệp: hàn, sơn, lắp ráp, bốc dỡ\n• Dây chuyền sản xuất tự động\n• Hệ thống sản xuất linh hoạt FMS\n• Xu hướng: Công nghiệp 4.0, IoT trong sản xuất",
+        "content": "Máy CNC (Computer Numerical Control): máy công cụ được điều khiển bằng máy tính qua chương trình số.\n\nƯu điểm CNC so với máy thông thường:\n• Độ chính xác cao, lặp lại tốt\n• Năng suất cao, ít phụ thuộc vào tay nghề\n• Linh hoạt thay đổi sản phẩm bằng cách thay chương trình\n\nCác loại máy CNC: tiện CNC, phay CNC, trung tâm gia công (machining center), máy cắt laser/plasma.\n\nTự động hóa sản xuất:\n• Robot công nghiệp: hàn, sơn, lắp ráp, bốc dỡ\n• Dây chuyền sản xuất tự động\n• Hệ thống sản xuất linh hoạt FMS\n• Xu hướng: Công nghiệp 4.0, IoT trong sản xuất",
         "formulas": [
           {
             "label": "Tốc độ cắt CNC",
@@ -3075,7 +3075,7 @@
       {
         "id": "c12_geo_l5",
         "title": "Bài 5: Địa lý vùng Đông Nam Bộ và Đồng bằng sông Cửu Long",
-        "content": "Đông Nam Bộ:\n• Gồm: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu, Bình Phước, Tây Ninh\n• GDP lớn nhất cả nước (45%+)\n• Công nghiệp: KCN Bình Dương, Đồng Nai, nhà máy lọc dầu Dung Quất\n• Dầu khí: thềm lục địa Bà Rịa-Vũng Tàu\n• TP.HCM: đầu tàu kinh tế, tài chính, thương mại\n\nĐồng bằng sông Cửu Long (ĐBSCL):\n• 13 tỉnh/thành, diện tích 40.000 $km^{2}$, 17 triệu dân\n• Vựa lúa và thủy sản lớn nhất cả nước\n• Xuất khẩu gạo, tôm, cá tra hàng đầu thế giới\n• Thách thức: xâm nhập mặn, sụt lún, biến đổi khí hậu\n• Giải pháp: chuyển dịch từ lúa sang tô$\\frac{m}{rau}$ quả/du lịch",
+        "content": "Đông Nam Bộ:\n• Gồm: TP.HCM, Bình Dương, Đồng Nai, Bà Rịa-Vũng Tàu, Bình Phước, Tây Ninh\n• GDP lớn nhất cả nước (45%+)\n• Công nghiệp: KCN Bình Dương, Đồng Nai, nhà máy lọc dầu Dung Quất\n• Dầu khí: thềm lục địa Bà Rịa-Vũng Tàu\n• TP.HCM: đầu tàu kinh tế, tài chính, thương mại\n\nĐồng bằng sông Cửu Long (ĐBSCL):\n• 13 tỉnh/thành, diện tích 40.000 $km^{2}$, 17 triệu dân\n• Vựa lúa và thủy sản lớn nhất cả nước\n• Xuất khẩu gạo, tôm, cá tra hàng đầu thế giới\n• Thách thức: xâm nhập mặn, sụt lún, biến đổi khí hậu\n• Giải pháp: chuyển dịch từ lúa sang tôm/rau quả/du lịch",
         "formulas": [
           {
             "label": "Tỉ lệ đô thị hóa",
