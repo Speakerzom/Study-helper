@@ -106,7 +106,15 @@
   <div id="question-panel" class="hidden">
 
     <div id="q-frame">
-      <span id="q-badge">4 lựa chọn</span>
+      <!-- Badge + nút điều chỉnh cỡ chữ -->
+      <div id="q-frame-top">
+        <span id="q-badge">4 lựa chọn</span>
+        <div id="font-ctrl" title="Điều chỉnh cỡ chữ">
+          <span id="font-ctrl-icon">🔍</span>
+          <button id="font-dec" aria-label="Giảm cỡ chữ">−</button>
+          <button id="font-inc" aria-label="Tăng cỡ chữ">+</button>
+        </div>
+      </div>
       <p id="q-text"></p>
     </div>
 

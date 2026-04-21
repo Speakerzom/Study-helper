@@ -19,6 +19,7 @@
   --trans  : .25s cubic-bezier(.4,0,.2,1);
   --hud-h  : 56px;
   --ring-c : 163.4;
+  --qs     : 1rem;  /* font-size câu hỏi — điều chỉnh bởi nút −/+ */
 }
 
 html, body {
@@ -670,7 +671,7 @@ body.light #music-name .mn-inner {
   50%     { box-shadow: 0 0 18px rgba(255,107,0,.8); }
 }
 #q-text {
-  font-size: 1rem; font-weight: 600; line-height: 1.75;
+  font-size: var(--qs); font-weight: 600; line-height: 1.75;
   color: var(--white);
   position: relative; z-index: 2;  /* nổi lên trên ::before shimmer */
 }
@@ -698,7 +699,7 @@ body.light #music-name .mn-inner {
   border: 1.5px solid rgba(255,255,255,.12);
   border-radius: 10px;
   background: rgba(255,255,255,.04);
-  color: var(--white); font-size: .9rem; font-weight: 500;
+  color: var(--white); font-size: calc(var(--qs) * 0.9); font-weight: 500;
   cursor: pointer;
   display: flex; align-items: center; gap: 12px;
   transition: border-color var(--trans), background var(--trans), transform .15s, box-shadow var(--trans);
@@ -837,7 +838,7 @@ body.light .short-inp {
   border-radius: 10px;
   border-left: 3px solid var(--teal);
   background: rgba(0,137,123,.13);
-  font-size: .86rem; line-height: 1.7; color: var(--white);
+  font-size: calc(var(--qs) * 0.86); line-height: 1.7; color: var(--white);
   animation: fadeInUp .3s ease;
 }
 #q-explanation.hidden { display: none; }
@@ -1188,10 +1189,9 @@ body.light .short-inp {
   display: inline;
   margin: 0;
 }
-/* Base size cho KaTeX trong các context khác nhau */
-#q-text { font-size: 1rem; }
-.opt-btn { font-size: 0.92rem; }
-#expl-text { font-size: 0.88rem; }
+/* Base size cho KaTeX trong các context khác nhau
+   KHÔNG override #q-text và .opt-btn ở đây — để var(--qs) hoạt động với nút −/+ */
+#expl-text { font-size: calc(var(--qs) * 0.88); }
 
 /* ── Short answer hint ── */
 .short-hint {
@@ -1205,3 +1205,42 @@ body.light .short-inp {
   border-left: 2px solid var(--cyan);
 }
 .short-hint strong { color: var(--yellow); }
+
+/* ── Font size control ─────────────────────────────────── */
+#q-frame-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  position: relative; z-index: 2;
+}
+#font-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  user-select: none;
+}
+#font-ctrl-icon {
+  font-size: .85rem;
+  opacity: .7;
+  margin-right: 2px;
+}
+#font-dec, #font-inc {
+  width: 26px; height: 26px;
+  border: 1.5px solid rgba(0,206,209,.4);
+  border-radius: 6px;
+  background: rgba(0,206,209,.08);
+  color: var(--cyan);
+  font-size: 1rem; font-weight: 900; line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s, border-color .15s, transform .1s;
+  padding: 0;
+}
+#font-dec:hover, #font-inc:hover {
+  background: rgba(0,206,209,.22);
+  border-color: var(--cyan);
+  transform: scale(1.12);
+}
+#font-dec:active, #font-inc:active { transform: scale(.93); }
+

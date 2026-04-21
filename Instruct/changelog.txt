@@ -9,6 +9,7 @@
 + Nâng cấp hệ thống lý thuyết với 221 bài học cho lớp 10, 11, 12
 + Nâng cấp nhân vật và âm thanh game
 + Thêm mục Nhật ký phát triển
++ Thêm hệ thống rank
 
 - v1.1.0 - 07/03/2026
 + Ra mắt phiên bản chính thức của Study Helper

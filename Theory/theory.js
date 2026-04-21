@@ -282,67 +282,24 @@
   }
 
   /* Render nội dung bài (text thường, giữ nguyên) */
+  /* Render nội dung bài (text thường, chuyển a/b → \dfrac{a}{b}) */
+  /* renderContent: render $...$ trong content qua KaTeX
+     Dữ liệu đã được pre-convert sang LaTeX với $...$
+  */
   function renderContent(text) {
     if (!text) return '';
-    const raw = String(text);
-
-    // Đơn vị vật lý KHÔNG convert thành phân số
-    const UNIT_PAIRS = new Set([
-      'm/s','km/h','J/C','C/s','W/m','N/m','kg/m','mol/L','g/mol',
-      'rad/s','mL/min','Wb/A','m/s2','J/mol','kJ/mol','kcal/mol',
-    ]);
-
-    // Ký tự sub/superscript Unicode → LaTeX
-    const SUB = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','ₙ':'n','ₘ':'m','ₖ':'k'};
-    const SUP = {'\u207B':'-','⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','ⁿ':'n'};
-
-    function tokenToLatex(tok) {
-      // Convert sub/sup Unicode trong token
-      tok = tok.replace(/[₀₁₂₃₄₅₆₇₈₉ₙₘₖ]+/g, m => '_{' + [...m].map(c=>SUB[c]||c).join('') + '}');
-      tok = tok.replace(/[\u207B⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ]+/g, m => '^{' + [...m].map(c=>SUP[c]||c).join('') + '}');
-      tok = tok.replace(/·/g, '\\cdot{}').replace(/×/g, '\\times{}');
-      const GREEK = {'π':'\\pi{}','α':'\\alpha{}','β':'\\beta{}','Δ':'\\Delta{}','ε':'\\varepsilon{}','ω':'\\omega{}','ξ':'\\xi{}','φ':'\\varphi{}','λ':'\\lambda{}','μ':'\\mu{}','Φ':'\\Phi{}','θ':'\\theta{}'};
-      for (const [g,l] of Object.entries(GREEK)) tok = tok.replaceAll(g, l);
-      return tok;
-    }
-
-    // Xử lý từng dòng
-    const lines = raw.split('\n');
-    const out = lines.map(line => {
-      // Tìm pattern a/b trong dòng và convert thành \frac
-      let result = '';
-      let lastIdx = 0;
-
-      // Regex: token / token (bao gồm sub/superscript unicode)
-      const FRAC = /([-]?[A-Za-zα-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]+[A-Za-z0-9α-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]*|[-]?[0-9]+[A-Za-z0-9₀-₉⁰-⁹]*)\s*\/\s*([-]?[A-Za-zα-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]+[A-Za-z0-9α-ωΑ-Ω₀-₉⁰-⁹Δ\u207B·]*|[-]?[0-9]+[A-Za-z0-9₀-₉⁰-⁹]*)/g;
-
-      let m;
-      while ((m = FRAC.exec(line)) !== null) {
-        const a = m[1].trim(), b = m[2].trim();
-        // Bỏ qua đơn vị vật lý
-        const combo = a + '/' + b;
-        if (UNIT_PAIRS.has(combo)) continue;
-        // Bỏ qua nếu là đơn vị đo lường SI thuần túy
-        const UNIT_SI = /^(m|s|km|h|J|W|N|kg|mol|L|g|rad|mL|Hz|Pa|V|A|F|Wb|C|min|kWh)$/;
-        if (UNIT_SI.test(a) && UNIT_SI.test(b)) continue;
-
-        result += escHtml(line.slice(lastIdx, m.index));
-        lastIdx = m.index + m[0].length;
-
-        if (typeof katex !== 'undefined') {
-          try {
-            const latex = '\\dfrac{' + tokenToLatex(a) + '}{' + tokenToLatex(b) + '}';
-            result += katex.renderToString(latex, {throwOnError:false, displayMode:false, strict:false, output:'html'});
-          } catch(e) { result += escHtml(m[0]); }
-        } else {
-          result += escHtml(m[0]);
-        }
+    return String(text).replace(/\$(.*?)\$/g, (match, expr) => {
+      try {
+        return katex.renderToString(expr, {
+          throwOnError: false,
+          displayMode: false,
+          output: 'html',
+          strict: false,
+        });
+      } catch(e) {
+        return escHtml(match);
       }
-      result += escHtml(line.slice(lastIdx));
-      return result;
     });
-
-    return out.join('\n');
   }
 
   function renderLesson(wrap) {

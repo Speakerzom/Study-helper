@@ -1,18 +1,3 @@
-/* ============================================================
-   game.js — Game Học Tập, Study Helper
-   Dữ liệu đầu vào: query string ?class=&subject=&lesson=
-   (Truyền từ Practice → Game qua URL, không cần cleanup,
-    dễ debug, hỗ trợ bookmark)
-
-   Luồng:
-   1. Đọc params → validate
-   2. Fetch practice.json → lấy normal[] + boss[]
-   3. Preplash video
-   4. Phase NORMAL (từng câu, player tiến gặp enemy)
-   5. Phase BOSS (đối mặt, timer 60s)
-   6. Win / Lose
-============================================================ */
-
 (() => {
   'use strict';
 
@@ -1342,6 +1327,8 @@
   }
 
   async function init() {
+    initFontControl();
+
     const _savedTheme = localStorage.getItem('sh-theme');
     if (_savedTheme === 'light') document.body.classList.add('light');
 
@@ -1368,6 +1355,45 @@
     }
 
     runPreplash();
+  }
+
+  /* ── Font size control ──────────────────────────────────────
+     Lưu cỡ chữ vào localStorage, áp dụng qua CSS var --qs
+     Range: 0.82rem – 1.3rem, bước 0.06rem
+  ────────────────────────────────────────────────────────── */
+  const FONT_MIN  = 0.82;
+  const FONT_MAX  = 1.30;
+  const FONT_STEP = 0.06;
+  const FONT_KEY  = 'sh-game-qs';
+
+  function applyFontSize(rem) {
+    rem = Math.min(FONT_MAX, Math.max(FONT_MIN, +rem.toFixed(3)));
+    document.documentElement.style.setProperty('--qs', rem + 'rem');
+    /* Disable nút nếu đã chạm giới hạn */
+    const dec = document.getElementById('font-dec');
+    const inc = document.getElementById('font-inc');
+    if (dec) dec.disabled = rem <= FONT_MIN;
+    if (inc) inc.disabled = rem >= FONT_MAX;
+    return rem;
+  }
+
+  function initFontControl() {
+    /* Đọc giá trị đã lưu */
+    const saved = parseFloat(localStorage.getItem(FONT_KEY) || '1');
+    let currentRem = applyFontSize(saved);
+
+    const dec = document.getElementById('font-dec');
+    const inc = document.getElementById('font-inc');
+    if (!dec || !inc) return;
+
+    dec.addEventListener('click', () => {
+      currentRem = applyFontSize(currentRem - FONT_STEP);
+      localStorage.setItem(FONT_KEY, currentRem);
+    });
+    inc.addEventListener('click', () => {
+      currentRem = applyFontSize(currentRem + FONT_STEP);
+      localStorage.setItem(FONT_KEY, currentRem);
+    });
   }
 
   init();
