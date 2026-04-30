@@ -389,9 +389,18 @@
      5. LOAD PRACTICE.JSON
   ════════════════════════════════════════ */
   async function loadData() {
-    const res = await fetch(PRACTICE_JSON);
-    if (!res.ok) throw new Error(`practice.json: HTTP ${res.status}`);
-    const db = await res.json();
+    /* ── practice.json: dùng cache nếu có ── */
+    const PR_KEY = 'sh_cache_practice';
+    let db;
+    const prCached = sessionStorage.getItem(PR_KEY);
+    if (prCached) {
+      db = JSON.parse(prCached);
+    } else {
+      const res = await fetch(PRACTICE_JSON);
+      if (!res.ok) throw new Error(`practice.json: HTTP ${res.status}`);
+      db = await res.json();
+      try { sessionStorage.setItem(PR_KEY, JSON.stringify(db)); } catch(_) {}
+    }
 
     let rawNormal = [], rawBoss = [];
 
@@ -445,9 +454,19 @@
 
     /* Lấy title từ theory.json nếu có, fallback lessonId */
     try {
-      const tRes = await fetch('../Theory/theory.json');
-      if (tRes.ok) {
-        const tdb = await tRes.json();
+      const TH_KEY = 'sh_cache_theory';
+      let tdb;
+      const thCached = sessionStorage.getItem(TH_KEY);
+      if (thCached) {
+        tdb = JSON.parse(thCached);
+      } else {
+        const tRes = await fetch('../Theory/theory.json');
+        if (tRes.ok) {
+          tdb = await tRes.json();
+          try { sessionStorage.setItem(TH_KEY, JSON.stringify(tdb)); } catch(_) {}
+        }
+      }
+      if (tdb) {
         const les = tdb[G.classId]?.[G.subjectId]?.find(l => l.id === G.lessonId);
         if (les) G.lessonTitle = les.title;
       }

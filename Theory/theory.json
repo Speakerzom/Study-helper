@@ -429,7 +429,7 @@
           },
           {
             "label": "Quy tắc Van't Hoff",
-            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\Delta T/10}, \\quad \\gamma = 2 \\div 4"
+            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\dfrac{\\Delta T}{10}}, \\quad \\gamma = 2 \\div 4"
           },
           {
             "label": "Hằng số cân bằng",
@@ -486,7 +486,7 @@
           },
           {
             "label": "Quy tắc Van't Hoff",
-            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\Delta T/10}"
+            "expr": "\\dfrac{v_2}{v_1} = \\gamma^{\\dfrac{\\Delta T}{10}}"
           }
         ]
       }
@@ -906,7 +906,7 @@
         "formulas": [
           {
             "label": "Tốc độ di chuyển mảng",
-            "expr": "v \\approx  2-15 cm/năm"
+            "expr": "v \\approx 2\\text{–}15 \\; \\text{cm/năm}"
           },
           {
             "label": "Thang Richter",
@@ -921,7 +921,7 @@
         "formulas": [
           {
             "label": "Gradient nhiệt theo độ cao",
-            "expr": "\\Delta T = -0{,}6°\\text{C} / 100\\text{m}"
+            "expr": "\\Delta T = -\\dfrac{0{,}6°\\text{C}}{100\\,\\text{m}} \\quad \\text{(giảm theo độ cao)}"
           },
           {
             "label": "Độ ẩm tương đối",
@@ -936,7 +936,7 @@
         "formulas": [
           {
             "label": "Độ muối trung bình",
-            "expr": "35‰ (35g muối/1000g nước biển)"
+            "expr": "35‰ \\left(\\dfrac{35\\,\\text{g muối}}{1000\\,\\text{g nước biển}}\\right)"
           },
           {
             "label": "Chu kỳ thủy triều bán nhật",
@@ -1203,7 +1203,7 @@
         "formulas": [
           {
             "label": "Định luật Coulomb",
-            "expr": "F = k\\dfrac{|q_1 q_2|}{\\varepsilon r^2},\\quad k = 9\\times10^9 \\;\\text{N}{\\cdot}\\text{m}^2/\\text{C}^2"
+            "expr": "F = k\\dfrac{|q_1 q_2|}{\\varepsilon r^2},\\quad k = 9\\times10^9 \\;\\dfrac{\\text{N}{\\cdot}\\text{m}^2}{\\text{C}^2}"
           },
           {
             "label": "Cường độ điện trường",
@@ -1505,7 +1505,7 @@
         "formulas": [
           {
             "label": "Cung lượng tim",
-            "expr": "CO = SV \\times  HR  (L/phút)"
+            "expr": "CO = SV \\times HR \\quad \\left(\\text{L/phút}\\right)"
           },
           {
             "label": "Huyết áp tâm thu bình thường",
@@ -1569,7 +1569,7 @@
         "formulas": [
           {
             "label": "Giới hạn bền kéo",
-            "expr": "σ_b = F_{max} / S_{0} (N/mm^{2})"
+            "expr": "\\sigma_b = \\dfrac{F_{\\max}}{S_0} \\quad \\left(\\text{N/mm}^2\\right)"
           }
         ]
       },
@@ -1909,7 +1909,7 @@
           },
           {
             "label": "Năng suất lao động",
-            "expr": "NSLĐ = GDP / Lực lượng lao động"
+            "expr": "\\text{NSLĐ} = \\dfrac{\\text{GDP}}{\\text{Lực lượng lao động}}"
           }
         ]
       },
@@ -1935,11 +1935,11 @@
         "formulas": [
           {
             "label": "Mật độ dân số",
-            "expr": "D = N / S  (người/km^{2})"
+            "expr": "D = \\dfrac{N}{S} \\quad \\left(\\text{người/km}^2\\right)"
           },
           {
             "label": "Tốc độ đô thị hóa",
-            "expr": "Tỉ lệ đô thị = Dân đô thị / Tổng dân \\times  100%"
+            "expr": "\\text{Tỉ lệ đô thị} = \\dfrac{\\text{Dân đô thị}}{\\text{Tổng dân}} \\times 100\\%"
           }
         ]
       },
@@ -2264,7 +2264,7 @@
         "formulas": [
           {
             "label": "Phóng xạ",
-            "expr": "N(t) = N_0\\left(\\dfrac{1}{2}\\right)^{t/T} = N_0 e^{-\\lambda t}"
+            "expr": "N(t) = N_0\\left(\\dfrac{1}{2}\\right)^{\\frac{t}{T}} = N_0 e^{-\\lambda t}"
           },
           {
             "label": "Hằng số phóng xạ",
@@ -2433,7 +2433,7 @@
           },
           {
             "label": "Thủy phân peptide",
-            "expr": "\\text{Peptide} + (n-1)\\text{H}_2\\text{O} \\xrightarrow{H^+/OH^-} n\\text{ amino axit}"
+            "expr": "\\text{Peptide} + (n-1)\\text{H}_2\\text{O} \\xrightarrow{H^+/OH^-} n \\; \\text{amino axit}"
           }
         ]
       },
@@ -3068,7 +3068,7 @@
           },
           {
             "label": "Footprint carbon",
-            "expr": "CF = Tổng khí thải CO_{2}eq / Hoạt động (kg CO_{2}/km, kg CO_{2}/kWh...)"
+            "expr": "CF = \\dfrac{\\text{Tổng khí thải } \\text{CO}_2\\text{eq}}{\\text{Hoạt động}} \\quad \\left(\\dfrac{\\text{kg CO}_2}{\\text{km}}, \\dfrac{\\text{kg CO}_2}{\\text{kWh}}\\right)"
           }
         ]
       },

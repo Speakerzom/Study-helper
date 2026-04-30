@@ -1244,3 +1244,8 @@ body.light .short-inp {
 }
 #font-dec:active, #font-inc:active { transform: scale(.93); }
 
+/* Ẩn nút tăng/giảm cỡ chữ trên mobile — chỉ hiện ở desktop */
+@media (max-width: 768px) {
+  #font-ctrl { display: none; }
+}
+

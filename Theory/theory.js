@@ -23,9 +23,9 @@
 
   /* ─── Metadata hiển thị ─── */
   const CLASS_META = {
-    class10: { label: 'Khối 10', icon: '<span class="icon-class">1️⃣0️⃣</span>', badge: 'badge-c10' },
-    class11: { label: 'Khối 11', icon: '<span class="icon-class">1️⃣1️⃣</span>', badge: 'badge-c11' },
-    class12: { label: 'Khối 12', icon: '<span class="icon-class">1️⃣2️⃣</span>', badge: 'badge-c12' }
+    class10: { label: 'Khối 10', icon: '<span class="class-icon-wrap">1️⃣0️⃣</span>', badge: 'badge-c10' },
+    class11: { label: 'Khối 11', icon: '<span class="class-icon-wrap">1️⃣1️⃣</span>', badge: 'badge-c11' },
+    class12: { label: 'Khối 12', icon: '<span class="class-icon-wrap">1️⃣2️⃣</span>', badge: 'badge-c12' }
   };
 
   const SUBJECT_META = {
@@ -191,7 +191,7 @@
 
     wrap.innerHTML = `
       <div class="section-title">
-        <span class="icon">${cm.icon}</span> ${cm.label}
+        ${cm.icon}<span class="section-title-label">${cm.label}</span>
       </div>
       <p class="section-sub">Chọn môn học để xem danh sách bài lý thuyết.</p>
       <div class="subject-grid">
