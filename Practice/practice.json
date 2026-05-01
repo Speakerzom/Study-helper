@@ -222,13 +222,12 @@
           {
             "id": "q6",
             "type": 3,
-            "question": "Tìm tập xác định của hàm số y = $\\sqrt{x-2}$.",
+            "question": "Tìm tập xác định của hàm số $y=\\sqrt{x-2}$. (nhập dạng: [2;+inf))",
             "answer": [
-              "[2;+∞)",
-              "x≥2",
-              "[2,+∞)"
+              "[2;+inf)",
+              "x>=2"
             ],
-            "explanation": "Cần x - 2 $\\geq $ 0 → x $\\geq $ 2. Tập xác định D = [2; $+\\infty )$."
+            "explanation": "Cần $x-2 \\geq 0 \\Rightarrow x \\geq 2$. Tập xác định D = $[2;+\\infty)$. Nhập: [2;+inf)."
           },
           {
             "id": "q7",
@@ -450,11 +449,11 @@
           {
             "id": "c10_math_l3_b6",
             "type": 3,
-            "question": "Phương trình $x^{2}$−5x+6=0 có hai nghiệm. Tổng bình phương hai nghiệm?",
+            "question": "Phương trình x^2-5x+6=0 có hai nghiệm. Tổng bình phương hai nghiệm? (số)",
             "answer": [
               "13"
             ],
-            "explanation": "$x_{1}+x_{2}=5$, $x_{1}x_{2}=6$ → $x_{1}^{2}+x_{2}^{2}=(x_{1}+x_{2})^{2}-2x_{1}x_{2}=25-12=13$."
+            "explanation": "Theo Viete: $x_1+x_2=5$, $x_1x_2=6$. $x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=25-12=13$."
           }
         ]
       },
@@ -974,11 +973,12 @@
           {
             "id": "c10_math_l7_b4",
             "type": 3,
-            "question": "Đường tròn tâm I(2;-1) bán kính R=3 có phương trình?",
+            "question": "Đường tròn tâm I(2;-1) bán kính R=3 có phương trình? (nhập dạng: (x-2)^2+(y+1)^2=9)",
             "answer": [
-              "(x-2)²+(y+1)²=9"
+              "(x-2)^2+(y+1)^2=9",
+              "(x-2)2+(y+1)2=9"
             ],
-            "explanation": "$(x-a)^{2}+(y-b)^{2}=R^{2}$: $(x-2)^{2}+(y+1)^{2}=9$."
+            "explanation": "Phương trình đường tròn $(x-a)^2+(y-b)^2=R^2$: $(x-2)^2+(y+1)^2=9$. Nhập: (x-2)^2+(y+1)^2=9."
           },
           {
             "id": "c10_math_l7_b5",
@@ -1505,12 +1505,12 @@
           {
             "id": "c10_phy_l1_b5",
             "type": 3,
-            "question": "Xe đi $\\frac{60km}{h}$ trong 2h, rồi $\\frac{80km}{h}$ trong 1h. Vận tốc trung bình cả hành trình?",
+            "question": "Xe đi 60 km/h trong 2h, rồi 80 km/h trong 1h. Vận tốc trung bình cả hành trình? (km/h, làm tròn 1 chữ số thập phân)",
             "answer": [
-              "≈66,7 km/h",
-              "200/3 km/h"
+              "66.7",
+              "66,7"
             ],
-            "explanation": "s=120+80=200km; t=3h; $v_{\\text{tb}}=\\frac{200}{3\\approx 66}$,$\\frac{7km}{h}$."
+            "explanation": "s=120+80=200 km; t=3h; $v_{tb}=200/3\\approx66{,}7$ km/h."
           },
           {
             "id": "c10_phy_l1_b6",
@@ -1789,12 +1789,12 @@
           {
             "id": "c10_phy_l3_b4",
             "type": 3,
-            "question": "Vật chuyển động tròn đều R=0,5m, T=2s. Gia tốc hướng tâm?",
+            "question": "Vật chuyển động tròn đều R=0,5m, T=2s. Gia tốc hướng tâm? (m/s^2, làm tròn 2 chữ số thập phân)",
             "answer": [
-              "π² m/s² ≈ 9,87 m/s²",
-              "π²/2"
+              "4.93",
+              "4,93"
             ],
-            "explanation": "$a=\\frac{4\\pi^{2}R}{T^{2}}=4\\pi^{2}\\times 0$,$\\frac{5}{4}=\\frac{\\pi^{2}}{2\\approx 4}$,93 m/s². Hoặc: $v=\\frac{2\\piR}{T}=\\frac{\\pim}{s}$; $a=\\frac{v^{2}}{R}=\\frac{\\pi^{2}}{0}$,$5=2\\pi^{2}\\approx 19$,7? Kiểm: $v=2\\pi\\times 0$,$\\frac{5}{2}=\\frac{\\pi}{2}$; $a=\\frac{(\\pi/2)^{2}}{0}$,$5=\\frac{\\pi^{2}}{4/0}$,$5=\\frac{\\pi^{2}}{2\\approx 4}$,$\\frac{93m}{s^{2}}$."
+            "explanation": "$a=4\\pi^2R/T^2=4\\pi^2\\times0{,}5/4\\approx4{,}93$ m/s²."
           },
           {
             "id": "c10_phy_l3_b5",
@@ -2210,12 +2210,11 @@
           {
             "id": "c10_phy_l6_b4",
             "type": 3,
-            "question": "Vật 3kg trên mặt phẳng nghiêng 30°, $g=\\frac{10m}{s^{2}}$. Lực pháp tuyến N?",
+            "question": "Vật 3kg trên mặt phẳng nghiêng 30°, g=10 m/s^2. Lực pháp tuyến N? (N, làm tròn số nguyên)",
             "answer": [
-              "≈26N",
-              "N=mg cos30°=3×10×√3/2≈26N"
+              "26"
             ],
-            "explanation": "N=mg $cos\\alpha=3\\times 10\\times cos30$°$=30\\times (\\sqrt{3}/2)\\approx 26N$."
+            "explanation": "$N=mg\\cos30°=3\\times10\\times(\\sqrt{3}/2)\\approx26$ N."
           },
           {
             "id": "c10_phy_l6_b5",
@@ -2573,12 +2572,13 @@
           {
             "id": "q7",
             "type": 3,
-            "question": "Nguyên tố X ở chu kỳ 3, nhóm IIA. Cấu hình electron của X là gì?",
+            "question": "Nguyên tố X ở chu kỳ 3, nhóm IIA. Cấu hình electron của X là gì? (nhập dạng: 1s2 2s2 2p6 3s2)",
             "answer": [
-              "1s²2s²2p⁶3s²",
-              "[Ne]3s²"
+              "1s2 2s2 2p6 3s2",
+              "1s22s22p63s2",
+              "[Ne]3s2"
             ],
-            "explanation": "Chu kỳ 3→3 lớp, nhóm IIA→2e ngoài cùng: $1s^{2}2s^{2}2p^{6}3s^{2}=Mg(Z=12)$."
+            "explanation": "Chu kỳ 3→3 lớp, nhóm IIA→2e ngoài cùng: $1s^22s^22p^63s^2$ (Mg, Z=12). Nhập: 1s2 2s2 2p6 3s2."
           }
         ],
         "boss": [
@@ -2859,11 +2859,12 @@
           {
             "id": "c10_che_l4_b4",
             "type": 3,
-            "question": "Cân bằng phản ứng: Fe + $O_{2}$ → $Fe_{2}O_{3}$. Phương trình đúng?",
+            "question": "Cân bằng phản ứng: Fe + O2 → Fe2O3. Phương trình cân bằng? (nhập dạng: 4Fe+3O2→2Fe2O3)",
             "answer": [
-              "4Fe+3O₂→2Fe₂O₃"
+              "4Fe+3O2→2Fe2O3",
+              "4Fe+3O2=2Fe2O3"
             ],
-            "explanation": "Cân bằng: $4Fe+3O_{2}$→$2Fe_{2}O_{3}$."
+            "explanation": "Cân bằng: $4Fe + 3O_2 \\to 2Fe_2O_3$. Nhập: 4Fe+3O2→2Fe2O3."
           },
           {
             "id": "c10_che_l4_b5",
@@ -2913,12 +2914,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Viết phương trình phản ứng $Cl_{2}$ tác dụng với NaOH loãng, nguội.",
+            "question": "Viết phương trình $Cl_2$ tác dụng với NaOH loãng, nguội. (nhập dạng: Cl2+2NaOH→NaCl+NaClO+H2O)",
             "answer": [
-              "Cl₂+2NaOH→NaCl+NaClO+H₂O",
+              "Cl2+2NaOH→NaCl+NaClO+H2O",
               "Cl2+2NaOH=NaCl+NaClO+H2O"
             ],
-            "explanation": "$Cl_{2}+2NaOH$→$NaCl+NaClO+H_{2}O$ (nước Javel — tẩy trắng, khử trùng)."
+            "explanation": "$Cl_2+2NaOH\\to NaCl+NaClO+H_2O$ (nước Javel). Nhập: Cl2+2NaOH→NaCl+NaClO+H2O."
           },
           {
             "id": "q4",
@@ -2993,12 +2994,11 @@
           {
             "id": "c10_che_l5_b4",
             "type": 3,
-            "question": "HCl + NaOH → ? Viết phương trình?",
+            "question": "HCl + NaOH → ? Sản phẩm là gì? (nhập dạng: NaCl+H2O)",
             "answer": [
-              "NaCl+H2O",
-              "HCl+NaOH→NaCl+H₂O"
+              "NaCl+H2O"
             ],
-            "explanation": "HCl+NaOH→$NaCl+H_{2}O$ — phản ứng trung hòa."
+            "explanation": "$HCl + NaOH \\to NaCl + H_2O$ — phản ứng trung hòa. Nhập: NaCl+H2O."
           },
           {
             "id": "c10_che_l5_b5",
@@ -3115,12 +3115,12 @@
           {
             "id": "c10_che_l6_b2",
             "type": 3,
-            "question": "Viết phương trình điều chế $SO_{3}$ từ $SO_{2}$?",
+            "question": "Viết phương trình điều chế SO3 từ SO2? (nhập dạng: 2SO2+O2→2SO3)",
             "answer": [
               "2SO2+O2→2SO3",
-              "2SO₂+O₂→2SO₃"
+              "2SO2+O2=2SO3"
             ],
-            "explanation": "$2SO_{2}+O_{2}$ ⇌ $2SO_{3}$ (xt: $V_{2}O_{5}$, 450°C)."
+            "explanation": "$2SO_2+O_2 \\rightleftharpoons 2SO_3$ (xt: $V_2O_5$, 450°C). Nhập: 2SO2+O2→2SO3."
           },
           {
             "id": "c10_che_l6_b3",
@@ -3250,12 +3250,12 @@
           {
             "id": "c10_che_l7_b4",
             "type": 3,
-            "question": "Phản ứng thuận nghịch $N_{2}+3H_{2}$⇌$2NH_{3}$. Hằng số cân bằng Kc=?",
+            "question": "Phản ứng N2+3H2⇌2NH3. Biểu thức hằng số cân bằng Kc=? (nhập dạng: [NH3]^2/([N2][H2]^3))",
             "answer": [
-              "Kc=[NH₃]²/([N₂][H₂]³)",
-              "[NH3]^2/([N2][H2]^3)"
+              "[NH3]^2/([N2][H2]^3)",
+              "[NH3]2/([N2][H2]3)"
             ],
-            "explanation": "Kc=[sản phẩm]^hệ số/[tác chất]^hệ số."
+            "explanation": "$K_c = \\dfrac{[NH_3]^2}{[N_2][H_2]^3}$. Nhập: [NH3]^2/([N2][H2]^3)."
           },
           {
             "id": "c10_che_l7_b5",
@@ -3758,12 +3758,12 @@
           {
             "id": "c10_bio_l5_n1",
             "type": 3,
-            "question": "Phương trình tổng quát quang hợp?",
+            "question": "Phương trình tổng quát quang hợp? (nhập dạng: 6CO2+6H2O→C6H12O6+6O2)",
             "answer": [
               "6CO2+6H2O→C6H12O6+6O2",
-              "6CO₂+6H₂O→C₆H₁₂O₆+6O₂"
+              "6CO2+6H2O=C6H12O6+6O2"
             ],
-            "explanation": "Quang hợp chuyển hóa $CO_{2}$ và $H_{2}O$ thành glucose và $O_{2}$."
+            "explanation": "$6CO_2+6H_2O \\to C_6H_{12}O_6+6O_2$. Nhập: 6CO2+6H2O→C6H12O6+6O2."
           },
           {
             "id": "c10_bio_l5_n2",
@@ -8133,12 +8133,12 @@
           {
             "id": "q8",
             "type": 3,
-            "question": "Tính lim[n→$\\infty $] $(n^{2}$ + $1)/(2n^{2})$.",
+            "question": "Tính giới hạn: (n^2+1)/(2n^2) khi n tiến đến vô cùng. (số thập phân)",
             "answer": [
               "0.5",
               "0,5"
             ],
-            "explanation": "Chia cả tử và mẫu cho $n^{2}$: (1 + $\\frac{1}{n^{2})/2}$. Khi n→$\\infty $: (1+0)/2 = $\\frac{1}{2}$."
+            "explanation": "$\\lim_{n\\to\\infty}\\dfrac{n^2+1}{2n^2}=\\dfrac{1}{2}=0{,}5$."
           }
         ],
         "boss": [
@@ -8232,12 +8232,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Giải phương trình tan(x) = 1. Nghiệm tổng quát là?",
+            "question": "Giải phương trình tan(x)=1. Nghiệm tổng quát là? (nhập dạng: x=pi/4+kpi)",
             "answer": [
-              "x = π/4 + kπ",
-              "pi/4 + kπ"
+              "x=pi/4+kpi",
+              "pi/4+kpi"
             ],
-            "explanation": "tan(x)=1 → $x=arctan(1)+k\\pi$ = $\\frac{\\pi}{4}+k\\pi$ $(k\\in $ℤ)."
+            "explanation": "$\\tan(x)=1 \\Rightarrow x = \\pi/4 + k\\pi$ ($k \\in \\mathbb{Z}$). Nhập: x=pi/4+kpi."
           },
           {
             "id": "q4",
@@ -8409,11 +8409,11 @@
           {
             "id": "q7",
             "type": 3,
-            "question": "CSN có $u_{1}=6$, $q=\\frac{1}{2}$. Tính tổng vô hạn $S\\infty $.",
+            "question": "CSN có u1=6, q=1/2. Tính tổng vô hạn S. (số)",
             "answer": [
               "12"
             ],
-            "explanation": "$S\\infty =\\frac{u_{1}}{(1}$−q)=6/(1−$\\frac{1}{2)=6/0}$,5=12."
+            "explanation": "$S = u_1/(1-q) = 6/(1-1/2) = 6/0{,}5 = 12$."
           }
         ],
         "boss": [
@@ -8551,11 +8551,13 @@
           {
             "id": "q7",
             "type": 3,
-            "question": "Lớp 10 học sinh nam và 5 học sinh nữ. Chọn ngẫu nhiên 1 học sinh. Xác suất chọn được nữ là?",
+            "question": "Lớp có 10 học sinh nam và 5 học sinh nữ. Chọn ngẫu nhiên 1 học sinh. Xác suất chọn được nữ là? (nhập dạng thập phân, ví dụ: 0.333)",
             "answer": [
+              "0.333",
+              "1/3",
               "0,333"
             ],
-            "explanation": "$P(nữ)=\\frac{5}{(10+5)}=\\frac{5}{15}=\\frac{1}{3}$."
+            "explanation": "P(nữ) = 5/15 = 1/3 ≈ 0,333. Nhập: 0.333."
           }
         ],
         "boss": [
@@ -8596,11 +8598,13 @@
           {
             "id": "c11_math_l5_b4",
             "type": 3,
-            "question": "Gieo 2 súc sắc. P(tổng = 12)?",
+            "question": "Gieo 2 súc sắc. P(tổng=12)? (nhập dạng thập phân: 0.028 hoặc phân số: 1/36)",
             "answer": [
-              "1/36"
+              "1/36",
+              "0.028",
+              "0,028"
             ],
-            "explanation": "Chỉ có 1 cách: (6,6). $P=\\frac{1}{36}$."
+            "explanation": "Chỉ có 1 kết quả (6,6) trong 36. P=1/36≈0,028. Nhập: 1/36 hoặc 0.028."
           },
           {
             "id": "c11_math_l5_b5",
@@ -8987,11 +8991,13 @@
           {
             "id": "c11_math_l8_b4",
             "type": 3,
-            "question": "Vectơ AB⃗=(3,−1,2). |AB⃗|=?",
+            "question": "Vecto AB=(3,-1,2). Độ dài |AB|=? (nhập dạng: can14 hoặc sqrt(14))",
             "answer": [
-              "√14"
+              "sqrt(14)",
+              "can14",
+              "3.742"
             ],
-            "explanation": "$\\sqrt{9+1+4}=\\sqrt{14}$."
+            "explanation": "$|AB|=\\sqrt{3^2+(-1)^2+2^2}=\\sqrt{9+1+4}=\\sqrt{14}\\approx3{,}742$. Nhập: sqrt(14) hoặc 3.742."
           },
           {
             "id": "c11_math_l8_b5",
@@ -9020,12 +9026,12 @@
           {
             "id": "c11_math_l9_n1",
             "type": 3,
-            "question": "$f(x)=x^{3}$−3x. Tìm f'(x)?",
+            "question": "$f(x)=x^3-3x$. Tìm f\\'(x)? (nhập biểu thức: 3x^2-3)",
             "answer": [
-              "3x²-3",
-              "3x²−3"
+              "3x^2-3",
+              "3x2-3"
             ],
-            "explanation": "f'$(x)=3x^{2}$−3."
+            "explanation": "$f'(x)=3x^2-3$. Nhập: 3x^2-3."
           },
           {
             "id": "c11_math_l9_n2",
@@ -9144,11 +9150,12 @@
           {
             "id": "c11_math_l10_n1",
             "type": 3,
-            "question": "∫2x dx = ?",
+            "question": "Tích phân: 2x dx = ? (nhập dạng: x^2+C)",
             "answer": [
-              "x²+C"
+              "x^2+C",
+              "x2+C"
             ],
-            "explanation": "∫2x dx = $x^{2}$ + C."
+            "explanation": "$\\int 2x\\,dx = x^2 + C$. Nhập: x^2+C."
           },
           {
             "id": "c11_math_l10_n2",
@@ -9514,12 +9521,12 @@
           {
             "id": "c11_phy_l1_b5",
             "type": 3,
-            "question": "Hai điện tích $+4\\mu\\text{C}$ và −$2\\mu\\text{C}$ đặt cách 6cm trong không khí. Lực Coulomb?",
+            "question": "Hai điện tích $+4\\,\\mu$C và $-2\\,\\mu$C đặt cách nhau 6cm trong không khí. Lực Coulomb? (N, làm tròn số nguyên)",
             "answer": [
-              "≈20 N",
-              "F=kq1q2/r²"
+              "20",
+              "20 N"
             ],
-            "explanation": "$F=9\\times 10^{9}\\times 4\\times 10$⁻$^{6}\\times 2\\times 10$⁻$\\frac{^{6}}{(0}$,$06)^{2}=72\\times 10$⁻$\\frac{^{3}}{3}$,$6\\times 10$⁻$^{3}=20N$."
+            "explanation": "$F = k\\dfrac{|q_1||q_2|}{r^2} = 9\\times10^9\\times\\dfrac{4\\times10^{-6}\\times2\\times10^{-6}}{(0{,}06)^2} = 20$ N."
           },
           {
             "id": "c11_phy_l1_b6",
@@ -9644,12 +9651,12 @@
           {
             "id": "c11_phy_l2_b4",
             "type": 3,
-            "question": "Tụ điện $C=10\\mu\\text{F}$, U=100V. Điện tích Q=?",
+            "question": "Tụ điện $C=10\\,\\mu$F, U=100V. Điện tích Q=? (mC)",
             "answer": [
-              "10⁻³ C = 1mC",
-              "Q=CU=10⁻⁵×100=10⁻³C"
+              "1",
+              "1 mC"
             ],
-            "explanation": "$Q=CU=10\\times 10$⁻$^{6}\\times 100=10$⁻$^{3}C=1mC$."
+            "explanation": "$Q = CU = 10\\times10^{-6}\\times100 = 10^{-3}$ C $= 1$ mC."
           },
           {
             "id": "c11_phy_l2_b5",
@@ -9841,12 +9848,13 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Dây dẫn thẳng dài mang dòng I=5A. Cảm ứng từ tại điểm cách dây 10cm là bao nhiêu T? $(\\mu_{0}/2\\pi=2\\times 10$⁻$^{7})$",
+            "question": "Dây dẫn thẳng dài mang dòng I=5A. Cảm ứng từ tại điểm cách dây 10cm là bao nhiêu? $(\\mu_0/2\\pi=2\\times10^{-7})$ (nhập: 0.00001 hoặc 1e-5, đơn vị T)",
             "answer": [
-              "10⁻⁵ T",
-              "1e-5"
+              "0.00001",
+              "1e-5",
+              "10^-5"
             ],
-            "explanation": "$B=2\\times 10$⁻$\\frac{^{7}\\times I}{r}=2\\times 10$⁻$\\frac{^{7}\\times 5}{0}$,1=10⁻$^{5}T$."
+            "explanation": "$B = \\dfrac{\\mu_0}{2\\pi}\\cdot\\dfrac{I}{r} = 2\\times10^{-7}\\times\\dfrac{5}{0{,}1} = 10^{-5}$ T $= 0{,}00001$ T."
           },
           {
             "id": "q4",
@@ -9975,12 +9983,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Khung dây diện tích $S=100cm^{2}$, đặt trong từ trường B đều. B tăng từ 0,1T lên 0,5T trong 0,2s. Tính |e|.",
+            "question": "Khung dây S=100cm^2, B tăng từ 0,1T lên 0,5T trong 0,2s. Tính |e|. (V)",
             "answer": [
-              "0,02",
-              "20"
+              "0.2",
+              "0,2"
             ],
-            "explanation": "|e|$=\\frac{\\Delta\\Phi}{\\Delta t}=\\frac{S\\DeltaB}{\\Delta t}=100\\times 10$⁻$^{4}\\times (0$,5−0,1)/0,2=10⁻$^{2}\\times 2=0$,02V."
+            "explanation": "$|e| = N\\cdot\\Delta\\Phi/\\Delta t = 1\\times(0{,}5-0{,}1)\\times100\\times10^{-4}/0{,}2 = 0{,}2$ V."
           },
           {
             "id": "q4",
@@ -10161,12 +10169,12 @@
           {
             "id": "c11_phy_l6_b1",
             "type": 3,
-            "question": "Tốc độ ánh sáng trong môi trường có n=1,5 là bao nhiêu? $(c=3\\times 10^{8}$ m/s)",
+            "question": "Tốc độ ánh sáng trong môi trường có n=1,5 là bao nhiêu? $(c=3\\times10^8$ m/s) (nhập số thập phân x 10^8 m/s, ví dụ: 2)",
             "answer": [
-              "2×10⁸ m/s",
-              "2.10^8 m/s"
+              "2",
+              "2x10^8"
             ],
-            "explanation": "$v=\\frac{c}{n}=\\frac{3\\times 10^{8}}{1}$,$5=2\\times 10^{8}$ m/s."
+            "explanation": "$v = c/n = 3\\times10^8 / 1{,}5 = 2\\times10^8$ m/s. Nhập: 2 (đơn vị $\\times10^8$ m/s)."
           },
           {
             "id": "c11_phy_l6_b2",
@@ -10215,12 +10223,12 @@
           {
             "id": "c11_phy_l7_n1",
             "type": 3,
-            "question": "Công thức thấu kính mỏng?",
+            "question": "Công thức thấu kính mỏng? (nhập dạng: 1/f=1/d+1/d\\')",
             "answer": [
-              "1/f=1/d+1/d-prime",
-              "1/f = 1/d + 1/d'"
+              "1/f=1/d+1/d'",
+              "1/f=1/do+1/di"
             ],
-            "explanation": "$\\frac{1}{f}$ = $\\frac{1}{d}$ + $\\frac{1}{d}$' — phương trình thấu kính."
+            "explanation": "Công thức thấu kính: $\\frac{1}{f}=\\frac{1}{d}+\\frac{1}{d'}$. Nhập: 1/f=1/d+1/d'."
           },
           {
             "id": "c11_phy_l7_n2",
@@ -10360,12 +10368,13 @@
           {
             "id": "c11_phy_l8_n7",
             "type": 3,
-            "question": "Cơ năng của con lắc lò xo W = ?",
+            "question": "Cơ năng của con lắc lò xo W=? (nhập công thức dùng k và A: W=0.5kA^2)",
             "answer": [
-              "0.5*k*A^2",
-              "W = ½kA²"
+              "W=0.5kA^2",
+              "0.5kA^2",
+              "W=1/2kA2"
             ],
-            "explanation": "W = ½$kA^{2}$ = ½$m\\omega^{2}A^{2}$ — bảo toàn cơ năng trong dao động."
+            "explanation": "$W = \\frac{1}{2}kA^2 = \\frac{1}{2}m\\omega^2 A^2$ — nhập: W=0.5kA^2."
           }
         ],
         "boss": [
@@ -10401,11 +10410,12 @@
           {
             "id": "c11_phy_l8_b4",
             "type": 3,
-            "question": "Mạch RLC: $R=100\\Omega$, $L=\\frac{1}{\\pi}$ H, C=10⁻$\\frac{^{4}}{\\pi}$ F, f=50Hz. Tổng trở Z=?",
+            "question": "Mạch RLC: R=100 ohm, L=1/pi H, C=10^-4/pi F, f=50Hz. Tổng trở Z=? (ohm)",
             "answer": [
-              "141"
+              "200",
+              "100"
             ],
-            "explanation": "$Z_{\\text{L}}=\\frac{2\\pi\\times 50\\times 1}{\\pi}=100\\Omega$; $Z_{\\text{C}}=\\frac{1}{(2\\pi\\times 50\\times 10}$⁻$\\frac{^{4}}{\\pi)=100\\Omega}$. $Z_{\\text{L}}=Z_{\\text{C}}$ → cộng hưởng! $Z=R=100\\Omega$."
+            "explanation": "$Z_L=\\omega L=100\\pi\\cdot(1/\\pi)=100\\,\\Omega$; $Z_C=1/(\\omega C)=1/(100\\pi\\cdot10^{-4}/\\pi)=100\\,\\Omega$; $Z=\\sqrt{R^2+(Z_L-Z_C)^2}=\\sqrt{100^2+0}=100\\,\\Omega$."
           },
           {
             "id": "c11_phy_l8_b5",
@@ -10808,11 +10818,12 @@
           {
             "id": "c11_che_l3_b4",
             "type": 3,
-            "question": "$SiO_{2}$ tác dụng với HF. Phương trình?",
+            "question": "SiO2 tác dụng với HF. Phương trình? (nhập dạng: SiO2+4HF→SiF4+2H2O)",
             "answer": [
-              "SiO₂+4HF→SiF₄+2H₂O"
+              "SiO2+4HF→SiF4+2H2O",
+              "SiO2+4HF=SiF4+2H2O"
             ],
-            "explanation": "$SiO_{2}+4HF$→$SiF_{4}$↑$+2H_{2}O$ — HF duy nhất hòa tan được thủy tinh $(SiO_{2})$."
+            "explanation": "$SiO_2+4HF\\to SiF_4\\uparrow+2H_2O$ — HF duy nhất hòa tan được thủy tinh. Nhập: SiO2+4HF→SiF4+2H2O."
           },
           {
             "id": "c11_che_l3_b5",
@@ -10987,12 +10998,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Axetilen $(C_{2}H_{2})$ được điều chế từ đất đèn $(CaC_{2})$ và nước. Viết phương trình.",
+            "question": "Axetilen (C2H2) điều chế từ đất đèn (CaC2) và nước. Viết phương trình. (nhập dạng: CaC2+2H2O→Ca(OH)2+C2H2)",
             "answer": [
-              "CaC₂+2H₂O→Ca(OH)₂+C₂H₂",
-              "CaC2+2H2O→Ca(OH)2+C2H2"
+              "CaC2+2H2O→Ca(OH)2+C2H2",
+              "CaC2+2H2O=Ca(OH)2+C2H2"
             ],
-            "explanation": "$CaC_{2}+2H_{2}O$→$Ca(OH)_{2}+C_{2}H_{2}$↑. Đây là phương pháp điều chế axetilen đơn giản trong phòng thí nghiệm."
+            "explanation": "$CaC_2+2H_2O\\to Ca(OH)_2+C_2H_2\\uparrow$. Nhập: CaC2+2H2O→Ca(OH)2+C2H2."
           },
           {
             "id": "q4",
@@ -11077,11 +11088,12 @@
           {
             "id": "c11_che_l5_b4",
             "type": 3,
-            "question": "Đốt cháy hoàn toàn $C_{2}H_{4}$. Phương trình?",
+            "question": "Đốt cháy hoàn toàn C2H4. Phương trình? (nhập dạng: C2H4+3O2→2CO2+2H2O)",
             "answer": [
-              "C₂H₄+3O₂→2CO₂+2H₂O"
+              "C2H4+3O2→2CO2+2H2O",
+              "C2H4+3O2=2CO2+2H2O"
             ],
-            "explanation": "$C_{2}H_{4}+3O_{2}$→$2CO_{2}+2H_{2}O$ (cân bằng nguyên tử)."
+            "explanation": "$C_2H_4+3O_2\\to 2CO_2+2H_2O$. Nhập: C2H4+3O2→2CO2+2H2O."
           },
           {
             "id": "c11_che_l5_b5",
@@ -12369,12 +12381,12 @@
           {
             "id": "c11_tec_l1_b5",
             "type": 3,
-            "question": "Thép không gỉ (inox) có thành phần chính là Fe, Cr và Ni. Hàm lượng Cr tối thiểu?",
+            "question": "Thép không gỉ (inox) có hàm lượng Cr tối thiểu là bao nhiêu? (%, nhập số: 10.5)",
             "answer": [
-              "≥10,5%",
-              ">10,5% Cr"
+              "10.5",
+              "10,5"
             ],
-            "explanation": "Inox cần $\\geq 10$,5%Cr → tạo màng $Cr_{2}O_{3}$ bảo vệ chống gỉ."
+            "explanation": "Inox cần $\\geq 10{,}5\\%$ Cr → tạo màng $Cr_2O_3$ bảo vệ chống gỉ. Nhập: 10.5."
           },
           {
             "id": "c11_tec_l1_b6",
@@ -13042,13 +13054,12 @@
           {
             "id": "b4",
             "type": 3,
-            "question": "Viết biểu thức tính tổng các số từ 1 đến n bằng công thức đóng (không dùng vòng lặp).",
+            "question": "Biểu thức tính tổng các số từ 1 đến n bằng công thức đóng? (nhập dạng: n*(n+1)/2)",
             "answer": [
               "n*(n+1)/2",
-              "n(n+1)/2",
-              "n×(n+1)÷2"
+              "n(n+1)/2"
             ],
-            "explanation": "S = 1+2+...+n = n(n+1)/2 (công thức Gauss). Ví dụ n=100: S = $\\frac{100\\times 101}{2}$ = 5050."
+            "explanation": "$S = \\frac{n(n+1)}{2}$ (công thức Gauss). Nhập: n*(n+1)/2."
           },
           {
             "id": "c11_inf_l1_b5",
@@ -16953,12 +16964,11 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Tính (2+3i)+(1−i).",
+            "question": "Tính (2+3i)+(1-i). (nhập dạng so phuc: 3+2i)",
             "answer": [
-              "3+2i",
-              "(3+2i)"
+              "3+2i"
             ],
-            "explanation": "Cộng phần thực: 2+1=3. Cộng phần ảo: 3+(−1)=2. → 3+2i."
+            "explanation": "$(2+3i)+(1-i)=3+2i$. Nhập: 3+2i."
           },
           {
             "id": "q4",
@@ -17078,12 +17088,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Tính ∫$x\\cdot e$ˣdx.",
+            "question": "Tính tich phan: x*e^x dx = ? (nhập dạng: (x-1)*e^x+C)",
             "answer": [
-              "eˣ(x-1)+C",
-              "(x-1)eˣ+C"
+              "(x-1)*e^x+C",
+              "(x-1)e^x+C"
             ],
-            "explanation": "Từng phần: u=x, dv=eˣdx → du=dx, v=eˣ. ∫xeˣdx=xeˣ−∫eˣdx=xeˣ−eˣ+C=(x−1)eˣ+C."
+            "explanation": "$\\int xe^x\\,dx = (x-1)e^x+C$ (tích phân từng phần). Nhập: (x-1)*e^x+C."
           },
           {
             "id": "q4",
@@ -17122,12 +17132,11 @@
           {
             "id": "q7",
             "type": 3,
-            "question": "Tính ∫$sin^{2}(x)dx$.",
+            "question": "Tính tích phân: sin^2(x)dx = ? (nhập dạng: x/2-sin(2x)/4+C)",
             "answer": [
-              "x/2 - sin(2x)/4 + C",
-              "1/2·x-1/4·sin(2x)+C"
+              "x/2-sin(2x)/4+C"
             ],
-            "explanation": "$sin^{2}x=(1$−cos2x)/2 → ∫$sin^{2}xdx=$∫(1−$cos2x)/2\\cdot dx=x/2$−sin(2x)/4+C."
+            "explanation": "$\\sin^2 x = (1-\\cos 2x)/2 \\Rightarrow \\int\\sin^2 x\\,dx = x/2 - \\sin(2x)/4 + C$. Nhập: x/2-sin(2x)/4+C."
           }
         ],
         "boss": [
@@ -17213,12 +17222,12 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Khối lập phương cạnh a có thể tích là bao nhiêu?",
+            "question": "Khối lập phương cạnh a có thể tích là bao nhiêu? (nhập công thức: a^3)",
             "answer": [
-              "a³",
-              "V=a³"
+              "a^3",
+              "V=a^3"
             ],
-            "explanation": "$V=a^{3}$."
+            "explanation": "$V = a^3$. Nhập: a^3."
           },
           {
             "id": "q4",
@@ -17302,11 +17311,12 @@
           {
             "id": "c12_math_l7_b4",
             "type": 3,
-            "question": "Hình lăng trụ đứng đáy vuông cạnh a, chiều cao h. Thể tích V=?",
+            "question": "Hình lăng trụ đứng đáy vuông cạnh a, chiều cao h. Thể tích V=? (nhập công thức: a^2*h)",
             "answer": [
-              "a²h"
+              "a^2*h",
+              "a^2h"
             ],
-            "explanation": "$V=S_{\\text{đáy}}\\times h=a^{2}\\times h$."
+            "explanation": "$V = S_{\\text{đáy}}\\times h = a^2 h$. Nhập: a^2*h."
           },
           {
             "id": "c12_math_l7_b5",
@@ -17550,11 +17560,11 @@
           {
             "id": "c12_math_l9_b2",
             "type": 3,
-            "question": "Mặt cầu tâm I(0,0,0), R=5 có phương trình?",
+            "question": "Mặt cầu tâm I(0,0,0), R=5 có phương trình? (nhập dạng: x^2+y^2+z^2=25)",
             "answer": [
-              "x²+y²+z²=25"
+              "x^2+y^2+z^2=25"
             ],
-            "explanation": "$(x-0)^{2}+(y-0)^{2}+(z-0)^{2}=25$."
+            "explanation": "$(x-0)^2+(y-0)^2+(z-0)^2=25 \\Rightarrow x^2+y^2+z^2=25$. Nhập: x^2+y^2+z^2=25."
           },
           {
             "id": "c12_math_l9_b3",
@@ -17566,12 +17576,11 @@
           {
             "id": "c12_math_l9_b4",
             "type": 3,
-            "question": "Mặt phẳng qua 3 điểm A(1,0,0), B(0,2,0), C(0,0,3)?",
+            "question": "Mặt phẳng qua A(1,0,0), B(0,2,0), C(0,0,3)? (nhập dạng: 6x+3y+2z=6)",
             "answer": [
-              "6x+3y+2z=6",
-              "x/1+y/2+z/3=1 → 6x+3y+2z=6"
+              "6x+3y+2z=6"
             ],
-            "explanation": "$\\frac{x}{1}+\\frac{y}{2}+\\frac{z}{3}=1$ → 6x+3y+2z=6."
+            "explanation": "$x/1+y/2+z/3=1 \\Rightarrow 6x+3y+2z=6$. Nhập: 6x+3y+2z=6."
           },
           {
             "id": "c12_math_l9_b5",
@@ -17971,12 +17980,12 @@
           {
             "id": "c12_math_l13_n1",
             "type": 3,
-            "question": "Công thức thể tích vật thể tròn xoay quanh Ox?",
+            "question": "Công thức thể tích vật thể tròn xoay quanh Ox? (nhập dạng: V=pi*integral(f^2)dx)",
             "answer": [
               "V=pi*integral(f^2)dx",
-              "V=π∫[a,b]f²(x)dx"
+              "pi*integral(f2)dx"
             ],
-            "explanation": "$V=\\pi$∫[a,b][f(x)]$^{2}dx$ — công thức thể tích tròn xoay."
+            "explanation": "$V=\\pi\\int_a^b[f(x)]^2\\,dx$. Nhập: V=pi*integral(f^2)dx."
           },
           {
             "id": "c12_math_l13_n2",
@@ -18031,12 +18040,12 @@
           {
             "id": "c12_math_l13_n7",
             "type": 3,
-            "question": "Thể tích khối cầu bán kính R?",
+            "question": "Thể tích khối cầu bán kính R? (nhập dạng: (4/3)*pi*R^3)",
             "answer": [
-              "4/3*pi*R^3",
-              "V=(4/3)πR³"
+              "(4/3)*pi*R^3",
+              "4/3*pi*R^3"
             ],
-            "explanation": "$V=(4/3)\\piR^{3}$ — thể tích khối cầu."
+            "explanation": "$V=\\frac{4}{3}\\pi R^3$. Nhập: (4/3)*pi*R^3."
           }
         ],
         "boss": [
@@ -18242,12 +18251,13 @@
           {
             "id": "c12_phy_l1_b5",
             "type": 3,
-            "question": "Con lắc lò xo: A=4cm, $k=\\frac{100N}{m}$, m=0,1kg. $\\omega$ và T=?",
+            "question": "Con lắc lò xo: A=4cm, k=100 N/m, m=0,1kg. Tần số góc omega? (rad/s, làm tròn số nguyên)",
             "answer": [
-              "ω=√(k/m)=√1000≈31,6rad/s; T≈0,199s",
-              "T=2π/ω"
+              "32",
+              "31",
+              "31.6"
             ],
-            "explanation": "$\\omega=\\sqrt{100/0{,}1}=\\sqrt{1000}\\approx 31{,}6$ rad/s; $T=\\frac{2\\pi}{31{,}6}\\approx 0{,}2$ s."
+            "explanation": "$\\omega = \\sqrt{k/m} = \\sqrt{100/0{,}1} = \\sqrt{1000} \\approx 31{,}6$ rad/s. Nhập: 32 (làm tròn)."
           },
           {
             "id": "c12_phy_l1_b6",
@@ -18487,11 +18497,12 @@
           {
             "id": "c12_phy_l3_b4",
             "type": 3,
-            "question": "Tốc độ ánh sáng trong nước $(n=4/3)$? $(c=3\\times 10^{8}m/s)$",
+            "question": "Tốc độ ánh sáng trong nước $(n=4/3)$? $(c=3\\times10^8$ m/s) (nhập số thập phân x 10^8 m/s, ví dụ: 2.25)",
             "answer": [
-              "2,25×10⁸ m/s"
+              "2.25",
+              "2,25"
             ],
-            "explanation": "$v=\\frac{c}{n}=\\frac{3\\times 10^{8}}{(4/3)}=2$,$\\frac{25\\times 10^{8}m}{s}$."
+            "explanation": "$v = c/n = 3\\times10^8 \\div (4/3) = 2{,}25\\times10^8$ m/s. Nhập: 2.25 (đơn vị $\\times10^8$ m/s)."
           },
           {
             "id": "c12_phy_l3_b5",
@@ -18665,13 +18676,13 @@
           {
             "id": "q3",
             "type": 3,
-            "question": "Mạch RLC cộng hưởng khi điều kiện nào?",
+            "question": "Mạch RLC cộng hưởng khi điều kiện nào? (nhập dạng: wL=1/wC hoặc Z_L=Z_C)",
             "answer": [
-              "ωL=1/ωC",
+              "wL=1/wC",
               "Z_L=Z_C",
-              "ω²LC=1"
+              "w^2*LC=1"
             ],
-            "explanation": "Cộng hưởng: $Z_{\\text{L}}=Z_{\\text{C}}$ → $\\omega L=\\frac{1}{(\\omega C)}$ → $\\omega=\\frac{1}{\\sqrt{LC}}$. Lúc đó Z=R (nhỏ nhất), $I=\\frac{U}{R}$ (lớn nhất)."
+            "explanation": "Cộng hưởng: $Z_L=Z_C \\Rightarrow \\omega L=\\frac{1}{\\omega C}$. Nhập: wL=1/wC hoặc Z_L=Z_C."
           },
           {
             "id": "q4",
@@ -18770,12 +18781,12 @@
           {
             "id": "c12_phy_l6_n1",
             "type": 3,
-            "question": "Năng lượng photon ánh sáng có bước sóng $\\lambda=0$,$6\\mum$? (h=6,$625\\times 10^{-34}$, $c=3\\times 10^{8})$",
+            "question": "Năng lượng photon ánh sáng có bước sóng 0,6 micromet? $(h=6{,}625\\times10^{-34}$, $c=3\\times10^8)$ (nhập dạng: 3.31, đơn vị x10^-19 J)",
             "answer": [
-              "≈3,31×10⁻¹⁹ J",
-              "3.31e-19 J"
+              "3.31",
+              "3,31"
             ],
-            "explanation": "$\\varepsilon=\\frac{hc}{\\lambda}=6$,$625\\times 10$⁻$\\frac{^{34}\\times 3\\times 10^{8}}{(0}$,$6\\times 10$⁻$^{6})\\approx 3$,$31\\times 10^{-19}$ J."
+            "explanation": "$E = hc/\\lambda \\approx 3{,}31\\times10^{-19}$ J. Nhập: 3.31 (đơn vị $\\times10^{-19}$ J)."
           },
           {
             "id": "c12_phy_l6_n2",
@@ -18820,12 +18831,12 @@
           {
             "id": "c12_phy_l6_n7",
             "type": 3,
-            "question": "Hằng số Planck h có giá trị xấp xỉ?",
+            "question": "Hằng số Planck h có giá trị xấp xỉ bao nhiêu? (nhập dạng: 6.626, đơn vị x10^-34 J.s)",
             "answer": [
-              "6.626e-34 J.s",
-              "6,626×10⁻³⁴ J·s"
+              "6.626",
+              "6,626"
             ],
-            "explanation": "h $\\approx $ 6,$626\\times 10^{-34}$ $J\\cdot s$ — hằng số cơ bản của cơ học lượng tử."
+            "explanation": "$h \\approx 6{,}626\\times10^{-34}$ J·s. Nhập: 6.626 (đơn vị $\\times10^{-34}$ J·s)."
           }
         ],
         "boss": [
@@ -18862,12 +18873,13 @@
           {
             "id": "c12_phy_l6_b4",
             "type": 3,
-            "question": "Photon có E=3,1eV. f=? (h=6,$625\\times 10$⁻$^{34}J\\cdot s$; 1eV=1,$6\\times 10$⁻$^{19}J)$",
+            "question": "Photon có E=3,1eV. Tần số f=? $(h=6{,}625\\times10^{-34}$ J·s; 1eV=$1{,}6\\times10^{-19}$ J) (nhập dạng: 7.49, đơn vị x10^14 Hz)",
             "answer": [
-              "≈7,49×10¹⁴ Hz",
-              "~7,5×10^14 Hz"
+              "7.49",
+              "7,49",
+              "7.5"
             ],
-            "explanation": "E=3,$1\\times 1$,$6\\times 10$⁻$^{19}=4$,$96\\times 10$⁻$^{19}J$; $f=\\frac{E}{h}=4$,$96\\times 10$⁻$\\frac{^{19}}{6}$,$625\\times 10$⁻$^{34}\\approx 7$,$49\\times 10^{14}Hz$ (tím)."
+            "explanation": "$E = 3{,}1\\times1{,}6\\times10^{-19} \\approx 4{,}96\\times10^{-19}$ J; $f = E/h \\approx 7{,}49\\times10^{14}$ Hz. Nhập: 7.49 (đơn vị $\\times10^{14}$ Hz)."
           },
           {
             "id": "c12_phy_l6_b5",
@@ -19059,12 +19071,13 @@
           {
             "id": "c12_phy_l8_n7",
             "type": 3,
-            "question": "Điện trở cảm kháng $Z_{\\text{L}}=$?",
+            "question": "Điện trở cảm kháng $Z_L$ tính theo công thức nào? (nhập: ZL=omega*L hoặc ZL=wL)",
             "answer": [
-              "Z_L=omega*L",
-              "Z_L=ωL"
+              "ZL=omega*L",
+              "ZL=wL",
+              "Z_L=wL"
             ],
-            "explanation": "$Z_{\\text{L}}=\\omega L=2\\pifL$, đơn vị $\\Omega$."
+            "explanation": "$Z_L = \\omega L = 2\\pi f L$, đơn vị $\\Omega$. Nhập: ZL=omega*L."
           }
         ],
         "boss": [
@@ -19164,12 +19177,12 @@
           {
             "id": "c12_phy_l9_n7",
             "type": 3,
-            "question": "Sóng âm tần số 440Hz, $v=\\frac{340m}{s}$. Bước sóng $\\lambda=$?",
+            "question": "Sóng âm tần số 440Hz, v=340 m/s. Bước sóng lambda=? (m, làm tròn 2 chữ số thập phân)",
             "answer": [
-              "≈0.77m",
-              "340/440≈0,77m"
+              "0.77",
+              "0,77"
             ],
-            "explanation": "$\\lambda=\\frac{v}{f}=\\frac{340}{440\\approx 0}$,773m."
+            "explanation": "$\\lambda = v/f = 340/440 \\approx 0{,}77$ m."
           }
         ],
         "boss": [
@@ -19278,12 +19291,12 @@
           {
             "id": "c12_phy_l10_n7",
             "type": 3,
-            "question": "Cơ năng con lắc lò xo W=? (biên độ A, độ cứng k)",
+            "question": "Cơ năng con lắc lò xo W=? (biên độ A, độ cứng k) (nhập công thức: W=0.5kA^2)",
             "answer": [
-              "0.5kA^2",
-              "W=½kA²"
+              "W=0.5kA^2",
+              "0.5kA^2"
             ],
-            "explanation": "W=½$kA^{2}=$½$m\\omega^{2}A^{2}$ — cơ năng bảo toàn trong dao động không ma sát."
+            "explanation": "$W = \\frac{1}{2}kA^2 = \\frac{1}{2}m\\omega^2A^2$. Nhập: W=0.5kA^2."
           }
         ],
         "boss": [
@@ -19925,12 +19938,12 @@
           {
             "id": "c12_che_l6_n1",
             "type": 3,
-            "question": "Phương trình Na tác dụng với nước?",
+            "question": "Phương trình Na tác dụng với nước? (nhập dạng: 2Na+2H2O→2NaOH+H2)",
             "answer": [
               "2Na+2H2O→2NaOH+H2",
-              "2Na+2H₂O→2NaOH+H₂↑"
+              "2Na+2H2O=2NaOH+H2"
             ],
-            "explanation": "$2Na+2H_{2}O$→$2NaOH+H_{2}$↑ — phản ứng mãnh liệt."
+            "explanation": "$2Na+2H_2O\\to 2NaOH+H_2\\uparrow$ — phản ứng mãnh liệt. Nhập: 2Na+2H2O→2NaOH+H2."
           },
           {
             "id": "c12_che_l6_n2",
@@ -20000,12 +20013,12 @@
           {
             "id": "c12_che_l6_b2",
             "type": 3,
-            "question": "Hòa tan Al vào NaOH dư. Phương trình ion rút gọn?",
+            "question": "Hòa tan Al vào NaOH dư. Phương trình ion rút gọn? (nhập dạng: Al+OH-+H2O→AlO2-+3/2H2)",
             "answer": [
-              "Al+OH⁻+H2O→AlO2⁻+3/2H2",
-              "Al+OH⁻+H₂O→AlO₂⁻+3/2H₂↑"
+              "Al+OH-+H2O→AlO2-+3/2H2",
+              "Al+OH-+H2O=AlO2-+3/2H2"
             ],
-            "explanation": "Al+OH⁻$+H_{2}O$→$AlO_{2}$⁻$+\\frac{3}{2H_{2}}$↑"
+            "explanation": "$Al + OH^- + H_2O \\to AlO_2^- + \\frac{3}{2}H_2\\uparrow$. Nhập: Al+OH-+H2O→AlO2-+3/2H2."
           },
           {
             "id": "c12_che_l6_b3",
@@ -20109,12 +20122,12 @@
           {
             "id": "c12_che_l7_b2",
             "type": 3,
-            "question": "Nhiệt luyện: dùng CO khử $Fe_{2}O_{3}$ ở nhiệt độ cao. Phương trình?",
+            "question": "Nhiệt luyện: dùng CO khử Fe2O3 ở nhiệt độ cao. Phương trình? (nhập dạng: Fe2O3+3CO→2Fe+3CO2)",
             "answer": [
               "Fe2O3+3CO→2Fe+3CO2",
-              "Fe₂O₃+3CO→2Fe+3CO₂"
+              "Fe2O3+3CO=2Fe+3CO2"
             ],
-            "explanation": "$Fe_{2}O_{3}+3CO$→$2Fe+3CO_{2}$ — nguyên tắc luyện gang."
+            "explanation": "$Fe_2O_3+3CO\\to 2Fe+3CO_2$ — nguyên tắc luyện gang. Nhập: Fe2O3+3CO→2Fe+3CO2."
           },
           {
             "id": "c12_che_l7_b3",
@@ -21087,12 +21100,12 @@
           {
             "id": "c12_bio_l6_n1",
             "type": 3,
-            "question": "Định luật Hardy-Weinberg: tần số kiểu gen trong quần thể ngẫu phối?",
+            "question": "Định luật Hardy-Weinberg: tần số kiểu gen trong quần thể ngẫu phối? (nhập dạng: p^2+2pq+q^2=1)",
             "answer": [
-              "p²+2pq+q²=1",
-              "p²AA+2pqAa+q²aa"
+              "p^2+2pq+q^2=1",
+              "p2+2pq+q2=1"
             ],
-            "explanation": "$p^{2}AA$ : 2pqAa : $q^{2}aa$ với p+q=1."
+            "explanation": "$p^2AA + 2pqAa + q^2aa = 1$ với $p+q=1$. Nhập: p^2+2pq+q^2=1."
           },
           {
             "id": "c12_bio_l6_n2",
@@ -21439,7 +21452,7 @@
           {
             "id": "c12_bio_l9_b1",
             "type": 1,
-            "question": "Chuỗi thức ăn: cỏ→sâu→chim→đại bàng. Năng lượng cỏ $= 10^6$ kJ. Năng lượng đại bàng $\\approx$ ?",
+            "question": "Chuỗi thức ăn: cỏ→sâu→chim→đại bàng. Năng lượng cỏ=10^6 kJ. Năng lượng đại bà$ng\\approx $?",
             "options": [
               "10 kJ",
               "100 kJ",
@@ -21447,7 +21460,7 @@
               "10000 kJ"
             ],
             "answer": 0,
-            "explanation": "$10^6 \\times 10\\% \\times 10\\% \\times 10\\% = 10^6 \\times 10^{-3} = 1000$ kJ. 3 bậc dinh dưỡng: $10^6 \\times (0{,}1)^3 = 1000$ kJ."
+            "explanation": "10^6 $\\times $ 10% $\\times $ 10% $\\times $ 10% = 10^6 $\\times $ 10^{-3}$ = 1000 kJ. Ồ: 3 bậc = 10^$6\\times (0$,$1)^{3}=1000kJ$."
           },
           {
             "id": "c12_bio_l9_b3",
