@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Helper</title>
   <link rel="icon" type="image/png" href="Web_icon.png">
+  <!-- KaTeX cho render công thức trong chat AI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
   <style>
     /* ============================================================
        home.css – Study Helper
@@ -308,14 +312,6 @@
       z-index: 1100;
       display: flex; flex-direction: column; align-items: flex-end;
       gap: 12px;
-      /* Khi chatbox đóng: chỉ vùng toggle mới nhận touch, không chặn iframe bên dưới */
-      pointer-events: none;
-    }
-
-    /* Cho phép touch riêng trên toggle-wrap và chatbox khi mở */
-    #ai-toggle-wrap,
-    #ai-widget.open #ai-chatbox {
-      pointer-events: auto;
     }
 
     /* Nút mở/đóng */
@@ -372,6 +368,7 @@
     /* Cửa sổ chat */
     #ai-chatbox {
       width: 360px;
+      height: 520px;
       max-height: 520px;
       background: var(--surface);
       border: 1.5px solid var(--border);
@@ -380,12 +377,62 @@
       overflow: hidden;
       box-shadow: 0 12px 48px rgba(0,0,0,.22), 0 0 0 1px rgba(0,206,209,.1);
       transform-origin: bottom right;
-      transition: transform .25s cubic-bezier(.34,1.4,.64,1), opacity .2s;
+      transition: transform .25s cubic-bezier(.34,1.4,.64,1), opacity .2s,
+                  width .3s cubic-bezier(.4,0,.2,1), height .3s cubic-bezier(.4,0,.2,1),
+                  max-height .3s cubic-bezier(.4,0,.2,1);
+      position: relative;
     }
     #ai-chatbox.hidden {
       transform: scale(.85) translateY(12px);
       opacity: 0;
       pointer-events: none;
+    }
+    /* Kích thước mở rộng khi bấm nút phóng to */
+    #ai-chatbox.expanded {
+      width: 860px;
+      height: 760px;
+      max-height: 760px;
+    }
+    @media (max-width: 920px) {
+      #ai-chatbox.expanded { width: calc(100vw - 32px); }
+    }
+    @media (max-height: 820px) {
+      #ai-chatbox.expanded { height: calc(100vh - 100px); max-height: calc(100vh - 100px); }
+    }
+
+    /* Nút phóng to / thu nhỏ chatbox */
+    #ai-btn-resize {
+      background: transparent; border: none;
+      color: var(--text2); cursor: pointer;
+      font-size: 1rem; line-height: 1;
+      width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 8px;
+      transition: background .15s, color .15s;
+      flex-shrink: 0;
+    }
+    #ai-btn-resize:hover { color: var(--text); background: rgba(255,255,255,.1); }
+
+    /* Bảng Markdown trong tin nhắn bot */
+    .ai-bubble table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: auto;
+      margin: 8px 0;
+      font-size: .85rem;
+    }
+    .ai-bubble th, .ai-bubble td {
+      border: 1px solid var(--border);
+      padding: 7px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ai-bubble th {
+      background: rgba(0,206,209,.1);
+      font-weight: 700;
+    }
+    .ai-bubble tr:nth-child(even) td {
+      background: rgba(255,255,255,.02);
     }
 
     /* Header chat */
@@ -438,6 +485,10 @@
       max-width: 85%; display: flex; flex-direction: column; gap: 3px;
       animation: msg-in .25s cubic-bezier(.34,1.3,.64,1);
     }
+    /* Khi chatbox phóng to: tin nhắn bot rộng hết cỡ để bảng/markdown hiển thị thoáng */
+    #ai-chatbox.expanded .ai-msg.bot {
+      max-width: 96%;
+    }
     @keyframes msg-in {
       from { opacity: 0; transform: translateY(8px) scale(.97); }
       to   { opacity: 1; transform: translateY(0) scale(1); }
@@ -469,6 +520,57 @@
       background: rgba(0,0,0,.15);
       padding: 8px 10px; border-radius: 8px;
     }
+
+    /* Markdown: heading (chỉ trong bubble bot) */
+    .ai-bubble h1.md-heading, .ai-bubble h2.md-heading,
+    .ai-bubble h3.md-heading, .ai-bubble h4.md-heading {
+      font-weight: 800;
+      line-height: 1.35;
+      margin: 10px 0 4px;
+      color: var(--text);
+    }
+    .ai-bubble h1.md-heading { font-size: 1.15rem; }
+    .ai-bubble h2.md-heading { font-size: 1.06rem; }
+    .ai-bubble h3.md-heading { font-size: .98rem; }
+    .ai-bubble h4.md-heading { font-size: .9rem; }
+    .ai-bubble h1.md-heading:first-child, .ai-bubble h2.md-heading:first-child,
+    .ai-bubble h3.md-heading:first-child, .ai-bubble h4.md-heading:first-child {
+      margin-top: 0;
+    }
+
+    /* Markdown: danh sách */
+    .ai-bubble ul, .ai-bubble ol {
+      margin: 6px 0; padding-left: 20px;
+    }
+    .ai-bubble li { margin: 3px 0; }
+
+    /* Markdown: blockquote */
+    .ai-bubble blockquote {
+      margin: 6px 0;
+      padding: 4px 10px;
+      border-left: 3px solid var(--cyan);
+      color: var(--text2);
+      background: rgba(0,206,209,.06);
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* Markdown: inline code */
+    .ai-bubble code {
+      font-family: 'Courier New', monospace;
+      font-size: .82em;
+      background: rgba(0,0,0,.15);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    .ai-msg.user .ai-bubble code {
+      background: rgba(255,255,255,.2);
+    }
+    .ai-bubble pre code {
+      background: transparent; padding: 0;
+    }
+
+    /* Markdown: gạch ngang */
+    .ai-bubble del { opacity: .65; }
 
     /* Typing indicator */
     .ai-typing .ai-bubble {
@@ -669,6 +771,7 @@
           <div class="ai-name">✨ Trợ lý Study Helper</div>
           <div class="ai-status-text">Đang hoạt động</div>
         </div>
+        <button id="ai-btn-resize" title="Phóng to">⤢</button>
         <button id="ai-btn-close" title="Đóng">✕</button>
       </div>
 
@@ -835,6 +938,18 @@
       let isLoading  = false;
       let welcomed   = false;
 
+      /* ── Nút phóng to / thu nhỏ chatbox ── */
+      (() => {
+        const btnResize = document.getElementById('ai-btn-resize');
+        if (!btnResize) return;
+
+        btnResize.addEventListener('click', () => {
+          const expanded = chatbox.classList.toggle('expanded');
+          btnResize.textContent = expanded ? '⤡' : '⤢';
+          btnResize.title = expanded ? 'Thu nhỏ' : 'Phóng to';
+        });
+      })();
+
       /* ── Load config từ home.json ── */
       async function loadConfig() {
         try {
@@ -877,18 +992,224 @@
       toggle.addEventListener('click', () => isOpen ? closeChat() : openChat());
       btnClose.addEventListener('click', closeChat);
 
+      /* Parse 1 khối bảng Markdown (| a | b |\n|---|---|\n| c | d |) thành <table> HTML.
+         Trả về text đã thay các khối bảng bằng <table>...</table>, phần còn lại giữ nguyên. */
+      function parseMarkdownTables(text) {
+        const lines = text.split('\n');
+        let out = [];
+        let i = 0;
+        while (i < lines.length) {
+          const line = lines[i];
+          const isTableRow = /^\s*\|.*\|\s*$/.test(line);
+          const nextIsSeparator = i + 1 < lines.length &&
+            /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/.test(lines[i + 1]);
+
+          if (isTableRow && nextIsSeparator) {
+            // Thu thập toàn bộ khối bảng
+            const headerCells = line.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+            let j = i + 2;
+            const bodyRows = [];
+            while (j < lines.length && /^\s*\|.*\|\s*$/.test(lines[j])) {
+              bodyRows.push(
+                lines[j].trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())
+              );
+              j++;
+            }
+            let html = '<table><thead><tr>' +
+              headerCells.map(c => `<th>${c}</th>`).join('') +
+              '</tr></thead><tbody>' +
+              bodyRows.map(row => '<tr>' + row.map(c => `<td>${c}</td>`).join('') + '</tr>').join('') +
+              '</tbody></table>';
+            out.push(html);
+            i = j;
+          } else {
+            out.push(line);
+            i++;
+          }
+        }
+        return out.join('\n');
+      }
+
+      /* Parse heading (#, ##, ###), code block (```), blockquote (>),
+         bullet list (-, *) và numbered list (1.) thành HTML tương ứng.
+         Chạy theo từng dòng — bổ sung cho parseMarkdownTables. */
+      function parseMarkdownBlocks(text) {
+        const lines = text.split('\n');
+        const out = [];
+        let i = 0;
+        let listBuffer = null; // { type: 'ul'|'ol', items: [] }
+
+        function flushList() {
+          if (!listBuffer) return;
+          const tag = listBuffer.type;
+          out.push(`<${tag}>` + listBuffer.items.map(it => `<li>${it}</li>`).join('') + `</${tag}>`);
+          listBuffer = null;
+        }
+
+        while (i < lines.length) {
+          const line = lines[i];
+
+          // Code block ```...```
+          if (/^\s*```/.test(line)) {
+            flushList();
+            const codeLines = [];
+            i++;
+            while (i < lines.length && !/^\s*```/.test(lines[i])) {
+              codeLines.push(lines[i]);
+              i++;
+            }
+            i++; // bỏ qua dòng ``` đóng
+            out.push('<pre><code>' + codeLines.join('\n') + '</code></pre>');
+            continue;
+          }
+
+          // Heading: # ## ### #### (tối đa H4, còn lại coi như H4)
+          const headingMatch = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
+          if (headingMatch) {
+            flushList();
+            const level = Math.min(headingMatch[1].length, 4);
+            out.push(`<h${level} class="md-heading">${headingMatch[2]}</h${level}>`);
+            i++;
+            continue;
+          }
+
+          // Blockquote: > text
+          const quoteMatch = line.match(/^\s*>\s?(.*)$/);
+          if (quoteMatch) {
+            flushList();
+            out.push(`<blockquote>${quoteMatch[1]}</blockquote>`);
+            i++;
+            continue;
+          }
+
+          // Bullet list: - text  hoặc  * text
+          const bulletMatch = line.match(/^\s*[-*]\s+(.+)$/);
+          if (bulletMatch) {
+            if (!listBuffer || listBuffer.type !== 'ul') { flushList(); listBuffer = { type: 'ul', items: [] }; }
+            listBuffer.items.push(bulletMatch[1]);
+            i++;
+            continue;
+          }
+
+          // Numbered list: 1. text
+          const numberedMatch = line.match(/^\s*\d+\.\s+(.+)$/);
+          if (numberedMatch) {
+            if (!listBuffer || listBuffer.type !== 'ol') { flushList(); listBuffer = { type: 'ol', items: [] }; }
+            listBuffer.items.push(numberedMatch[1]);
+            i++;
+            continue;
+          }
+
+          // Dòng thường — đóng list nếu đang mở
+          flushList();
+          out.push(line);
+          i++;
+        }
+        flushList();
+        return out.join('\n');
+      }
+
+      /* Xử lý Markdown inline trong 1 đoạn text: **bold**, *italic*,
+         ~~strikethrough~~, `code`. Không đụng vào nội dung công thức LaTeX
+         vì hàm này chỉ nên chạy trên phần text đã tách khỏi khối bảo vệ. */
+      function parseInlineMarkdown(text) {
+        return text
+          .replace(/`([^`]+?)`/g, '<code>$1</code>')
+          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+          .replace(/~~(.+?)~~/g, '<del>$1</del>')
+          .replace(/(^|[^*])\*([^*]+?)\*([^*]|$)/g, '$1<em>$2</em>$3');
+      }
+
       /* ── Render message ── */
       function addMessage(role, text) {
         const div = document.createElement('div');
         div.className = `ai-msg ${role}`;
-        /* Chuyển newline thành <br> và escape HTML cơ bản */
-        const safe = text
-          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-          .replace(/\n/g,'<br>');
+
+        /* 0. Một số model trả về "<br>" dạng text thô thay vì ký tự xuống
+              dòng thật — chuẩn hóa về \n trước khi escape để không bị
+              hiện ra chữ "<br>" nguyên văn */
+        let normalized = text.replace(/<br\s*\/?>/gi, '\n');
+
+        /* 1. TÁCH công thức LaTeX ra khỏi luồng xử lý Markdown ngay từ đầu,
+              thay bằng placeholder — để **bold**, bảng, heading... không
+              bao giờ có cơ hội chèn HTML vào giữa cú pháp LaTeX. Công thức
+              gốc (chưa escape) được cất riêng, ráp lại nguyên vẹn ở bước cuối. */
+        const mathStore = [];
+        let safe = normalized.replace(
+          /\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$[^$\n]+?\$/g,
+          (m) => {
+            mathStore.push(m);
+            return `\u0000MATH${mathStore.length - 1}\u0000`;
+          }
+        );
+
+        /* 2. Escape HTML trên phần còn lại (an toàn khỏi injection) */
+        safe = safe
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+        /* 3. Bảng Markdown → <table> thật (chỉ áp dụng cho bot) */
+        if (role === 'bot') {
+          safe = parseMarkdownTables(safe);
+        }
+
+        /* 3b. Heading / list / code block / blockquote → HTML tương ứng */
+        if (role === 'bot') {
+          safe = parseMarkdownBlocks(safe);
+        }
+
+        /* 4. Markdown inline: **bold**, *italic*, ~~gạch ngang~~, `code`
+              — an toàn vì công thức LaTeX đã được thay bằng placeholder */
+        safe = parseInlineMarkdown(safe);
+
+        /* 5. Chuyển newline thành <br>, nhưng bỏ qua bên trong các block
+              HTML đã dựng sẵn (table, pre, heading, list, blockquote) */
+        const protectedBlockRegex = /<table>[\s\S]*?<\/table>|<pre>[\s\S]*?<\/pre>|<ul>[\s\S]*?<\/ul>|<ol>[\s\S]*?<\/ol>|<blockquote>[\s\S]*?<\/blockquote>|<h[1-4][^>]*>[\s\S]*?<\/h[1-4]>/g;
+        const parts = safe.split(protectedBlockRegex);
+        const matches = safe.match(protectedBlockRegex) || [];
+        let result = '';
+        parts.forEach((part, i) => {
+          result += part.replace(/\n/g, '<br>');
+          if (i < matches.length) result += matches[i];
+        });
+        safe = result;
+
+        /* 6. Ráp công thức LaTeX gốc (nguyên vẹn, chưa từng bị escape hay
+              chèn markdown) trở lại đúng vị trí placeholder */
+        safe = safe.replace(/\u0000MATH(\d+)\u0000/g, (_, idx) => mathStore[+idx]);
+
         div.innerHTML = `<div class="ai-bubble">${safe}</div>`;
         messages.appendChild(div);
         messages.scrollTop = messages.scrollHeight;
+
+        /* 7. Render công thức LaTeX trong tin nhắn bot.
+              KaTeX (defer) có thể chưa load xong khi tin nhắn đầu tiên tới
+              (race condition) → thử lại vài lần thay vì bỏ qua im lặng. */
+        if (role === 'bot') {
+          renderMathWithRetry(div);
+        }
+
         return div;
+      }
+
+      function renderMathWithRetry(el, attempt = 0) {
+        if (typeof renderMathInElement === 'function') {
+          try {
+            renderMathInElement(el, {
+              delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '\\[', right: '\\]', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false }
+              ],
+              throwOnError: false
+            });
+          } catch (_) { /* lỗi cú pháp công thức cụ thể — bỏ qua công thức đó */ }
+          return;
+        }
+        /* KaTeX chưa sẵn sàng — thử lại tối đa 20 lần (~2s) */
+        if (attempt < 20) {
+          setTimeout(() => renderMathWithRetry(el, attempt + 1), 100);
+        }
       }
 
       function addTyping() {

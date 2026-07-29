@@ -1,9 +1,13 @@
 
+- v1.2.2 - 29/07/2026
++ Đổi model AI
++ Sửa lỗi hiển thị công thức trên chatbot
++ Thêm tính năng phóng to cửa sổ chatbot
 
 - v1.2.1 - 15/04/2026
 + Thêm hiệu ứng chuyển động nhẹ nhàng
 + Sửa lỗi giao diện trên điện thoại
-+ Sửa lỗi hiển thị công thức
++ Sửa lỗi hiển thị công thức trong game
 
 - v1.2.0 - 01/04/2026
 + Nâng cấp hệ thống lý thuyết với 221 bài học cho lớp 10, 11, 12
