@@ -1201,7 +1201,8 @@
                 { left: '$', right: '$', display: false },
                 { left: '\\(', right: '\\)', display: false }
               ],
-              throwOnError: false
+              throwOnError: false,
+              errorColor: '#ff6b6b' /* công thức lỗi hiện đỏ, dễ nhận biết thay vì lẫn vào text thường */
             });
           } catch (_) { /* lỗi cú pháp công thức cụ thể — bỏ qua công thức đó */ }
           return;
